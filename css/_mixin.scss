@@ -53,3 +53,30 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin translate3d{
+    -webkit-transform: translate3d(-20%, 0, 0);
+    -moz-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+}
+
+@mixin animation ($animation, $duration, $timing, $delay, $count, $mode) {
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    animation-delay: $delay;
+    animation-iteration-count: $count;
+    animation-fill-mode: $mode;
+}
+
+@mixin keyframe ($animation_name) {
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}

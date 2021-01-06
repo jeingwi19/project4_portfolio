@@ -5,15 +5,131 @@
 .fixed_bg{
     @include translateX-50;
     position: fixed;z-index: -1;left: 50%;
-    .bg_line{
-        width: 1280px;height: 608px;border: 1px solid #424242;
-        .box{float: left;width: 318px;height: 606px;}
-        .box + .box{border-left: 1px solid #424242;}
+  .bg_line{
+    width: 1280px;height: 608px;border: 1px solid #424242;
+    .box{float: left;width: 318px;height: 606px;}
+    .box + .box{border-left: 1px solid #424242;}
 
-        .wisesaying{display: block;font-size: 88px;font-weight: 700;white-space: nowrap;line-height: 74px;}
-        .hello{top: 80px;}
+    .wisesaying{
+      display: block;font-size: 88px;font-weight: 700;white-space: nowrap;line-height: 74px;
+      @include keyframe(flowtxt){
+        100%{
+          transform: translateX(-110%)
+        }0%{
+          transform: translateX(100%)
+        }
+      };
+      @include animation(flowtxt, 30s, linear, 0s, infinite, backwards);
     }
+    .hello{top: 80px;}
+    .watch{bottom: 0;font-size: 88px;font-weight: 700;line-height: 52px;}
+    .human_area{
+      width: 428px;height: 606px;
+      .human{position: absolute;left: -40px;top: 104px;}
+      .human_talk{
+        @include border-radius(20px);
+        position: absolute;right: 60px;top: 40px;background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);
+        &::before{
+          @include translateX-50;
+          content: "";position: absolute;width: 0;height: 0;bottom: -40px;left: 50%;
+          border-top: 40px solid $white;border-left: 0 solid transparent;border-right: 52px solid transparent;
+        }
+        .talkguide{
+          width: 106px;height: 182px;margin-top: 24px;margin-left: 24px;color: $black;font-size: 12px;line-height: 22px;/* background: pink; */
+        }
+      }
+    }
+    .txt_hire{
+      width: 276px;height: 276px;bottom: 0px;right: 0;
+      &::before{
+        @include translate-50;
+        content: "";position: absolute;background: url('../images/main/shape_8star_purple.svg')no-repeat center;width: 204px;height: 204px;left: 50%;top: 50%;z-index: -1;
+      }
+      .moveround{
+        @include keyframe(movr){
+          100%{
+            transform: rotate(360deg)
+          }0%{
+            transform: rotate(0deg)
+          }
+        };
+        @include animation(movr, 8s, linear, 0s, infinite, backwards);
+        width: 276px; height: 276px;
+      }
+      .move_cycle{
+        @include border-radius(50%);
+        @include translate-50;
+        position: absolute;font-weight: 700;color: #424242;font-size: 32px;z-index: -1;width: 276px;height: 276px;/* background: pink; */left: 50%;top: 50%;
+        p{
+          @include transform(rotate(-66deg) translate(0px, -74px));
+          span{
+            @include transform(origin(center, bottom));//회전 중심 축 변경
+            position: absolute;top: 0;left: 0;width: 16px;height: 260px;
+          }
+        }
+
+      }
+      .btn_txt{
+        @include translate-50;
+        position: absolute;font-weight: 700;font-size: 24px;line-height: 32px;width: 140px;height: 140px;left: 50%;top: 50%;z-index: 10;
+      }
+      .btn_txt:focus{
+        @include border-radius(50%);
+        /* @include box-shadow(0, 0, 0, 2px, $orange); ??*/
+        outline: none;box-shadow: 0 0 0 2px $orange;
+      }
+      .imgicon{position: absolute;width: 200px;height: 200px;background: no-repeat center;}
+      .coffee{background-image: url('../images/main/emoji_coffee.png');left: 120px;top: -40px;}
+      .fire{background-image: url('../images/main/emoji_fire.png');bottom: -20px;left: -28px;}
+    }
+  }
 }
 
-#scrollCnt{display: none;}
+#scrollCnt{
+  position: relative;left: 184px;top: 76px;width: 770px;
+  .section{width: 100%;}
+  #cnt1{
+    strong, span, button{display: inline-block;}
+    .tit_txt{
+      /* background: red; */
+      strong{
+        :nth-child(2){margin-left: 160px;}
+        font-family: $korFont;font-size: 40px;line-height: 88px;
+        button{font-weight: 700;margin-left: 20px;}
+      }
+      .imgicon{position: absolute;width: 200px;height: 200px;background: no-repeat center;}
+      .head{
+        @include keyframe(head){
+          100%{
+            transform: rotate(-4deg)
+          }50%{
+            transform: rotate(8deg)
+          }0%{
+            transform: rotate(-4deg)
+          }
+        };
+        @include animation(head, 4s, ease, 0s, infinite, backwards);
+        background-image: url('../images/main/emoji_head.png');top: -60px;left: 20px;
+      }
+      .thumsup{
+        @include keyframe(thumbs){
+          100%{
+            transform: scale(.9)
+          }50%{
+            transform: scale(1.2)
+          }0%{
+            transform: scale(.9)
+          }
+        };
+        @include animation(thumbs, 2s, ease, 0s, infinite, backwards);
+        background-image: url('../images/main/emoji_thumsup.png');top: -68px;right: 192px;
+      }
+    }
+  }
+}
+
 #modalIntro{display: none;}
+
+@media screen and (max-width: 320px){
+  
+}
