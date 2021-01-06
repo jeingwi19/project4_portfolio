@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "_mixin", "_var", "_function";
+
+//고정 배경 스타일
+.fixed_bg{
+    @include translateX-50;
+    position: fixed;z-index: -1;left: 50%;
+    .bg_line{
+        width: 1280px;height: 608px;border: 1px solid #424242;
+        .box{float: left;width: 318px;height: 606px;}
+        .box + .box{border-left: 1px solid #424242;}
+
+        .wisesaying{display: block;font-size: 88px;font-weight: 700;white-space: nowrap;line-height: 74px;}
+        .hello{top: 80px;}
+    }
+}
+
+#scrollCnt{display: none;}
+#modalIntro{display: none;}

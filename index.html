@@ -26,7 +26,8 @@
                     <img src="images/common/logo_black.svg" alt="">
                 </a>
             </h1>
-            <div class="menu">
+            <!-- .menu에 .active 추가 -->
+            <div class="menu active">
                 <button class="btn_open" type="button">
                     <span class="blind-b">전체 메뉴 열기</span>
                     <span class="btn_line">
@@ -51,17 +52,19 @@
             </nav>
         </header>
 
-        <div class="fixed_background">
+        <div class="fixed_bg">
             <div class="fixed_cnt wid1280">
                 <div class="bg_line">
-                    <div class="box_line"></div>
-                    <div class="box_line"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="txt_line wisesaying p_a" aria-hidden="true"><p>
+                        The only thing worse than starting something and failing... is not starting something</p>
+                    </div>
+                    <div class="txt_grey hello p_a" aria-hidden="true">Hello I am...</div>
+                    <div class="txt_line watch">Seoul AM09:45</div>
                 </div>
-                <div class="txt_grey hello" aria-hidden="true">Hello I am...</div>
-                <div class="txt_line wisesaying" aria-hidden="true"><p>
-                    The only thing worse than starting something and failing... is not starting something
-                </p></div>
-                <div class="txt_line watch"></div>
                 <div class="txt_hire">
                     <div class="move_cycle" aria-hidden="ture">Click! Click! Click! Click!</div>
                     <button type="button">Just Hire Now</button>
@@ -288,6 +291,8 @@
         </div>
         <button type="button" class="bnt_close_modal last"><img src="images/main/btn_close_black.svg" alt="대화상자 닫기"></button>
     </div>
+
+    <!-- Contact Me 모달 -->
 
     <!-- 프로젝트 모달 -->
 </body>

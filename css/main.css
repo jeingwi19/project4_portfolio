@@ -1,0 +1,35 @@
+.fixed_bg {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: -1;
+  left: 50%; }
+  .fixed_bg .bg_line {
+    width: 1280px;
+    height: 608px;
+    border: 1px solid #424242; }
+    .fixed_bg .bg_line .box {
+      float: left;
+      width: 318px;
+      height: 606px; }
+    .fixed_bg .bg_line .box + .box {
+      border-left: 1px solid #424242; }
+    .fixed_bg .bg_line .wisesaying {
+      display: block;
+      font-size: 88px;
+      font-weight: 700;
+      white-space: nowrap;
+      line-height: 74px; }
+    .fixed_bg .bg_line .hello {
+      top: 80px; }
+
+#scrollCnt {
+  display: none; }
+
+#modalIntro {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

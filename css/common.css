@@ -103,6 +103,16 @@ header, nav, section, footer {
   line-height: 40px;
   background: url("../images/main/btn_more_black.svg") no-repeat center; }
 
+.txt_grey {
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  font-weight: 700; }
+
+.txt_line {
+  text-shadow: -1px -1px 0 #595959, 1px -1px 0 #595959, -1px 1px 0 #595959, 1px 1px 0 #595959;
+  color: #333333; }
+
 body {
   background: #333;
   font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";
@@ -152,7 +162,8 @@ body {
     top: 0; }
 
 #pcHeader {
-  position: relative; }
+  position: relative;
+  /* .menu에 .active 추가 */ }
   #pcHeader .logo {
     top: 28px;
     left: 0;
@@ -171,8 +182,7 @@ body {
     width: 40px;
     height: 40px;
     overflow: hidden;
-    z-index: 900;
-    background: orange; }
+    z-index: 1100; }
     #pcHeader .menu, #pcHeader .menu .line {
       position: absolute; }
     #pcHeader .menu .btn_open {
@@ -184,5 +194,36 @@ body {
         left: 0;
         width: 40px;
         height: 40px; }
+    #pcHeader .menu .line {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      width: 100%;
+      height: 2px;
+      background: #e5e5e5;
+      left: 0; }
+    #pcHeader .menu .top {
+      top: 12px; }
+    #pcHeader .menu .btm {
+      top: 26px; }
+    #pcHeader .menu.active .line {
+      background: #e5e5e5; }
+    #pcHeader .menu.active .top {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 20px; }
+    #pcHeader .menu.active .btm {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 20px; }
+  #pcHeader #gnb {
+    display: none; }
 
 /*# sourceMappingURL=common.css.map */
