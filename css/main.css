@@ -6,7 +6,8 @@
   transform: translateX(-50%);
   position: fixed;
   z-index: -1;
-  left: 50%; }
+  left: 50%;
+  top: 80px; }
   .fixed_bg .bg_line {
     width: 1280px;
     height: 608px;
@@ -23,6 +24,24 @@
       font-weight: 700;
       white-space: nowrap;
       line-height: 74px;
+      -webkit-animation-name: flowtxt;
+      -webkit-animation-duration: 30s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: flowtxt;
+      -moz-animation-duration: 30s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: flowtxt;
+      -o-animation-duration: 30s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
       animation-name: flowtxt;
       animation-duration: 30s;
       animation-timing-function: linear;
@@ -103,6 +122,24 @@
         top: 50%;
         z-index: -1; }
       .fixed_bg .bg_line .txt_hire .moveround {
+        -webkit-animation-name: movr;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: movr;
+        -moz-animation-duration: 8s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: movr;
+        -o-animation-duration: 8s;
+        -o-animation-timing-function: linear;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: backwards;
         animation-name: movr;
         animation-duration: 8s;
         animation-timing-function: linear;
@@ -191,7 +228,7 @@
 #scrollCnt {
   position: relative;
   left: 184px;
-  top: 76px;
+  top: 156px;
   width: 770px; }
   #scrollCnt .section {
     width: 100%; }
@@ -199,21 +236,31 @@
     display: inline-block; }
   #scrollCnt #cnt1 .tit_txt {
     /* background: red; */ }
-    #scrollCnt #cnt1 .tit_txt strong {
-      font-family: NtSansKR;
-      font-size: 40px;
-      line-height: 88px; }
-      #scrollCnt #cnt1 .tit_txt strong :nth-child(2) {
-        margin-left: 160px; }
-      #scrollCnt #cnt1 .tit_txt strong button {
-        font-weight: 700;
-        margin-left: 20px; }
     #scrollCnt #cnt1 .tit_txt .imgicon {
       position: absolute;
       width: 200px;
       height: 200px;
-      background: no-repeat center; }
+      background: no-repeat center;
+      z-index: -1; }
     #scrollCnt #cnt1 .tit_txt .head {
+      -webkit-animation-name: head;
+      -webkit-animation-duration: 4s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: head;
+      -moz-animation-duration: 4s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: head;
+      -o-animation-duration: 4s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
       animation-name: head;
       animation-duration: 4s;
       animation-timing-function: ease;
@@ -231,9 +278,27 @@
   0% {
     transform: rotate(-4deg); } }
     #scrollCnt #cnt1 .tit_txt .thumsup {
+      -webkit-animation-name: thumbs;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: cubic-bezier(0.83, -0.03, 0, 1.21);
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: thumbs;
+      -moz-animation-duration: 2s;
+      -moz-animation-timing-function: cubic-bezier(0.83, -0.03, 0, 1.21);
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: thumbs;
+      -o-animation-duration: 2s;
+      -o-animation-timing-function: cubic-bezier(0.83, -0.03, 0, 1.21);
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
       animation-name: thumbs;
       animation-duration: 2s;
-      animation-timing-function: ease;
+      animation-timing-function: cubic-bezier(0.83, -0.03, 0, 1.21);
       animation-delay: 0s;
       animation-iteration-count: infinite;
       animation-fill-mode: backwards;
@@ -244,9 +309,512 @@
   100% {
     transform: scale(0.9); }
   50% {
-    transform: scale(1.2); }
+    transform: scale(1.2) rotate(-16deg); }
   0% {
     transform: scale(0.9); } }
+    #scrollCnt #cnt1 .tit_txt .talkbox {
+      -webkit-animation-name: talkmov;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: talkmov;
+      -moz-animation-duration: 2s;
+      -moz-animation-timing-function: ease-in-out;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: talkmov;
+      -o-animation-duration: 2s;
+      -o-animation-timing-function: ease-in-out;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: talkmov;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      background-image: url("../images/main/emoji_talk.png");
+      top: 12px;
+      right: 100px; }
+@keyframes talkmov {
+  100% {
+    transform: rotate(0deg) scale(0.8); }
+  68% {
+    transform: rotate(4deg) scale(0.8); }
+  54% {
+    transform: rotate(-4deg) scale(0.8); }
+  46% {
+    transform: rotate(4deg) scale(0.8); }
+  38% {
+    transform: rotate(-4deg) scale(0.8); }
+  0% {
+    transform: rotate(0deg) scale(0.8); } }
+    #scrollCnt #cnt1 .tit_txt .point {
+      -webkit-animation-name: pointmov;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: pointmov;
+      -moz-animation-duration: 2s;
+      -moz-animation-timing-function: ease-in-out;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: pointmov;
+      -o-animation-duration: 2s;
+      -o-animation-timing-function: ease-in-out;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: pointmov;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      background-image: url("../images/main/emoji_pointing.png");
+      top: 120px;
+      right: 320px; }
+@keyframes pointmov {
+  100% {
+    transform: translate(0) rotate(45deg) scale(0.8); }
+  30% {
+    transform: translate(-20px, -20px) rotate(45deg) scale(1); }
+  0% {
+    transform: translate(0) rotate(45deg) scale(0.8); } }
+    #scrollCnt #cnt1 .tit_txt strong {
+      font-family: NtSansKR;
+      font-size: 40px;
+      line-height: 88px; }
+      #scrollCnt #cnt1 .tit_txt strong :nth-child(2) {
+        margin-left: 160px; }
+      #scrollCnt #cnt1 .tit_txt strong button {
+        position: relative;
+        font-weight: 700;
+        margin-left: 20px; }
+      #scrollCnt #cnt1 .tit_txt strong button::before {
+        content: "";
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        width: 268px;
+        height: 4px;
+        background: #e5e5e5; }
+  #scrollCnt #cnt1 .deco {
+    margin-top: 160px;
+    margin-left: 110px; }
+    #scrollCnt #cnt1 .deco p {
+      font-weight: 700;
+      color: #595959;
+      font-size: 20px;
+      line-height: 24px; }
+    #scrollCnt #cnt1 .deco .arrow {
+      -webkit-animation-name: arrowmov;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: arrowmov;
+      -moz-animation-duration: 2s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: arrowmov;
+      -o-animation-duration: 2s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: arrowmov;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background: url("../images/main/arrow_down_70x100.svg") no-repeat center;
+      width: 70px;
+      height: 100px;
+      position: absolute;
+      top: 300px;
+      left: 0; }
+@keyframes arrowmov {
+  100% {
+    transform: translateY(52px); }
+  50% {
+    transform: translateY(60px); }
+  0% {
+    transform: translateY(-40px); } }
+    #scrollCnt #cnt1 .deco .mouse {
+      position: absolute;
+      top: 252px;
+      right: 220px;
+      background: url("../images/main/emoji_mouse.png") no-repeat center;
+      width: 200px;
+      height: 200px; }
+  #scrollCnt #cnt2 span, #scrollCnt #cnt2 strong, #scrollCnt #cnt2 a {
+    display: inline-block; }
+  #scrollCnt #cnt2 .project {
+    position: relative;
+    width: 770px;
+    height: 520px;
+    color: #333333; }
+    #scrollCnt #cnt2 .project + .project {
+      margin-top: 100px; }
+    #scrollCnt #cnt2 .project > ul li {
+      float: left; }
+    #scrollCnt #cnt2 .project > ul li:first-child a, #scrollCnt #cnt2 .project ul li:first-child + li {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    #scrollCnt #cnt2 .project > ul li + li {
+      margin-left: 40px;
+      opacity: 0; }
+    #scrollCnt #cnt2 .project ul li a {
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      position: relative;
+      height: 520px;
+      width: 330px;
+      background: #e5e5e5; }
+      #scrollCnt #cnt2 .project ul li a .txt_area {
+        width: 250px;
+        height: 384px;
+        margin-top: 60px;
+        margin-left: 40px; }
+        #scrollCnt #cnt2 .project ul li a .txt_area .tit {
+          width: 100%;
+          height: 90px; }
+          #scrollCnt #cnt2 .project ul li a .txt_area .tit span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px; }
+          #scrollCnt #cnt2 .project ul li a .txt_area .tit strong {
+            margin-top: 20px;
+            font-size: 32px; }
+        #scrollCnt #cnt2 .project ul li a .txt_area .period {
+          width: 100%;
+          height: 34px;
+          margin-top: 260px; }
+          #scrollCnt #cnt2 .project ul li a .txt_area .period span {
+            font-weight: 700; }
+          #scrollCnt #cnt2 .project ul li a .txt_area .period .tit_date {
+            position: absolute;
+            display: block; }
+          #scrollCnt #cnt2 .project ul li a .txt_area .period .tit_date::before {
+            content: "";
+            position: absolute;
+            background: #333333;
+            width: 220px;
+            height: 2px;
+            top: -20px;
+            left: 0; }
+          #scrollCnt #cnt2 .project ul li a .txt_area .period .data {
+            margin-top: 20px; }
+            #scrollCnt #cnt2 .project ul li a .txt_area .period .data :last-child {
+              margin-left: 28px;
+              position: absolute; }
+            #scrollCnt #cnt2 .project ul li a .txt_area .period .data :last-child::before {
+              content: "";
+              position: absolute;
+              background: #333333;
+              width: 12px;
+              height: 2px;
+              top: 6px;
+              left: -20px; }
+        #scrollCnt #cnt2 .project ul li a .txt_area .btn_more {
+          position: absolute;
+          right: 20px;
+          bottom: 20px; }
+    #scrollCnt #cnt2 .project .explan_kor {
+      color: #e5e5e5;
+      width: 330px;
+      height: 520px;
+      font-family: NtSansKR;
+      /* background: red; */ }
+      #scrollCnt #cnt2 .project .explan_kor span, #scrollCnt #cnt2 .project .explan_kor strong {
+        display: block; }
+      #scrollCnt #cnt2 .project .explan_kor span, #scrollCnt #cnt2 .project .explan_kor p {
+        font-size: 12px; }
+      #scrollCnt #cnt2 .project .explan_kor span {
+        padding-top: 60px; }
+      #scrollCnt #cnt2 .project .explan_kor strong {
+        font-size: 40px;
+        margin-top: 8px; }
+      #scrollCnt #cnt2 .project .explan_kor p {
+        line-height: 22px;
+        margin-top: 24px; }
+    #scrollCnt #cnt2 .project > ul li a .bg_img::before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: no-repeat center;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0; }
+    #scrollCnt #cnt2 .project:nth-child(1) ul li a .bg_img::before {
+      background-image: url("../images/main/project_bg1.jpg"); }
+    #scrollCnt #cnt2 .project:nth-child(2) ul li a .bg_img::before {
+      background-color: yellowgreen; }
+    #scrollCnt #cnt2 .project:nth-child(3) ul li a .bg_img::before {
+      background-color: coral; }
+    #scrollCnt #cnt2 .project > ul .pj_card:first-child:hover a, #scrollCnt #cnt2 .project > ul .pj_card:first-child a:focus {
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      transform: translateY(-20px);
+      box-shadow: 10px 60px 80px 0 rgba(0, 0, 0, 0.5); }
+    #scrollCnt #cnt2 .project ul .pj_card:hover + li, #scrollCnt #cnt2 .project .pj_card a:focus {
+      opacity: 1; }
+    #scrollCnt #cnt2 .project ul .pj_card:hover a > .bg_img::before, #scrollCnt #cnt2 .project ul .pj_card a:focus > .bg_img::before {
+      opacity: 1; }
+  #scrollCnt #cnt2 .project li:nth-child(2) > ul li {
+    float: right; }
+  #scrollCnt #cnt2 #pj1 {
+    margin-top: 240px; }
+  #scrollCnt #cnt2 .even ul li {
+    float: right; }
+    #scrollCnt #cnt2 .even ul li .explan_kor {
+      margin-right: 40px; }
+  #scrollCnt #cnt3 .direct {
+    margin-top: 264px;
+    width: 770px;
+    height: 140px;
+    margin-bottom: 120px; }
+    #scrollCnt #cnt3 .direct .tit_txt {
+      position: relative; }
+      #scrollCnt #cnt3 .direct .tit_txt strong {
+        font-size: 40px;
+        font-family: NtSansKR; }
+        #scrollCnt #cnt3 .direct .tit_txt strong :last-child {
+          margin-left: 160px; }
+        #scrollCnt #cnt3 .direct .tit_txt strong .imgicon {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background: no-repeat center;
+          z-index: -1; }
+        #scrollCnt #cnt3 .direct .tit_txt strong .head {
+          background-image: url("../images/main/emoji_head.png");
+          top: -80px;
+          left: 160px;
+          z-index: 0;
+          cursor: pointer; }
+          #scrollCnt #cnt3 .direct .tit_txt strong .head .me {
+            -webkit-box-shadow: 10px 20px 40px 0 rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 10px 20px 40px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 20px 40px 0 rgba(0, 0, 0, 0.5);
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            border-radius: 16px;
+            opacity: 0;
+            position: absolute;
+            top: -8px;
+            left: -100px;
+            font-weight: 400;
+            font-size: 12px;
+            width: 80px;
+            height: 40px;
+            background: #e5e5e5;
+            padding: 14px;
+            text-align: center;
+            color: #333333; }
+            #scrollCnt #cnt3 .direct .tit_txt strong .head .me::before {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              left: calc(50% - 8px);
+              bottom: -8px;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-top: 8px solid #e5e5e5; }
+            #scrollCnt #cnt3 .direct .tit_txt strong .head .me a {
+              margin-left: -12px;
+              padding: 12px 22px 20px; }
+        #scrollCnt #cnt3 .direct .tit_txt strong .head:hover .me, #scrollCnt #cnt3 .direct .tit_txt strong .head:focus .me {
+          opacity: 1; }
+    #scrollCnt #cnt3 .direct .btn {
+      width: 380px;
+      height: 48px;
+      margin-top: 72px; }
+      #scrollCnt #cnt3 .direct .btn button {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        border-radius: 16px;
+        width: 180px;
+        height: 100%;
+        font-size: 22px;
+        font-weight: 700; }
+      #scrollCnt #cnt3 .direct .btn .contact {
+        background: #4c4882; }
+      #scrollCnt #cnt3 .direct .btn .top {
+        border: 1px solid #595959;
+        color: #595959;
+        margin-left: 14px; }
+      #scrollCnt #cnt3 .direct .btn .contact:hover, #scrollCnt #cnt3 .direct .btn .contact:focus {
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px);
+        -o-transform: translateY(-4px);
+        -ms-transform: translateY(-4px);
+        transform: translateY(-4px);
+        box-shadow: 10px 20px 40px 0 rgba(0, 0, 0, 0.5);
+        background: #5c4aca; }
+      #scrollCnt #cnt3 .direct .btn .top:hover, #scrollCnt #cnt3 .direct .btn .top:focus {
+        color: #e5e5e5;
+        border-color: #e5e5e5; }
+  #scrollCnt #cnt3 .deco {
+    position: relative;
+    width: 770px;
+    height: 160px;
+    margin-bottom: 400px; }
+    #scrollCnt #cnt3 .deco .arrowup {
+      -webkit-animation-name: arrowup;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: arrowup;
+      -moz-animation-duration: 2s;
+      -moz-animation-timing-function: ease-in-out;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: arrowup;
+      -o-animation-duration: 2s;
+      -o-animation-timing-function: ease-in-out;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: arrowup;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      position: absolute;
+      background: url("../images/main/arrow_down_70x100.svg") no-repeat center;
+      width: 70px;
+      height: 100px; }
+@keyframes arrowup {
+  100% {
+    transform: translateY(-52px) rotate(180deg); }
+  50% {
+    transform: translateY(-60px) rotate(180deg); }
+  0% {
+    transform: translateY(20px) rotate(180deg); } }
+    #scrollCnt #cnt3 .deco .arrow1 {
+      top: -400px;
+      left: 0; }
+    #scrollCnt #cnt3 .deco .arrow2 {
+      top: 0;
+      left: 320px; }
+    #scrollCnt #cnt3 .deco .txt_grey {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px; }
+    #scrollCnt #cnt3 .deco .imgicon {
+      position: absolute;
+      background: no-repeat center;
+      width: 200px;
+      height: 200px; }
+    #scrollCnt #cnt3 .deco .sun {
+      -webkit-animation-name: sunmov;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: sunmov;
+      -moz-animation-duration: 3s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: sunmov;
+      -o-animation-duration: 3s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: sunmov;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/emoji_sun.png");
+      top: -500px;
+      right: -40px; }
+@keyframes sunmov {
+  100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  0% {
+    transform: scale(1); } }
+    #scrollCnt #cnt3 .deco .moon {
+      -webkit-animation-name: moonmov;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: moonmov;
+      -moz-animation-duration: 3s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: moonmov;
+      -o-animation-duration: 3s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: moonmov;
+      animation-duration: 3s;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/emoji_moon.png");
+      top: -160px;
+      right: 80px; }
+@keyframes moonmov {
+  100% {
+    transform: rotate(-24deg); }
+  40% {
+    transform: rotate(8deg); }
+  0% {
+    transform: rotate(-24deg); } }
+  #scrollCnt #footer {
+    position: fixed; }
+
 #modalIntro {
   display: none; }
 
