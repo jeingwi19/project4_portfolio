@@ -22,13 +22,19 @@
       @include animation(flowtxt, 30s, linear, 0s, infinite, backwards);
     }
     .hello{top: 80px;}
-    .watch{bottom: 0;font-size: 88px;font-weight: 700;line-height: 52px;}
+    .now{
+      width: 1200px;bottom: -8px;font-size: 88px;font-weight: 700;line-height: 68px;z-index: -1;left: 0;
+      div{display: inline;}
+    }
     .human_area{
       width: 428px;height: 606px;
-      .human{position: absolute;left: -40px;top: 104px;}
+      .human{
+        position: absolute;left: -40px;top: 104px;
+        img{position: fixed;}
+      }
       .human_talk{
         @include border-radius(20px);
-        position: absolute;right: 60px;top: 40px;background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);
+        position: fixed;left: 240px;top: 40px;background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);
         &::before{
           @include translateX-50;
           content: "";position: absolute;width: 0;height: 0;bottom: -40px;left: 50%;
@@ -36,6 +42,10 @@
         }
         .talkguide{
           width: 106px;height: 182px;margin-top: 24px;margin-left: 24px;color: $black;font-size: 12px;line-height: 22px;/* background: pink; */
+        }
+        .talk2{
+          display: none;
+          span{display: inline-block;font-size: 40px;line-height: 40px;margin-top: 12px;}
         }
       }
     }
@@ -289,7 +299,7 @@
       }
     }
     .deco{
-      position: relative;width: 770px;height: 160px;margin-bottom: 400px;
+      position: relative;width: 770px;height: 160px;margin-bottom: 140px;
       .arrowup{
         @include keyframe(arrowup){
           100%{
@@ -336,9 +346,21 @@
     }
   }
   
-  #footer{
-    position: fixed;
+  .ft_cnt{
     
+    #footer{
+      .footer_area{
+        width: 100%;height: 160px;font-weight: 700;
+        div{float: left;}
+        .footer_left .fixed_info{
+          position: fixed;top: 760px;left: 312px;width: 400px;
+          strong{display: inline-block;margin-bottom: 24px;}
+          strong::before{content: "";position: absolute;background: url('../images/main/shape_8star_purple.svg')no-repeat center;width: 210px;height: 210px;top: -40px;left: -105px;z-index: -1;}
+          ul li{margin-bottom: 12px;}
+        }
+        .footer_right{margin-bottom: 340px;color: #595959;}
+      }
+    }
   }
 }
 
