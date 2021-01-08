@@ -295,12 +295,12 @@
     </div>
 
     <!-- #dim은 스크립트에 동적 생성 -->
-    <div id="dim"></div><!-- 나중에 삭제하기 -->
+    <div id="dim"></div>
     <!-- Profile 모달 -->
     <div id="modalIntro" class="modal_cnt wid1280" role="dialog" aria-modal="true" aria-labelledby="introMe">
         <h4 class="blind-b" id="introMe">박정은 상세 소개</h4>
         <div class="modal_flat white">
-            <div>About Me</div>
+            <strong>About Me</strong>
             <ul class="detail_list">
                 <li class="list profile">
                     <strong>Profile</strong>
@@ -373,7 +373,44 @@
     </div>
 
     <!-- Contact Me 모달 -->
+    <div id="modalContact" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="contactMe">
+      <h4 id="contactMe">Contact Me</h4>
+      <div class="modal_flat transp">
+        <form action="index.html" method="post" id="mailArea" class="mailarea">
+          <table>
+            <caption>메일 문의 입력 항목 2가지</caption>
+            <colgroup>
+              <col class="w0">
+              <col class="w580">
+            </colgroup>
+            <tr>
+              <th id="uEmailAd" scope="row">
+                <label for="umail">
+                  <span class="blind-b">이메일 보내시는 주소</span>
+                </label>
+              </th>
+              <td headers="umailAd">
+                <input type="text" style="ime-mode:disabled;" id="umail" class="umail" name="umail" placeholder="Your Email" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
+              </td>
+            </tr>
+            <tr>
+              <th id="mailCnt">
+                <label for="umailCnt">
+                  <span class="blind-b">이메일 문의 내용 입력란</span>
+                </label>
+              </th>
+              <td headers="mailCnt" class="m_cnt">
+                <textarea name="umailCnt" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message." maxlength="300"></textarea>
+              </td>
+            </tr>
+          </table>
+          <div class="btn">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+      <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
+    </div>
 
-    <!-- 프로젝트 모달 -->
 </body>
 </html>

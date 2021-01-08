@@ -850,12 +850,108 @@
         left: -105px;
         z-index: -1; }
       #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li {
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -o-transition: width 0.3s;
+        transition: width 0.3s;
+        position: relative;
         margin-bottom: 12px; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a {
+          display: inline-block; }
+      #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li:hover a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #e5e5e5;
+        top: 12px;
+        left: 0; }
     #scrollCnt .ft_cnt #footer .footer_area .footer_right {
       margin-bottom: 340px;
       color: #595959; }
 
+#dim, #modalContact {
+  position: fixed;
+  z-index: 1200;
+  /* visibility: hidden; */ }
+
+#dim {
+  /* display: none; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
 #modalIntro {
   display: none; }
+
+#modalContact {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  top: calc(50% - 260px);
+  left: calc(50% - 350px);
+  width: 700px;
+  height: 520px;
+  padding-top: 64px;
+  padding-left: 60px;
+  background: #534ac9; }
+  #modalContact #contactMe {
+    font-size: 40px;
+    margin-bottom: 88px; }
+  #modalContact input::placeholder {
+    color: #e5e5e5; }
+  #modalContact input[type="text"] {
+    background: transparent;
+    color: #e5e5e5;
+    width: 552px; }
+  #modalContact input[type="text"], #modalContact textarea {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px; }
+  #modalContact textarea {
+    color: #333333;
+    background: #e5e5e5;
+    resize: none; }
+  #modalContact textarea::-webkit-scrollbar {
+    width: 12px;
+    background: #ccc;
+    height: 156px; }
+  #modalContact textarea::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #534ac9; }
+  #modalContact input[type="submit"] {
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    color: #333333;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 15px 16px;
+    width: 80px;
+    height: 40px;
+    background: #e5e5e5;
+    margin-top: 24px;
+    cursor: pointer; }
+  #modalContact #umail {
+    padding: 4px 0;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 20px; }
+  #modalContact #umailCnt {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 552px;
+    height: 160px;
+    padding: 12px 16px; }
+  #modalContact .btn_close_modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px; }
 
 /*# sourceMappingURL=main.css.map */

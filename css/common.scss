@@ -54,14 +54,16 @@
 }
 
 //tag reset
-body, h1, h2, h3, h4, h5, h6, p, ul, button, form, input{margin: 0;padding: 0;}
+body, h1, h2, h3, h4, h5, h6, p, th, td, ul, button, form, input{margin: 0;padding: 0;}
 h1{font-size: 100%;}
 ul{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 button{border: none;background: none;cursor: pointer;}
-input, button{font-family: inherit;font-size: inherit;color: inherit;line-height: inherit;}
+input, button, textarea{font-family: inherit;font-size: inherit;color: inherit;line-height: inherit;border: none;}
 img{vertical-align: top;border: none;}
 img, figure{max-width: 100%;}
+/* table{border-style: 0;border-collapse: collapse;} */
+caption{width: 1px;height: 1px;overflow: hidden;border: none;margin: -1px;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 header, nav, section, footer{display: block;}
 
 //common class

@@ -107,3 +107,13 @@
     -moz-box-shadow: $value;
     box-shadow: $value;
 }
+
+@mixin scrollbar($value) {
+    -webkit-scrollbar: $value;
+    scrollbar: $value;
+}
+
+@mixin scrollbar-thumb($value) {
+    -webkit-scrollbar-thumb: $value;
+    scrollbar-thumb: $value;
+}

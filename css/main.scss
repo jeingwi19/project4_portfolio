@@ -356,7 +356,12 @@
           position: fixed;top: 760px;left: 312px;width: 400px;
           strong{display: inline-block;margin-bottom: 24px;}
           strong::before{content: "";position: absolute;background: url('../images/main/shape_8star_purple.svg')no-repeat center;width: 210px;height: 210px;top: -40px;left: -105px;z-index: -1;}
-          ul li{margin-bottom: 12px;}
+          ul li{
+            @include transition(width 0.3s);
+            position: relative;margin-bottom: 12px;
+            a{display: inline-block;}
+          }
+          ul li:hover a::before{content: "";position: absolute;width: 100%;height: 2px;background: $white;top: 12px;left: 0;}
         }
         .footer_right{margin-bottom: 340px;color: #595959;}
       }
@@ -364,7 +369,35 @@
   }
 }
 
+#dim, #modalContact{position: fixed;z-index: 1200;/* visibility: hidden; */}
+#dim{/* display: none; */top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+
 #modalIntro{display: none;}
+
+#modalContact{
+  @include border-radius(20px);
+  top: calc(50% - 260px);left: calc(50% - 350px);width: 700px;height: 520px;padding-top: 64px;padding-left: 60px;background: $purple;
+  #contactMe{font-size: 40px;margin-bottom: 88px;}
+  input::placeholder{color: $white;}
+  input[type="text"]{background: transparent;color: $white;width: 552px;}
+  input[type="text"],textarea{font-weight: 700;font-size: 16px;line-height: 24px;}
+  textarea{color: $black;background: $white;resize: none;}
+  textarea::-webkit-scrollbar{width: 12px;background: #ccc; height: 156px}
+  textarea::-webkit-scrollbar-thumb{
+    @include border-radius(6px);
+    background-color: $purple;
+  }
+  input[type="submit"]{
+    @include border-radius(16px);
+    color: $black;font-weight: 700;font-size: 12px;padding: 15px 16px;width: 80px;height: 40px;background: $white;margin-top: 24px;cursor: pointer;
+  }
+  #umail{padding: 4px 0;border-bottom: 2px solid $white;margin-bottom: 20px;}
+  #umailCnt{
+    @include border-radius(20px);
+    width: 552px;height: 160px;padding: 12px 16px;
+  }
+  .btn_close_modal{position: absolute;top: 20px;right: 20px;width: 40px;height: 40px;}
+}
 
 @media screen and (max-width: 320px){
   

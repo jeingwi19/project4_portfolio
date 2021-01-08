@@ -29,7 +29,7 @@
   font-style: normal;
   src: url("../fonts/Syncopate-Bold.eot");
   src: url("../fonts/Syncopate-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/Syncopate-Bold.woff2") format("woff2"), url("../fonts/Syncopate-Bold.woff") format("woff"), url("../fonts/Syncopate-Bold.otf") format("opentype"); }
-body, h1, h2, h3, h4, h5, h6, p, ul, button, form, input {
+body, h1, h2, h3, h4, h5, h6, p, th, td, ul, button, form, input {
   margin: 0;
   padding: 0; }
 
@@ -48,11 +48,12 @@ button {
   background: none;
   cursor: pointer; }
 
-input, button {
+input, button, textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  line-height: inherit; }
+  line-height: inherit;
+  border: none; }
 
 img {
   vertical-align: top;
@@ -60,6 +61,16 @@ img {
 
 img, figure {
   max-width: 100%; }
+
+/* table{border-style: 0;border-collapse: collapse;} */
+caption {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: none;
+  margin: -1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
 
 header, nav, section, footer {
   display: block; }
