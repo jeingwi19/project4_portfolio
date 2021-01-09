@@ -12,6 +12,37 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script type="text/javascript">
+      window.addEventListener('load', function(){
+        var digEle = document.getElementById('nowTime');
+        function clock(){
+          var now = new Date;
+          //console.log(now);
+          var capital = now.get
+          var h = now.getHours();
+          var m = now.getMinutes();
+
+          var ampm = h < 12? 'AM' : 'PM';
+          //console.log(ampm);
+
+          h %= 12;
+          h = h? h:12;
+          //console.log(h);
+
+          if(h < 10)h = '0' + h
+          if(m < 10)m = '0' + m
+          //console.log(h, m);
+
+          var result = 'Time is ' + ampm + h + ':' + m
+          //console.log(result);
+
+          nowTime.innerHTML = result;
+        }
+        clock();
+
+        var timer = setInterval(clock, 1000);
+      });
+    </script>
 </head>
 <body>
     <div id="skip">
@@ -62,12 +93,27 @@
                     <div class="txt_line wisesaying p_a" aria-hidden="true"><p>The only thing worse than starting something and failing... is not starting something</p><p>The only thing worse than starting something and failing... is not starting something</p>
                     </div>
                     <div class="txt_grey hello p_a" aria-hidden="true">Hello I am...</div>
-                    <div class="txt_line watch p_a">Seoul AM09:45</div>
+                    <div class="txt_line now p_a" id="nowTime">
+                      <div id="capital"></div>
+                      <div id="clock"></div>
+                    </div>
                     <div class="human_area p_a">
-                        <div class="human"><img src="images/main/character1.webp" alt=""></div>
-                        <div class="human_talk">
+                        <div class="human">
+                          <img src="images/main/rotate_img/hum0.webp" alt="">
+                        </div>
+                        <div class="human_talk talk1">
                             <div class="talkguide">
-                                <div class="talk1">안녕하세요! <br>박정은의 포트폴리오 사이트 입니다. <br><br> 현재 페이지에서 스크롤을 내려주시면 포트폴리오 볼 수 있습니다.</div>
+                                <p>안녕하세요! <br>박정은의 포트폴리오 사이트입니다. 🧡💜<br><br> 현재 페이지에서 스크롤을 내려주시면 포트폴리오 볼 수 있습니다.</p>
+                            </div>
+                            <div class="human_talk talk2">
+                              <div class="talkguide">
+                                <p>오른쪽 프로젝트 카드를 클릭하시면, 프로젝트의 자세한 내용을 볼 수 있어요.<span>😏👉</span></p>
+                              </div>
+                            </div>
+                            <div class="human_talk talk3">
+                              <div class="talkguide">
+                                <p>포트폴리오를 끝까지 봐주셔서 감사합니다! <br><br>오른쪽 &apos;연결하기&apos; 버튼을 누르시면, 현재 페이지에서 이메일 전송이 가능합니다. 💌</p>
+                              </div>
                             </div>
                         </div>
                     </div>
@@ -87,14 +133,15 @@
             <section class="section" id="cnt1">
                 <h2 class="blind-b">박정은 소개</h2>
                 <div class="tit_txt">
-                    <strong><span>if( </span><span>=== 박정은 ) </span><br>궁금하다면? <button type="button">박정은 바로가기</button></strong>
                     <div class="imgicon head"></div>
                     <div class="imgicon thumsup"></div>
-                    <div class="imgicon point"></div>
                     <div class="imgicon talkbox"></div>
+                    <div class="imgicon point"></div>
+                    <strong><span>if( </span><span>=== 박정은 ) </span><br>궁금하다면? <button type="button">박정은 바로가기</button></strong>
                 </div>
                 <div class="deco">
-                    <p>SCROLL DOWN</p>
+                    <p>SCROLL DOWN &amp;</p>
+                    <p>Watching Projects</p>
                     <div class="arrow"></div>
                     <div class="imgicon mouse"></div>
                 </div>
@@ -105,89 +152,121 @@
                 <ul>
                     <li class="project" id="pj1">
                         <h3 class="blind-b">반응형 웹 프로젝트 금강제화</h3>
-                        <button tpye="button">
-                            <span class="bg_img"></span>
-                            <span class="tit">
-                                <span>Responsive Web Project</span>
-                                <strong>Kumkang</strong>
-                            </span>
-                            <span class="period">
-                                <span>Period</span>
-                                <span class="data" aria-hidden="true">
-                                    <span>2020.11.16</span>
-                                    <span>12.11</span>
-                                </span>
-                            </span>
-                            <span class="btn_more"></span>
-                        </button>
-                        <div class="explan_kor">
-                            <span>반응형 웹 프로젝트</span>
-                            <strong>금강제화</strong>
-                            <p>기존 브랜드 사이트를 리서치와 분석을 통해 <br>웹 이용자의 다양한 해상도를 생각한 반응형 <br>웹 인덱스 페이지를 구현해보았습니다.</p>
-                        </div>
+                        <ul>
+                          <li class="pj_card">
+                            <a href="">
+                              <span class="bg_img"></span>
+                              <span class="txt_area">
+                                <span class="tit">
+                                  <span>Responsive Web <br>Project</span>
+                                  <strong>Kumkang</strong>
+                              </span>
+                              <span class="period">
+                                  <span class="tit_date">Period</span>
+                                  <span class="data" aria-hidden="true">
+                                      <span>2020.11.16</span>
+                                      <span>12.11</span>
+                                  </span>
+                              </span>
+                              <span class="btn_more"></span>
+                              </span>
+                            </a>
+                          </li>
+                          <li class="txt_opacity">
+                            <div class="explan_kor">
+                              <span>반응형 웹 프로젝트</span>
+                              <strong>금강제화</strong>
+                              <p>기존 브랜드 사이트를 리서치와 분석을 통해 <br>웹 이용자의 다양한 해상도를 생각한 반응형 <br>웹 인덱스 페이지를 구현해보았습니다.</p>
+                          </div>
+                          </li>
+                        </ul>
                     </li>
-                    <li class="project" id="pj2">
+                    <li class="project even" id="pj2">
                         <h3 class="blind-b">모바일 웹 프로젝트 더숲</h3>
-                        <button tpye="button">
-                            <span class="bg_img"></span>
-                            <span class="tit">
-                                <span>Mobile Web Project</span>
-                                <strong>The Soop</strong>
-                            </span>
-                            <span class="period">
-                                <span>Period</span>
-                                <span class="data" aria-hidden="true">
-                                    <span>2020.10.19</span>
-                                    <span>11.12</span>
-                                </span>
-                            </span>
-                            <span class="btn_more"></span>
-                        </button>
-                        <div class="explan_kor">
-                            <span>모바일 웹 프로젝트</span>
-                            <strong>더숲</strong>
-                            <p>브랜드 심볼을 리뉴얼하고, 캐릭터 디자인을 추가하여 <br>언택트 사용자를 위한 서점 문화플랫폼 <br>모바일 버전 웹 사이트를 제작해보았습니다.</p>
-                        </div>
+                        <ul>
+                          <li class="pj_card">
+                            <a href="">
+                              <span class="bg_img"></span>
+                              <span class="txt_area">
+                                <span class="tit">
+                                  <span>Mobile Web <br>Project</span>
+                                  <strong>The Soop</strong>
+                              </span>
+                              <span class="period">
+                                  <span class="tit_date">Period</span>
+                                  <span class="data" aria-hidden="true">
+                                      <span>2020.10.19</span>
+                                      <span>11.12</span>
+                                  </span>
+                              </span>
+                              <span class="btn_more"></span>
+                              </span>
+                          </a>
+                          </li>
+                          <li class="txt_opacity">
+                            <div class="explan_kor">
+                              <span>모바일 웹 프로젝트</span>
+                              <strong>더숲</strong>
+                              <p>브랜드 심볼을 리뉴얼하고, 캐릭터 디자인을 추가하여 <br>언택트 사용자를 위한 서점 문화플랫폼 <br>모바일 버전 웹 사이트를 제작해보았습니다.</p>
+                          </div>
+                          </li>
+                        </ul>
                     </li>
                     <li class="project" id="pj3">
                         <h3 class="blind-b">PC 웹 프로젝트 파파이스</h3>
-                        <button tpye="button">
-                            <span class="bg_img"></span>
-                            <span class="tit">
-                                <span>PC Web Project</span>
-                                <strong>Popeyes</strong>
-                            </span>
-                            <span class="period">
-                                <span>Period</span>
-                                <span class="data" aria-hidden="true">
-                                    <span>2020.08.18</span>
-                                    <span>10.09</span>
-                                </span>
-                            </span>
-                            <span class="btn_more"></span>
-                        </button>
-                        <div class="explan_kor">
-                            <span>PC 웹 프로젝트</span>
-                            <strong>파파이스</strong>
-                            <p>사이트 이용자의 접근성 문제 분석을 중심으로 <br>웹 이용자 타겟을 조사하여 팀 프로젝트를 <br>진행하였습니다.</p>
-                        </div>
+                        <ul>
+                          <li class="pj_card">
+                            <a href="">
+                              <span class="bg_img"></span>
+                              <span class="txt_area">
+                                <span class="tit">
+                                  <span>PC Web <br>Project</span>
+                                  <strong>Popeyes</strong>
+                              </span>
+                              <span class="period">
+                                  <span class="tit_date">Period</span>
+                                  <span class="data" aria-hidden="true">
+                                      <span>2020.08.18</span>
+                                      <span>10.09</span>
+                                  </span>
+                              </span>
+                              <span class="btn_more"></span>
+                              </span>
+                          </a>
+                          </li>
+                          <li class="txt_opacity">
+                            <div class="explan_kor">
+                              <span>PC 웹 프로젝트</span>
+                              <strong>파파이스</strong>
+                              <p>사이트 이용자의 접근성 문제 분석을 중심으로 <br>웹 이용자 타겟을 조사하여 팀 프로젝트를 <br>진행하였습니다.</p>
+                          </div>
+                          </li>
+                        </ul>
                     </li>
                 </ul>
             </section>
 
             <section class="section" id="cnt3">
-                <h2 class="blind-b">연락 가능 정보 안내</h2>
-                <div class="tit_txt">
-                    <strong>지금 바로     만나 보세요!</strong>
-                </div>
-                <div class="btn">
-                    <button type="button" class="contact">연결하기</button>
-                    <button type="button" class="top">처음으로</button>
+                <h2 class="blind-b">연락 가능한 정보 안내</h2>
+                <div class="direct">
+                  <div class="tit_txt">
+                      <strong>
+                        <span>지금 바로</span>
+                        <a class="imgicon head">
+                          <span class="me">박정은</span>
+                        </a>
+                        <span>을 만나 보세요!</span>
+                      </strong>
+                  </div>
+                  <div class="btn">
+                      <button type="button" class="contact">연결하기</button>
+                      <button type="button" class="top">처음으로</button>
+                  </div>
                 </div>
                 <div class="deco">
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
-                    <div class="txt_grey">Thanks For Watching !</div>
+                    <div class="arrowup arrow1"></div>
+                    <div class="arrowup arrow2"></div>
+                    <div class="txt_grey">Thanks <br>For Watching !</div>
                     <div class="imgicon sun"></div>
                     <div class="imgicon moon"></div>
                 </div>
@@ -195,7 +274,7 @@
 
             <div class="section ft_cnt">
                 <footer id="footer">
-                    <div class="wid1280">
+                    <div class="wid1280 footer_area">
                         <div class="footer_left">
                             <div class="fixed_info">
                                 <strong>Contact Me</strong>
@@ -206,7 +285,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="footer_mid">
+                        <div class="footer_right">
                             <p>COPYRIGHT 2021 Jeong-eun ALL RIGHT RESERVED.</p>
                         </div>
                     </divc>
@@ -216,12 +295,12 @@
     </div>
 
     <!-- #dim은 스크립트에 동적 생성 -->
-    <div id="dim"></div><!-- 나중에 삭제하기 -->
+    <div id="dim"></div>
     <!-- Profile 모달 -->
     <div id="modalIntro" class="modal_cnt wid1280" role="dialog" aria-modal="true" aria-labelledby="introMe">
         <h4 class="blind-b" id="introMe">박정은 상세 소개</h4>
         <div class="modal_flat white">
-            <div>About Me</div>
+            <strong>About Me</strong>
             <ul class="detail_list">
                 <li class="list profile">
                     <strong>Profile</strong>
@@ -294,7 +373,44 @@
     </div>
 
     <!-- Contact Me 모달 -->
+    <div id="modalContact" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="contactMe">
+      <h4 id="contactMe">Contact Me</h4>
+      <div class="modal_flat transp">
+        <form action="index.html" method="post" id="mailArea" class="mailarea">
+          <table>
+            <caption>메일 문의 입력 항목 2가지</caption>
+            <colgroup>
+              <col class="w0">
+              <col class="w580">
+            </colgroup>
+            <tr>
+              <th id="uEmailAd" scope="row">
+                <label for="umail">
+                  <span class="blind-b">이메일 보내시는 주소</span>
+                </label>
+              </th>
+              <td headers="umailAd">
+                <input type="text" style="ime-mode:disabled;" id="umail" class="umail" name="umail" placeholder="Your Email" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
+              </td>
+            </tr>
+            <tr>
+              <th id="mailCnt">
+                <label for="umailCnt">
+                  <span class="blind-b">이메일 문의 내용 입력란</span>
+                </label>
+              </th>
+              <td headers="mailCnt" class="m_cnt">
+                <textarea name="umailCnt" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message." maxlength="300"></textarea>
+              </td>
+            </tr>
+          </table>
+          <div class="btn">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+      <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
+    </div>
 
-    <!-- 프로젝트 모달 -->
 </body>
 </html>

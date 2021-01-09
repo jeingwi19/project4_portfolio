@@ -29,7 +29,7 @@
   font-style: normal;
   src: url("../fonts/Syncopate-Bold.eot");
   src: url("../fonts/Syncopate-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/Syncopate-Bold.woff2") format("woff2"), url("../fonts/Syncopate-Bold.woff") format("woff"), url("../fonts/Syncopate-Bold.otf") format("opentype"); }
-body, h1, h2, h3, h4, h5, h6, p, ul, button, form, input {
+body, h1, h2, h3, h4, h5, h6, p, th, td, ul, button, form, input {
   margin: 0;
   padding: 0; }
 
@@ -48,11 +48,12 @@ button {
   background: none;
   cursor: pointer; }
 
-input, button {
+input, button, textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  line-height: inherit; }
+  line-height: inherit;
+  border: none; }
 
 img {
   vertical-align: top;
@@ -60,6 +61,16 @@ img {
 
 img, figure {
   max-width: 100%; }
+
+/* table{border-style: 0;border-collapse: collapse;} */
+caption {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: none;
+  margin: -1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
 
 header, nav, section, footer {
   display: block; }
@@ -152,9 +163,14 @@ body {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
   height: 80px;
   z-index: 1000; }
@@ -162,7 +178,7 @@ body {
     top: 0; }
 
 #pcHeader {
-  position: relative;
+  /* position: relative; */
   /* .menu에 .active 추가 */ }
   #pcHeader .logo {
     top: 28px;

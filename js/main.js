@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   /* 텍스트 둥글게 만들기 */
   var _typing = $('.move_cycle p');
   var rotateDeg = 8; //회전하려는 각도
@@ -26,4 +27,35 @@ $(document).ready(function(){
   _typing.children().each(function (index) { //0*6은 0도, 1*6은 6도, 2*6은 12도...
     $(this).css('transform', 'rotate('+ index*rotateDeg + 'deg)');
   });
+
+
+
+
+  /* 스크롤시에 이미지 변환 */
+  var windowHei = $(window).height();
+  var stickyTop = $('.human_area').offset().top;
+  //console.log(windowHei, stickyTop);
+  $('.human_area').css('height', windowHei);
+
+  var total = 59;
+  var turn = 500;
+  var imgTag = '';
+  /* for(var i=1; i<=total; i++){
+    imgTag += '<img src="images/main/rotate_img/hum'+ i + '.webp" alt="">';
+  } */
+  //console.log(imgTag);
+  //$('.human').append(imgTag);
+
+  $(window).on('scroll', function(){
+    var scrollY = $(this).scrollTop();
+    var imgnum = parseInt(scrollY/(turn / (total + 1)));//parseInt()소수점제거
+    imgnum %= 60;
+    console.log(scrollY);
+    //console.log(imgnum);
+
+    $('.human img').attr('src', 'images/main/rotate_img/hum'+ imgnum + '.webp');
+  });
+
+
+  /*  */
 });
