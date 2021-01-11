@@ -88,17 +88,14 @@ $(document).ready(function(){
 
     _btnlist.on('click', function(){
 
-      if(_btnlist.hasClass('active')){ //열기
-        _btnlist.next('ul').stop().animate({top: '100%'}, 300, function(){
-          _btnlist.addClass('active').next('ul').css({display: 'block'}).stop().slideDown();
-        });
-      }else{ //닫기
-        _btnlist.next('ul').css({display: 'none'}).stop().animate({top: 0}, 300, function() {
-          _btnlist.removeClass('acitve').next('ul').css('display');
-        });
-
+      if(!_btnlist.hasClass('active')){ //닫겨진 경우
+        _btnlist.addClass('active').next('ul').stop().slideDown('fast');
+      }else{ //열린경우 닫기
+        _btnlist.removeClass('active').next('ul').stop().slideUp('fast');
       }
     });
+
+    
   });
 
 
