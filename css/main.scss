@@ -9,6 +9,7 @@
     width: 1280px;height: 608px;border: 1px solid #424242;
     .box{float: left;width: 318px;height: 606px;}
     .box + .box{border-left: 1px solid #424242;}
+    &:nth-child(1)::before{content: "";position: absolute;bottom: -250px;left: -105px;width: 210px;height: 210px;background: url('../images/main/shape_8star_purple.svg')no-repeat center;z-index: -1;}
 
     .wisesaying{
       display: block;font-size: 88px;font-weight: 700;white-space: nowrap;line-height: 74px;
@@ -163,9 +164,9 @@
         @include animation(pointmov, 2s, ease-in-out, 0s, infinite, backwards);
         background-image: url('../images/main/emoji_pointing.png');top: 120px;right: 320px;
       }
-      strong{
+      .intro_main_txt{
         :nth-child(2){margin-left: 160px;}
-        font-family: $korFont;font-size: 40px;line-height: 88px;
+        font-family: $korFont;font-size: 40px;line-height: 88px;font-weight: 700;
         button{position: relative;font-weight: 700;margin-left: 20px;}
         button::before{content: "";position: absolute;bottom: 12px;left: 0;width: 268px;height: 4px;background: $white;}
       }
@@ -257,7 +258,7 @@
 
   #cnt3{
     .direct{
-      margin-top: 264px;width:770px;height: 140px;margin-bottom: 120px;
+      margin-top: 264px;width:770px;height: 160px;margin-bottom: 120px;
       .tit_txt{
         position: relative;
         strong{
@@ -265,7 +266,7 @@
           :last-child{margin-left: 160px;}
           .imgicon{position: absolute;width: 200px;height:200px;background: no-repeat center;z-index: -1;}
           .head{
-            background-image: url('../images/main/emoji_head.png');top: -80px;left: 160px;z-index: 0;cursor: pointer;
+            background-image: url('../images/main/emoji_head.png');top: -80px;left: 152px;z-index: 0;cursor: pointer;
             .me{
               @include box-shadow(10px 20px 40px 0 rgba(0, 0, 0, .5));
               @include border-radius(16px);
@@ -299,7 +300,7 @@
       }
     }
     .deco{
-      position: relative;width: 770px;height: 160px;margin-bottom: 140px;
+      position: relative;width: 770px;height: 160px;margin-bottom: 200px;
       .arrowup{
         @include keyframe(arrowup){
           100%{
@@ -347,36 +348,190 @@
   }
   
   .ft_cnt{
-    
+    position: relative;bottom: 80px;left: -440px;width: 1280px;height: 220px;
     #footer{
       .footer_area{
-        width: 100%;height: 160px;font-weight: 700;
-        div{float: left;}
-        .footer_left .fixed_info{
-          position: fixed;top: 760px;left: 312px;width: 400px;
-          strong{display: inline-block;margin-bottom: 24px;}
-          strong::before{content: "";position: absolute;background: url('../images/main/shape_8star_purple.svg')no-repeat center;width: 210px;height: 210px;top: -40px;left: -105px;z-index: -1;}
-          ul li{
-            @include transition(width 0.3s);
-            position: relative;margin-bottom: 12px;
-            a{display: inline-block;}
+        font-weight: 700;
+        div:nth-child(1){width: 400px;}
+        div{float: left;line-height: 24px;}
+        .footer_left{
+          position: fixed;width: 1280px;height: 140px;bottom: 0;left: calc(50% - 640px);color: $white;
+          strong, a{display: inline-block;}
+          strong{margin-bottom: 8px;}
+          .fixed_info ul li a{
+            position: relative;padding: 2px 8px 4px 0;
           }
-          ul li:hover a::before{content: "";position: absolute;width: 100%;height: 2px;background: $white;top: 12px;left: 0;}
+          .fixed_info ul li a::before{
+            @include transition(width 0.3s);
+            content: "";position: absolute;background: $white;width: 0;height: 2px;bottom: 6px;left: 0;
+          }
+          .fixed_info ul li:hover a::before{width: 100%;}
         }
-        .footer_right{margin-bottom: 340px;color: #595959;}
+        .footer_right{color: #595959;margin-left: 440px;}
       }
     }
   }
 }
 
-#dim, #modalContact{position: fixed;z-index: 1200;/* visibility: hidden; */}
-#dim{/* display: none; */top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+#dim, #modalContact, #modalIntro{position: fixed;z-index: 1200;/* visibility: hidden; */}
+#dim{
+  @include backdrop-filter(blur(100px));
+  /* display: none; */top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.5);
+}
 
-#modalIntro{display: none;}
+.modal_cnt{/* visibility: hidden; */}
+
+#modalIntro{
+  /* visibility: hidden; */
+  @include border-radius(20px);
+  top: calc(50% - 260px);left: calc(50% - 385px);width: 770px;height: 520px;background: #6d1dff;
+  .modal_flat{
+    position: relative;width: 100%;height: 340px;margin-left: 40px;margin-top: 100px;
+    strong, span{display: inline-block;}
+    > strong{position: absolute;width: 340px;}
+    strong > span{display: block;font-size: 40px;line-height: 40px;margin-bottom: 40px;}
+    .modal_info{
+      width: 330px;height: 580px;margin-left: 440px;color: $black;
+      .info{
+        @include border-radius(24px);
+        width: 100%;height: 180px;background: $white;
+        .li_tit{
+          @include border-radius(24px);
+          width: 100%;height: 60px;font-weight: 700;text-align: left;padding-left: 32px;background: $white;
+          span{width: 100%;position: relative;}
+          span::before{
+            @include transform(rotate(180deg));
+            content: "";position: absolute;right: 24px;top: -5px;width: 24px;height: 24px;background: url('../images/main/arrow_down16x16.svg')no-repeat center;}
+        }
+        ul{
+          font-family: $korFont;font-size: 12px;line-height: 16px;width: 270px;margin-left: 32px;
+          li{
+            margin-bottom: 8px;color: #595959;
+            :first-child{width: 48px;margin-right: 12px;}
+          }
+        }
+      }
+      .education{
+        margin-top: 20px;margin-bottom: 20px;
+        .align span{vertical-align: top;}
+      }
+      .skills .skill_list{
+        width: 100%;height: 40px;
+        span + span{width: 40px;height: 40px;margin-right: 4px;}
+        :last-child{margin-right: -6px;}
+        .icon{background: no-repeat center;}
+      }
+      .skills .publishing{
+        .pb1{background-image: url('../images/main/skillicon_html.svg');}
+        .pb2{background-image: url('../images/main/skillicon_css.svg');}
+        .pb3{background-image: url('../images/main/skillicon_sass.svg');}
+        .pb4{background-image: url('../images/main/skillicon_jquery.svg');}
+        .pb5{background-image: url('../images/main/skillicon_javascript.svg');}
+        .pb6{background-image: url('../images/main/skillicon_bootstrap.svg');}
+      }
+      .skills .design{
+        .ds1{background-image: url('../images/main/skillicon_photoshop.svg');}
+        .ds2{background-image: url('../images/main/skillicon_illust.svg');}
+        .ds3{background-image: url('../images/main/skillicon_xd.svg');}
+        .ds4{background-image: url('../images/main/skillicon_aftereffect.svg');}
+        .ds5{background-image: url('../images/main/skillicon_zeplin.svg');}
+        .ds6{background-image: url('../images/main/skillicon_blender3d.svg');}
+      }
+    }
+    
+  }
+  .iconbtn{
+    width: 60px;height: 140px;margin-top: -142px;
+    button{
+      @include border-radius(24px);
+      position: relative;width: 60px;height: 60px;margin-left: -30px;background: no-repeat center;background-color: #431f87;
+    }
+    button + button{margin-top: 20px;}
+    button::before{
+      @include transition(all 0.3s);
+      content: "";position: absolute;width: 60px;height: 60px;top: 0;left: 0;
+    }
+    .like::before{background-image: url('../images/main/icon_heart60x60.png');}
+    .chat::before{background-image: url('../images/main/icon_talk60x60.png');}
+  }
+  .like:hover::before, .like:focus::before{
+    @include keyframe(hoverheart){
+      100%{
+        transform: scale(1)
+      }50%{
+        transform: scale(1.8)
+      }0%{
+        transform: scale(1)
+      }
+    };
+    @include animation(hoverheart, 0.5s, ease, 0s, infinite, none);
+  }
+  .chat:hover::before, .chat:focus::before{
+    @include keyframe(hoverchat){
+      100%{
+        transform: rotate(0deg) scale(1)
+      }80%{
+        transform: rotate(10deg) scale(.9)
+      }20%{
+        transform: rotate(-10deg) scale(1.2)
+      }0%{
+        transform: rotate(0deg) scale(1)
+      }
+    }
+    @include animation(hoverchat, 0.5s, ease-in-out, 0s, infinite, none);
+  }
+
+  .bg_img{
+    width: 100%;height: 100%;top: 0;left: 0;z-index: -2;
+    .imgicon{position: absolute;background: no-repeat center;}
+    .character{
+      @include keyframe(charotate){
+        100%{
+          transform: scale(1) rotate(0deg)
+        }50%{
+          transform: scale(.9) rotate(360deg)
+        }0%{
+          transform: scale(1) rotate(0deg)
+        }
+      }
+      @include animation(charotate, 4200s, linear, 0s, infinite, none);
+      background-image: url('../images/main/modal_bg_cha.png');width: 420px;height: 720px;top: 0;left: 110px;
+    }
+    .canbg{
+      @include keyframe(canmov){
+        100%{
+          transform: scale(1) rotate(0deg)
+        }50%{
+          transform: scale(.9) rotate(-360deg)
+        }0%{
+          transform: scale(1) rotate(0deg) 
+        }
+      }
+      width: 200px;height: 260px;
+    }
+    .can1{
+      @include animation(canmov, 500s, linear, 0s, infinite, none);
+      background-image: url('../images/main/modal_can1_200x260.png');top: 100px;left: -100px;
+    }
+    .can2{
+      @include animation(canmov, 300s, linear, 1s, infinite, none);
+      background-image: url('../images/main/modal_can2_200x260.png');top: -40px;right: 200px;
+    }
+    .can3{
+      @include animation(canmov, 600s, ease, 2s, infinite, none);
+      background-image: url('../images/main/modal_can3_200x260.png');bottom: -20px;left: 80px;
+    }
+  }
+
+  .btn_close_modal{position: absolute;top: 20px;right: 20px;width: 40px;height: 40px;}
+}
 
 #modalContact{
+  visibility: hidden;
+  @include backdrop-filter(blur(100px));
+  @include box-shadow(0 0 6rem 0 rgba(0, 0, 0, .5));
   @include border-radius(20px);
-  top: calc(50% - 260px);left: calc(50% - 350px);width: 700px;height: 520px;padding-top: 64px;padding-left: 60px;background: $purple;
+  top: calc(50% - 260px);left: calc(50% - 350px);width: 700px;height: 520px;padding-top: 64px;padding-left: 60px;overflow: hidden;background-color: rgba(255, 255, 255, .03);
   #contactMe{font-size: 40px;margin-bottom: 88px;}
   input::placeholder{color: $white;}
   input[type="text"]{background: transparent;color: $white;width: 552px;}
@@ -385,7 +540,7 @@
   textarea::-webkit-scrollbar{width: 12px;background: #ccc; height: 156px}
   textarea::-webkit-scrollbar-thumb{
     @include border-radius(6px);
-    background-color: $purple;
+    background-color: $orange;
   }
   input[type="submit"]{
     @include border-radius(16px);

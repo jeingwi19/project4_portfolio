@@ -117,3 +117,8 @@
     -webkit-scrollbar-thumb: $value;
     scrollbar-thumb: $value;
 }
+
+@mixin backdrop-filter($value) {
+    -webkit-backdrop-filter: $value;
+    backdrop-filter: $value;
+}

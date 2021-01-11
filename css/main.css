@@ -18,6 +18,15 @@
       height: 606px; }
     .fixed_bg .bg_line .box + .box {
       border-left: 1px solid #424242; }
+    .fixed_bg .bg_line:nth-child(1)::before {
+      content: "";
+      position: absolute;
+      bottom: -250px;
+      left: -105px;
+      width: 210px;
+      height: 210px;
+      background: url("../images/main/shape_8star_purple.svg") no-repeat center;
+      z-index: -1; }
     .fixed_bg .bg_line .wisesaying {
       display: block;
       font-size: 88px;
@@ -402,17 +411,18 @@
     transform: translate(-20px, -20px) rotate(45deg) scale(1); }
   0% {
     transform: translate(0) rotate(45deg) scale(0.8); } }
-    #scrollCnt #cnt1 .tit_txt strong {
+    #scrollCnt #cnt1 .tit_txt .intro_main_txt {
       font-family: NtSansKR;
       font-size: 40px;
-      line-height: 88px; }
-      #scrollCnt #cnt1 .tit_txt strong :nth-child(2) {
+      line-height: 88px;
+      font-weight: 700; }
+      #scrollCnt #cnt1 .tit_txt .intro_main_txt :nth-child(2) {
         margin-left: 160px; }
-      #scrollCnt #cnt1 .tit_txt strong button {
+      #scrollCnt #cnt1 .tit_txt .intro_main_txt button {
         position: relative;
         font-weight: 700;
         margin-left: 20px; }
-      #scrollCnt #cnt1 .tit_txt strong button::before {
+      #scrollCnt #cnt1 .tit_txt .intro_main_txt button::before {
         content: "";
         position: absolute;
         bottom: 12px;
@@ -612,7 +622,7 @@
   #scrollCnt #cnt3 .direct {
     margin-top: 264px;
     width: 770px;
-    height: 140px;
+    height: 160px;
     margin-bottom: 120px; }
     #scrollCnt #cnt3 .direct .tit_txt {
       position: relative; }
@@ -630,7 +640,7 @@
         #scrollCnt #cnt3 .direct .tit_txt strong .head {
           background-image: url("../images/main/emoji_head.png");
           top: -80px;
-          left: 160px;
+          left: 152px;
           z-index: 0;
           cursor: pointer; }
           #scrollCnt #cnt3 .direct .tit_txt strong .head .me {
@@ -704,7 +714,7 @@
     position: relative;
     width: 770px;
     height: 160px;
-    margin-bottom: 140px; }
+    margin-bottom: 200px; }
     #scrollCnt #cnt3 .deco .arrowup {
       -webkit-animation-name: arrowup;
       -webkit-animation-duration: 2s;
@@ -826,67 +836,436 @@
     transform: rotate(8deg); }
   0% {
     transform: rotate(-24deg); } }
-  #scrollCnt .ft_cnt #footer .footer_area {
-    width: 100%;
-    height: 160px;
-    font-weight: 700; }
-    #scrollCnt .ft_cnt #footer .footer_area div {
-      float: left; }
-    #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info {
-      position: fixed;
-      top: 760px;
-      left: 312px;
-      width: 400px; }
-      #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info strong {
-        display: inline-block;
-        margin-bottom: 24px; }
-      #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info strong::before {
-        content: "";
-        position: absolute;
-        background: url("../images/main/shape_8star_purple.svg") no-repeat center;
-        width: 210px;
-        height: 210px;
-        top: -40px;
-        left: -105px;
-        z-index: -1; }
-      #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li {
-        -webkit-transition: width 0.3s;
-        -moz-transition: width 0.3s;
-        -o-transition: width 0.3s;
-        transition: width 0.3s;
-        position: relative;
-        margin-bottom: 12px; }
-        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a {
+  #scrollCnt .ft_cnt {
+    position: relative;
+    bottom: 80px;
+    left: -440px;
+    width: 1280px;
+    height: 220px; }
+    #scrollCnt .ft_cnt #footer .footer_area {
+      font-weight: 700; }
+      #scrollCnt .ft_cnt #footer .footer_area div:nth-child(1) {
+        width: 400px; }
+      #scrollCnt .ft_cnt #footer .footer_area div {
+        float: left;
+        line-height: 24px; }
+      #scrollCnt .ft_cnt #footer .footer_area .footer_left {
+        position: fixed;
+        width: 1280px;
+        height: 140px;
+        bottom: 0;
+        left: calc(50% - 640px);
+        color: #e5e5e5; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left strong, #scrollCnt .ft_cnt #footer .footer_area .footer_left a {
           display: inline-block; }
-      #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li:hover a::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: #e5e5e5;
-        top: 12px;
-        left: 0; }
-    #scrollCnt .ft_cnt #footer .footer_area .footer_right {
-      margin-bottom: 340px;
-      color: #595959; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left strong {
+          margin-bottom: 8px; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a {
+          position: relative;
+          padding: 2px 8px 4px 0; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a::before {
+          -webkit-transition: width 0.3s;
+          -moz-transition: width 0.3s;
+          -o-transition: width 0.3s;
+          transition: width 0.3s;
+          content: "";
+          position: absolute;
+          background: #e5e5e5;
+          width: 0;
+          height: 2px;
+          bottom: 6px;
+          left: 0; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li:hover a::before {
+          width: 100%; }
+      #scrollCnt .ft_cnt #footer .footer_area .footer_right {
+        color: #595959;
+        margin-left: 440px; }
 
-#dim, #modalContact {
+#dim, #modalContact, #modalIntro {
   position: fixed;
   z-index: 1200;
   /* visibility: hidden; */ }
 
 #dim {
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
   /* display: none; */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.modal_cnt {
+  /* visibility: hidden; */ }
 
 #modalIntro {
-  display: none; }
+  /* visibility: hidden; */
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  top: calc(50% - 260px);
+  left: calc(50% - 385px);
+  width: 770px;
+  height: 520px;
+  background: #6d1dff; }
+  #modalIntro .modal_flat {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    margin-left: 40px;
+    margin-top: 100px; }
+    #modalIntro .modal_flat strong, #modalIntro .modal_flat span {
+      display: inline-block; }
+    #modalIntro .modal_flat > strong {
+      position: absolute;
+      width: 340px; }
+    #modalIntro .modal_flat strong > span {
+      display: block;
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 40px; }
+    #modalIntro .modal_flat .modal_info {
+      width: 330px;
+      height: 580px;
+      margin-left: 440px;
+      color: #333333; }
+      #modalIntro .modal_flat .modal_info .info {
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        border-radius: 24px;
+        width: 100%;
+        height: 180px;
+        background: #e5e5e5; }
+        #modalIntro .modal_flat .modal_info .info .li_tit {
+          -webkit-border-radius: 24px;
+          -moz-border-radius: 24px;
+          border-radius: 24px;
+          width: 100%;
+          height: 60px;
+          font-weight: 700;
+          text-align: left;
+          padding-left: 32px;
+          background: #e5e5e5; }
+          #modalIntro .modal_flat .modal_info .info .li_tit span {
+            width: 100%;
+            position: relative; }
+          #modalIntro .modal_flat .modal_info .info .li_tit span::before {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            content: "";
+            position: absolute;
+            right: 24px;
+            top: -5px;
+            width: 24px;
+            height: 24px;
+            background: url("../images/main/arrow_down16x16.svg") no-repeat center; }
+        #modalIntro .modal_flat .modal_info .info ul {
+          font-family: NtSansKR;
+          font-size: 12px;
+          line-height: 16px;
+          width: 270px;
+          margin-left: 32px; }
+          #modalIntro .modal_flat .modal_info .info ul li {
+            margin-bottom: 8px;
+            color: #595959; }
+            #modalIntro .modal_flat .modal_info .info ul li :first-child {
+              width: 48px;
+              margin-right: 12px; }
+      #modalIntro .modal_flat .modal_info .education {
+        margin-top: 20px;
+        margin-bottom: 20px; }
+        #modalIntro .modal_flat .modal_info .education .align span {
+          vertical-align: top; }
+      #modalIntro .modal_flat .modal_info .skills .skill_list {
+        width: 100%;
+        height: 40px; }
+        #modalIntro .modal_flat .modal_info .skills .skill_list span + span {
+          width: 40px;
+          height: 40px;
+          margin-right: 4px; }
+        #modalIntro .modal_flat .modal_info .skills .skill_list :last-child {
+          margin-right: -6px; }
+        #modalIntro .modal_flat .modal_info .skills .skill_list .icon {
+          background: no-repeat center; }
+      #modalIntro .modal_flat .modal_info .skills .publishing .pb1 {
+        background-image: url("../images/main/skillicon_html.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .publishing .pb2 {
+        background-image: url("../images/main/skillicon_css.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .publishing .pb3 {
+        background-image: url("../images/main/skillicon_sass.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .publishing .pb4 {
+        background-image: url("../images/main/skillicon_jquery.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .publishing .pb5 {
+        background-image: url("../images/main/skillicon_javascript.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .publishing .pb6 {
+        background-image: url("../images/main/skillicon_bootstrap.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .design .ds1 {
+        background-image: url("../images/main/skillicon_photoshop.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .design .ds2 {
+        background-image: url("../images/main/skillicon_illust.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .design .ds3 {
+        background-image: url("../images/main/skillicon_xd.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .design .ds4 {
+        background-image: url("../images/main/skillicon_aftereffect.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .design .ds5 {
+        background-image: url("../images/main/skillicon_zeplin.svg"); }
+      #modalIntro .modal_flat .modal_info .skills .design .ds6 {
+        background-image: url("../images/main/skillicon_blender3d.svg"); }
+  #modalIntro .iconbtn {
+    width: 60px;
+    height: 140px;
+    margin-top: -142px; }
+    #modalIntro .iconbtn button {
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      border-radius: 24px;
+      position: relative;
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+      background: no-repeat center;
+      background-color: #431f87; }
+    #modalIntro .iconbtn button + button {
+      margin-top: 20px; }
+    #modalIntro .iconbtn button::before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 0;
+      left: 0; }
+    #modalIntro .iconbtn .like::before {
+      background-image: url("../images/main/icon_heart60x60.png"); }
+    #modalIntro .iconbtn .chat::before {
+      background-image: url("../images/main/icon_talk60x60.png"); }
+  #modalIntro .like:hover::before, #modalIntro .like:focus::before {
+    -webkit-animation-name: hoverheart;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: none;
+    -moz-animation-name: hoverheart;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: none;
+    -o-animation-name: hoverheart;
+    -o-animation-duration: 0.5s;
+    -o-animation-timing-function: ease;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: none;
+    animation-name: hoverheart;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none; }
+@keyframes hoverheart {
+  100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.8); }
+  0% {
+    transform: scale(1); } }
+  #modalIntro .chat:hover::before, #modalIntro .chat:focus::before {
+    -webkit-animation-name: hoverchat;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: none;
+    -moz-animation-name: hoverchat;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: none;
+    -o-animation-name: hoverchat;
+    -o-animation-duration: 0.5s;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: none;
+    animation-name: hoverchat;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none; }
+@keyframes hoverchat {
+  100% {
+    transform: rotate(0deg) scale(1); }
+  80% {
+    transform: rotate(10deg) scale(0.9); }
+  20% {
+    transform: rotate(-10deg) scale(1.2); }
+  0% {
+    transform: rotate(0deg) scale(1); } }
+  #modalIntro .bg_img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2; }
+    #modalIntro .bg_img .imgicon {
+      position: absolute;
+      background: no-repeat center; }
+    #modalIntro .bg_img .character {
+      -webkit-animation-name: charotate;
+      -webkit-animation-duration: 4200s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: charotate;
+      -moz-animation-duration: 4200s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: charotate;
+      -o-animation-duration: 4200s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: charotate;
+      animation-duration: 4200s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_bg_cha.png");
+      width: 420px;
+      height: 720px;
+      top: 0;
+      left: 110px; }
+@keyframes charotate {
+  100% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(0.9) rotate(360deg); }
+  0% {
+    transform: scale(1) rotate(0deg); } }
+    #modalIntro .bg_img .canbg {
+      width: 200px;
+      height: 260px; }
+@keyframes canmov {
+  100% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(0.9) rotate(-360deg); }
+  0% {
+    transform: scale(1) rotate(0deg); } }
+    #modalIntro .bg_img .can1 {
+      -webkit-animation-name: canmov;
+      -webkit-animation-duration: 500s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: canmov;
+      -moz-animation-duration: 500s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: canmov;
+      -o-animation-duration: 500s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: canmov;
+      animation-duration: 500s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_can1_200x260.png");
+      top: 100px;
+      left: -100px; }
+    #modalIntro .bg_img .can2 {
+      -webkit-animation-name: canmov;
+      -webkit-animation-duration: 300s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 1s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: canmov;
+      -moz-animation-duration: 300s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 1s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: canmov;
+      -o-animation-duration: 300s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 1s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: canmov;
+      animation-duration: 300s;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_can2_200x260.png");
+      top: -40px;
+      right: 200px; }
+    #modalIntro .bg_img .can3 {
+      -webkit-animation-name: canmov;
+      -webkit-animation-duration: 600s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: canmov;
+      -moz-animation-duration: 600s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: canmov;
+      -o-animation-duration: 600s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 2s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: canmov;
+      animation-duration: 600s;
+      animation-timing-function: ease;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_can3_200x260.png");
+      bottom: -20px;
+      left: 80px; }
+  #modalIntro .btn_close_modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px; }
 
 #modalContact {
+  visibility: hidden;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  -webkit-box-shadow: 0 0 6rem 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 6rem 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6rem 0 rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -896,7 +1275,8 @@
   height: 520px;
   padding-top: 64px;
   padding-left: 60px;
-  background: #534ac9; }
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.03); }
   #modalContact #contactMe {
     font-size: 40px;
     margin-bottom: 88px; }
@@ -922,7 +1302,7 @@
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
-    background-color: #534ac9; }
+    background-color: #ff6f30; }
   #modalContact input[type="submit"] {
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
