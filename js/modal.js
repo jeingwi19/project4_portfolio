@@ -83,12 +83,20 @@ $(document).ready(function(){
 
 
     /* 모달창 - 리스트메뉴 열기 클릭 */
-    var _btnlist = $('#modalIntro .myinfo');
-    _btnlist.find('ul > li > button').on('click', function(){
-      if($(this).hasClass('active')){ //열기
-        _btnlist.stop().animate({height: '100%'}, 300, function(){
-          $(this).addClass('active').css({display: 'block'}).stop().slideDown();
+    var _btnlist = $('.li_tit');//button태그 클래스명
+    _btnlist.next('ul').hide();
+
+    _btnlist.on('click', function(){
+
+      if(_btnlist.hasClass('active')){ //열기
+        _btnlist.next('ul').stop().animate({top: '100%'}, 300, function(){
+          _btnlist.addClass('active').next('ul').css({display: 'block'}).stop().slideDown();
         });
+      }else{ //닫기
+        _btnlist.next('ul').css({display: 'none'}).stop().animate({top: 0}, 300, function() {
+          _btnlist.removeClass('acitve').next('ul').css('display');
+        });
+
       }
     });
   });

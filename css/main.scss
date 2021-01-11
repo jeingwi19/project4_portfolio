@@ -236,7 +236,7 @@
         @include border-radius(20px);
         content: "";position: absolute;top: 0;left: 0;background: no-repeat center;width: 100%;height: 100%;z-index: -1;opacity: 0;
       }
-      &:nth-child(1) ul li a .bg_img::before{background-image: url('../images/main/project_bg1.jpg');}
+      &:nth-child(1) ul li a .bg_img::before{/* background-image: url('../images/main/project_bg1.jpg'); */background-color: rgb(216, 76, 76);}
       &:nth-child(2) ul li a .bg_img::before{background-color: yellowgreen;}
       &:nth-child(3) ul li a .bg_img::before{background-color: coral;}
 
@@ -244,7 +244,8 @@
         @include transform(translateY(-20px));
         box-shadow: 10px 60px 80px 0 rgba(0, 0, 0, .5);
       }
-      ul .pj_card:hover + li, .pj_card a:focus{opacity: 1;}//??????포커스?
+      ul .pj_card:hover + li{opacity: 1;}
+      /* .pj_card a:focus, .explan_kor{opacity: 1;} *///??????포커스?
       ul .pj_card:hover a>.bg_img::before, ul .pj_card a:focus>.bg_img::before{opacity: 1;}
 
     }
@@ -394,10 +395,10 @@
       width: 330px;height: 580px;margin-left: 440px;color: $black;
       .info{
         @include border-radius(24px);
-        width: 100%;height: 60px;/* background: $white; */
+        width: 100%;height: 60px;background: $white;
         .li_tit{
           @include border-radius(24px);
-          width: 100%;height: 60px;font-weight: 700;text-align: left;padding-left: 32px;background: $white;
+          width: 100%;height: 60px;font-weight: 700;text-align: left;padding-left: 32px;/* background: $white; */
           span{width: 100%;position: relative;}
           span::before{
             @include transform(rotate(0deg));
@@ -413,7 +414,7 @@
         }
           
         ul{
-          display: none;font-family: $korFont;font-size: 12px;line-height: 16px;width: 100%;padding-left: 32px;
+          /* display: none; */font-family: $korFont;font-size: 12px;line-height: 16px;width: 100%;padding-left: 32px;
           li{
             margin-bottom: 8px;color: #595959;width: 270px;
             :first-child{width: 48px;margin-right: 12px;}
@@ -450,13 +451,13 @@
     
   }
   .iconbtn{
-    width: 60px;height: 140px;margin-top: -142px;bottom: 100px;left: -30px;
-    button{
+    width: 60px;height: 140px;margin-top: -142px;bottom: 80px;left: -30px;
+    button, a{
       @include border-radius(24px);
       position: absolute;width: 60px;height: 60px;background: no-repeat center;background-color: #431f87;
     }
-    button + button{top: 80px;}
-    button::before{
+    button + a{top: 80px;}
+    button::before, a::before{
       @include transition(all 0.3s);
       content: "";position: absolute;width: 60px;height: 60px;top: 0;left: 0;
     }

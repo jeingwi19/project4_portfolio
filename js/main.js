@@ -57,8 +57,20 @@ $(document).ready(function(){
   });
 
 
+  /* 프로젝트 섹션 카드에 강제 포커스() */
+  $('.pj_card a').on({
+    'focus': function(){
+      $(this).parent().next().stop().animate({opacity: 1});
+    },
+    'blur': function(){
+      $(this).parent().next().stop().animate({opacity: 0});
+    }
+  });
+  
+
   /* 스크롤 되었을때 처음으로 (top)기능 버튼 이벤트 */
   $('#btnTop').on('click', function(){
     $('html, body').stop().animate({scrollTop: 0});
+    $(this).focus();
   });
 });

@@ -143,7 +143,7 @@ body {
   position: absolute;
   top: 0;
   left: -9999px;
-  z-index: 1000; }
+  z-index: 1400; }
   #skip a:focus {
     left: 0;
     width: 100%;
@@ -226,20 +226,80 @@ body {
     #pcHeader .menu.active .line {
       background: #e5e5e5; }
     #pcHeader .menu.active .top {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      transform: rotate(225deg);
       top: 20px; }
     #pcHeader .menu.active .btm {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+      -webkit-transform: rotate(-225deg);
+      -moz-transform: rotate(-225deg);
+      -o-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+      transform: rotate(-225deg);
       top: 20px; }
   #pcHeader #gnb {
-    display: none; }
+    /* display: none; */
+    opacity: 0; }
+    #pcHeader #gnb > ul {
+      position: relative;
+      width: 820px;
+      height: 80px;
+      margin-left: 348px;
+      padding-top: 32px; }
+      #pcHeader #gnb > ul > li > a {
+        font-size: 20px;
+        font-weight: 700;
+        color: #595959; }
+      #pcHeader #gnb > ul > li {
+        margin-right: 60px; }
+      #pcHeader #gnb > ul li {
+        float: left; }
+    #pcHeader #gnb ul li ul {
+      position: absolute;
+      font-family: NtSansKR;
+      font-weight: 400;
+      /* display: none; */ }
+    #pcHeader #gnb > ul > li > a {
+      position: relative; }
+    #pcHeader #gnb > ul > li > a::before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #e5e5e5; }
+    #pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before {
+      width: 100%;
+      color: #e5e5e5; }
+    #pcHeader #gnb ul li ul li {
+      margin-top: 48px;
+      margin-right: 60px; }
+    #pcHeader #gnb ul li ul li a {
+      position: relative;
+      color: #595959; }
+    #pcHeader #gnb ul li ul li a::before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #e5e5e5; }
+    #pcHeader #gnb ul li ul li:hover a, #pcHeader #gnb ul li ul li a:focus, #pcHeader #gnb ul li ul li:hover a::before, #pcHeader #gnb ul li ul li a:focus::before {
+      width: 100%;
+      color: #e5e5e5; }
+    #pcHeader #gnb ul li ul li a span {
+      margin-left: 8px; }
 
 /*# sourceMappingURL=common.css.map */
