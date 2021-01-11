@@ -50,19 +50,22 @@ $(document).ready(function(){
         }, 100);
     });
 
+    /* #gnb에 ul li ul li클릭하면 스크롤이동하고 포커싱 */
     $('.pj_1').on('click', function(){
         $('html, body').stop().animate({scrollTop: 660});
-        $('#pj1 .pj_card').hover();
+        $('#pj1 .pj_card a').focus();
         return false;
     });
 
     $('.pj_2').on('click', function(){
         $('html, body').stop().animate({scrollTop: 1280});
+        $('#pj2 .pj_card a').focus();
         return false;
     });
 
     $('.pj_3').on('click', function(){
         $('html, body').stop().animate({scrollTop: 1900});
+        $('#pj3 .pj_card a').focus();
         return false;
     });
 
