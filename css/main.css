@@ -894,13 +894,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .modal_cnt {
   /* visibility: hidden; */ }
 
 #modalIntro {
-  /* visibility: hidden; */
+  visibility: hidden;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -935,8 +935,8 @@
         -moz-border-radius: 24px;
         border-radius: 24px;
         width: 100%;
-        height: 180px;
-        background: #e5e5e5; }
+        height: 60px;
+        /* background: $white; */ }
         #modalIntro .modal_flat .modal_info .info .li_tit {
           -webkit-border-radius: 24px;
           -moz-border-radius: 24px;
@@ -951,11 +951,11 @@
             width: 100%;
             position: relative; }
           #modalIntro .modal_flat .modal_info .info .li_tit span::before {
-            -webkit-transform: rotate(180deg);
-            -moz-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
             content: "";
             position: absolute;
             right: 24px;
@@ -963,15 +963,33 @@
             width: 24px;
             height: 24px;
             background: url("../images/main/arrow_down16x16.svg") no-repeat center; }
+        #modalIntro .modal_flat .modal_info .info .li_tit.active {
+          -webkit-border-radius: 24px 24px 0 0;
+          -moz-border-radius: 24px 24px 0 0;
+          border-radius: 24px 24px 0 0; }
+          #modalIntro .modal_flat .modal_info .info .li_tit.active + ul {
+            -webkit-border-radius: 0 0 24px 24px;
+            -moz-border-radius: 0 0 24px 24px;
+            border-radius: 0 0 24px 24px;
+            height: 120px;
+            background: #e5e5e5; }
+          #modalIntro .modal_flat .modal_info .info .li_tit.active span::before {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
         #modalIntro .modal_flat .modal_info .info ul {
+          display: none;
           font-family: NtSansKR;
           font-size: 12px;
           line-height: 16px;
-          width: 270px;
-          margin-left: 32px; }
+          width: 100%;
+          padding-left: 32px; }
           #modalIntro .modal_flat .modal_info .info ul li {
             margin-bottom: 8px;
-            color: #595959; }
+            color: #595959;
+            width: 270px; }
             #modalIntro .modal_flat .modal_info .info ul li :first-child {
               width: 48px;
               margin-right: 12px; }
@@ -1018,19 +1036,20 @@
   #modalIntro .iconbtn {
     width: 60px;
     height: 140px;
-    margin-top: -142px; }
+    margin-top: -142px;
+    bottom: 100px;
+    left: -30px; }
     #modalIntro .iconbtn button {
       -webkit-border-radius: 24px;
       -moz-border-radius: 24px;
       border-radius: 24px;
-      position: relative;
+      position: absolute;
       width: 60px;
       height: 60px;
-      margin-left: -30px;
       background: no-repeat center;
       background-color: #431f87; }
     #modalIntro .iconbtn button + button {
-      margin-top: 20px; }
+      top: 80px; }
     #modalIntro .iconbtn button::before {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;

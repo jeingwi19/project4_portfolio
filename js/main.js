@@ -50,12 +50,15 @@ $(document).ready(function(){
     var scrollY = $(this).scrollTop();
     var imgnum = parseInt(scrollY/(turn / (total + 1)));//parseInt()소수점제거
     imgnum %= 60;
-    console.log(scrollY);
+    //console.log(scrollY);
     //console.log(imgnum);
 
     $('.human img').attr('src', 'images/main/rotate_img/hum'+ imgnum + '.webp');
   });
 
 
-  /*  */
+  /* 스크롤 되었을때 처음으로 (top)기능 버튼 이벤트 */
+  $('#btnTop').on('click', function(){
+    $('html, body').stop().animate({scrollTop: 0});
+  });
 });

@@ -376,13 +376,13 @@
 #dim, #modalContact, #modalIntro{position: fixed;z-index: 1200;/* visibility: hidden; */}
 #dim{
   @include backdrop-filter(blur(100px));
-  /* display: none; */top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.5);
+  /* display: none; */top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);
 }
 
 .modal_cnt{/* visibility: hidden; */}
 
 #modalIntro{
-  /* visibility: hidden; */
+  visibility: hidden;
   @include border-radius(20px);
   top: calc(50% - 260px);left: calc(50% - 385px);width: 770px;height: 520px;background: #6d1dff;
   .modal_flat{
@@ -394,19 +394,28 @@
       width: 330px;height: 580px;margin-left: 440px;color: $black;
       .info{
         @include border-radius(24px);
-        width: 100%;height: 180px;background: $white;
+        width: 100%;height: 60px;/* background: $white; */
         .li_tit{
           @include border-radius(24px);
           width: 100%;height: 60px;font-weight: 700;text-align: left;padding-left: 32px;background: $white;
           span{width: 100%;position: relative;}
           span::before{
-            @include transform(rotate(180deg));
+            @include transform(rotate(0deg));
             content: "";position: absolute;right: 24px;top: -5px;width: 24px;height: 24px;background: url('../images/main/arrow_down16x16.svg')no-repeat center;}
         }
+        .li_tit.active{
+          @include border-radius(24px 24px 0 0);
+          + ul{
+            @include border-radius(0 0 24px 24px);
+            height: 120px;background: $white;
+          }
+          span::before{@include transform(rotate(180deg));}
+        }
+          
         ul{
-          font-family: $korFont;font-size: 12px;line-height: 16px;width: 270px;margin-left: 32px;
+          display: none;font-family: $korFont;font-size: 12px;line-height: 16px;width: 100%;padding-left: 32px;
           li{
-            margin-bottom: 8px;color: #595959;
+            margin-bottom: 8px;color: #595959;width: 270px;
             :first-child{width: 48px;margin-right: 12px;}
           }
         }
@@ -441,12 +450,12 @@
     
   }
   .iconbtn{
-    width: 60px;height: 140px;margin-top: -142px;
+    width: 60px;height: 140px;margin-top: -142px;bottom: 100px;left: -30px;
     button{
       @include border-radius(24px);
-      position: relative;width: 60px;height: 60px;margin-left: -30px;background: no-repeat center;background-color: #431f87;
+      position: absolute;width: 60px;height: 60px;background: no-repeat center;background-color: #431f87;
     }
-    button + button{margin-top: 20px;}
+    button + button{top: 80px;}
     button::before{
       @include transition(all 0.3s);
       content: "";position: absolute;width: 60px;height: 60px;top: 0;left: 0;

@@ -140,7 +140,7 @@
                     <div class="intro_main_txt">
                       <span>if( </span><span>=== 박정은 ) </span>
                       <br>궁금하다면?
-                      <button type="button" class="modal_direct" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자">박정은 바로가기</button>
+                      <button type="button" class="direct_btn" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자">박정은 바로가기</button>
                     </div>
                 </div>
                 <div class="deco">
@@ -264,7 +264,7 @@
                   </div>
                   <div class="btn">
                       <button type="button" class="contact" data-targetmodal="#modalContact" aria-haspopup="dialog" title="대화상자">연결하기</button>
-                      <button type="button" class="top">처음으로</button>
+                      <button type="button" class="top" id="btnTop">처음으로</button>
                   </div>
                 </div>
                 <div class="deco">
@@ -298,7 +298,7 @@
         </div>
 
         <!-- #dim은 스크립트에 동적 생성 -->
-        <div id="dim"></div>
+        <!-- <div id="dim"></div> -->
 
         <!-- Profile 모달 -->
         <div id="modalIntro" class="modal_cnt wid1280 p_r" role="dialog" aria-modal="true" aria-labelledby="introMe">
@@ -310,7 +310,7 @@
               </strong>
               <ul class="modal_info">
                 <li class="info profile">
-                  <button type="button" class="li_tit first">
+                  <button type="button" class="li_tit active first">
                     <span>Profile</span>
                   </button>
                   <ul>
@@ -437,7 +437,7 @@
                     </label>
                   </th>
                   <td headers="umailAd">
-                    <input type="text" style="ime-mode:disabled;" id="umail" class="umail" name="umail" placeholder="Your Email" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
+                    <input type="text" style="ime-mode:disabled;" id="umail" class="umail first" name="umail" placeholder="Your Email" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
                   </td>
                 </tr>
                 <tr>
