@@ -94,13 +94,13 @@ $(document).ready(function(){
         _btnlist.removeClass('active').find('ul').stop().slideUp('fast');
       }
 
-      _btnlist.find('button').on('click', function(){
+      /* _btnlist.find('button').on('click', function(){
         if($(this).next().size() === 0){
         }else{
           $(this).parent().siblings().removeClass('active').find('ul').stop().slideUp('fast');
           
         }
-      });
+      }); */
     });
 
   });
