@@ -2,12 +2,18 @@ $(document).ready(function(){
   /* 모달1 - 자기소개 */
   $('.direct_btn').on('click', function (){
     var _openBtn = $(this);
+    var mdCntTxt = $(this).data('targetmodal');
     var _mdCnt = $( $(this).data('targetmodal') );
     //console.log(_mdCnt, typeof _mdCnt);
     var _closeBtn = _mdCnt.find('.btn_close_modal');
     var _first = _mdCnt.find('.first');
     var _last = _mdCnt.find('.last');
     var timer = 0;
+
+    //1)캐릭터 회전을 위해 클래스명 .on 추가
+    if(mdCntTxt === '#modalIntro') {
+      _mdCnt.addClass('on');
+    }
 
     //2) 열려진 모달 말고 접근하지못하게 비활성화
     _mdCnt.siblings().attr({'aria-hidden': true, inert: true});
@@ -66,6 +72,11 @@ $(document).ready(function(){
       _mdCnt.css('visibility', 'hidden').siblings().removeAttr('aria-hidden inert');
       //다시 눌렀던 버튼으로 포커스 강제이동
       _openBtn.focus();
+
+      //캐릭터 클래스명 .on제거
+      if(mdCntTxt === '#modalIntro') {
+        _mdCnt.removeClass('on');
+      }
     });
 
     //#dim을 클릭하는 경우에도 모달창 닫기
@@ -83,24 +94,16 @@ $(document).ready(function(){
 
 
     /* 모달창 - 리스트메뉴 열기 클릭 */
-    var _btnlist = $('.info');//button태그 클래스명
+    var _btnlist = $('.info');//li태그 클래스명 active 추가or제거
     _btnlist.find('ul').hide();
 
-    _btnlist.on('click', function(){
-
-      if(!_btnlist.hasClass('active')){ //닫겨진 경우
-        _btnlist.addClass('active').find('ul').stop().slideDown('fast');
+    _btnlist.children('button').on('click', function(){
+      if(!$(this).parent().hasClass('active')){ //닫겨진 경우
+        $(this).next().stop().slideDown('fast').parent().addClass('active').siblings().removeClass('active').find('ul').stop().slideUp('fast');
       }else{ //열린경우 닫기
-        _btnlist.removeClass('active').find('ul').stop().slideUp('fast');
+        $(this).next().stop().slideUp('fast').parent().removeClass('active');
       }
 
-      /* _btnlist.find('button').on('click', function(){
-        if($(this).next().size() === 0){
-        }else{
-          $(this).parent().siblings().removeClass('active').find('ul').stop().slideUp('fast');
-          
-        }
-      }); */
     });
 
   });
@@ -162,12 +165,27 @@ $(document).ready(function(){
 
     //이메일form태그에 input안에 영어만 입력할수있게 정규표현객체
     $('#mailArea').on('submit', function(){
-      var _mailaddr = $('#umail');
+      var _tg = $('#umail');
+      var regExp = /^[\w]{5,30}$/; //한글만 2~10글자
+      var msg = '이메일 주소는 영문, 숫자, 기호로 입력해주세요.';
 
-      /* http://www.tcpschool.com/javascript/js_regularExpression_application */
-      if(!regChk(_mailaddr, /^[\w]{10,30}$/, '이메일 주소는 영문, 숫자, 기호로 입력해주세요.')) return false;
+      if(!regChk(_tg, regExp, msg)) return false;
 
-      alert('메일을 전송합니다.');
+      //alert('메일을 전송합니다.');
+
+      //이메일 input태그에 정규표현객체
+      function regChk(_tg, regExp, msg){
+        var result = regExp.test(_tg.val());
+        console.log(result);
+
+        if(result){
+          return true;
+        } else{//잘못된 문자열을 입력한 경우 : 경고창, 포커스강제이동
+          alert(msg);//?? alret()왜 두번?
+          _tg.focus();//잘못 입력한 곳에 포커싱
+          return false;
+        }
+      }
     });
   });
 });

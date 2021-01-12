@@ -127,7 +127,7 @@ header, nav, section, footer {
 body {
   background: #333;
   font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";
-  font-family: 16px;
+  font-size: 16px;
   color: #e5e5e5;
   line-height: 1;
   font-weight: 400;
