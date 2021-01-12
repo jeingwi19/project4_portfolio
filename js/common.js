@@ -1,7 +1,7 @@
 $(document).ready(function(){
     /* gnb 메뉴아이콘 열기 클릭 */
 
-    //$('#gnb').hide();
+    $('#gnb').hide();
     //$('#gnb .dep2').hide();
 
     $('.menu').on('click',function() {
@@ -32,6 +32,17 @@ $(document).ready(function(){
         }else{
             $(this).removeClass('active').next().stop().animate({opacity: 0, left: 0}, 300).hide();
             $(this).find('.blind-b').text('전체 메뉴 열기');
+            
+
+            /* gnb버튼을 닫을 다시 마우스 호버가능하게 제어 */
+            $('.pj_card').on({
+                'mouseenter': function(){
+                    $(this).hover().next().stop().animate({opacity: 1}, 300);
+                },
+                'mouseleave': function(){
+                    $(this).hover().next().stop().animate({opacity: 0}, 300);
+                }
+              });
         }
 
 
@@ -59,13 +70,13 @@ $(document).ready(function(){
 
     $('.pj_2').on('click', function(){
         $('html, body').stop().animate({scrollTop: 1280});
-        $('#pj2 .pj_card a').focus();
+        $('#pj2 .pj_card a').focus().hover();
         return false;
     });
 
     $('.pj_3').on('click', function(){
         $('html, body').stop().animate({scrollTop: 1900});
-        $('#pj3 .pj_card a').focus();
+        $('#pj3 .pj_card a').focus().hover();
         return false;
     });
 

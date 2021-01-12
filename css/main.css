@@ -911,130 +911,128 @@
   width: 770px;
   height: 520px;
   background: #6d1dff; }
-  #modalIntro .modal_flat {
-    position: relative;
-    width: 100%;
-    height: 340px;
-    margin-left: 40px;
-    margin-top: 100px; }
-    #modalIntro .modal_flat strong, #modalIntro .modal_flat span {
-      display: inline-block; }
-    #modalIntro .modal_flat > strong {
-      position: absolute;
-      width: 340px; }
-    #modalIntro .modal_flat strong > span {
+  #modalIntro .modal_flat strong {
+    position: absolute;
+    top: 100px;
+    left: 60px; }
+    #modalIntro .modal_flat strong span {
+      font-size: 40px; }
+    #modalIntro .modal_flat strong :first-child {
       display: block;
-      font-size: 40px;
-      line-height: 40px;
-      margin-bottom: 40px; }
-    #modalIntro .modal_flat .modal_info {
-      width: 330px;
-      height: 580px;
-      margin-left: 440px;
-      color: #333333; }
-      #modalIntro .modal_flat .modal_info .info {
+      margin-bottom: 24px; }
+  #modalIntro .modal_flat .modal_info {
+    position: absolute;
+    width: 330px;
+    height: 340px;
+    right: -40px;
+    top: 100px;
+    /* .profile{display: none;} */ }
+    #modalIntro .modal_flat .modal_info > li + li {
+      margin-top: 20px; }
+    #modalIntro .modal_flat .modal_info .info {
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      border-radius: 24px;
+      position: relative;
+      background: #e5e5e5; }
+      #modalIntro .modal_flat .modal_info .info .li_tit {
+        position: relative;
+        width: 100%;
+        height: 60px; }
+        #modalIntro .modal_flat .modal_info .info .li_tit span {
+          position: absolute;
+          font-weight: 700;
+          color: #333333;
+          left: 32px;
+          top: 22px; }
+      #modalIntro .modal_flat .modal_info .info::before {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 32px;
+        width: 32px;
+        height: 32px;
+        background: url("../images/main/arrow_down16x16.svg") no-repeat center; }
+      #modalIntro .modal_flat .modal_info .info.active::before {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+      #modalIntro .modal_flat .modal_info .info ul {
         -webkit-border-radius: 24px;
         -moz-border-radius: 24px;
         border-radius: 24px;
+        height: 180px;
         width: 100%;
-        height: 60px;
+        padding: 60px 0;
+        margin-top: -60px;
         background: #e5e5e5; }
-        #modalIntro .modal_flat .modal_info .info .li_tit {
-          -webkit-border-radius: 24px;
-          -moz-border-radius: 24px;
-          border-radius: 24px;
+        #modalIntro .modal_flat .modal_info .info ul li {
+          padding: 10px 32px;
           width: 100%;
-          height: 60px;
-          font-weight: 700;
-          text-align: left;
-          padding-left: 32px;
-          /* background: $white; */ }
-          #modalIntro .modal_flat .modal_info .info .li_tit span {
-            width: 100%;
-            position: relative; }
-          #modalIntro .modal_flat .modal_info .info .li_tit span::before {
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-            content: "";
-            position: absolute;
-            right: 24px;
-            top: -5px;
-            width: 24px;
-            height: 24px;
-            background: url("../images/main/arrow_down16x16.svg") no-repeat center; }
-        #modalIntro .modal_flat .modal_info .info .li_tit.active {
-          -webkit-border-radius: 24px 24px 0 0;
-          -moz-border-radius: 24px 24px 0 0;
-          border-radius: 24px 24px 0 0; }
-          #modalIntro .modal_flat .modal_info .info .li_tit.active + ul {
-            -webkit-border-radius: 0 0 24px 24px;
-            -moz-border-radius: 0 0 24px 24px;
-            border-radius: 0 0 24px 24px;
-            height: 120px;
-            background: #e5e5e5; }
-          #modalIntro .modal_flat .modal_info .info .li_tit.active span::before {
-            -webkit-transform: rotate(180deg);
-            -moz-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            transform: rotate(180deg); }
-        #modalIntro .modal_flat .modal_info .info ul {
-          /* display: none; */
+          height: 20px;
+          line-height: 20px;
+          color: #333333;
           font-family: NtSansKR;
           font-size: 12px;
-          line-height: 16px;
-          width: 100%;
-          padding-left: 32px; }
-          #modalIntro .modal_flat .modal_info .info ul li {
-            margin-bottom: 8px;
-            color: #595959;
-            width: 270px; }
-            #modalIntro .modal_flat .modal_info .info ul li :first-child {
-              width: 48px;
-              margin-right: 12px; }
-      #modalIntro .modal_flat .modal_info .education {
-        margin-top: 20px;
-        margin-bottom: 20px; }
-        #modalIntro .modal_flat .modal_info .education .align span {
-          vertical-align: top; }
-      #modalIntro .modal_flat .modal_info .skills .skill_list {
-        width: 100%;
-        height: 40px; }
-        #modalIntro .modal_flat .modal_info .skills .skill_list span + span {
-          width: 40px;
-          height: 40px;
-          margin-right: 4px; }
-        #modalIntro .modal_flat .modal_info .skills .skill_list :last-child {
-          margin-right: -6px; }
-        #modalIntro .modal_flat .modal_info .skills .skill_list .icon {
-          background: no-repeat center; }
-      #modalIntro .modal_flat .modal_info .skills .publishing .pb1 {
-        background-image: url("../images/main/skillicon_html.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .publishing .pb2 {
-        background-image: url("../images/main/skillicon_css.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .publishing .pb3 {
-        background-image: url("../images/main/skillicon_sass.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .publishing .pb4 {
-        background-image: url("../images/main/skillicon_jquery.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .publishing .pb5 {
-        background-image: url("../images/main/skillicon_javascript.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .publishing .pb6 {
-        background-image: url("../images/main/skillicon_bootstrap.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .design .ds1 {
-        background-image: url("../images/main/skillicon_photoshop.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .design .ds2 {
-        background-image: url("../images/main/skillicon_illust.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .design .ds3 {
-        background-image: url("../images/main/skillicon_xd.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .design .ds4 {
-        background-image: url("../images/main/skillicon_aftereffect.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .design .ds5 {
-        background-image: url("../images/main/skillicon_zeplin.svg"); }
-      #modalIntro .modal_flat .modal_info .skills .design .ds6 {
-        background-image: url("../images/main/skillicon_blender3d.svg"); }
+          background: #e5e5e5; }
+    #modalIntro .modal_flat .modal_info .profile .info_list :first-child {
+      display: inline-block;
+      width: 48px;
+      margin-right: 12px; }
+    #modalIntro .modal_flat .modal_info .education .info_list span {
+      display: inline-block;
+      vertical-align: top; }
+    #modalIntro .modal_flat .modal_info .education .info_list :first-child {
+      width: 48px;
+      margin-right: 12px; }
+    #modalIntro .modal_flat .modal_info .education .align, #modalIntro .modal_flat .modal_info .education span + span {
+      margin-bottom: 24px; }
+    #modalIntro .modal_flat .modal_info .skills > ul .skill_list {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 8px; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list .icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: no-repeat center; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list span + span {
+        margin-left: 2px; }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb1 {
+      background-image: url("../images/main/skillicon_html.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb2 {
+      background-image: url("../images/main/skillicon_css.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb3 {
+      background-image: url("../images/main/skillicon_sass.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb4 {
+      background-image: url("../images/main/skillicon_jquery.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb5 {
+      background-image: url("../images/main/skillicon_javascript.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb6 {
+      background-image: url("../images/main/skillicon_bootstrap.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds1 {
+      background-image: url("../images/main/skillicon_photoshop.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds2 {
+      background-image: url("../images/main/skillicon_illust.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds3 {
+      background-image: url("../images/main/skillicon_xd.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds4 {
+      background-image: url("../images/main/skillicon_aftereffect.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds5 {
+      background-image: url("../images/main/skillicon_zeplin.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds6 {
+      background-image: url("../images/main/skillicon_blender3d.svg"); }
   #modalIntro .iconbtn {
     width: 60px;
     height: 140px;

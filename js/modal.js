@@ -83,19 +83,26 @@ $(document).ready(function(){
 
 
     /* 모달창 - 리스트메뉴 열기 클릭 */
-    var _btnlist = $('.li_tit');//button태그 클래스명
-    _btnlist.next('ul').hide();
+    var _btnlist = $('.info');//button태그 클래스명
+    _btnlist.find('ul').hide();
 
     _btnlist.on('click', function(){
 
       if(!_btnlist.hasClass('active')){ //닫겨진 경우
-        _btnlist.addClass('active').next('ul').stop().slideDown('fast');
+        _btnlist.addClass('active').find('ul').stop().slideDown('fast');
       }else{ //열린경우 닫기
-        _btnlist.removeClass('active').next('ul').stop().slideUp('fast');
+        _btnlist.removeClass('active').find('ul').stop().slideUp('fast');
       }
+
+      _btnlist.find('button').on('click', function(){
+        if($(this).next().size() === 0){
+        }else{
+          $(this).parent().siblings().removeClass('active').find('ul').stop().slideUp('fast');
+          
+        }
+      });
     });
 
-    
   });
 
 
@@ -148,5 +155,19 @@ $(document).ready(function(){
       _openBtn.focus();
     });
 
+    //modal닫기누르면 다시 원래 포커스로제어
+    $('#modalContact .btn_close_modal').on('click', function(){
+      $('#cnt3 .contact').focus();
+    });
+
+    //이메일form태그에 input안에 영어만 입력할수있게 정규표현객체
+    $('#mailArea').on('submit', function(){
+      var _mailaddr = $('#umail');
+
+      /* http://www.tcpschool.com/javascript/js_regularExpression_application */
+      if(!regChk(_mailaddr, /^[\w]{10,30}$/, '이메일 주소는 영문, 숫자, 기호로 입력해주세요.')) return false;
+
+      alert('메일을 전송합니다.');
+    });
   });
 });
