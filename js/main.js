@@ -29,9 +29,7 @@ $(document).ready(function(){
   });
 
 
-  /* 스크롤시에 말주머니 fade in up */
-
-  /* 스크롤시에 이미지 변환 */
+  /* 스크롤시에 이미지 변환, 말주머니변환 */
   var windowHei = $(window).height();
   var stickyTop = $('.human_area').offset().top;
   //console.log(windowHei, stickyTop);
@@ -60,13 +58,31 @@ $(document).ready(function(){
 
 
     //스크롤 말주머니 fade in up
-    if(scrollY >= 0 && scrollY < scrollMax * 1/3){
+    /* 테스트2 */
+    /* if(scrollY >= 0 && scrollY < scrollMax * 1/3){
       $('.talk1').stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast');
     }else if(scrollY >= scrollMax * 1/3 && scrollY < scrollMax * 2/3){
       $('.talk2').stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast');
     }else if(scrollY >= scrollMax * 2/3 && scrollY < scrollMax ){
       $('.talk3').stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast');
-    }
+    } */
+
+    /* 테스트2 */
+    /* $('.human_talk').each(function (index) {
+      console.log(index * scrollMax * 1/3);
+      console.log(scrollMax * (index + 1) * 1/3);
+
+      if(scrollY >= (scrollMax * (index * 1/3)) && scrollY < (scrollMax * ((index + 1) * 1/3))){
+        $(this).stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast').css('top', 0);
+      }
+    }); */
+
+    /* 최종 */
+    $('.human_talk').each(function (index) {
+      if(scrollY >= (scrollMax * (index * 1/3)) && scrollY < (scrollMax * ((index + 1) * 1/3))){
+        $(this).addClass('on').siblings().removeClass('on');
+      }
+    });
 
 
   });

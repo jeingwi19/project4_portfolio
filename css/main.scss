@@ -37,9 +37,8 @@
         position: relative;left: 240px;top: 60px;width: 154px;height: 238px;
       }
       .human_talk{
-        display: none;
         @include border-radius(20px);
-        position: absolute;
+        position: absolute;opacity: 0;top: 0;transition: all 0.5s;
         background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);padding: 24px;
         &::before{
           @include translateX-50;
@@ -50,6 +49,9 @@
           width: 106px;height: 182px;color: $black;font-size: 12px;line-height: 22px;/* background: pink; */
         }
         
+      }
+      .human_talk.on{
+        opacity: 1;top: -10px;
       }
       .talk1{top: 40px;}
       .talk2{

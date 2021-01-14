@@ -61,6 +61,14 @@ $(document).ready(function(){
         }, 100);
     });
 
+    /* gnb메뉴 Contact Me 클릭, 모달 열림 */
+    $('#gnb .md_gnb_contact').on('click', function(){
+
+    });
+
+    /* gnb메뉴 About Me 클릭, 모달 열림 */
+    
+    
     /* #gnb에 ul li ul li클릭하면 스크롤이동하고 포커싱 */
     $('.pj_1').on('click', function(){
         $('html, body').stop().animate({scrollTop: 640});

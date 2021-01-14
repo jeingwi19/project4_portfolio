@@ -179,6 +179,7 @@ $(document).ready(function(){
         console.log(result);
 
         if(result){
+          alert('서버 준비중 입니다. 왼쪽 하단 e mail 버튼을 눌러 메일을 보내주세요.');
           return true;
         } else{//잘못된 문자열을 입력한 경우 : 경고창, 포커스강제이동
           alert(msg);//?? alret()왜 두번?
