@@ -29,7 +29,7 @@ $(document).ready(function(){
   });
 
 
-  /* 스크롤시에 말주머니 fade in up 변수선언 */
+  /* 스크롤시에 말주머니 fade in up */
 
   /* 스크롤시에 이미지 변환 */
   var windowHei = $(window).height();
@@ -46,17 +46,28 @@ $(document).ready(function(){
   //console.log(imgTag);
   //$('.human').append(imgTag);
 
+  $('.talk1').stop().fadeIn('fast').animate({top: -10});
   $(window).on('scroll', function(){
     var scrollY = $(this).scrollTop();
     var imgnum = parseInt(scrollY/(turn / (total + 1)));//parseInt()소수점제거
+    var scrollMax = $(document).height() - $(window).height();
+    console.log(scrollY, scrollMax);
     imgnum %= 60;
-    console.log(scrollY);//??
+    
     //console.log(imgnum);
 
     $('.human img').attr('src', 'images/main/rotate_img/hum'+ imgnum + '.webp');
 
+
     //스크롤 말주머니 fade in up
-    $('.talk1').stop().fadeIn('fast');
+    if(scrollY >= 0 && scrollY < scrollMax * 1/3){
+      $('.talk1').stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast');
+    }else if(scrollY >= scrollMax * 1/3 && scrollY < scrollMax * 2/3){
+      $('.talk2').stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast');
+    }else if(scrollY >= scrollMax * 2/3 && scrollY < scrollMax ){
+      $('.talk3').stop().fadeIn('fast').animate({top: -10}).siblings().stop().fadeOut('fast');
+    }
+
 
   });
 

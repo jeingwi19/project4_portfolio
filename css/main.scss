@@ -34,12 +34,12 @@
         img{position: fixed;}
       }
       .talk_area{
-        position: relative;left: 240px;top: 40px;width: 154px;height: 238px;
+        position: relative;left: 240px;top: 60px;width: 154px;height: 238px;
       }
       .human_talk{
         display: none;
         @include border-radius(20px);
-        position: absolute;top: 0;
+        position: absolute;
         background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);padding: 24px;
         &::before{
           @include translateX-50;
@@ -51,14 +51,12 @@
         }
         
       }
-      .talk1{}
+      .talk1{top: 40px;}
       .talk2{
-        margin-left:-24px;
+        top: 40px;
         span{display: inline-block;font-size: 40px;line-height: 40px;margin-top: 12px;}
       }
-      .talk3{
-        margin-left:-24px;
-      }
+      .talk3{top: 40px;}
     }
     .txt_hire{
       width: 276px;height: 276px;bottom: 0px;right: 0;
