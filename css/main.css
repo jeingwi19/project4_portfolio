@@ -83,17 +83,24 @@
         top: 104px; }
         .fixed_bg .bg_line .human_area .human img {
           position: fixed; }
+      .fixed_bg .bg_line .human_area .talk_area {
+        position: relative;
+        left: 240px;
+        top: 40px;
+        width: 154px;
+        height: 238px; }
       .fixed_bg .bg_line .human_area .human_talk {
+        display: none;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
-        position: fixed;
-        left: 240px;
-        top: 40px;
+        position: absolute;
+        top: 0;
         background: #e5e5e5;
         width: 154px;
         height: 238px;
-        box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.5); }
+        box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.5);
+        padding: 24px; }
         .fixed_bg .bg_line .human_area .human_talk::before {
           -webkit-transform: translateX(-50%);
           -moz-transform: translateX(-50%);
@@ -112,19 +119,19 @@
         .fixed_bg .bg_line .human_area .human_talk .talkguide {
           width: 106px;
           height: 182px;
-          margin-top: 24px;
-          margin-left: 24px;
           color: #333333;
           font-size: 12px;
           line-height: 22px;
           /* background: pink; */ }
-        .fixed_bg .bg_line .human_area .human_talk .talk2 {
-          display: none; }
-          .fixed_bg .bg_line .human_area .human_talk .talk2 span {
-            display: inline-block;
-            font-size: 40px;
-            line-height: 40px;
-            margin-top: 12px; }
+      .fixed_bg .bg_line .human_area .talk2 {
+        margin-left: -24px; }
+        .fixed_bg .bg_line .human_area .talk2 span {
+          display: inline-block;
+          font-size: 40px;
+          line-height: 40px;
+          margin-top: 12px; }
+      .fixed_bg .bg_line .human_area .talk3 {
+        margin-left: -24px; }
     .fixed_bg .bg_line .txt_hire {
       width: 276px;
       height: 276px;

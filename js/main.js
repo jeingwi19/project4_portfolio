@@ -29,7 +29,7 @@ $(document).ready(function(){
   });
 
 
-
+  /* 스크롤시에 말주머니 fade in up 변수선언 */
 
   /* 스크롤시에 이미지 변환 */
   var windowHei = $(window).height();
@@ -50,10 +50,14 @@ $(document).ready(function(){
     var scrollY = $(this).scrollTop();
     var imgnum = parseInt(scrollY/(turn / (total + 1)));//parseInt()소수점제거
     imgnum %= 60;
-    //console.log(scrollY);
+    console.log(scrollY);//??
     //console.log(imgnum);
 
     $('.human img').attr('src', 'images/main/rotate_img/hum'+ imgnum + '.webp');
+
+    //스크롤 말주머니 fade in up
+    $('.talk1').stop().fadeIn('fast');
+
   });
 
 

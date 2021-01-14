@@ -33,21 +33,31 @@
         position: absolute;left: -40px;top: 104px;
         img{position: fixed;}
       }
+      .talk_area{
+        position: relative;left: 240px;top: 40px;width: 154px;height: 238px;
+      }
       .human_talk{
+        display: none;
         @include border-radius(20px);
-        position: fixed;left: 240px;top: 40px;background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);
+        position: absolute;top: 0;
+        background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);padding: 24px;
         &::before{
           @include translateX-50;
           content: "";position: absolute;width: 0;height: 0;bottom: -40px;left: 50%;
           border-top: 40px solid $white;border-left: 0 solid transparent;border-right: 52px solid transparent;
         }
         .talkguide{
-          width: 106px;height: 182px;margin-top: 24px;margin-left: 24px;color: $black;font-size: 12px;line-height: 22px;/* background: pink; */
+          width: 106px;height: 182px;color: $black;font-size: 12px;line-height: 22px;/* background: pink; */
         }
-        .talk2{
-          display: none;
-          span{display: inline-block;font-size: 40px;line-height: 40px;margin-top: 12px;}
-        }
+        
+      }
+      .talk1{}
+      .talk2{
+        margin-left:-24px;
+        span{display: inline-block;font-size: 40px;line-height: 40px;margin-top: 12px;}
+      }
+      .talk3{
+        margin-left:-24px;
       }
     }
     .txt_hire{
