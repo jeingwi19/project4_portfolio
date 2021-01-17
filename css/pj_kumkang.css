@@ -1,0 +1,536 @@
+@font-face {
+  font-family: SongMyung;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/SongMyung/SongMyung-Regular.eot");
+  src: url("../fonts/SongMyung/SongMyung-Regular.eot#iefix") format("embedded-opentype"), url("../fonts/SongMyung/SongMyung-Regular.woff2") format("woff2"), url("../fonts/SongMyung/SongMyung-Regular.woff") format("woff"), url("../fonts/SongMyung/SongMyung-Regular.otf") format("opentype"); }
+@font-face {
+  font-family: RozhaOne;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/RozhaOne/RozhaOne-Regular.eot");
+  src: url("../fonts/RozhaOne/RozhaOne-Regular.eot#iefix") format("embedded-opentype"), url("../fonts/RozhaOne/RozhaOne-Regular.woff2") format("woff2"), url("../fonts/RozhaOne/RozhaOne-Regular.woff") format("woff"), url("../fonts/RozhaOne/RozhaOne-Regular.otf") format("opentype"); }
+.fixed_bg {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 1; }
+  .fixed_bg .bg_full {
+    background: url("../images/kumkang/bg_full_top.jpg") no-repeat 0 70%; }
+
+.fixed_bg.on {
+  opacity: 0; }
+
+#movMain #cnt1 {
+  width: 100%; }
+  #movMain #cnt1 .pc_view {
+    -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    height: 520px;
+    border: 8px solid #191919;
+    margin-bottom: 80px;
+    overflow: hidden;
+    cursor: pointer; }
+    #movMain #cnt1 .pc_view .img_pc {
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      background-size: cover !important;
+      display: block;
+      width: 1080px;
+      height: 2980px;
+      background: url("../images/kumkang/index_pc_1920_1x.jpg") no-repeat -100px 0; }
+    #movMain #cnt1 .pc_view .dim {
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      -o-transition: opacity 0.3s;
+      transition: opacity 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 880px;
+      height: 520%;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 1; }
+      #movMain #cnt1 .pc_view .dim p {
+        font-size: 14px;
+        color: #e5e5e5;
+        text-align: center;
+        padding-top: 248px; }
+    #movMain #cnt1 .pc_view .dim.on {
+      opacity: 0; }
+  #movMain #cnt1 .pc_view.on {
+    -webkit-box-shadow: 0 0 0 2px #e5e5e5;
+    -moz-box-shadow: 0 0 0 2px #e5e5e5;
+    box-shadow: 0 0 0 2px #e5e5e5; }
+  #movMain #cnt1 .pc_view:hover .img_pc, #movMain #cnt1 .pc_view .img_pc:focus {
+    -webkit-animation-name: movpc;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: movpc;
+    -moz-animation-duration: 12s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: movpc;
+    -o-animation-duration: 12s;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: 1;
+    -o-animation-fill-mode: forwards;
+    animation-name: movpc;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; }
+@keyframes movpc {
+  100% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-2472px); }
+  0% {
+    transform: translateY(0); } }
+  #movMain #cnt1 .info {
+    width: 100%; }
+    #movMain #cnt1 .info .info_txt1 {
+      height: 140px;
+      margin-bottom: 120px; }
+      #movMain #cnt1 .info .info_txt1 strong {
+        display: block;
+        font-size: 20px;
+        line-height: 28px;
+        color: #999999; }
+      #movMain #cnt1 .info .info_txt1 p, #movMain #cnt1 .info .info_txt1 span {
+        display: inline-block;
+        font-family: NtSansKR;
+        font-size: 14px;
+        line-height: 20px;
+        color: #595959; }
+      #movMain #cnt1 .info .info_txt1 p {
+        margin-top: 24px;
+        float: left; }
+      #movMain #cnt1 .info .info_txt1 span {
+        margin-left: 70px;
+        margin-top: 24px;
+        width: 220px; }
+    #movMain #cnt1 .info .img_history {
+      width: 100%;
+      height: 280px;
+      margin-bottom: 40px; }
+      #movMain #cnt1 .info .img_history .picture {
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
+        background: url("../images/kumkang/img_history.jpg") no-repeat 0 80%;
+        width: 100%;
+        height: 100%; }
+    #movMain #cnt1 .info .inspire_txt {
+      width: 100%;
+      height: 360px;
+      color: #595959;
+      margin-bottom: 80px; }
+      #movMain #cnt1 .info .inspire_txt .circles {
+        width: 100%;
+        height: 262px;
+        margin-bottom: 40px; }
+        #movMain #cnt1 .info .inspire_txt .circles li {
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          float: left;
+          width: 262px;
+          height: 100%;
+          border: 1px solid #595959;
+          color: #999999;
+          text-align: center;
+          padding-top: 124px; }
+        #movMain #cnt1 .info .inspire_txt .circles li + li {
+          margin-left: -56px; }
+      #movMain #cnt1 .info .inspire_txt .tit {
+        font-weight: 400;
+        width: 180px;
+        height: 40px;
+        vertical-align: top;
+        font-size: 20px; }
+      #movMain #cnt1 .info .inspire_txt p {
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 40px;
+        line-height: 14px; }
+        #movMain #cnt1 .info .inspire_txt p span {
+          display: block;
+          margin-bottom: 8px; }
+  #movMain #cnt1 .bg320 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: no-repeat 0 -320px;
+    z-index: -1; }
+  #movMain #cnt1 .bgi1 {
+    top: 1780px;
+    background-color: #533434; }
+  #movMain #cnt1 .bgi2 {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    top: 3320px;
+    background-image: url("../images/kumkang/bg_full_mid.jpg"); }
+  #movMain #cnt1 .font_guide {
+    width: 100%;
+    height: 320px; }
+    #movMain #cnt1 .font_guide .font {
+      width: 100%;
+      height: 68px;
+      padding-top: 100px; }
+      #movMain #cnt1 .font_guide .font ul li {
+        float: left; }
+        #movMain #cnt1 .font_guide .font ul li + li {
+          margin-left: 110px; }
+        #movMain #cnt1 .font_guide .font ul li span {
+          font-size: 28px; }
+        #movMain #cnt1 .font_guide .font ul li span + span {
+          margin-left: 16px; }
+        #movMain #cnt1 .font_guide .font ul li .font_info {
+          font-family: NtSansKR;
+          font-size: 14px;
+          margin-bottom: 16px;
+          color: #735151; }
+          #movMain #cnt1 .font_guide .font ul li .font_info span {
+            display: inline-block;
+            margin-left: 16px;
+            font-size: 14px; }
+        #movMain #cnt1 .font_guide .font ul li .ft_ex {
+          color: #907272; }
+      #movMain #cnt1 .font_guide .font .basic_font {
+        font-family: NtSansKR; }
+        #movMain #cnt1 .font_guide .font .basic_font .w_mid {
+          font-weight: 500; }
+        #movMain #cnt1 .font_guide .font .basic_font .w_bold {
+          font-weight: 700; }
+      #movMain #cnt1 .font_guide .font .high_font .ft_ex :first-child {
+        font-family: SongMyung;
+        font-size: 32px; }
+      #movMain #cnt1 .font_guide .font .high_font .ft_ex :last-child {
+        font-family: RozhaOne;
+        font-size: 32px; }
+    #movMain #cnt1 .font_guide .brand {
+      display: none; }
+  #movMain #cnt1 .tm_view {
+    width: 100%; }
+    #movMain #cnt1 .tm_view > ul > li {
+      float: left; }
+    #movMain #cnt1 .tm_view .tablet {
+      -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      position: relative;
+      width: 510px;
+      height: 812px;
+      margin-top: -80px;
+      border: 8px solid #191919;
+      overflow: hidden; }
+      #movMain #cnt1 .tm_view .tablet .display_t {
+        width: 100%;
+        height: 100%;
+        background: url("../images/kumkang/index_tablet_768_1x.jpg") no-repeat top; }
+      #movMain #cnt1 .tm_view .tablet p {
+        position: absolute;
+        bottom: -80px;
+        left: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #595959; }
+    #movMain #cnt1 .tm_view .color {
+      width: 290px;
+      margin-top: 100px;
+      margin-left: 40px;
+      font-family: NtSansKR;
+      color: #595959;
+      font-size: 14px; }
+      #movMain #cnt1 .tm_view .color p {
+        line-height: 20px;
+        margin-bottom: 20px; }
+      #movMain #cnt1 .tm_view .color ul li {
+        margin-left: 200px;
+        position: relative;
+        height: 32px;
+        padding: 20px 0; }
+      #movMain #cnt1 .tm_view .color ul li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -200px;
+        width: 180px;
+        height: 56px;
+        background: no-repeat center; }
+      #movMain #cnt1 .tm_view .color .greys_c :nth-child(1)::before {
+        background-image: url("../images/kumkang/color191919.svg"); }
+      #movMain #cnt1 .tm_view .color .greys_c :nth-child(2)::before {
+        background-image: url("../images/kumkang/color595959.svg"); }
+      #movMain #cnt1 .tm_view .color .greys_c :nth-child(3)::before {
+        background-image: url("../images/kumkang/color949494.svg"); }
+      #movMain #cnt1 .tm_view .color .greys_c :nth-child(4)::before {
+        background-image: url("../images/kumkang/colorcccccc.svg"); }
+      #movMain #cnt1 .tm_view .color .greys_c :nth-child(5)::before {
+        background-image: url("../images/kumkang/colore5e5e5.svg"); }
+      #movMain #cnt1 .tm_view .color .tit {
+        margin-top: 60px; }
+      #movMain #cnt1 .tm_view .color .highl_c :nth-child(1)::before {
+        background-image: url("../images/kumkang/colore0d8cc.svg"); }
+      #movMain #cnt1 .tm_view .color .highl_c :nth-child(2)::before {
+        background-image: url("../images/kumkang/colorcfb89f.svg"); }
+      #movMain #cnt1 .tm_view .color .highl_c :nth-child(3)::before {
+        background-image: url("../images/kumkang/colorb82830.svg"); }
+    #movMain #cnt1 .tm_view .mobile {
+      -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      border-radius: 40px;
+      width: 290px;
+      height: 580px;
+      margin-top: 100px;
+      margin-left: 40px;
+      margin-bottom: 120px;
+      overflow: hidden;
+      border: 8px solid #191919; }
+      #movMain #cnt1 .tm_view .mobile .display_m {
+        width: 290px;
+        height: 100%;
+        background: url("../images/kumkang/index_mobile_320_1x.jpg") no-repeat -8px -1200px; }
+  #movMain #cnt1 .brand_info {
+    width: 100%;
+    height: 60px;
+    margin-top: 1380px;
+    font-family: NtSansKR;
+    font-size: 14px;
+    color: #cfb89f; }
+#movMain #cnt2 {
+  margin-top: 220px;
+  width: 100%; }
+  #movMain #cnt2 .tit_txt {
+    width: 100%;
+    height: 48px;
+    color: #595959; }
+    #movMain #cnt2 .tit_txt h3 {
+      font-weight: 400;
+      display: inline-block;
+      width: 180px;
+      line-height: 24px;
+      margin-right: 40px;
+      font-size: 20px;
+      color: #999999; }
+      #movMain #cnt2 .tit_txt h3 span {
+        width: 100%;
+        display: block; }
+    #movMain #cnt2 .tit_txt p {
+      display: inline-block;
+      font-size: 14px;
+      width: 620px;
+      line-height: 20px;
+      height: 48px;
+      margin-top: -100px; }
+  #movMain #cnt2 ul {
+    width: 100%; }
+    #movMain #cnt2 ul li {
+      height: 320px; }
+    #movMain #cnt2 ul .list {
+      font-size: 14px;
+      line-height: 20px;
+      color: #999999; }
+      #movMain #cnt2 ul .list ul > li {
+        width: 290px;
+        float: right; }
+        #movMain #cnt2 ul .list ul > li strong {
+          font-weight: 400;
+          display: block;
+          margin-top: 40px; }
+          #movMain #cnt2 ul .list ul > li strong span {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 8px; }
+        #movMain #cnt2 ul .list ul > li .sub_txt {
+          margin-top: 60px; }
+        #movMain #cnt2 ul .list ul > li .sub_txt + p {
+          font-family: NtSansKR;
+          color: #595959;
+          margin-top: 12px; }
+      #movMain #cnt2 ul .list .capture {
+        width: 550px;
+        height: 320px;
+        background: no-repeat center;
+        margin-right: 40px;
+        margin-bottom: 80px; }
+        #movMain #cnt2 ul .list .capture div {
+          width: 100%;
+          height: 100%; }
+        #movMain #cnt2 ul .list .capture .img_ac1 {
+          background-image: url("../images/kumkang/capture1_1x.jpg"); }
+        #movMain #cnt2 ul .list .capture .img_ac2 {
+          background-image: url("../images/kumkang/capture2_1x.jpg"); }
+        #movMain #cnt2 ul .list .capture .img_ac3 {
+          background-image: url("../images/kumkang/capture3_1x.jpg"); }
+    #movMain #cnt2 ul .ac1 {
+      margin-top: 80px; }
+    #movMain #cnt2 ul .ac2 ul li {
+      float: left; }
+    #movMain #cnt2 ul .ac2 .capture {
+      margin-right: 0;
+      margin-left: 40px; }
+#movMain #footer {
+  width: 100%;
+  margin-top: 400px; }
+  #movMain #footer .label {
+    position: absolute;
+    top: 5200px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: #191919;
+    padding: 16px;
+    overflow: hidden; }
+    #movMain #footer .label div {
+      display: inline-block; }
+    #movMain #footer .label .mov_label {
+      width: 100%;
+      height: 28px;
+      background: url("../images/kumkang/pattern_label.svg") repeat-x; }
+@keyframes movlabel1 {
+  100% {
+    transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%); } }
+    #movMain #footer .label .lb1 {
+      -webkit-animation-name: movlabel1;
+      -webkit-animation-duration: 30s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: movlabel1;
+      -moz-animation-duration: 30s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: movlabel1;
+      -o-animation-duration: 30s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: movlabel1;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      position: relative;
+      top: 0;
+      left: 0; }
+    #movMain #footer .label .lb2 {
+      -webkit-animation-name: movlabel1;
+      -webkit-animation-duration: 30s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: movlabel1;
+      -moz-animation-duration: 30s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: movlabel1;
+      -o-animation-duration: 30s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: movlabel1;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      position: absolute;
+      top: 16px;
+      left: 100%; }
+  #movMain #footer .bg_full {
+    position: absolute;
+    top: 5260px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: no-repeat center;
+    z-index: -1;
+    overflow: hidden; }
+    #movMain #footer .bg_full .bg_img {
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      background-size: cover !important;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/kumkang/bg_full_btm.jpg"); }
+  #movMain #footer .btn_area {
+    width: 100%;
+    color: #999999;
+    padding-top: 60px; }
+    #movMain #footer .btn_area ul li {
+      float: left;
+      height: 100px;
+      width: 220px; }
+      #movMain #footer .btn_area ul li + li {
+        margin-left: 40px; }
+      #movMain #footer .btn_area ul li > p, #movMain #footer .btn_area ul li button, #movMain #footer .btn_area ul li a {
+        font-weight: 700; }
+    #movMain #footer .btn_area .ft_txt1 p {
+      line-height: 20px; }
+    #movMain #footer .btn_area .ft_txt2 p, #movMain #footer .btn_area .ft_txt3 p {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      font-size: 12px;
+      margin-top: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      opacity: 0; }
+    #movMain #footer .btn_area .ft_txt2 button, #movMain #footer .btn_area .ft_txt3 a {
+      display: inline-block;
+      line-height: 20px;
+      position: relative; }
+    #movMain #footer .btn_area .ft_txt2 button::before, #movMain #footer .btn_area .ft_txt3 a::before {
+      -webkit-transition: width 0.3s;
+      -moz-transition: width 0.3s;
+      -o-transition: width 0.3s;
+      transition: width 0.3s;
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #999999; }
+    #movMain #footer .btn_area .ft_txt2.on button:hover + p, #movMain #footer .btn_area .ft_txt2.on button:focus + p, #movMain #footer .btn_area .ft_txt3.on a:hover + p, #movMain #footer .btn_area .ft_txt3.on a:focus + p {
+      opacity: 1; }
+    #movMain #footer .btn_area .ft_txt2.on button:hover::before, #movMain #footer .btn_area .ft_txt2.on button:focus::before, #movMain #footer .btn_area .ft_txt3.on a:hover::before, #movMain #footer .btn_area .ft_txt3.on a:focus::before {
+      width: 100%; }
+
+/*# sourceMappingURL=pj_kumkang.css.map */

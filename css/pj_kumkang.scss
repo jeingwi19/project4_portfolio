@@ -1,0 +1,276 @@
+@charset "utf-8";
+@import "_mixin", "_var", "_function";
+
+@font-face{
+  font-family: SongMyung;
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/SongMyung/SongMyung-Regular.eot');
+  src: url('../fonts/SongMyung/SongMyung-Regular.eot#iefix') format("embedded-opentype"),
+  url('../fonts/SongMyung/SongMyung-Regular.woff2') format("woff2"),
+  url('../fonts/SongMyung/SongMyung-Regular.woff') format("woff"),
+  url('../fonts/SongMyung/SongMyung-Regular.otf') format("opentype");
+}
+
+@font-face{
+  font-family: RozhaOne;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/RozhaOne/RozhaOne-Regular.eot");
+  src: url("../fonts/RozhaOne/RozhaOne-Regular.eot#iefix") format("embedded-opentype"),
+  url("../fonts/RozhaOne/RozhaOne-Regular.woff2") format("woff2"),
+  url("../fonts/RozhaOne/RozhaOne-Regular.woff") format("woff"),
+  url("../fonts/RozhaOne/RozhaOne-Regular.otf") format("opentype");
+}
+
+//.fixed_bg
+.fixed_bg{
+  @include transition(opacity 0.5s);
+  opacity: 1;
+  .bg_full{background: url("../images/kumkang/bg_full_top.jpg")no-repeat 0 70%;}
+}
+
+.fixed_bg.on{opacity: 0;}
+
+//#movMain
+#movMain{
+    #cnt1{
+      width: 100%;
+      .pc_view{
+        @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .4));
+        @include border-radius(20px);
+        position: relative;width: 100%;height: 520px;border: 8px solid #191919;margin-bottom: 80px;overflow: hidden;cursor: pointer;
+        .img_pc{
+          @include bgsize(cover);
+          display: block;width: 1080px;height: 2980px;background: url('../images/kumkang/index_pc_1920_1x.jpg')no-repeat -100px 0;
+        }
+        .dim{
+          @include transition(opacity 0.3s);
+          position:absolute;top: 0;left: 0;width: 880px;height: 520%;background: rgba(0, 0, 0, .7);opacity: 1;
+          p{font-size: 14px;color: $white;text-align: center;padding-top: 248px;}
+        }
+        .dim.on{opacity: 0;}
+      }
+      .pc_view.on{
+        @include box-shadow(0 0 0 2px #e5e5e5);
+      }
+      .pc_view:hover .img_pc, .pc_view .img_pc:focus{
+        @include keyframe(movpc){
+          100%{
+            transform: translateY(0)
+          }50%{
+            transform: translateY(-2472px)
+          }0%{
+            transform: translateY(0)
+          }
+        };
+        @include animation(movpc, 12s, ease-in-out, 0s, 1, forwards);
+      }
+
+      .info{
+        width: 100%;
+        .info_txt1{
+          height: 140px;margin-bottom: 120px;
+          strong{display: block;font-size: 20px;line-height: 28px;color: $greyLight;}
+          p, span{display: inline-block;font-family: $korFont;font-size: 14px;line-height: 20px;color: $greyDark;}
+          p{margin-top: 24px;float: left;}
+          span{margin-left: 70px;margin-top: 24px;width: 220px;}
+        }
+        .img_history{
+          width: 100%;height: 280px;margin-bottom: 40px;
+          .picture{
+            @include bgsize(cover);
+            background: url("../images/kumkang/img_history.jpg") no-repeat 0 80%;width: 100%;height: 100%;
+          }
+        }
+        .inspire_txt{
+          width: 100%;height: 360px;color: $greyDark;margin-bottom: 80px;
+          .circles{
+            width: 100%;height: 262px;margin-bottom: 40px;
+            li{
+              @include border-radius(50%);
+              float: left;width: 262px;height: 100%;border: 1px solid $greyDark;color: $greyLight;text-align: center;padding-top: 124px;
+            }
+            li + li{margin-left: -56px;}
+          }
+          .tit{font-weight: 400;width: 180px;height: 40px;vertical-align: top;font-size: 20px;}
+          p{
+            display: inline-block;font-size: 14px;margin-left: 40px;line-height: 14px;
+            span{display: block;margin-bottom: 8px;}
+          }
+        }
+      }
+
+      .bg320{
+        position: absolute;left: 0;width: 100%;height: 320px;background: no-repeat 0 -320px;z-index: -1;
+      }
+      .bgi1{top: 1780px;background-color: #533434;}
+      .bgi2{
+        @include bgsize(cover);
+        top: 3320px;background-image: url('../images/kumkang/bg_full_mid.jpg');
+      }
+
+      .font_guide{
+        width: 100%;height: 320px;
+        .font{
+          width: 100%;height: 68px;padding-top: 100px;
+          ul li{
+            float: left;
+            + li{margin-left: 110px;}
+            span{font-size: 28px;}
+            span + span{margin-left: 16px;}
+            .font_info{
+              font-family: $korFont;font-size: 14px;margin-bottom: 16px;color: #735151;
+              span{display: inline-block;margin-left: 16px;font-size: 14px;}
+            }
+            .ft_ex{color: #907272;}
+          }
+
+          .basic_font{
+            font-family: $korFont;
+            .w_mid{font-weight: 500;}
+            .w_bold{font-weight: 700;}
+          }
+          .high_font .ft_ex{
+            :first-child{font-family: SongMyung;font-size: 32px;}
+            :last-child{font-family: RozhaOne;font-size: 32px;}
+          }
+        }
+
+        .brand{display: none;}
+      }
+      .tm_view{
+        width: 100%;
+        > ul > li{float: left;}
+        .tablet{
+          @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .4));
+          @include border-radius(20px);
+          position: relative;width: 510px;height: 812px;margin-top: -80px;border: 8px solid #191919;overflow: hidden;
+          .display_t{
+            width: 100%;height: 100%;background: url('../images/kumkang/index_tablet_768_1x.jpg')no-repeat top;
+          }
+          p{position: absolute;bottom: -80px;left: 0;font-size: 14px;line-height: 20px;color: $greyDark;}//?
+        }
+        .color{
+          width: 290px;margin-top: 100px;margin-left: 40px;font-family: $korFont;color: $greyDark;font-size: 14px;
+          p{line-height: 20px;margin-bottom: 20px;}
+          ul li{margin-left: 200px;position: relative;height: 32px;padding: 20px 0;}
+          ul li::before{content: "";position: absolute;top: 0;left: -200px;width: 180px;height: 56px;background: no-repeat center;}
+          .greys_c{
+            :nth-child(1)::before{background-image: url('../images/kumkang/color191919.svg');}
+            :nth-child(2)::before{background-image: url('../images/kumkang/color595959.svg');}
+            :nth-child(3)::before{background-image: url('../images/kumkang/color949494.svg');}
+            :nth-child(4)::before{background-image: url('../images/kumkang/colorcccccc.svg');}
+            :nth-child(5)::before{background-image: url('../images/kumkang/colore5e5e5.svg');}
+          }
+          .tit{margin-top: 60px;}
+          .highl_c{
+            :nth-child(1)::before{background-image: url('../images/kumkang/colore0d8cc.svg');}
+            :nth-child(2)::before{background-image: url('../images/kumkang/colorcfb89f.svg');}
+            :nth-child(3)::before{background-image: url('../images/kumkang/colorb82830.svg');}
+          }
+        }
+        .mobile{
+          @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .4));
+          @include border-radius(40px);
+          width: 290px;height: 580px;margin-top: 100px;margin-left: 40px;margin-bottom: 120px;overflow: hidden;border: 8px solid #191919;
+          .display_m{
+            width: 290px;height: 100%;background: url('../images/kumkang/index_mobile_320_1x.jpg') no-repeat -8px -1200px;
+          }
+        }
+      }
+      .brand_info{
+        width: 100%;height: 60px;margin-top: 1380px;font-family: $korFont;font-size: 14px;color: #cfb89f;
+      }
+    }
+    #cnt2{
+      margin-top: 220px;width: 100%;
+      .tit_txt{
+        width: 100%;height: 48px;color: $greyDark;
+        h3{
+          font-weight: 400;display: inline-block;width: 180px;line-height: 24px;margin-right: 40px;font-size: 20px;color: $greyLight;
+          span{width: 100%;display: block;}
+        }
+        p{display: inline-block;font-size: 14px;width: 620px;line-height: 20px;height: 48px;margin-top: -100px;}
+      }
+      
+      ul{
+        width: 100%;
+        li{height: 320px;}
+        .list{
+          font-size: 14px;line-height: 20px;color: $greyLight;
+          ul > li{
+            width: 290px;float: right;
+            strong{
+              font-weight: 400;display: block;margin-top: 40px;
+              span{display: block;font-size: 20px;margin-bottom: 8px;}
+            }
+            .sub_txt{margin-top: 60px;}
+            .sub_txt + p{font-family: $korFont;color: $greyDark;margin-top: 12px;}
+          }
+
+          .capture{
+            width: 550px;height: 320px;background: no-repeat center;margin-right: 40px;margin-bottom: 80px;
+            div{width: 100%;height: 100%;}
+            .img_ac1{background-image: url('../images/kumkang/capture1_1x.jpg');}
+            .img_ac2{background-image: url('../images/kumkang/capture2_1x.jpg');}
+            .img_ac3{background-image: url('../images/kumkang/capture3_1x.jpg');}
+          }
+        }
+        .ac1{margin-top: 80px;}
+        .ac2{
+          ul li{float: left;}
+          .capture{margin-right: 0;margin-left: 40px;}
+        }
+      }
+    }
+
+    #footer{
+      width: 100%;margin-top: 400px;
+      .label{
+        position: absolute;top: 5200px;left: 0;height: 60px;width: 100%;background: #191919;padding: 16px;overflow: hidden;
+        div{display: inline-block;}
+        .mov_label{
+          @include keyframe(movlabel1){
+            100%{
+              transform: translateX(-100%)
+            }0%{
+              transform: translateX(0%)
+            }
+          };
+          width: 100%;height: 28px;background: url('../images/kumkang/pattern_label.svg') repeat-x;
+        }
+        .lb1{@include animation(movlabel1, 30s, linear, 0s, infinite, backwards);position: relative;top: 0;left: 0;}
+        .lb2{@include animation(movlabel1, 30s, linear, 0s, infinite, backwards);position: absolute;top: 16px;left: 100%;}
+      }
+      .bg_full{
+        position: absolute;top: 5260px;left: 0;width: 100%;height: 180px;background: no-repeat center;z-index: -1;overflow: hidden;
+        .bg_img{
+          @include bgsize(cover);
+          width: 100%; height: 100%;background-image: url('../images/kumkang/bg_full_btm.jpg');
+        }
+      }
+      .btn_area{
+        width: 100%;color: $greyLight;padding-top: 60px;
+        ul li{
+          float: left;height: 100px;width: 220px;
+          + li{margin-left: 40px;}
+          > p, button, a{font-weight: 700;}
+        }
+        .ft_txt1 p{line-height: 20px;}
+        .ft_txt2 p, .ft_txt3 p{
+          @include transition(all 0.5s);
+          font-size: 12px;margin-top: 20px;font-weight: 400;line-height: 20px;opacity: 0;
+        }
+
+        .ft_txt2 button, .ft_txt3 a{display: inline-block;line-height: 20px;position: relative;}
+        .ft_txt2 button::before, .ft_txt3 a::before{
+          @include transition(width 0.3s);
+          content: "";position: absolute;bottom: -6px;left: 0;width: 0;height: 2px;background: $greyLight;
+        }
+
+        .ft_txt2.on button:hover + p, .ft_txt2.on button:focus + p, .ft_txt3.on a:hover + p, .ft_txt3.on a:focus + p{opacity: 1;}
+        .ft_txt2.on button:hover::before, .ft_txt2.on button:focus::before, .ft_txt3.on a:hover::before, .ft_txt3.on a:focus::before{width: 100%;}
+      }
+    }
+}
