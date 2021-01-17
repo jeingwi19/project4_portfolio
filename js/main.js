@@ -87,6 +87,25 @@ $(document).ready(function(){
 
   });
 
+  /* #gnb에 ul li ul li클릭하면 스크롤이동하고 포커싱 */
+  $('.pj_1').on('click', function(){
+    $('html, body').stop().animate({scrollTop: 640});
+    $('#pj1 .pj_card a').focus();
+    return false;
+  });
+
+  $('.pj_2').on('click', function(){
+      $('html, body').stop().animate({scrollTop: 1280});
+      $('#pj2 .pj_card a').focus().hover();
+      return false;
+  });
+
+  $('.pj_3').on('click', function(){
+      $('html, body').stop().animate({scrollTop: 1880});
+      $('#pj3 .pj_card a').focus().hover();
+      return false;
+  });
+
 
   /* 프로젝트 섹션 카드에 강제 포커스() */
   $('.pj_card a').on({

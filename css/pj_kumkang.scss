@@ -173,14 +173,16 @@
         .mobile{
           @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .4));
           @include border-radius(40px);
-          width: 290px;height: 580px;margin-top: 100px;margin-left: 40px;margin-bottom: 120px;overflow: hidden;border: 8px solid #191919;
+          width: 290px;height: 580px;margin-top: 100px;margin-left: 40px;margin-bottom: 80px;overflow: hidden;border: 8px solid #191919;
           .display_m{
             width: 290px;height: 100%;background: url('../images/kumkang/index_mobile_320_1x.jpg') no-repeat -8px -1200px;
           }
         }
       }
       .brand_info{
-        width: 100%;height: 60px;margin-top: 1380px;font-family: $korFont;font-size: 14px;color: #cfb89f;
+        width: 100%;height: 60px;margin-top: 1400px;font-family: SongMyung;font-size: 20px;color: #cfb89f;
+        p{position: relative;line-height: 28px;}
+        p::before{content: "";position: absolute;left: 0; top: -80px;width: 132px;height: 22px;background: url('../images/kumkang/kumkang_typ_logo.svg')no-repeat center;}
       }
     }
     #cnt2{

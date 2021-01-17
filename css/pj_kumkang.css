@@ -307,7 +307,7 @@
       height: 580px;
       margin-top: 100px;
       margin-left: 40px;
-      margin-bottom: 120px;
+      margin-bottom: 80px;
       overflow: hidden;
       border: 8px solid #191919; }
       #movMain #cnt1 .tm_view .mobile .display_m {
@@ -317,10 +317,21 @@
   #movMain #cnt1 .brand_info {
     width: 100%;
     height: 60px;
-    margin-top: 1380px;
-    font-family: NtSansKR;
-    font-size: 14px;
+    margin-top: 1400px;
+    font-family: SongMyung;
+    font-size: 20px;
     color: #cfb89f; }
+    #movMain #cnt1 .brand_info p {
+      position: relative;
+      line-height: 28px; }
+    #movMain #cnt1 .brand_info p::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -80px;
+      width: 132px;
+      height: 22px;
+      background: url("../images/kumkang/kumkang_typ_logo.svg") no-repeat center; }
 #movMain #cnt2 {
   margin-top: 220px;
   width: 100%; }

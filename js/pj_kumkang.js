@@ -29,4 +29,10 @@ $(document).ready(function(){
       $(this).removeClass('on');
     }
   });
+
+  //푸터 Return to top 버튼 스크롤 맨 위로
+  $('.ft_txt2 button').on('click', function(){
+    $('html, body').stop().animate({scrollTop: 0});
+    $(this).parent('#skip a').focus();//?포커스?
+  });
 });
