@@ -137,7 +137,8 @@
           line-height: 40px;
           margin-top: 12px; }
       .fixed_bg .bg_line .human_area .talk3 {
-        top: 40px; }
+        top: 40px;
+        font-family: NtSansKR; }
     .fixed_bg .bg_line .txt_hire {
       width: 276px;
       height: 276px;
