@@ -279,7 +279,7 @@ body {
       width: 100%;
       color: #e5e5e5; }
     #pcHeader #gnb ul li ul li {
-      margin-top: 48px;
+      margin-top: 28px;
       margin-right: 60px; }
     #pcHeader #gnb ul li ul li a {
       position: relative;
@@ -291,7 +291,7 @@ body {
       transition: all 0.3s;
       content: "";
       position: absolute;
-      bottom: -4px;
+      bottom: -6px;
       left: 0;
       width: 0;
       height: 2px;

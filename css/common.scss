@@ -150,11 +150,11 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
         content: "";position: absolute;bottom: -6px;left: 0;width: 0%;height: 2px;background: $white;
       }
       > ul > li:hover > a,  > ul > li > a:focus, > ul > li:hover > a::before, > ul > li > a:focus::before{width: 100%;color: $white;}
-      ul li ul li{margin-top: 48px;margin-right: 60px;}
+      ul li ul li{margin-top: 28px;margin-right: 60px;}
       ul li ul li a{position: relative;color: #595959;}
       ul li ul li a::before{
         @include transition(all 0.3s);
-        content: "";position: absolute;bottom: -4px;left: 0;width: 0;height: 2px;background: $white;
+        content: "";position: absolute;bottom: -6px;left: 0;width: 0;height: 2px;background: $white;
       }
       ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{width: 100%;color: $white;}
       ul li ul li a span{margin-left: 8px;}

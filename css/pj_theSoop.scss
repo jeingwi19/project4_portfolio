@@ -1,0 +1,243 @@
+@charset "utf-8";
+@import "_mixin", "_var", "_function";
+
+@font-face {
+  font-family: RIDI;
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+}
+
+//body
+body{background: #fff;}
+
+//header
+#pcHeader{
+  .logo{
+    a img:first-child{opacity: 0;}
+    a img:last-child{opacity: 1;}
+  }
+  .menu{
+    .line{background: $black;}
+    &.active .line{background: $black;}
+  }
+
+  #gnb{
+    > ul > li > a{color: $greyLight;}
+    > ul > li > a::before{background: $black;}
+    > ul > li:hover > a,  > ul > li > a:focus, > ul > li:hover > a::before, > ul > li > a:focus::before{color: $black;}
+
+    ul li ul li a{color: $greyLight;font-weight: 500;}
+    ul li ul li a::before{background: $black;}
+    ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{color: $black;}
+  }
+}
+
+//.fixed_bg
+.fixed_bg{
+  @include transition(opacity 0.5s);
+  opacity: 1;height: 646px;
+  .bg_full{background: url('../images/theSoop/bg_full_top.jpg')no-repeat bottom;}
+
+  &.on{opacity: 0;}
+}
+
+//#mainTit
+#mainTit .fixed_tit{
+  color: $black;
+  .period .apart::before{background: $black;}
+  .btn_link{
+    a{border-color: $black;color: $black;}
+    a:hover, a:focus{background: $black;border-color: $black;color: $white;}
+  }
+}
+
+//#movMain
+#movMain{
+  color: $black;
+  #cnt1{
+    width: 100%;
+    //공통 스타일
+    .tit{
+      display: block;font-size: 20px;line-height: 24px;margin-bottom: 24px;
+      + p{font-size: 14px;line-height: 20px;color: $greyDark;}
+    }
+    .device{
+      @include box-shadow(10px 60px 60px 0 rgba(0, 0, 0, .4));
+      @include border-radius(32px);
+      width: 290px;height: 520px;/* background: $greyLight; */border: 8px solid $black;
+    }
+
+    //본문 스타일
+    .m_view{
+      position: relative;width: 100%;height: 520px;
+      .info_txt{
+        padding-top: 48px;/* padding-left: 110px; */
+        strong{font-size: 18px;line-height: 24px;}
+        p{margin-top: 16px;font-size: 14px;line-height: 20px;color: $greyDark;}
+        .work_data{
+          span{display: inline-block;font-size: 14px;margin-left: 8px;line-height: 20px;}
+        }
+      }
+      .m_main{
+        position: absolute;top: -20px;right: 150px;overflow: hidden;
+        .devi1{
+          @include keyframe(movM1){
+            100%{
+              transform: translateY(0)
+            }90%{
+              transform: translateY(0)
+            }60%{
+              transform: translateY(-2300px)
+            }50%{
+              transform: translateY(-2300px)
+            }10%{
+              transform: translateY(0)
+            }0%{
+              transform: translateY(0)
+            }
+          }
+          @include animation(movM1, 20s, ease, 1s, infinite, backwards);
+          width: 100%;height: 2819px;background: url('../images/theSoop/mview_index_1x.jpg') no-repeat top;
+        }
+        a{display: block;width: 100%;height: 100%;}
+      }
+    }
+
+    .inspire{
+      position: relative;width: 100%;height: 180px;margin-top: 140px;
+      > ul{
+        width: 100%;
+        li{float: left;}
+        .shape_txt{
+          width: 510px;
+          ul li{
+            @include border-radius(80px 80px 80px 0);
+            width: 180px;height: 180px;text-align: center;border: 1px solid $greyLight;padding-top: 84px;
+          }
+          ul li + li{margin-left: -15px;}
+        }
+        .txt{
+          width: 330px;height: 100%;margin-left: 40px;
+          p{font-size: 14px;line-height: 20px;padding-top: 78px;}
+        }
+      }
+      .soopie1{
+        @include keyframe(mov3d1){
+          100%{
+            transform: scale(1) translateY(0);
+          }50%{
+            transform: scale(1.04, 0.96) translateY(6px);
+          }0%{
+            transform: scale(1) translateY(0);
+          }
+        }
+        @include animation(mov3d1, 0.5s, linear, 0s, infinite, backwards);
+        position: absolute;top: -252px;left: 0;
+        width: 180px;height: 263px;background: url('../images/theSoop/3d_soopie1.png')no-repeat center;cursor: pointer;
+      }
+    }
+
+    .scroll_ani{}
+
+    .symbol_info{
+      .bg_img{
+        @include bgsize(cover);
+        position: absolute;top: 1080px;left: 0;width: 100%;height: 640px;background: url('../images/theSoop/bg_full_mid1.jpg')no-repeat center;z-index: -1;
+      }
+      .logom_info{
+        width: 100%;height: 520px;margin-top: 280px;
+        li{float: left;}
+        .logom_view{
+          @include border-radius(40px);
+          width: 290px;height: 100%;background: #e6e6e6;border: 8px solid $black;
+          .d2{
+            @include transition(all 0.5s);
+            position:relative;width: 100%;height: 504px;background: url('../images/theSoop/mview_logo1.jpg')no-repeat center;overflow: hidden;border: none;opacity: 0;
+          }
+          .d2::before{
+            content: "";position: absolute;background: url('../images/theSoop/3d_soopie2.png')no-repeat center;width: 290px;height: 427px;bottom: -180px;left: calc(50% - 145px);
+          }
+
+          //스크립트 - addClass('on')
+          .d2.on{
+            @include keyframe(opa_logo){
+              100%{
+                opacity: 1;
+              }0%{
+                opacity: 0;
+              }
+            };
+            @include animation(opa_logo, 1s, ease-in, 0s, 1, backwards);
+            opacity: 1;
+          }
+          .d2.on::before{
+            @include keyframe(cha_up){
+              100%{
+                transform: translateY(0)
+              }0%{
+                transform: translateY(280px)
+              }
+            };
+            @include animation(cha_up, 2s, cubic-bezier(1,-0.46, 0, 1.35), 1s, 1, backwards);
+          }
+        }
+        .logom_txt{
+          width: 400px;height: 120px;margin-top: 80px;margin-left: 40px;
+        }
+      }
+    }
+
+    .color_info{
+      margin-top: 160px;
+      .color_area{
+        width: 100%;height: 226px;font-size: 14px;font-family: $korFont;
+        //flex
+        .vari{
+          width: 100%;height: 176px;
+          ul{display: flex;width: 100%;}
+          ul li{position: relative;display: flex;justify-content: center;align-items: center;height: 176px;width: 100%;}
+          ul li p{position: absolute;bottom: 16px;left: 20px;width: 108px;height: 32px;color: $white;font-size: 12px;line-height: 16px;}
+          .colr1{background: #88B14B;}
+          .colr2{background: #51663D;}
+          .colr3{background: #B90700;}
+          .colr4{background: #6B1866;}
+          .colr5{background: #191919;}
+        }
+        .grey{
+          width: 100%;height: 50px;
+          ul{display: flex;width: 100%;}
+          ul li{position: relative;display: flex;justify-content: center;align-items: center;width: 100%;height: 50px;}
+          ul li p{position: absolute;top: 0;left: 0;font-size: 12px;line-height: 16px;width: 220px;height: 50px;color: $white;padding-top: 16px;padding-left: 20px;}
+          .colr6{background: #595959;}
+          .colr7{background: #949494;}
+          .colr8{background: #CCCCCC;}
+          .colr9{background: #E5E5E5;}
+          .colr8 p, .colr9 p{color: $greyDark;}
+        }
+      }
+    }
+
+    .icon_info{
+      margin-top: 160px;width: 100%;margin-bottom: 160px;
+      .icon_area{
+        display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;width: 100%;height: 100%;margin-top: 20px;
+        .icons{position: relative;display: flex;justify-content: center;align-items: center;height: 176px;width: 176px;}
+        /* :nth-child(odd){background: skyblue;}
+        :nth-child(even){background: orange;} */
+        .icons::before{content: "";position: absolute;width: 100px;height: 100px;top: calc(50% - 50px);left: calc(50% - 50px);background: no-repeat center;}
+
+        .icon1::before{background-image: url('../images/theSoop/icon_cinema.svg');}
+        .icon2::before{background-image: url('../images/theSoop/icon_gallery.svg');}
+        .icon3::before{background-image: url('../images/theSoop/icon_bstore.svg');}
+        .icon4::before{background-image: url('../images/theSoop/icon_cafe.svg');}
+        .icon5::before{background-image: url('../images/theSoop/icon_seminar.svg');}
+        .icon6::before{background-image: url('../images/theSoop/icon_concert.svg');}
+        .icon7::before{background-image: url('../images/theSoop/icon_qmark.svg');}
+        .icon8::before{background-image: url('../images/theSoop/icon_location.svg');}
+        .icon9::before{background-image: url('../images/theSoop/icon_search.svg');}
+        .icon10::before{background-image: url('../images/theSoop/icon_menu.svg');}
+      }
+    }
+  }
+}
