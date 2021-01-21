@@ -106,8 +106,11 @@
               <p>기존 웹페이지의 접근성을 고려하여 분석한 데이터와 <br>웹이용자 사이 일치되는 목표를 설정하였습니다.</p>
             </li>
           </ul>
-          <div class="3d_img soopie1">
+          <div class="soopie1">
             <span class="blind-b">더숲 캐릭터 수피 정면 이미지</span>
+          </div>
+          <div class="cha_talk">
+            <p>오른쪽 움직이는 모바일 화면에 마우스를 올리거나 키보드 포커싱하면 애니메이션이 일시정지 됩니다.</p>
           </div>
         </div>
         
@@ -220,39 +223,45 @@
 
         <div class="tyop_info">
           <strong class="tit">Typo <br>-graphy</strong>
-          <ul class="typo_data">
-            <li class="main">
-              <p>Main <br>NotoSansKR</p>
+          <div class="typo_data">
+            <div class="main">
+              <strong class="tit">Main <br>NotoSansKR</strong>
               <ul>
                 <li class="bold">Aa 가나다</li>
                 <li class="middle">Aa 가나다</li>
                 <li class="regular">Aa 가나다</li>
               </ul>
-            </li>
-            <li class="hihgl">
-              <p>Highlight <br>RIDIBatang</p>
+            </div>
+            <div class="hihgl">
+              <strong class="tit">Highlight <br>RIDIBatang</strong>
               <p class="hl_font">Aa 가나다</p>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="3d_info">
+        <div class="cha_info">
           <div class="bg_full"></div>
           <strong class="tit">Character <br>Design</strong>
           <p>다양한 나무들이 어우러진 더숲 속에 <br>살고있는 작은 요정 &apos;수피&apos;입니다.</p>
-          <div class="3d_img soopie2">
+          <div class="soopie3">
             <span class="blind-b">비스듬히 위에서 바라본 더숲 캐릭터 수피 이미지</span>
           </div>
         </div>
 
         <div class="other_view">
           <strong class="tit">Ohter View</strong>
-          <div class="device m_gnb">
-            <div class="mov_img devi2"></div>
-          </div>
-          <div class=" device m_sub">
-            <div class="mov_img devi3"></div>
-          </div>
+          <ul>
+            <li class="device m_gnb">
+              <div class="mov_img devi2">
+                <span class="blind-b">더숲 모바일 웹 GNB메뉴 클릭 화면 이미지</span>
+              </div>
+            </li>
+            <li class="device m_sub">
+              <div class="mov_img devi3">
+                <span class="blind-b">더숲 모바일 웹 서브페이지 화면 이미지</span>
+              </div>
+            </li>
+          </ul>
         </div>
 
       </section>
@@ -260,7 +269,7 @@
       <section class="section wid880" id="cnt2">
         <div class="tit_txt">
           <h3><span>Web</span> Accessibility</h3>
-          <p>웹이란 '장애에 구애 없이 모든 사람들이 손쉽게 정보를 공유할 수 있는 공간'으로 그 내용의 <br>이해가 쉬워야 하며, 견고성을 지니고 충분한 웹 접근성을 확보할 수 있어야 합니다.</p>
+          <p>웹이란 &apos;장애에 구애 없이 모든 사람들이 손쉽게 정보를 공유할 수 있는 공간&apos; 으로 그 내용의 <br>이해가 쉬워야 하며, 견고성을 지니고 충분한 웹 접근성을 확보할 수 있어야 합니다.</p>
         </div>
         <ul>
           <li class="list ac1">
@@ -284,8 +293,25 @@
                 <p>자동재생 되어지는 상단 메인배너에 일시정지 <br>가능한 제어 기능을 추가하였습니다.</p>
               </li>
               <li class="capture">
-                <span class="blind-b">메인배너에 일시정지 버튼과 페이지 넘김 제어가 가능한 버튼 캡쳐 이미지</span>
-                <div class="img_ac2"></div>
+                <span class="blind-b"> 자동재생 배너에 일시정지, 재생 기능 추가 스크립트 코드</span>
+                <div class="img_ac2">
+                  <pre class="txt_code">
+                    <code class="code1" aria-hidden="true">
+                      <span>//자동재생 배너 일시정지 버튼 기능 추가</span>
+                      $('.main_top .controller .autostop').on('click', function () {
+                          $(this).hide().siblings().show();
+                          mySwiper1.autoplay.stop();
+                          return false;
+                      });
+                      <span>//자동재생 배너 플레이 버튼 기능 추가</span>
+                      $('.main_top .controller .autoplay').on('click', function () {
+                          $(this).hide().siblings().show();
+                          mySwiper1.autoplay.start();
+                          return false;
+                      });
+                    </code>
+                  </pre>
+                </div>
               </li>
             </ul>
           </li>

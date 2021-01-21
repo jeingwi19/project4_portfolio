@@ -64,7 +64,7 @@ body{background: #fff;}
     }
     .device{
       @include box-shadow(10px 60px 60px 0 rgba(0, 0, 0, .4));
-      @include border-radius(32px);
+      @include border-radius(40px);
       width: 290px;height: 520px;/* background: $greyLight; */border: 8px solid $black;
     }
 
@@ -81,6 +81,7 @@ body{background: #fff;}
       }
       .m_main{
         position: absolute;top: -20px;right: 150px;overflow: hidden;
+        /* .devi1{width: 100%;height: 100%;background: url('../images/theSoop/mview_index_1x.jpg')no-repeat top;} */
         .devi1{
           @include keyframe(movM1){
             100%{
@@ -98,9 +99,13 @@ body{background: #fff;}
             }
           }
           @include animation(movM1, 20s, ease, 1s, infinite, backwards);
-          width: 100%;height: 2819px;background: url('../images/theSoop/mview_index_1x.jpg') no-repeat top;
+          width: 100%;height: 2819px;background: url('../images/theSoop/mview_index_1x.jpg') no-repeat top;cursor: pointer;
         }
-        a{display: block;width: 100%;height: 100%;}
+        .devi1.on{animation-play-state: paused;}
+        a{position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;}
+      }
+      .m_main.on{
+        @include box-shadow(0px 0px 0px 4px #B90700);
       }
     }
 
@@ -136,6 +141,28 @@ body{background: #fff;}
         position: absolute;top: -252px;left: 0;
         width: 180px;height: 263px;background: url('../images/theSoop/3d_soopie1.png')no-repeat center;cursor: pointer;
       }
+      .cha_talk{opacity: 0;}
+      .cha_talk.on{
+        @include keyframe(talkup){
+          100%{
+            transform: translateY(0);
+            opacity: 1;
+          }0%{
+            transform: translateY(40px);
+            opacity: 0;
+          }
+        };
+        @include animation(talkup, 1s, ease-in-out, 0s, 1, backwards);
+        @include box-shadow(0px 20px 40px 0 rgba(0, 0, 0, .3));
+        @include border-radius(20px);
+        position: absolute;top: -360px;left: 160px;width: 172px;height: 200px;padding: 24px 28px;background: $black;opacity: 1;
+        p{font-size: 14px;line-height: 24px;color: $white;}
+        &::before{
+          @include translateX-50;
+          content: "";position: absolute;width: 0;height: 0;bottom: -40px;left: calc(50% - 28px);
+          border-top: 40px solid $black;border-left: 0 solid transparent;border-right: 48px solid transparent;
+        }
+      }
     }
 
     .scroll_ani{}
@@ -149,7 +176,7 @@ body{background: #fff;}
         width: 100%;height: 520px;margin-top: 280px;
         li{float: left;}
         .logom_view{
-          @include border-radius(40px);
+          @include border-radius(48px);
           width: 290px;height: 100%;background: #e6e6e6;border: 8px solid $black;
           .d2{
             @include transition(all 0.5s);
@@ -238,6 +265,141 @@ body{background: #fff;}
         .icon9::before{background-image: url('../images/theSoop/icon_search.svg');}
         .icon10::before{background-image: url('../images/theSoop/icon_menu.svg');}
       }
+    }
+
+    .tyop_info{
+      .typo_data{
+        font-family: $korFont;width: 100%;height: 124px;color: $black;
+        .tit{display: inline-block;font-size: 14px;line-height: 20px;font-weight: 400;width: 120px;height: 50px;padding-top: 4px;}
+        div{display: flex;margin-top: 40px;}
+        div + div{margin-top: 40px;}
+        .main{
+          width: 100%;height: 50px;
+          ul{
+            width: 770px;height: 100%;
+            li{float: left;width: 220px;height: 100%;font-size: 40px;padding-top: 4px;}
+            .bold{font-weight: 700;}
+            .middle{font-weight: 500;}
+          }
+        }
+        .hihgl .hl_font{font-family: RIDI;font-size: 40px;padding-top: 16px;color: $black;}
+      }
+    }
+
+    .cha_info{
+      .bg_full{
+        @include bgsize(cover);
+        position: absolute;top: 3345px;left: 0;width: 100%;height: 640px;background: url('../images/theSoop/bg_full_mid2.jpg')no-repeat top;z-index: -1;
+      }
+      .tit{margin-top: 300px;}
+      .soopie3{position: absolute;width: 480px;height: 523px;top: 3188px;left: calc(50% - 100px);background: url('../images/theSoop/3d_soopie3.png')no-repeat center;opacity: 1;}
+      .soopie3.on{
+        @include keyframe(movcha){
+          100%{
+            transform: translateX(0);
+            opacity: 1;
+          }0%{
+            transform: translateX(120px);
+            opacity: 0;
+          }
+        };
+        @include animation(movcha, 2s, ease, 0s, infinite, backwards);
+      }
+    }
+
+    .other_view{
+      position: relative;margin-top: 140px;width: 100%;height: 660px;
+      .tit{position: absolute;top: 80px;left: 460px;}
+      ul{
+        display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;width: 100%;height: 100%;
+        li{display: flex;justify-content: center;align-items: center;overflow: hidden;}
+        .m_gnb{
+          margin-left: 110px;background: #fff;
+          .devi2{width: 100%;height: 696px;background: url('../images/theSoop/mview_gnb_1x.jpg')no-repeat 0px 100px;}
+        }
+        .m_sub{
+          margin-left: 40px;margin-top: 140px;
+          .devi3{width: 100%;height: 1627px;background: url('../images/theSoop/mview_sub_1x.jpg')no-repeat -8px 560px;}
+        }
+      }
+    }
+  }
+
+  #cnt2{
+    margin-top: 160px;
+    .tit_txt{
+      margin-bottom: 80px;
+      h3, p{display: inline-block}
+      h3{
+        font-size: 20px;line-height: 24px;
+        span{display: block;}
+      }
+      p{font-size: 14px;line-height: 20px;margin-left: 40px;color: $greyDark;}
+    }
+
+    ul{
+      width: 100%;
+      li{height: 320px;}
+      .list{
+        font-size: 14px;line-height: 20px;color: $black;
+        ul > li{
+          width: 290px;float: right;
+          strong{
+            font-weight: 400;display: block;margin-top: 40px;
+            span{display: block;font-size: 20px;margin-bottom: 8px;}
+          }
+          .sub_txt{margin-top: 60px;}
+          .sub_txt + p{font-family: $korFont;color: $greyDark;margin-top: 12px;}
+        }
+
+        .capture{
+          width: 550px;height: 320px;background: no-repeat center;margin-right: 40px;margin-bottom: 80px;
+          div{
+            @include border-radius(20px);
+            width: 100%;height: 100%;border: 1px solid $white;
+          }
+          .img_ac1{background-image: url('../images/theSoop/ac_img1.jpg');}
+          .img_ac2{
+            background: $black;
+            pre code{
+              font-family: $korFont;color: $white;
+              span{color: #88B14B;}
+            }
+          }
+          .img_ac3{background-image: url('../images/theSoop/ac_img3.jpg');}
+        }
+      }
+      .ac1{margin-top: 80px;}
+      .ac2{
+        ul li{float: left;}
+        .capture{margin-right: 0;margin-left: 40px;}
+      }
+    }
+  }
+
+  #footer{
+    width: 100%;height: 240px;margin-top: 200px;
+    .btn_area{
+      width: 100%;color: $black;padding-top: 60px;
+      ul li{
+        float: left;height: 100px;width: 220px;
+        + li{margin-left: 40px;}
+        > p, a{font-weight: 700;}
+      }
+      .ft_txt1 p{line-height: 20px;}
+      .ft_txt2 p, .ft_txt3 p{
+        @include transition(all 0.5s);
+        font-size: 12px;margin-top: 20px;font-weight: 400;line-height: 20px;opacity: 0;
+      }
+
+      .ft_txt2 a, .ft_txt3 a{display: inline-block;line-height: 20px;position: relative;}
+      .ft_txt2 a::before, .ft_txt3 a::before{
+        @include transition(width 0.3s);
+        content: "";position: absolute;bottom: -6px;left: 0;width: 0;height: 2px;background: $black;
+      }
+
+      .ft_txt2.on a:hover + p, .ft_txt2.on a:focus + p, .ft_txt3.on a:hover + p, .ft_txt3.on a:focus + p{opacity: 1;}
+      .ft_txt2.on a:hover::before, .ft_txt2.on a:focus::before, .ft_txt3.on a:hover::before, .ft_txt3.on a:focus::before{width: 100%;}
     }
   }
 }
