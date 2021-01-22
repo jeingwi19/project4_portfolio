@@ -584,32 +584,31 @@ body {
       height: 523px;
       top: 3188px;
       left: calc(50% - 100px);
-      background: url("../images/theSoop/3d_soopie3.png") no-repeat center;
-      opacity: 1; }
+      background: url("../images/theSoop/3d_soopie3.png") no-repeat center; }
     #movMain #cnt1 .cha_info .soopie3.on {
       -webkit-animation-name: movcha;
       -webkit-animation-duration: 2s;
       -webkit-animation-timing-function: ease;
       -webkit-animation-delay: 0s;
-      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: 1;
       -webkit-animation-fill-mode: backwards;
       -moz-animation-name: movcha;
       -moz-animation-duration: 2s;
       -moz-animation-timing-function: ease;
       -moz-animation-delay: 0s;
-      -moz-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: 1;
       -moz-animation-fill-mode: backwards;
       -o-animation-name: movcha;
       -o-animation-duration: 2s;
       -o-animation-timing-function: ease;
       -o-animation-delay: 0s;
-      -o-animation-iteration-count: infinite;
+      -o-animation-iteration-count: 1;
       -o-animation-fill-mode: backwards;
       animation-name: movcha;
       animation-duration: 2s;
       animation-timing-function: ease;
       animation-delay: 0s;
-      animation-iteration-count: infinite;
+      animation-iteration-count: 1;
       animation-fill-mode: backwards; }
 @keyframes movcha {
   100% {

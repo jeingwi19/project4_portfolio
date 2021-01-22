@@ -292,7 +292,7 @@ body{background: #fff;}
         position: absolute;top: 3345px;left: 0;width: 100%;height: 640px;background: url('../images/theSoop/bg_full_mid2.jpg')no-repeat top;z-index: -1;
       }
       .tit{margin-top: 300px;}
-      .soopie3{position: absolute;width: 480px;height: 523px;top: 3188px;left: calc(50% - 100px);background: url('../images/theSoop/3d_soopie3.png')no-repeat center;opacity: 1;}
+      .soopie3{position: absolute;width: 480px;height: 523px;top: 3188px;left: calc(50% - 100px);background: url('../images/theSoop/3d_soopie3.png')no-repeat center;}
       .soopie3.on{
         @include keyframe(movcha){
           100%{
@@ -303,7 +303,7 @@ body{background: #fff;}
             opacity: 0;
           }
         };
-        @include animation(movcha, 2s, ease, 0s, infinite, backwards);
+        @include animation(movcha, 2s, ease, 0s, 1, backwards);
       }
     }
 
