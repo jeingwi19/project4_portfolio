@@ -3,7 +3,8 @@ $(document).ready(function(){
   $(window).on('scroll', function(){
     var scrollY = $(this).scrollTop();
     var docHei = $(document).height();
-    console.log(scrollY, docHei);
+    var winTop = parseInt($(this).scrollTop());
+    console.log(scrollY, docHei, winTop);
     if(scrollY > 100){
       $('.fixed_bg').addClass('on');
     }else{
@@ -26,13 +27,26 @@ $(document).ready(function(){
 
     //.soopie3 캐릭터 서서히 나타나기
     //현재의 스크롤이 $(document)의 1/2지점 이상을 만족하면 addClass('on') 아니면 removeClass('on');
-      //1) 문서 전체 스크롤 높이를 구하기 = 6114
-      //2) 전체 높이에서 1/2해준다.
-      //?? fade? 해줘야하나? 애니메이션CSS 번복 오류
-    if(scrollY > docHei * 1/2){
+      //1) 문서 전체 스크롤 높이 => docHei
+      //2) 전체 높이에서 1/2를 조건문에 넣기
+    if(winTop > docHei * 1/2){
       $('.soopie3').addClass('on');
     }else{
       $('.soopie3').removeClass('on');
+    }
+
+    //.other_view .m_gnb 아래서 위로 fade
+    if(winTop > docHei * 3/5){
+      $('.m_gnb').stop().animate({opacity: 1, top: 0});
+    }else{
+      $('.m_gnb').stop().animate({opacity: 0, top: 80});
+    }
+
+    //.other_view .m_sub 위에서 아래로 fade
+    if(winTop > docHei * 3/5){
+      $('.m_sub').stop().animate({opacity: 1, top: 0});
+    }else{
+      $('.m_sub').stop().animate({opacity: 0, top: -80});
     }
   });
 

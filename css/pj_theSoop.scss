@@ -292,7 +292,6 @@ body{background: #fff;}
         position: absolute;top: 3345px;left: 0;width: 100%;height: 640px;background: url('../images/theSoop/bg_full_mid2.jpg')no-repeat top;z-index: -1;
       }
       .tit{margin-top: 300px;}
-      .soopie3{position: absolute;width: 480px;height: 523px;top: 3188px;left: calc(50% - 100px);background: url('../images/theSoop/3d_soopie3.png')no-repeat center;}
       .soopie3.on{
         @include keyframe(movcha){
           100%{
@@ -303,7 +302,8 @@ body{background: #fff;}
             opacity: 0;
           }
         };
-        @include animation(movcha, 2s, ease, 0s, 1, backwards);
+        @include animation(movcha, 1s, ease, 0s, 1, backwards);
+        position: absolute;width: 480px;height: 523px;top: 3188px;left: calc(50% - 100px);background: url('../images/theSoop/3d_soopie3.png') no-repeat center;
       }
     }
 
@@ -314,12 +314,44 @@ body{background: #fff;}
         display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;width: 100%;height: 100%;
         li{display: flex;justify-content: center;align-items: center;overflow: hidden;}
         .m_gnb{
-          margin-left: 110px;background: #fff;
-          .devi2{width: 100%;height: 696px;background: url('../images/theSoop/mview_gnb_1x.jpg')no-repeat 0px 100px;}
+          position: relative;top: 80px;left: 0;margin-left: 110px;background: #fff;opacity: 0;
+          .devi2{
+            @include keyframe(movother1){
+              100%{
+                transform: translateY(88px);
+              }70%{
+                transform: translateY(-88px);
+              }50%{
+                transform: translateY(-88px);
+              }20%{
+                transform: translateY(88px);
+              }0%{
+                transform: translateY(88px);
+              }
+            };
+            @include animation(movother1, 4s, ease-in-out, 0s, infinite, backwards);
+            width: 100%;height: 696px;background: url('../images/theSoop/mview_gnb_1x.jpg')no-repeat top;
+          }
         }
         .m_sub{
-          margin-left: 40px;margin-top: 140px;
-          .devi3{width: 100%;height: 1627px;background: url('../images/theSoop/mview_sub_1x.jpg')no-repeat -8px 560px;}
+          position: relative;top: -80px;left: 0;margin-left: 40px;margin-top: 140px;
+          .devi3{
+            @include keyframe(movother2){
+              100%{
+                transform: translateY(-580px);
+              }70%{
+                transform: translateY(560px);
+              }50%{
+                transform: translateY(560px);
+              }10%{
+                transform: translateY(-580px);
+              }0%{
+                transform: translateY(-580px);
+              }
+            };
+            @include animation(movother2, 8s, ease-in-out, 0s, infinite, backwards);
+            width: 100%;height: 1627px;background: url('../images/theSoop/mview_sub_1x.jpg')no-repeat top;
+          }
         }
       }
     }

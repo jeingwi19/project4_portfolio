@@ -578,38 +578,37 @@ body {
       z-index: -1; }
     #movMain #cnt1 .cha_info .tit {
       margin-top: 300px; }
-    #movMain #cnt1 .cha_info .soopie3 {
+    #movMain #cnt1 .cha_info .soopie3.on {
+      -webkit-animation-name: movcha;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: movcha;
+      -moz-animation-duration: 1s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: movcha;
+      -o-animation-duration: 1s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: backwards;
+      animation-name: movcha;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-fill-mode: backwards;
       position: absolute;
       width: 480px;
       height: 523px;
       top: 3188px;
       left: calc(50% - 100px);
       background: url("../images/theSoop/3d_soopie3.png") no-repeat center; }
-    #movMain #cnt1 .cha_info .soopie3.on {
-      -webkit-animation-name: movcha;
-      -webkit-animation-duration: 2s;
-      -webkit-animation-timing-function: ease;
-      -webkit-animation-delay: 0s;
-      -webkit-animation-iteration-count: 1;
-      -webkit-animation-fill-mode: backwards;
-      -moz-animation-name: movcha;
-      -moz-animation-duration: 2s;
-      -moz-animation-timing-function: ease;
-      -moz-animation-delay: 0s;
-      -moz-animation-iteration-count: 1;
-      -moz-animation-fill-mode: backwards;
-      -o-animation-name: movcha;
-      -o-animation-duration: 2s;
-      -o-animation-timing-function: ease;
-      -o-animation-delay: 0s;
-      -o-animation-iteration-count: 1;
-      -o-animation-fill-mode: backwards;
-      animation-name: movcha;
-      animation-duration: 2s;
-      animation-timing-function: ease;
-      animation-delay: 0s;
-      animation-iteration-count: 1;
-      animation-fill-mode: backwards; }
 @keyframes movcha {
   100% {
     transform: translateX(0);
@@ -639,19 +638,96 @@ body {
           align-items: center;
           overflow: hidden; }
         #movMain #cnt1 .other_view ul .m_gnb {
+          position: relative;
+          top: 80px;
+          left: 0;
           margin-left: 110px;
-          background: #fff; }
+          background: #fff;
+          opacity: 0; }
           #movMain #cnt1 .other_view ul .m_gnb .devi2 {
+            -webkit-animation-name: movother1;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode: backwards;
+            -moz-animation-name: movother1;
+            -moz-animation-duration: 4s;
+            -moz-animation-timing-function: ease-in-out;
+            -moz-animation-delay: 0s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-fill-mode: backwards;
+            -o-animation-name: movother1;
+            -o-animation-duration: 4s;
+            -o-animation-timing-function: ease-in-out;
+            -o-animation-delay: 0s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-fill-mode: backwards;
+            animation-name: movother1;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
             width: 100%;
             height: 696px;
-            background: url("../images/theSoop/mview_gnb_1x.jpg") no-repeat 0px 100px; }
+            background: url("../images/theSoop/mview_gnb_1x.jpg") no-repeat top; }
+@keyframes movother1 {
+  100% {
+    transform: translateY(88px); }
+  70% {
+    transform: translateY(-88px); }
+  50% {
+    transform: translateY(-88px); }
+  20% {
+    transform: translateY(88px); }
+  0% {
+    transform: translateY(88px); } }
         #movMain #cnt1 .other_view ul .m_sub {
+          position: relative;
+          top: -80px;
+          left: 0;
           margin-left: 40px;
           margin-top: 140px; }
           #movMain #cnt1 .other_view ul .m_sub .devi3 {
+            -webkit-animation-name: movother2;
+            -webkit-animation-duration: 8s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode: backwards;
+            -moz-animation-name: movother2;
+            -moz-animation-duration: 8s;
+            -moz-animation-timing-function: ease-in-out;
+            -moz-animation-delay: 0s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-fill-mode: backwards;
+            -o-animation-name: movother2;
+            -o-animation-duration: 8s;
+            -o-animation-timing-function: ease-in-out;
+            -o-animation-delay: 0s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-fill-mode: backwards;
+            animation-name: movother2;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
             width: 100%;
             height: 1627px;
-            background: url("../images/theSoop/mview_sub_1x.jpg") no-repeat -8px 560px; }
+            background: url("../images/theSoop/mview_sub_1x.jpg") no-repeat top; }
+@keyframes movother2 {
+  100% {
+    transform: translateY(-580px); }
+  70% {
+    transform: translateY(560px); }
+  50% {
+    transform: translateY(560px); }
+  10% {
+    transform: translateY(-580px); }
+  0% {
+    transform: translateY(-580px); } }
   #movMain #cnt2 {
     margin-top: 160px; }
     #movMain #cnt2 .tit_txt {
