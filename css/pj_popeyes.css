@@ -1,0 +1,572 @@
+@font-face {
+  font-family: jalnan;
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff"); }
+body {
+  background: #ffb739; }
+
+#pcHeader .logo a img:first-child {
+  opacity: 0; }
+#pcHeader .logo a img:last-child {
+  opacity: 1; }
+#pcHeader .menu .line {
+  background: #333333; }
+#pcHeader .menu.active .line {
+  background: #333333; }
+#pcHeader #gnb > ul > li > a {
+  color: #595959; }
+#pcHeader #gnb > ul > li > a::before {
+  background: #333333; }
+#pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before {
+  color: #333333; }
+#pcHeader #gnb ul li ul li a {
+  color: #595959;
+  font-weight: 500; }
+#pcHeader #gnb ul li ul li a::before {
+  background: #333333; }
+#pcHeader #gnb ul li ul li:hover a, #pcHeader #gnb ul li ul li a:focus, #pcHeader #gnb ul li ul li:hover a::before, #pcHeader #gnb ul li ul li a:focus::before {
+  color: #333333; }
+
+#mainTit .fixed_tit {
+  color: #333333; }
+  #mainTit .fixed_tit .period .apart::before {
+    background: #333333; }
+  #mainTit .fixed_tit .btn_link a {
+    border-color: #333333;
+    color: #333333; }
+  #mainTit .fixed_tit .btn_link a:hover, #mainTit .fixed_tit .btn_link a:focus {
+    background: #333333;
+    border-color: #333333;
+    color: #e5e5e5; }
+
+#movMain {
+  color: #333333; }
+  #movMain #cnt1 {
+    width: 100%; }
+    #movMain #cnt1 .tit {
+      display: block;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 24px; }
+    #movMain #cnt1 .tit + p {
+      font-family: NtSansKR;
+      font-size: 14px;
+      line-height: 24px;
+      color: #333; }
+    #movMain #cnt1 .device {
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      position: relative;
+      display: inline-block;
+      width: 628px;
+      height: 358px;
+      background: #fff; }
+      #movMain #cnt1 .device ::before {
+        -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(100px);
+        -webkit-box-shadow: 10px 40px 60px 0 rgba(255, 133, 46, 0.5);
+        -moz-box-shadow: 10px 40px 60px 0 rgba(255, 133, 46, 0.5);
+        box-shadow: 10px 40px 60px 0 rgba(255, 133, 46, 0.5);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        content: "";
+        position: absolute;
+        top: calc(50% - 195px);
+        left: calc(50% - 330px);
+        width: 660px;
+        height: 430px;
+        background: rgba(255, 255, 255, 0.03);
+        z-index: -1; }
+      #movMain #cnt1 .device ::after {
+        -webkit-box-shadow: inset 0 0 20px rgba(245, 102, 0, 0.4);
+        -moz-box-shadow: inset 0 0 20px rgba(245, 102, 0, 0.4);
+        box-shadow: inset 0 0 20px rgba(245, 102, 0, 0.4);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        content: "";
+        position: absolute;
+        top: calc(50% - 195px);
+        left: calc(50% - 330px);
+        width: 660px;
+        height: 430px;
+        z-index: -1; }
+    #movMain #cnt1 .pc_view1 ul {
+      width: 100%;
+      height: 390px; }
+      #movMain #cnt1 .pc_view1 ul li {
+        float: left; }
+    #movMain #cnt1 .pc_view1 .info_txt {
+      font-family: NtSansKR;
+      margin-top: 46px;
+      margin-right: 48px; }
+      #movMain #cnt1 .pc_view1 .info_txt .work_data {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 60px; }
+    #movMain #cnt1 .pc_view1 .pc_main .info_txt {
+      position: absolute;
+      bottom: -32px;
+      left: calc(50% - 123px);
+      font-size: 12px;
+      color: #d55a00; }
+      #movMain #cnt1 .pc_view1 .pc_main .info_txt::before, #movMain #cnt1 .pc_view1 .pc_main .info_txt::after {
+        display: none; }
+    #movMain #cnt1 .pc_view1 .pc_main .mov_img {
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      #movMain #cnt1 .pc_view1 .pc_main .mov_img .devi1 {
+        -webkit-animation-name: movpc1;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: movpc1;
+        -moz-animation-duration: 4s;
+        -moz-animation-timing-function: ease;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: movpc1;
+        -o-animation-duration: 4s;
+        -o-animation-timing-function: ease;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: backwards;
+        animation-name: movpc1;
+        animation-duration: 4s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+        width: 628px;
+        height: 809px;
+        background: url("../images/popeyes/pc_main_1x.jpg") no-repeat center; }
+@keyframes movpc1 {
+  100% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(-450px); }
+  50% {
+    transform: translateY(-450px); }
+  30% {
+    transform: translateY(0); }
+  0% {
+    transform: translateY(0); } }
+        #movMain #cnt1 .pc_view1 .pc_main .mov_img .devi1::after, #movMain #cnt1 .pc_view1 .pc_main .mov_img .devi1::before {
+          display: none; }
+    #movMain #cnt1 .inspire {
+      margin-top: 160px;
+      width: 100%;
+      height: 240px; }
+      #movMain #cnt1 .inspire ul {
+        width: 100%;
+        height: 100%; }
+        #movMain #cnt1 .inspire ul li {
+          height: 100%;
+          float: left; }
+          #movMain #cnt1 .inspire ul li ul {
+            display: inline-block;
+            width: 620px;
+            height: 100%;
+            margin-right: 40px; }
+            #movMain #cnt1 .inspire ul li ul > li {
+              -webkit-border-radius: 110px;
+              -moz-border-radius: 110px;
+              border-radius: 110px;
+              float: left;
+              width: 240px;
+              height: 100%;
+              border: 1px solid #d55a00;
+              text-align: center;
+              color: #d55a00;
+              font-weight: 700;
+              padding-top: 114px; }
+              #movMain #cnt1 .inspire ul li ul > li + li {
+                margin-left: -52px; }
+      #movMain #cnt1 .inspire .connect_info {
+        display: inline-block;
+        width: 220px;
+        height: 100%;
+        padding-top: 40px; }
+        #movMain #cnt1 .inspire .connect_info p {
+          font-size: 14px;
+          line-height: 24px; }
+        #movMain #cnt1 .inspire .connect_info .tit + p {
+          margin-bottom: 8px; }
+    #movMain #cnt1 .tyop_info {
+      margin-top: 160px; }
+      #movMain #cnt1 .tyop_info .typo_data {
+        font-family: NtSansKR;
+        width: 100%;
+        height: 124px;
+        color: #333333; }
+        #movMain #cnt1 .tyop_info .typo_data .tit {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          width: 120px;
+          height: 50px;
+          padding-top: 4px; }
+        #movMain #cnt1 .tyop_info .typo_data div {
+          display: flex;
+          margin-top: 40px; }
+        #movMain #cnt1 .tyop_info .typo_data div + div {
+          margin-top: 40px; }
+        #movMain #cnt1 .tyop_info .typo_data .main {
+          width: 100%;
+          height: 50px; }
+          #movMain #cnt1 .tyop_info .typo_data .main ul {
+            width: 770px;
+            height: 100%; }
+            #movMain #cnt1 .tyop_info .typo_data .main ul li {
+              float: left;
+              width: 220px;
+              height: 100%;
+              font-size: 40px;
+              padding-top: 4px; }
+            #movMain #cnt1 .tyop_info .typo_data .main ul .bold {
+              font-weight: 700; }
+            #movMain #cnt1 .tyop_info .typo_data .main ul .middle {
+              font-weight: 500; }
+        #movMain #cnt1 .tyop_info .typo_data .hihgl .hl_font {
+          font-family: jalnan;
+          font-size: 36px;
+          padding-top: 16px;
+          color: #333333; }
+    #movMain #cnt1 .color_info {
+      margin-top: 160px; }
+      #movMain #cnt1 .color_info .color_area {
+        width: 100%;
+        height: 226px;
+        font-size: 14px;
+        font-family: NtSansKR; }
+        #movMain #cnt1 .color_info .color_area .vari {
+          width: 100%; }
+          #movMain #cnt1 .color_info .color_area .vari ul {
+            display: flex;
+            width: 100%; }
+          #movMain #cnt1 .color_info .color_area .vari ul li {
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 172px;
+            width: 172px;
+            margin-bottom: 5px; }
+            #movMain #cnt1 .color_info .color_area .vari ul li + li {
+              margin-left: 5px; }
+          #movMain #cnt1 .color_info .color_area .vari ul li p {
+            position: absolute;
+            bottom: 16px;
+            left: 20px;
+            width: 108px;
+            height: 32px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 16px; }
+          #movMain #cnt1 .color_info .color_area .vari .colr1 {
+            background: #FD7907; }
+          #movMain #cnt1 .color_info .color_area .vari .colr2 {
+            background: #BE5A07; }
+          #movMain #cnt1 .color_info .color_area .vari .colr3 {
+            background: #950988; }
+          #movMain #cnt1 .color_info .color_area .vari .colr4 {
+            background: #C20031; }
+          #movMain #cnt1 .color_info .color_area .vari .colr5 {
+            background: #000000; }
+        #movMain #cnt1 .color_info .color_area .grey {
+          width: 100%;
+          height: 50px; }
+          #movMain #cnt1 .color_info .color_area .grey ul {
+            display: flex;
+            width: 100%; }
+          #movMain #cnt1 .color_info .color_area .grey ul li {
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 172px;
+            height: 50px; }
+            #movMain #cnt1 .color_info .color_area .grey ul li + li {
+              margin-left: 5px; }
+          #movMain #cnt1 .color_info .color_area .grey ul li p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            line-height: 16px;
+            width: 220px;
+            height: 50px;
+            color: #fff;
+            padding-top: 8px;
+            padding-left: 20px; }
+          #movMain #cnt1 .color_info .color_area .grey .colr6 {
+            background: #434343; }
+          #movMain #cnt1 .color_info .color_area .grey .colr7 {
+            background: #666666; }
+          #movMain #cnt1 .color_info .color_area .grey .colr8 {
+            background: #B7B7B7; }
+          #movMain #cnt1 .color_info .color_area .grey .colr9 {
+            background: #D9D9D9; }
+          #movMain #cnt1 .color_info .color_area .grey .colr10 {
+            background: #F3F3F3; }
+          #movMain #cnt1 .color_info .color_area .grey .colr8 p, #movMain #cnt1 .color_info .color_area .grey .colr9 p, #movMain #cnt1 .color_info .color_area .grey .colr10 p {
+            color: #595959; }
+    #movMain #cnt1 .pc_view2 {
+      margin-top: 160px; }
+      #movMain #cnt1 .pc_view2 ul {
+        width: 100%; }
+        #movMain #cnt1 .pc_view2 ul li {
+          float: left; }
+          #movMain #cnt1 .pc_view2 ul li .txt_info {
+            padding-top: 40px; }
+          #movMain #cnt1 .pc_view2 ul li ul .device ::before {
+            height: 390px; }
+          #movMain #cnt1 .pc_view2 ul li ul .device ::after {
+            height: 390px; }
+        #movMain #cnt1 .pc_view2 ul .subp2 {
+          margin-top: 160px; }
+        #movMain #cnt1 .pc_view2 ul .txt_info {
+          width: 220px;
+          margin-right: 20px; }
+          #movMain #cnt1 .pc_view2 ul .txt_info a {
+            position: relative;
+            display: inline-block;
+            margin-top: 24px;
+            font-weight: 700; }
+          #movMain #cnt1 .pc_view2 ul .txt_info a::before {
+            -webkit-transition: width 0.3s;
+            -moz-transition: width 0.3s;
+            -o-transition: width 0.3s;
+            transition: width 0.3s;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #333333; }
+          #movMain #cnt1 .pc_view2 ul .txt_info a:hover::before, #movMain #cnt1 .pc_view2 ul .txt_info a:focus::before {
+            width: 140%; }
+      #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+        #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi2 {
+          -webkit-animation-name: movpc2;
+          -webkit-animation-duration: 8s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: backwards;
+          -moz-animation-name: movpc2;
+          -moz-animation-duration: 8s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: backwards;
+          -o-animation-name: movpc2;
+          -o-animation-duration: 8s;
+          -o-animation-timing-function: ease;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: backwards;
+          animation-name: movpc2;
+          animation-duration: 8s;
+          animation-timing-function: ease;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: backwards;
+          width: 628px;
+          height: 1277px;
+          background: url("../images/popeyes/pc_sub1_1x.jpg") no-repeat top; }
+@keyframes movpc2 {
+  100% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(-918px); }
+  50% {
+    transform: translateY(-918px); }
+  30% {
+    transform: translateY(0); }
+  0% {
+    transform: translateY(0); } }
+          #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi2::after, #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi2::before {
+            display: none; }
+        #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi3 {
+          -webkit-animation-name: movpc3;
+          -webkit-animation-duration: 4s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: backwards;
+          -moz-animation-name: movpc3;
+          -moz-animation-duration: 4s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: backwards;
+          -o-animation-name: movpc3;
+          -o-animation-duration: 4s;
+          -o-animation-timing-function: ease;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: backwards;
+          animation-name: movpc3;
+          animation-duration: 4s;
+          animation-timing-function: ease;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: backwards;
+          width: 628px;
+          height: 734px;
+          background: url("../images/popeyes/pc_sub2_1x.jpg") no-repeat top; }
+@keyframes movpc3 {
+  100% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(-376px); }
+  50% {
+    transform: translateY(-376px); }
+  30% {
+    transform: translateY(0); }
+  0% {
+    transform: translateY(0); } }
+          #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi3::after, #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi3::before {
+            display: none; }
+  #movMain #cnt2 {
+    margin-top: 160px; }
+    #movMain #cnt2 .tit_txt {
+      margin-bottom: 80px; }
+      #movMain #cnt2 .tit_txt h3, #movMain #cnt2 .tit_txt p {
+        display: inline-block; }
+      #movMain #cnt2 .tit_txt h3 {
+        font-size: 20px;
+        line-height: 24px; }
+        #movMain #cnt2 .tit_txt h3 span {
+          display: block; }
+      #movMain #cnt2 .tit_txt p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 40px;
+        color: #333333; }
+    #movMain #cnt2 ul {
+      width: 100%; }
+      #movMain #cnt2 ul li {
+        height: 320px; }
+      #movMain #cnt2 ul .list {
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333; }
+        #movMain #cnt2 ul .list ul > li {
+          width: 290px;
+          float: right; }
+          #movMain #cnt2 ul .list ul > li strong {
+            font-weight: 400;
+            display: block;
+            margin-top: 40px; }
+            #movMain #cnt2 ul .list ul > li strong span {
+              display: block;
+              font-size: 20px;
+              margin-bottom: 8px; }
+          #movMain #cnt2 ul .list ul > li .sub_txt {
+            margin-top: 60px; }
+          #movMain #cnt2 ul .list ul > li .sub_txt + p {
+            font-family: NtSansKR;
+            color: #333333;
+            margin-top: 12px; }
+        #movMain #cnt2 ul .list .capture {
+          width: 550px;
+          height: 320px;
+          background: no-repeat center;
+          margin-right: 40px;
+          margin-bottom: 80px; }
+          #movMain #cnt2 ul .list .capture div {
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e5e5e5; }
+          #movMain #cnt2 ul .list .capture .img_ac1 {
+            background-image: url("../images/popeyes/ac_img1.jpg"); }
+          #movMain #cnt2 ul .list .capture .img_ac2 {
+            background-image: url("../images/popeyes/ac_img2.jpg"); }
+          #movMain #cnt2 ul .list .capture .img_ac3 {
+            background-image: url("../images/popeyes/ac_img3.jpg"); }
+      #movMain #cnt2 ul .ac1 {
+        margin-top: 80px; }
+      #movMain #cnt2 ul .ac2 ul li {
+        float: left; }
+      #movMain #cnt2 ul .ac2 .capture {
+        margin-right: 0;
+        margin-left: 40px; }
+  #movMain #footer {
+    width: 100%;
+    height: 240px;
+    margin-top: 200px; }
+    #movMain #footer .btn_area {
+      width: 100%;
+      color: #333333;
+      padding-top: 60px; }
+      #movMain #footer .btn_area ul li {
+        float: left;
+        height: 100px;
+        width: 220px; }
+        #movMain #footer .btn_area ul li + li {
+          margin-left: 40px; }
+        #movMain #footer .btn_area ul li > p, #movMain #footer .btn_area ul li a {
+          font-weight: 700; }
+      #movMain #footer .btn_area .ft_txt1 p {
+        line-height: 20px; }
+      #movMain #footer .btn_area .ft_txt2 p, #movMain #footer .btn_area .ft_txt3 p {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        font-size: 12px;
+        margin-top: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        opacity: 0; }
+      #movMain #footer .btn_area .ft_txt2 a, #movMain #footer .btn_area .ft_txt3 a {
+        display: inline-block;
+        line-height: 20px;
+        position: relative; }
+      #movMain #footer .btn_area .ft_txt2 a::before, #movMain #footer .btn_area .ft_txt3 a::before {
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -o-transition: width 0.3s;
+        transition: width 0.3s;
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #333333; }
+      #movMain #footer .btn_area .ft_txt2.on a:hover + p, #movMain #footer .btn_area .ft_txt2.on a:focus + p, #movMain #footer .btn_area .ft_txt3.on a:hover + p, #movMain #footer .btn_area .ft_txt3.on a:focus + p {
+        opacity: 1; }
+      #movMain #footer .btn_area .ft_txt2.on a:hover::before, #movMain #footer .btn_area .ft_txt2.on a:focus::before, #movMain #footer .btn_area .ft_txt3.on a:hover::before, #movMain #footer .btn_area .ft_txt3.on a:focus::before {
+        width: 100%; }
+
+/*# sourceMappingURL=pj_popeyes.css.map */

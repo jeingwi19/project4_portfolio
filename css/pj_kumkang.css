@@ -509,7 +509,7 @@
       width: 220px; }
       #movMain #footer .btn_area ul li + li {
         margin-left: 40px; }
-      #movMain #footer .btn_area ul li > p, #movMain #footer .btn_area ul li button, #movMain #footer .btn_area ul li a {
+      #movMain #footer .btn_area ul li > p, #movMain #footer .btn_area ul li a {
         font-weight: 700; }
     #movMain #footer .btn_area .ft_txt1 p {
       line-height: 20px; }
@@ -523,11 +523,11 @@
       font-weight: 400;
       line-height: 20px;
       opacity: 0; }
-    #movMain #footer .btn_area .ft_txt2 button, #movMain #footer .btn_area .ft_txt3 a {
+    #movMain #footer .btn_area .ft_txt2 a, #movMain #footer .btn_area .ft_txt3 a {
       display: inline-block;
       line-height: 20px;
       position: relative; }
-    #movMain #footer .btn_area .ft_txt2 button::before, #movMain #footer .btn_area .ft_txt3 a::before {
+    #movMain #footer .btn_area .ft_txt2 a::before, #movMain #footer .btn_area .ft_txt3 a::before {
       -webkit-transition: width 0.3s;
       -moz-transition: width 0.3s;
       -o-transition: width 0.3s;
@@ -539,9 +539,9 @@
       width: 0;
       height: 2px;
       background: #999999; }
-    #movMain #footer .btn_area .ft_txt2.on button:hover + p, #movMain #footer .btn_area .ft_txt2.on button:focus + p, #movMain #footer .btn_area .ft_txt3.on a:hover + p, #movMain #footer .btn_area .ft_txt3.on a:focus + p {
+    #movMain #footer .btn_area .ft_txt2.on a:hover + p, #movMain #footer .btn_area .ft_txt2.on a:focus + p, #movMain #footer .btn_area .ft_txt3.on a:hover + p, #movMain #footer .btn_area .ft_txt3.on a:focus + p {
       opacity: 1; }
-    #movMain #footer .btn_area .ft_txt2.on button:hover::before, #movMain #footer .btn_area .ft_txt2.on button:focus::before, #movMain #footer .btn_area .ft_txt3.on a:hover::before, #movMain #footer .btn_area .ft_txt3.on a:focus::before {
+    #movMain #footer .btn_area .ft_txt2.on a:hover::before, #movMain #footer .btn_area .ft_txt2.on a:focus::before, #movMain #footer .btn_area .ft_txt3.on a:hover::before, #movMain #footer .btn_area .ft_txt3.on a:focus::before {
       width: 100%; }
 
 /*# sourceMappingURL=pj_kumkang.css.map */

@@ -256,7 +256,7 @@
         ul li{
           float: left;height: 100px;width: 220px;
           + li{margin-left: 40px;}
-          > p, button, a{font-weight: 700;}
+          > p, a{font-weight: 700;}
         }
         .ft_txt1 p{line-height: 20px;}
         .ft_txt2 p, .ft_txt3 p{
@@ -264,14 +264,14 @@
           font-size: 12px;margin-top: 20px;font-weight: 400;line-height: 20px;opacity: 0;
         }
 
-        .ft_txt2 button, .ft_txt3 a{display: inline-block;line-height: 20px;position: relative;}
-        .ft_txt2 button::before, .ft_txt3 a::before{
+        .ft_txt2 a, .ft_txt3 a{display: inline-block;line-height: 20px;position: relative;}
+        .ft_txt2 a::before, .ft_txt3 a::before{
           @include transition(width 0.3s);
           content: "";position: absolute;bottom: -6px;left: 0;width: 0;height: 2px;background: $greyLight;
         }
 
-        .ft_txt2.on button:hover + p, .ft_txt2.on button:focus + p, .ft_txt3.on a:hover + p, .ft_txt3.on a:focus + p{opacity: 1;}
-        .ft_txt2.on button:hover::before, .ft_txt2.on button:focus::before, .ft_txt3.on a:hover::before, .ft_txt3.on a:focus::before{width: 100%;}
+        .ft_txt2.on a:hover + p, .ft_txt2.on a:focus + p, .ft_txt3.on a:hover + p, .ft_txt3.on a:focus + p{opacity: 1;}
+        .ft_txt2.on a:hover::before, .ft_txt2.on a:focus::before, .ft_txt3.on a:hover::before, .ft_txt3.on a:focus::before{width: 100%;}
       }
     }
 }
