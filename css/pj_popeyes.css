@@ -329,7 +329,9 @@ body {
           #movMain #cnt1 .color_info .color_area .grey .colr8 p, #movMain #cnt1 .color_info .color_area .grey .colr9 p, #movMain #cnt1 .color_info .color_area .grey .colr10 p {
             color: #595959; }
     #movMain #cnt1 .pc_view2 {
-      margin-top: 160px; }
+      margin-top: 160px;
+      width: 100%;
+      height: 900px; }
       #movMain #cnt1 .pc_view2 ul {
         width: 100%; }
         #movMain #cnt1 .pc_view2 ul li {
@@ -454,7 +456,9 @@ body {
           #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi3::after, #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi3::before {
             display: none; }
   #movMain #cnt2 {
-    margin-top: 160px; }
+    margin-top: 160px;
+    width: 100%;
+    height: 1240px; }
     #movMain #cnt2 .tit_txt {
       margin-bottom: 80px; }
       #movMain #cnt2 .tit_txt h3, #movMain #cnt2 .tit_txt p {
@@ -466,7 +470,7 @@ body {
           display: block; }
       #movMain #cnt2 .tit_txt p {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 24px;
         margin-left: 40px;
         color: #333333; }
     #movMain #cnt2 ul {
@@ -475,7 +479,7 @@ body {
         height: 320px; }
       #movMain #cnt2 ul .list {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 24px;
         color: #333333; }
         #movMain #cnt2 ul .list ul > li {
           width: 290px;
@@ -523,7 +527,7 @@ body {
   #movMain #footer {
     width: 100%;
     height: 240px;
-    margin-top: 200px; }
+    margin-top: 80px; }
     #movMain #footer .btn_area {
       width: 100%;
       color: #333333;
