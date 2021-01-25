@@ -23,17 +23,96 @@ body{background: #ffb739;}
   }
 
   #gnb{
-    > ul > li > a{color: $greyDark;}
+    > ul > li > a{color: #d55a00;}
     > ul > li > a::before{background: $black;}
     > ul > li:hover > a,  > ul > li > a:focus, > ul > li:hover > a::before, > ul > li > a:focus::before{color: $black;}
 
-    ul li ul li a{color: $greyDark;font-weight: 500;}
+    ul li ul li a{color: #d55a00;font-weight: 500;}
     ul li ul li a::before{background: $black;}
     ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{color: $black;}
   }
 }
 
-.fixed_bg{}
+//animation_bg_image
+.fixed_bg{
+  .bg_full{
+    position: relative;width: 100%;height: 100vh;
+    div{position: absolute;background: no-repeat center;}
+    .mov_hi{
+      @include bgsize(contain);
+      @include keyframe(mov_hi){
+        100%{
+          transform: rotate(45deg) translateX(-48%) translateY(10%);
+        }80%{
+          transform: rotate(45deg) translateX(0) translateY(0);
+        }20%{
+          transform: rotate(45deg) translateX(0) translateY(0);
+        }0%{
+          transform: rotate(45deg) translateX(-48%) translateY(10%);
+        }
+      };
+      @include animation(mov_hi, 4s, ease, 0s, infinite, backwards);
+      top: 0;left: -20%;width: 40%;height: 40%;background-image: url('../images/popeyes/bgi_hi.gif');
+    }
+    .cloud1{
+      @include keyframe(mov_c1){
+        100%{
+          transform: translateX(-150vw)
+        }70%{
+          transform: translateX(-150vw)
+        }0%{
+          transform: translateX(0)
+        }
+      };
+      @include animation(mov_c1, 60s, linear, 0s, infinite, forwards);
+      top: 40%;left: 100%;width: 20%;height: 20%;background-image: url('../images/popeyes/cloud1_light.svg');
+      &::before{content: "";position: absolute;top: -50%;left: 200%;width: 50%;height: 50%;background: url('../images/popeyes/cloud1_light.svg')no-repeat center;}
+    }
+    .mov_lying{
+      @include keyframe(mov_thick){
+        100%{
+          transform: translateY(-6%);
+        }50%{
+          transform: translateY(6%);
+        }0%{
+          transform: translateY(-6%);
+        }
+      };
+      @include keyframe(mov_lying){
+        100%{
+          transform: translateY(4%)
+        }50%{
+          transform: translateY(-4%)
+        }0%{
+          transform: translateY(4%)
+        }
+      };
+      @include animation(mov_lying, 1s, ease-in-out, 0s, infinite, backwards);
+      top: 10%;right: 2%;width: 14%;height: 14%;background-image: url('../images/popeyes/bgi_lying.svg');
+      &::before{
+        @include animation(mov_lying, 1s, ease-in-out, 0.5s, infinite, backwards);
+        content: "";position: absolute;top: 60%;left: 5%;width: 50%;height: 50%;background: url('../images/popeyes/cloud1_light.svg')no-repeat center;
+      }
+      &::after{
+        @include animation(mov_thick, 1s, ease, 0s, infinite, backwards);
+        content: "";position: absolute;top: -30%;left: -48%;width: 60%;height: 60%;background: url('../images/popeyes/bgi_thick.svg')no-repeat center;
+      }
+    }
+    .mov_delivery{
+      @include keyframe(mov_deli){
+        100%{
+          transform: translateX(-74%) scale(1);
+        }50%{
+          transform: translateX(-74%) scale(1,1, 0.9);
+        }0%{
+          transform: translateX(320%) scale(1);
+        }
+      };
+      @include animation(mov_deli, 6s, linear, 0s, infinite, forwards);
+      top: 68%;left: 0;width: 30%;height: 30%;background-image: url('../images/popeyes/bgi_delivery.svg');
+    }
+  }
+}
 
 //#mainTit
 #mainTit .fixed_tit{
@@ -60,10 +139,10 @@ body{background: #ffb739;}
       @include border-radius(10px);
       position: relative;display: inline-block;width: 628px;height: 358px;background: #fff;
       ::before{
-        @include backdrop-filter(blur(100px));
+        @include backdrop-filter(blur(10px));
         @include box-shadow(10px 40px 60px 0 rgba(255, 133, 46, .5));
         @include border-radius(20px);
-        content: "";position: absolute;top: calc(50% - 195px);left: calc(50% - 330px);width: 660px;height: 430px;background: rgba(255, 255, 255, .03);z-index: -1;
+        content: "";position: absolute;top: calc(50% - 195px);left: calc(50% - 330px);width: 660px;height: 430px;background: rgba(255, 255, 255, .1);z-index: -1;
       }
       ::after{
         @include box-shadow(inset 0 0 20px rgba(245, 102, 0, .4));
@@ -85,30 +164,40 @@ body{background: #ffb739;}
         .work_data{font-size: 14px;line-height: 24px;margin-top: 60px;}
       }
       .pc_main{
+        position: relative;
         .info_txt{
           position: absolute;bottom: -32px;left: calc(50% - 123px);font-size: 12px;color: #d55a00;&::before, &::after{display: none;}
         }
-        .mov_img{
+        .dev_link{
           @include border-radius(10px);
-          width: 100%;height: 100%;overflow: hidden;
-          .devi1{
-            @include keyframe(movpc1){
-              100%{
-                transform: translateY(0)
-              }70%{
-                transform: translateY(-450px)
-              }50%{
-                transform: translateY(-450px)
-              }30%{
-                transform: translateY(0)
-              }0%{
-                transform: translateY(0)
-              }
-            };
-            @include animation(movpc1, 4s, ease, 0s, infinite, backwards);
-            width: 628px;height: 809px;background: url('../images/popeyes/pc_main_1x.jpg')no-repeat center;
-            &::after, &::before{display: none;}
+          position: absolute;top: 0;left: 0;display: inline-block;width: 100%;height: 100%;
+          span{display: inline-block;}
+          .mov_img{
+            @include border-radius(10px);
+            width: 100%;height: 100%;overflow: hidden;
+            .devi1{width: 628px;height: 809px;background: url('../images/popeyes/pc_main_1x.jpg')no-repeat center;}
+            .devi1.on{
+              @include keyframe(movpc1){
+                100%{
+                  transform: translateY(0)
+                }70%{
+                  transform: translateY(-450px)
+                }50%{
+                  transform: translateY(-450px)
+                }30%{
+                  transform: translateY(0)
+                }0%{
+                  transform: translateY(0)
+                }
+              };
+              @include animation(movpc1, 4s, ease, 0s, infinite, backwards);
+              background-image: url('../images/popeyes/pc_main_1x.jpg');
+              &::after, &::before{display: none;}
+            }
           }
+        }
+        .dev_link:hover, .dev_link:focus{
+          @include box-shadow(0px 0px 0px 4px $black);
         }
       }
     }

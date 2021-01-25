@@ -15,19 +15,258 @@ body {
 #pcHeader .menu.active .line {
   background: #333333; }
 #pcHeader #gnb > ul > li > a {
-  color: #595959; }
+  color: #d55a00; }
 #pcHeader #gnb > ul > li > a::before {
   background: #333333; }
 #pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before {
   color: #333333; }
 #pcHeader #gnb ul li ul li a {
-  color: #595959;
+  color: #d55a00;
   font-weight: 500; }
 #pcHeader #gnb ul li ul li a::before {
   background: #333333; }
 #pcHeader #gnb ul li ul li:hover a, #pcHeader #gnb ul li ul li a:focus, #pcHeader #gnb ul li ul li:hover a::before, #pcHeader #gnb ul li ul li a:focus::before {
   color: #333333; }
 
+.fixed_bg .bg_full {
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+  .fixed_bg .bg_full div {
+    position: absolute;
+    background: no-repeat center; }
+  .fixed_bg .bg_full .mov_hi {
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    background-size: contain !important;
+    -webkit-animation-name: mov_hi;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-name: mov_hi;
+    -moz-animation-duration: 4s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-name: mov_hi;
+    -o-animation-duration: 4s;
+    -o-animation-timing-function: ease;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: backwards;
+    animation-name: mov_hi;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    top: 0;
+    left: -20%;
+    width: 40%;
+    height: 40%;
+    background-image: url("../images/popeyes/bgi_hi.gif"); }
+@keyframes mov_hi {
+  100% {
+    transform: rotate(45deg) translateX(-48%) translateY(10%); }
+  80% {
+    transform: rotate(45deg) translateX(0) translateY(0); }
+  20% {
+    transform: rotate(45deg) translateX(0) translateY(0); }
+  0% {
+    transform: rotate(45deg) translateX(-48%) translateY(10%); } }
+  .fixed_bg .bg_full .cloud1 {
+    -webkit-animation-name: mov_c1;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: mov_c1;
+    -moz-animation-duration: 60s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: mov_c1;
+    -o-animation-duration: 60s;
+    -o-animation-timing-function: linear;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: forwards;
+    animation-name: mov_c1;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    top: 40%;
+    left: 100%;
+    width: 20%;
+    height: 20%;
+    background-image: url("../images/popeyes/cloud1_light.svg"); }
+@keyframes mov_c1 {
+  100% {
+    transform: translateX(-150vw); }
+  70% {
+    transform: translateX(-150vw); }
+  0% {
+    transform: translateX(0); } }
+    .fixed_bg .bg_full .cloud1::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: 200%;
+      width: 50%;
+      height: 50%;
+      background: url("../images/popeyes/cloud1_light.svg") no-repeat center; }
+  .fixed_bg .bg_full .mov_lying {
+    -webkit-animation-name: mov_lying;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-name: mov_lying;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-name: mov_lying;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: backwards;
+    animation-name: mov_lying;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    top: 10%;
+    right: 2%;
+    width: 14%;
+    height: 14%;
+    background-image: url("../images/popeyes/bgi_lying.svg"); }
+@keyframes mov_thick {
+  100% {
+    transform: translateY(-6%); }
+  50% {
+    transform: translateY(6%); }
+  0% {
+    transform: translateY(-6%); } }
+@keyframes mov_lying {
+  100% {
+    transform: translateY(4%); }
+  50% {
+    transform: translateY(-4%); }
+  0% {
+    transform: translateY(4%); } }
+    .fixed_bg .bg_full .mov_lying::before {
+      -webkit-animation-name: mov_lying;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-delay: 0.5s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: mov_lying;
+      -moz-animation-duration: 1s;
+      -moz-animation-timing-function: ease-in-out;
+      -moz-animation-delay: 0.5s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: mov_lying;
+      -o-animation-duration: 1s;
+      -o-animation-timing-function: ease-in-out;
+      -o-animation-delay: 0.5s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: mov_lying;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0.5s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      content: "";
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      width: 50%;
+      height: 50%;
+      background: url("../images/popeyes/cloud1_light.svg") no-repeat center; }
+    .fixed_bg .bg_full .mov_lying::after {
+      -webkit-animation-name: mov_thick;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-name: mov_thick;
+      -moz-animation-duration: 1s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: backwards;
+      -o-animation-name: mov_thick;
+      -o-animation-duration: 1s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: backwards;
+      animation-name: mov_thick;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      content: "";
+      position: absolute;
+      top: -30%;
+      left: -48%;
+      width: 60%;
+      height: 60%;
+      background: url("../images/popeyes/bgi_thick.svg") no-repeat center; }
+  .fixed_bg .bg_full .mov_delivery {
+    -webkit-animation-name: mov_deli;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: mov_deli;
+    -moz-animation-duration: 6s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: mov_deli;
+    -o-animation-duration: 6s;
+    -o-animation-timing-function: linear;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: forwards;
+    animation-name: mov_deli;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    top: 68%;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    background-image: url("../images/popeyes/bgi_delivery.svg"); }
+@keyframes mov_deli {
+  100% {
+    transform: translateX(-74%) scale(1); }
+  50% {
+    transform: translateX(-74%) scale(1, 1, 0.9); }
+  0% {
+    transform: translateX(320%) scale(1); } }
 #mainTit .fixed_tit {
   color: #333333; }
   #mainTit .fixed_tit .period .apart::before {
@@ -64,8 +303,8 @@ body {
       height: 358px;
       background: #fff; }
       #movMain #cnt1 .device ::before {
-        -webkit-backdrop-filter: blur(100px);
-        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
         -webkit-box-shadow: 10px 40px 60px 0 rgba(255, 133, 46, 0.5);
         -moz-box-shadow: 10px 40px 60px 0 rgba(255, 133, 46, 0.5);
         box-shadow: 10px 40px 60px 0 rgba(255, 133, 46, 0.5);
@@ -78,7 +317,7 @@ body {
         left: calc(50% - 330px);
         width: 660px;
         height: 430px;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.1);
         z-index: -1; }
       #movMain #cnt1 .device ::after {
         -webkit-box-shadow: inset 0 0 20px rgba(245, 102, 0, 0.4);
@@ -107,49 +346,65 @@ body {
         font-size: 14px;
         line-height: 24px;
         margin-top: 60px; }
-    #movMain #cnt1 .pc_view1 .pc_main .info_txt {
-      position: absolute;
-      bottom: -32px;
-      left: calc(50% - 123px);
-      font-size: 12px;
-      color: #d55a00; }
-      #movMain #cnt1 .pc_view1 .pc_main .info_txt::before, #movMain #cnt1 .pc_view1 .pc_main .info_txt::after {
-        display: none; }
-    #movMain #cnt1 .pc_view1 .pc_main .mov_img {
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      width: 100%;
-      height: 100%;
-      overflow: hidden; }
-      #movMain #cnt1 .pc_view1 .pc_main .mov_img .devi1 {
-        -webkit-animation-name: movpc1;
-        -webkit-animation-duration: 4s;
-        -webkit-animation-timing-function: ease;
-        -webkit-animation-delay: 0s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-fill-mode: backwards;
-        -moz-animation-name: movpc1;
-        -moz-animation-duration: 4s;
-        -moz-animation-timing-function: ease;
-        -moz-animation-delay: 0s;
-        -moz-animation-iteration-count: infinite;
-        -moz-animation-fill-mode: backwards;
-        -o-animation-name: movpc1;
-        -o-animation-duration: 4s;
-        -o-animation-timing-function: ease;
-        -o-animation-delay: 0s;
-        -o-animation-iteration-count: infinite;
-        -o-animation-fill-mode: backwards;
-        animation-name: movpc1;
-        animation-duration: 4s;
-        animation-timing-function: ease;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: backwards;
-        width: 628px;
-        height: 809px;
-        background: url("../images/popeyes/pc_main_1x.jpg") no-repeat center; }
+    #movMain #cnt1 .pc_view1 .pc_main {
+      position: relative; }
+      #movMain #cnt1 .pc_view1 .pc_main .info_txt {
+        position: absolute;
+        bottom: -32px;
+        left: calc(50% - 123px);
+        font-size: 12px;
+        color: #d55a00; }
+        #movMain #cnt1 .pc_view1 .pc_main .info_txt::before, #movMain #cnt1 .pc_view1 .pc_main .info_txt::after {
+          display: none; }
+      #movMain #cnt1 .pc_view1 .pc_main .dev_link {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%; }
+        #movMain #cnt1 .pc_view1 .pc_main .dev_link span {
+          display: inline-block; }
+        #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img {
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          overflow: hidden; }
+          #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1 {
+            width: 628px;
+            height: 809px;
+            background: url("../images/popeyes/pc_main_1x.jpg") no-repeat center; }
+          #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1.on {
+            -webkit-animation-name: movpc1;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode: backwards;
+            -moz-animation-name: movpc1;
+            -moz-animation-duration: 4s;
+            -moz-animation-timing-function: ease;
+            -moz-animation-delay: 0s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-fill-mode: backwards;
+            -o-animation-name: movpc1;
+            -o-animation-duration: 4s;
+            -o-animation-timing-function: ease;
+            -o-animation-delay: 0s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-fill-mode: backwards;
+            animation-name: movpc1;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+            background-image: url("../images/popeyes/pc_main_1x.jpg"); }
 @keyframes movpc1 {
   100% {
     transform: translateY(0); }
@@ -161,8 +416,12 @@ body {
     transform: translateY(0); }
   0% {
     transform: translateY(0); } }
-        #movMain #cnt1 .pc_view1 .pc_main .mov_img .devi1::after, #movMain #cnt1 .pc_view1 .pc_main .mov_img .devi1::before {
-          display: none; }
+            #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1.on::after, #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1.on::before {
+              display: none; }
+      #movMain #cnt1 .pc_view1 .pc_main .dev_link:hover, #movMain #cnt1 .pc_view1 .pc_main .dev_link:focus {
+        -webkit-box-shadow: 0px 0px 0px 4px #333333;
+        -moz-box-shadow: 0px 0px 0px 4px #333333;
+        box-shadow: 0px 0px 0px 4px #333333; }
     #movMain #cnt1 .inspire {
       margin-top: 160px;
       width: 100%;
