@@ -49,19 +49,27 @@ $(document).ready(function(){
 
     });
 
-    /* 모바일 - 헤더 dep1*/
+    /* 모바일 - 헤더 dep1 메뉴열기*/
     var _mgnb = $('#mHeader #gnb');
     _mgnb.find('ul li ul').hide();
 
     $('#mHeader .menu').on('click', function() {
-        var _first = $('#mHeader #gnb').find('.first');
-        var _last = $('#mHeader #gnb').find('.last');
-        if(!$(this).hasClass('active')){
-            $(this).addClass('active').next().stop().animate({opacity: 1}, 300, function(){
-                $(this).css({display: 'block'}).find('ul li ul').stop().slideDown('fast');//??움직임이? 툭툭 끊기는 이유?
+        if($(this).hasClass('active')){ //닫기
+            _mgnb.stop().animate({top: '-100%'}, 500, function(){
+                $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
             });
-            $(this).find('.blind-b').text('전체 메뉴 닫기');
-            _first.focus();
+            $(this).removeClass('active').find('.blind-b').text('전체 메뉴 열기');
+
+
+        }else{ //열기
+            var _first = $('#mHeader #gnb').find('.first');
+            var _last = $('#mHeader #gnb').find('.last');
+
+            _mgnb.css({display: 'block'}).stop().animate({top: 0}, 500, function(){
+                _first.focus();
+            });
+
+            $(this).addClass('active').find('.blind-b').text('전체 메뉴 닫기');
 
             //포커싱 제어
             _first.on('keydown', function(e){
@@ -78,13 +86,6 @@ $(document).ready(function(){
                     $('.menu .btn_open').focus();
                 }
             });
-
-        }else{
-            $(this).removeClass('active').next().stop().animate({opacity: 0}, 300, function(){
-                $(this).css({display: 'none'}).find('ul li ul').stop().slideUp('fast');
-            });
-            $(this).find('.blind-b').text('전체 메뉴 열기');
-            
         }
 
         //모바일 - depth1 a 클릭
@@ -98,9 +99,6 @@ $(document).ready(function(){
 
             return false;
         });
-
-        //??sildeDown 자연스럽게 열리지 않는 오류
-        //??메뉴를 닫아도 dep2 ul열림 오류 
     });
 
     

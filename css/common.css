@@ -315,6 +315,10 @@ body {
     display: none; }
 
   #mHeader {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     display: block;
     position: fixed;
     top: 0;
@@ -392,28 +396,17 @@ body {
         transform: rotate(-225deg);
         top: 20px; }
     #mHeader #gnb {
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
+      /* li아닌 a태그에 스타일 적용하기, display: block; */
+      display: none;
       position: fixed;
-      top: 0;
+      top: -100%;
       left: 0;
       right: 0;
-      display: none;
       height: 100%;
       width: 100%;
-      opacity: 0;
-      overflow-x: auto; }
-      #mHeader #gnb::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: -100; }
+      overflow-y: auto;
+      /* opacity: 0; */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0)); }
       #mHeader #gnb > ul {
         padding-left: 20px;
         width: 100%;
@@ -421,59 +414,59 @@ body {
         top: 0;
         left: 0;
         margin-top: 80px; }
-        #mHeader #gnb > ul .more {
-          position: relative; }
-        #mHeader #gnb > ul .more::before {
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
-          -webkit-transform: rotate(-135deg) translateY(10px) translateX(10px);
-          -moz-transform: rotate(-135deg) translateY(10px) translateX(10px);
-          -o-transform: rotate(-135deg) translateY(10px) translateX(10px);
-          -ms-transform: rotate(-135deg) translateY(10px) translateX(10px);
-          transform: rotate(-135deg) translateY(10px) translateX(10px);
-          content: "";
-          position: absolute;
-          top: 46px;
-          left: 85%;
-          width: 16px;
-          height: 16px;
-          border-top: 4px solid #fff;
-          border-left: 4px solid #fff;
-          z-index: 1; }
         #mHeader #gnb > ul > li {
           border-bottom: 2px solid #e5e5e5; }
+          #mHeader #gnb > ul > li > a {
+            position: relative;
+            height: 80px;
+            padding-top: 40px; }
         #mHeader #gnb > ul li {
           width: 100%;
           font-weight: 700;
           font-size: 28px; }
           #mHeader #gnb > ul li a {
             display: block;
-            padding-top: 40px;
-            width: 100%;
-            height: 80px; }
+            width: 100%; }
+          #mHeader #gnb > ul li .more {
+            position: relative; }
+          #mHeader #gnb > ul li .more::before {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform: rotate(-135deg) translateY(10px) translateX(10px);
+            -moz-transform: rotate(-135deg) translateY(10px) translateX(10px);
+            -o-transform: rotate(-135deg) translateY(10px) translateX(10px);
+            -ms-transform: rotate(-135deg) translateY(10px) translateX(10px);
+            transform: rotate(-135deg) translateY(10px) translateX(10px);
+            content: "";
+            position: absolute;
+            top: 46px;
+            left: 85%;
+            width: 16px;
+            height: 16px;
+            border-top: 4px solid #fff;
+            border-left: 4px solid #fff;
+            z-index: 1; }
           #mHeader #gnb > ul li ul {
-            margin-top: 2px; }
+            margin-top: 2px;
+            display: none; }
             #mHeader #gnb > ul li ul li {
               width: 100%;
               font-size: 20px;
               font-family: NtSansKR; }
               #mHeader #gnb > ul li ul li a {
+                display: block;
                 padding-top: 16px;
                 width: 100%;
                 height: 60px;
                 font-weight: 400; }
-      #mHeader #gnb > ul > li > a + ul > li a {
-        display: none; }
       #mHeader #gnb > ul > li.on .more::before {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
-      #mHeader #gnb > ul > li.on ul li a {
-        display: block; }
       #mHeader #gnb ul .copyr {
         border-bottom: none; }
         #mHeader #gnb ul .copyr p {
