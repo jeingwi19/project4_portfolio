@@ -106,6 +106,11 @@ header, nav, section, footer {
   width: 100%;
   margin: 0 auto; }
 
+.wid360 {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto; }
+
 .btn_more {
   display: inline-block;
   text-align: center;
@@ -301,5 +306,195 @@ body {
       color: #e5e5e5; }
     #pcHeader #gnb ul li ul li a span {
       margin-left: 8px; }
+
+#mHeader {
+  display: none; }
+
+@media screen and (max-width: 360px) {
+  #pcHeader {
+    display: none; }
+
+  #mHeader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 360px;
+    z-index: 1100;
+    /* position: relative; */
+    /* .menu에 .active 추가 */ }
+    #mHeader .bgfix_gr {
+      margin: auto;
+      max-width: initial;
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+      opacity: 0; }
+    #mHeader .logo {
+      top: 0;
+      left: 0;
+      width: 264px;
+      height: 24px;
+      z-index: 100; }
+      #mHeader .logo, #mHeader .logo a img {
+        position: absolute; }
+      #mHeader .logo a img {
+        top: 28px;
+        left: 20px; }
+      #mHeader .logo a img:last-child {
+        opacity: 0; }
+    #mHeader .menu {
+      top: 16px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      z-index: 1100; }
+      #mHeader .menu, #mHeader .menu .line {
+        position: absolute; }
+      #mHeader .menu .btn_open {
+        width: 100%;
+        height: 100%; }
+        #mHeader .menu .btn_open .btn_line {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px; }
+      #mHeader .menu .line {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        width: 100%;
+        height: 4px;
+        background: #e5e5e5;
+        left: 0; }
+      #mHeader .menu .top {
+        top: 12px; }
+      #mHeader .menu .btm {
+        top: 26px; }
+      #mHeader .menu.active .line {
+        background: #e5e5e5; }
+      #mHeader .menu.active .top {
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        transform: rotate(225deg);
+        top: 20px; }
+      #mHeader .menu.active .btm {
+        -webkit-transform: rotate(-225deg);
+        -moz-transform: rotate(-225deg);
+        -o-transform: rotate(-225deg);
+        -ms-transform: rotate(-225deg);
+        transform: rotate(-225deg);
+        top: 20px; }
+    #mHeader #gnb {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      overflow-x: auto; }
+      #mHeader #gnb::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: -100; }
+      #mHeader #gnb > ul {
+        padding-left: 20px;
+        width: 100%;
+        height: 480px;
+        top: 0;
+        left: 0;
+        margin-top: 80px; }
+        #mHeader #gnb > ul .more {
+          position: relative; }
+        #mHeader #gnb > ul .more::before {
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          -webkit-transform: rotate(-135deg) translateY(10px) translateX(10px);
+          -moz-transform: rotate(-135deg) translateY(10px) translateX(10px);
+          -o-transform: rotate(-135deg) translateY(10px) translateX(10px);
+          -ms-transform: rotate(-135deg) translateY(10px) translateX(10px);
+          transform: rotate(-135deg) translateY(10px) translateX(10px);
+          content: "";
+          position: absolute;
+          top: 46px;
+          left: 85%;
+          width: 16px;
+          height: 16px;
+          border-top: 4px solid #fff;
+          border-left: 4px solid #fff;
+          z-index: 1; }
+        #mHeader #gnb > ul > li {
+          border-bottom: 2px solid #e5e5e5; }
+        #mHeader #gnb > ul li {
+          width: 100%;
+          font-weight: 700;
+          font-size: 28px; }
+          #mHeader #gnb > ul li a {
+            display: block;
+            padding-top: 40px;
+            width: 100%;
+            height: 80px; }
+          #mHeader #gnb > ul li ul {
+            margin-top: 2px; }
+            #mHeader #gnb > ul li ul li {
+              width: 100%;
+              font-size: 20px;
+              font-family: NtSansKR; }
+              #mHeader #gnb > ul li ul li a {
+                padding-top: 16px;
+                width: 100%;
+                height: 60px;
+                font-weight: 400; }
+      #mHeader #gnb > ul > li > a + ul > li a {
+        display: none; }
+      #mHeader #gnb > ul > li.on .more::before {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      #mHeader #gnb > ul > li.on ul li a {
+        display: block; }
+      #mHeader #gnb ul .copyr {
+        border-bottom: none; }
+        #mHeader #gnb ul .copyr p {
+          font-size: 14px;
+          margin-top: 40px; }
+          #mHeader #gnb ul .copyr p a {
+            position: relative;
+            display: inline-block;
+            width: auto;
+            height: auto;
+            padding-top: 0; }
+            #mHeader #gnb ul .copyr p a::before {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: #e5e5e5; }
+          #mHeader #gnb ul .copyr p span {
+            display: block;
+            margin-top: 12px; } }
 
 /*# sourceMappingURL=common.css.map */

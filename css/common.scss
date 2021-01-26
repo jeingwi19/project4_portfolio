@@ -74,6 +74,7 @@ header, nav, section, footer{display: block;}
 .clearfix::after{content: "";display: block;clear: both;}
 .blind-b{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 .wid1280{max-width: 1280px;width: 100%;margin: 0 auto;}
+.wid360{max-width: 360px;width: 100%; margin: 0 auto;}
 .btn_more{
     display: inline-block;text-align: center;width: 40px;height: 40px;line-height: 40px;background: url("../images/main/btn_more_black.svg")no-repeat center;
 }
@@ -159,5 +160,97 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
       ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{width: 100%;color: $white;}
       ul li ul li a span{margin-left: 8px;}
 
+    }
+}
+
+#mHeader{display: none;}
+
+@media screen and (max-width: 360px){
+  #pcHeader{display: none;}
+  #mHeader{
+      display: block;position: fixed;top: 0;left: 0;width: 100%;min-width: 360px;z-index: 1100;
+      .bgfix_gr{margin: auto;max-width: initial;width: 100%;height: 80px;background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));opacity: 0;}
+      /* position: relative; */
+      .logo{
+          &, a img{position: absolute;}
+          top: 0;left: 0;width: 264px;height: 24px;z-index: 100;
+          a img{top: 28px;left: 20px;}
+          a img:last-child{opacity: 0;}
+      }
+      /* .menu에 .active 추가 */
+      .menu{
+        &, .line{position: absolute;}
+        top: 16px;right: 20px;width: 40px;height: 40px;overflow: hidden;z-index: 1100;
+        .btn_open{
+            width: 100%;height: 100%;
+            .btn_line{
+                position: absolute;top: 0;left: 0;width: 40px;height: 40px;
+            }
+        }
+        .line{
+            @include transition(all 0.5s);
+            width: 100%;height: 4px;background: $white;left: 0;
+        }
+        .top{top: 12px;}
+        .btm{top: 26px;}
+        &.active{
+            .line{background: $white;}
+            .top{
+                @include transform(rotate(225deg));
+                top: 20px;
+            }
+            .btm{
+                @include transform(rotate(-225deg));
+                top: 20px;
+            }
+        }
+
+      }
+
+      #gnb{
+        @include transition(all 0.5s);
+        position: fixed;top: 0;left: 0;right: 0;display: none;height: 100%;width: 100%;opacity: 0;overflow-x: auto;
+        &::before{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, .8);z-index: -100;}
+        > ul{
+          padding-left: 20px;width: 100%;height: 480px;top: 0;left: 0;margin-top: 80px;
+          .more{position: relative;}
+          .more::before{
+            @include transition(all 0.5s);
+            @include transform(rotate(-135deg)translateY(10px) translateX(10px));
+            content: "";position: absolute;top: 46px;left: 85%;width: 16px;height: 16px;border-top: 4px solid #fff;border-left: 4px solid #fff;z-index: 1;
+          }
+          >li{border-bottom: 2px solid $white;}
+          li{
+            width: 100%;font-weight: 700;font-size: 28px;
+            a{display: block;padding-top: 40px;width: 100%;height: 80px;}
+            ul{
+              margin-top: 2px;
+              li{
+                width: 100%;font-size: 20px;font-family: $korFont;
+                a{padding-top: 16px;width: 100%;height: 60px;font-weight: 400;}
+              }
+            }
+          }
+        }
+        > ul > li > a + ul > li a{display: none;}
+        > ul > li.on{
+          .more::before{
+            @include transform(rotate(45deg));
+          }
+          ul li a{display: block;}
+        }
+        
+        ul .copyr{
+          border-bottom: none;
+          p{
+            font-size: 14px;margin-top: 40px;
+            a{
+              position: relative;display: inline-block;width: auto;height: auto;padding-top: 0;
+              &::before{content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 2px;background: $white;}
+            }
+            span{display: block;margin-top: 12px;}
+          }
+        }
+      }
     }
 }
