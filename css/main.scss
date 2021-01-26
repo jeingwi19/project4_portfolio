@@ -27,6 +27,7 @@
       width: 1200px;bottom: -8px;font-size: 88px;font-weight: 700;line-height: 68px;z-index: -1;left: 0;
       div{display: inline;}
     }
+    #nowTime{left: 480px;}
     .human_area{
       width: 428px;height: 606px;
       .human{
@@ -37,8 +38,9 @@
         position: relative;left: 240px;top: 60px;width: 154px;height: 238px;
       }
       .human_talk{
+        @include transition(all 0.5s);
         @include border-radius(20px);
-        position: absolute;opacity: 0;top: 0;transition: all 0.5s;
+        position: absolute;opacity: 0;top: 0;
         background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);padding: 24px;
         &::before{
           @include translateX-50;
@@ -94,11 +96,10 @@
         @include translate-50;
         position: absolute;font-weight: 700;font-size: 24px;line-height: 32px;width: 140px;height: 140px;left: 50%;top: 50%;z-index: 10;
       }
-      .btn_txt:focus{
+      /* .btn_txt:focus{
         @include border-radius(50%);
-        /* @include box-shadow(0, 0, 0, 2px, $orange); ??*/
         outline: none;box-shadow: 0 0 0 2px $orange;
-      }
+      } */
       .imgicon{position: absolute;width: 200px;height: 200px;background: no-repeat center;}
       .coffee{background-image: url('../images/main/emoji_coffee.png');left: 120px;top: -40px;}
       .fire{background-image: url('../images/main/emoji_fire.png');bottom: -20px;left: -28px;}
@@ -592,5 +593,63 @@
 }
 
 @media screen and (max-width: 360px){
-  
+  .fixed_bg{
+    left: 50%;
+    .bg_line{
+      width: 320px;height: 480px;
+      .box{display: none;}
+      &:nth-child(1)::before{top: 0;display: none;}
+
+      .wisesaying{font-size: 58px;line-height: 52px;}
+      .hello{display: none;}
+      .now{font-size: 58px;line-height: 60px;bottom: 60px;}
+      #nowTime{left: 0;bottom: 6px;}
+      .human_area{
+        .human{
+          z-index: 1;top: 0;left: 0;
+        }
+        .talk_area{
+          /* display: none; */
+          top: 0;left: 0;
+          .human_talk{
+            &::before{
+              left: 32%;bottom: -32px;border-top: 32px solid $white;border-left: 40px solid transparent;border-right: 0 solid transparent;
+            }
+          }
+          .talk2{display: none;}
+        }
+      }
+      .txt_hire{
+        bottom: 25%;right: -30%;
+        &::before{
+          width: 160px;height: 160px
+        }
+        .btn_txt{
+          @include keyframe(rot_txt){
+            100%{
+              transform: rotate(-360deg);
+            }0%{
+              transform: rotate(0);
+            }
+          };
+          @include animation(rot_txt, 60s, linear, 0s, infinite, backwards);
+          z-index: -1;left: 32%;top: 32%;font-size: 20px;line-height: 24px;width: 100px;height: 100px;color: $greyLight;
+        }
+        .coffee{top: -48px;left: 80px;}
+        .fire{
+          @include keyframe(mov_fire){
+            100%{
+              transform: scale(0.9, 0.9) translateY(2px);
+            }20%{
+              transform: scale(1.2, 0.9) translateY(4px);
+            }0%{
+              transform: scale(0.9, 0.9) translateY(2px);
+            }
+          };
+          @include animation(mov_fire, 0.1s, ease-in-out, 0s, infinite, backwards);
+          bottom: -72px;left: -182px;
+        }
+      }
+    }
+  }
 }

@@ -33,7 +33,7 @@
           if(m < 10)m = '0' + m
           //console.log(h, m);
 
-          var result = 'Time is ' + ampm + h + ':' + m
+          var result = ampm + h + ':' + m
           //console.log(result);
 
           nowTime.innerHTML = result;
@@ -134,8 +134,8 @@
                     <div class="txt_line wisesaying p_a" aria-hidden="true"><p>The only thing worse than starting something and failing... is not starting something</p><p>The only thing worse than starting something and failing... is not starting something</p>
                     </div>
                     <div class="txt_grey hello p_a" aria-hidden="true">Hello I am...</div>
+                    <p class="txt_line now p_a">Time is</p>
                     <div class="txt_line now p_a" id="nowTime">
-                      <div id="capital"></div>
                       <div id="clock"></div>
                     </div>
                     <div class="human_area p_a">
@@ -449,7 +449,7 @@
             <button type="button" class="like" title="좋아요">
               <span class="blind-b">하트 좋아요</span>
             </button>
-            <span class="count_numb p_a">102</span><!-- 동적생성 예정 -->
+            <!-- <span class="count_numb p_a">102</span> --><!-- 동적생성 예정 -->
             <a href="https://open.kakao.com/o/skrVTIQc" class="chat" target="_blank" title="새창열기 오픈채팅">
               <span class="blind-b">채팅 메세지</span>
             </a>

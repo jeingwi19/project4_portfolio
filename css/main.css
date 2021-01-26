@@ -74,6 +74,8 @@
       left: 0; }
       .fixed_bg .bg_line .now div {
         display: inline; }
+    .fixed_bg .bg_line #nowTime {
+      left: 480px; }
     .fixed_bg .bg_line .human_area {
       width: 428px;
       height: 606px; }
@@ -90,13 +92,16 @@
         width: 154px;
         height: 238px; }
       .fixed_bg .bg_line .human_area .human_talk {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
         position: absolute;
         opacity: 0;
         top: 0;
-        transition: all 0.5s;
         background: #e5e5e5;
         width: 154px;
         height: 238px;
@@ -143,7 +148,11 @@
       width: 276px;
       height: 276px;
       bottom: 0px;
-      right: 0; }
+      right: 0;
+      /* .btn_txt:focus{
+        @include border-radius(50%);
+        outline: none;box-shadow: 0 0 0 2px $orange;
+      } */ }
       .fixed_bg .bg_line .txt_hire::before {
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -241,13 +250,6 @@
         left: 50%;
         top: 50%;
         z-index: 10; }
-      .fixed_bg .bg_line .txt_hire .btn_txt:focus {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        /* @include box-shadow(0, 0, 0, 2px, $orange); ??*/
-        outline: none;
-        box-shadow: 0 0 0 2px #ff6f30; }
       .fixed_bg .bg_line .txt_hire .imgicon {
         position: absolute;
         width: 200px;
@@ -1392,5 +1394,126 @@
     right: 20px;
     width: 40px;
     height: 40px; }
+
+@media screen and (max-width: 360px) {
+  .fixed_bg {
+    left: 50%; }
+    .fixed_bg .bg_line {
+      width: 320px;
+      height: 480px; }
+      .fixed_bg .bg_line .box {
+        display: none; }
+      .fixed_bg .bg_line:nth-child(1)::before {
+        top: 0;
+        display: none; }
+      .fixed_bg .bg_line .wisesaying {
+        font-size: 58px;
+        line-height: 52px; }
+      .fixed_bg .bg_line .hello {
+        display: none; }
+      .fixed_bg .bg_line .now {
+        font-size: 58px;
+        line-height: 60px;
+        bottom: 60px; }
+      .fixed_bg .bg_line #nowTime {
+        left: 0;
+        bottom: 6px; }
+      .fixed_bg .bg_line .human_area .human {
+        z-index: 1;
+        top: 0;
+        left: 0; }
+      .fixed_bg .bg_line .human_area .talk_area {
+        /* display: none; */
+        top: 0;
+        left: 0; }
+        .fixed_bg .bg_line .human_area .talk_area .human_talk::before {
+          left: 32%;
+          bottom: -32px;
+          border-top: 32px solid #e5e5e5;
+          border-left: 40px solid transparent;
+          border-right: 0 solid transparent; }
+        .fixed_bg .bg_line .human_area .talk_area .talk2 {
+          display: none; }
+      .fixed_bg .bg_line .txt_hire {
+        bottom: 25%;
+        right: -30%; }
+        .fixed_bg .bg_line .txt_hire::before {
+          width: 160px;
+          height: 160px; }
+        .fixed_bg .bg_line .txt_hire .btn_txt {
+          -webkit-animation-name: rot_txt;
+          -webkit-animation-duration: 60s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: backwards;
+          -moz-animation-name: rot_txt;
+          -moz-animation-duration: 60s;
+          -moz-animation-timing-function: linear;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: backwards;
+          -o-animation-name: rot_txt;
+          -o-animation-duration: 60s;
+          -o-animation-timing-function: linear;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: backwards;
+          animation-name: rot_txt;
+          animation-duration: 60s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: backwards;
+          z-index: -1;
+          left: 32%;
+          top: 32%;
+          font-size: 20px;
+          line-height: 24px;
+          width: 100px;
+          height: 100px;
+          color: #999999; }
+  @keyframes rot_txt {
+    100% {
+      transform: rotate(-360deg); }
+    0% {
+      transform: rotate(0); } }
+        .fixed_bg .bg_line .txt_hire .coffee {
+          top: -48px;
+          left: 80px; }
+        .fixed_bg .bg_line .txt_hire .fire {
+          -webkit-animation-name: mov_fire;
+          -webkit-animation-duration: 0.1s;
+          -webkit-animation-timing-function: ease-in-out;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: backwards;
+          -moz-animation-name: mov_fire;
+          -moz-animation-duration: 0.1s;
+          -moz-animation-timing-function: ease-in-out;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: backwards;
+          -o-animation-name: mov_fire;
+          -o-animation-duration: 0.1s;
+          -o-animation-timing-function: ease-in-out;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: backwards;
+          animation-name: mov_fire;
+          animation-duration: 0.1s;
+          animation-timing-function: ease-in-out;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: backwards;
+          bottom: -72px;
+          left: -182px; }
+  @keyframes mov_fire {
+    100% {
+      transform: scale(0.9, 0.9) translateY(2px); }
+    20% {
+      transform: scale(1.2, 0.9) translateY(4px); }
+    0% {
+      transform: scale(0.9, 0.9) translateY(2px); } } }
 
 /*# sourceMappingURL=main.css.map */

@@ -56,7 +56,7 @@ $(document).ready(function(){
     $('#mHeader .menu').on('click', function() {
         if($(this).hasClass('active')){ //닫기
             _mgnb.stop().animate({top: '-100%'}, 500, function(){
-                $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
+                $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp('fast');
             });
             $(this).removeClass('active').find('.blind-b').text('전체 메뉴 열기');
 
