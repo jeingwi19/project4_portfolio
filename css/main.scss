@@ -40,8 +40,9 @@
       .human_talk{
         @include transition(all 0.5s);
         @include border-radius(20px);
+        @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .5));
         position: absolute;opacity: 0;top: 0;
-        background: $white;width: 154px;height: 238px;box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, .5);padding: 24px;
+        background: $white;width: 154px;height: 238px;padding: 24px;
         &::before{
           @include translateX-50;
           content: "";position: absolute;width: 0;height: 0;bottom: -40px;left: 50%;
@@ -134,7 +135,7 @@
           100%{
             transform: scale(.9)
           }50%{
-            transform: scale(1.2) rotate(-16deg)
+            transform: scale(1.1) rotate(-16deg)
           }0%{
             transform: scale(.9)
           }
@@ -179,7 +180,7 @@
         :nth-child(2){margin-left: 160px;}
         font-family: $korFont;font-size: 40px;line-height: 88px;font-weight: 700;
         button{position: relative;font-weight: 700;margin-left: 20px;}
-        button::before{content: "";position: absolute;bottom: 12px;left: 0;width: 268px;height: 4px;background: $white;}
+        button::before{content: "";position: absolute;bottom: 12px;left: 0;width: 100%;height: 4px;background: $white;}
       }
     }
     .deco{
@@ -612,15 +613,18 @@
           /* display: none; */
           top: 0;left: 0;
           .human_talk{
+            @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .2));
+            background: #222;
             &::before{
-              left: 32%;bottom: -32px;border-top: 32px solid $white;border-left: 40px solid transparent;border-right: 0 solid transparent;
+              left: 32%;bottom: -32px;border-top: 32px solid #222;border-left: 40px solid transparent;border-right: 0 solid transparent;
             }
+            .talkguide{color: $white;}
           }
           .talk2{display: none;}
         }
       }
       .txt_hire{
-        bottom: 25%;right: -30%;
+        bottom: 23%;right: -30%;
         &::before{
           width: 160px;height: 160px
         }
@@ -635,20 +639,63 @@
           @include animation(rot_txt, 60s, linear, 0s, infinite, backwards);
           z-index: -1;left: 32%;top: 32%;font-size: 20px;line-height: 24px;width: 100px;height: 100px;color: $greyLight;
         }
-        .coffee{top: -48px;left: 80px;}
+        .coffee{
+          @include keyframe(mov_coffee){
+            100%{
+              transform: rotate(-12deg);
+            }50%{
+              transform: rotate(2deg);
+            }0%{
+              transform: rotate(-12deg);
+            }
+          };
+          @include animation(mov_coffee, 2s, ease, 0s, infinite, backwards);
+          top: -48px;left: 80px;
+        }
         .fire{
           @include keyframe(mov_fire){
             100%{
-              transform: scale(0.9, 0.9) translateY(2px);
+              transform: scale(0.9, 1.1) translateY(2px) rotate(0);
             }20%{
-              transform: scale(1.2, 0.9) translateY(4px);
+              transform: scale(1.2, 0.9) translateY(12px) rotate(8deg);
             }0%{
-              transform: scale(0.9, 0.9) translateY(2px);
+              transform: scale(0.9, 1.1) translateY(2px) rotate(0);
             }
           };
-          @include animation(mov_fire, 0.1s, ease-in-out, 0s, infinite, backwards);
-          bottom: -72px;left: -182px;
+          @include animation(mov_fire, 0.14s, ease-in-out, 0s, infinite, backwards);
+          bottom: -50px;left: -182px;
         }
+      }
+    }
+  }
+  
+  #scrollCnt{
+    left: 0;top: 400px;width: 320px;/* background: red; */
+
+    #cnt1{
+      .tit_txt{
+        .imgicon{width: 140px;height: 140px;}
+        .head{
+          @include bgsize(contain);
+          top: -40px;left: 12px;
+        }
+        .thumsup{display: none;top: -80px;right: -48px;}
+        .talkbox{
+          @include bgsize(contain);
+          top: 80px;right: 0;
+        }
+        .point{display: none;}
+        .intro_main_txt{
+          :nth-child(2){margin-left: 100px;}
+          font-size: 32px;line-height: 60px;
+          button{margin-left: 0;}
+          button::before{bottom: 0;}
+        }
+      }
+      .deco{
+        margin-top: 240px;margin-left: 0;
+        .arrow{top: 240px;left: 140px;}
+        .mouse{display: none;}
       }
     }
   }

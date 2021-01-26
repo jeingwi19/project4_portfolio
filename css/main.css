@@ -99,13 +99,15 @@
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
+        -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.5);
         position: absolute;
         opacity: 0;
         top: 0;
         background: #e5e5e5;
         width: 154px;
         height: 238px;
-        box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.5);
         padding: 24px; }
         .fixed_bg .bg_line .human_area .human_talk::before {
           -webkit-transform: translateX(-50%);
@@ -348,7 +350,7 @@
   100% {
     transform: scale(0.9); }
   50% {
-    transform: scale(1.2) rotate(-16deg); }
+    transform: scale(1.1) rotate(-16deg); }
   0% {
     transform: scale(0.9); } }
     #scrollCnt #cnt1 .tit_txt .talkbox {
@@ -443,7 +445,7 @@
         position: absolute;
         bottom: 12px;
         left: 0;
-        width: 268px;
+        width: 100%;
         height: 4px;
         background: #e5e5e5; }
   #scrollCnt #cnt1 .deco {
@@ -1426,16 +1428,23 @@
         /* display: none; */
         top: 0;
         left: 0; }
-        .fixed_bg .bg_line .human_area .talk_area .human_talk::before {
-          left: 32%;
-          bottom: -32px;
-          border-top: 32px solid #e5e5e5;
-          border-left: 40px solid transparent;
-          border-right: 0 solid transparent; }
+        .fixed_bg .bg_line .human_area .talk_area .human_talk {
+          -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
+          background: #222; }
+          .fixed_bg .bg_line .human_area .talk_area .human_talk::before {
+            left: 32%;
+            bottom: -32px;
+            border-top: 32px solid #222;
+            border-left: 40px solid transparent;
+            border-right: 0 solid transparent; }
+          .fixed_bg .bg_line .human_area .talk_area .human_talk .talkguide {
+            color: #e5e5e5; }
         .fixed_bg .bg_line .human_area .talk_area .talk2 {
           display: none; }
       .fixed_bg .bg_line .txt_hire {
-        bottom: 25%;
+        bottom: 23%;
         right: -30%; }
         .fixed_bg .bg_line .txt_hire::before {
           width: 160px;
@@ -1479,41 +1488,115 @@
     0% {
       transform: rotate(0); } }
         .fixed_bg .bg_line .txt_hire .coffee {
+          -webkit-animation-name: mov_coffee;
+          -webkit-animation-duration: 2s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: backwards;
+          -moz-animation-name: mov_coffee;
+          -moz-animation-duration: 2s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: backwards;
+          -o-animation-name: mov_coffee;
+          -o-animation-duration: 2s;
+          -o-animation-timing-function: ease;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: backwards;
+          animation-name: mov_coffee;
+          animation-duration: 2s;
+          animation-timing-function: ease;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: backwards;
           top: -48px;
           left: 80px; }
+  @keyframes mov_coffee {
+    100% {
+      transform: rotate(-12deg); }
+    50% {
+      transform: rotate(2deg); }
+    0% {
+      transform: rotate(-12deg); } }
         .fixed_bg .bg_line .txt_hire .fire {
           -webkit-animation-name: mov_fire;
-          -webkit-animation-duration: 0.1s;
+          -webkit-animation-duration: 0.14s;
           -webkit-animation-timing-function: ease-in-out;
           -webkit-animation-delay: 0s;
           -webkit-animation-iteration-count: infinite;
           -webkit-animation-fill-mode: backwards;
           -moz-animation-name: mov_fire;
-          -moz-animation-duration: 0.1s;
+          -moz-animation-duration: 0.14s;
           -moz-animation-timing-function: ease-in-out;
           -moz-animation-delay: 0s;
           -moz-animation-iteration-count: infinite;
           -moz-animation-fill-mode: backwards;
           -o-animation-name: mov_fire;
-          -o-animation-duration: 0.1s;
+          -o-animation-duration: 0.14s;
           -o-animation-timing-function: ease-in-out;
           -o-animation-delay: 0s;
           -o-animation-iteration-count: infinite;
           -o-animation-fill-mode: backwards;
           animation-name: mov_fire;
-          animation-duration: 0.1s;
+          animation-duration: 0.14s;
           animation-timing-function: ease-in-out;
           animation-delay: 0s;
           animation-iteration-count: infinite;
           animation-fill-mode: backwards;
-          bottom: -72px;
+          bottom: -50px;
           left: -182px; }
   @keyframes mov_fire {
     100% {
-      transform: scale(0.9, 0.9) translateY(2px); }
+      transform: scale(0.9, 1.1) translateY(2px) rotate(0); }
     20% {
-      transform: scale(1.2, 0.9) translateY(4px); }
+      transform: scale(1.2, 0.9) translateY(12px) rotate(8deg); }
     0% {
-      transform: scale(0.9, 0.9) translateY(2px); } } }
+      transform: scale(0.9, 1.1) translateY(2px) rotate(0); } }
+  #scrollCnt {
+    left: 0;
+    top: 400px;
+    width: 320px;
+    /* background: red; */ }
+    #scrollCnt #cnt1 .tit_txt .imgicon {
+      width: 140px;
+      height: 140px; }
+    #scrollCnt #cnt1 .tit_txt .head {
+      -webkit-background-size: contain !important;
+      -moz-background-size: contain !important;
+      background-size: contain !important;
+      top: -40px;
+      left: 12px; }
+    #scrollCnt #cnt1 .tit_txt .thumsup {
+      display: none;
+      top: -80px;
+      right: -48px; }
+    #scrollCnt #cnt1 .tit_txt .talkbox {
+      -webkit-background-size: contain !important;
+      -moz-background-size: contain !important;
+      background-size: contain !important;
+      top: 80px;
+      right: 0; }
+    #scrollCnt #cnt1 .tit_txt .point {
+      display: none; }
+    #scrollCnt #cnt1 .tit_txt .intro_main_txt {
+      font-size: 32px;
+      line-height: 60px; }
+      #scrollCnt #cnt1 .tit_txt .intro_main_txt :nth-child(2) {
+        margin-left: 100px; }
+      #scrollCnt #cnt1 .tit_txt .intro_main_txt button {
+        margin-left: 0; }
+      #scrollCnt #cnt1 .tit_txt .intro_main_txt button::before {
+        bottom: 0; }
+    #scrollCnt #cnt1 .deco {
+      margin-top: 240px;
+      margin-left: 0; }
+      #scrollCnt #cnt1 .deco .arrow {
+        top: 240px;
+        left: 140px; }
+      #scrollCnt #cnt1 .deco .mouse {
+        display: none; } }
 
 /*# sourceMappingURL=main.css.map */
