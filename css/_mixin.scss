@@ -111,15 +111,31 @@
 
 @mixin scrollbar($value) {
     -webkit-scrollbar: $value;
-    scrollbar: $value;
 }
 
 @mixin scrollbar-thumb($value) {
     -webkit-scrollbar-thumb: $value;
-    scrollbar-thumb: $value;
+}
+
+@mixin scrollbar-track($value) {
+    -webkit-scrollbar-track: $value;
 }
 
 @mixin backdrop-filter($value) {
     -webkit-backdrop-filter: $value;
     backdrop-filter: $value;
+}
+
+@mixin bg-linear-gradient($value) {
+    -webkit-background: linear-gradient($value);
+    -moz-background: linear-gradient($value);
+    -o-background: linear-gradient($value);
+    background: linear-gradient($value);
+}
+
+@mixin bg-radial-gradient($value) {
+    -webkit-background: radial-gradient($value);
+    -moz-background: radial-gradient($value);
+    -o-background: radial-gradient($value);
+    background: radial-gradient($value);
 }
