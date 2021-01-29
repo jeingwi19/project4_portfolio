@@ -1652,6 +1652,10 @@
       margin-top: 0;
       margin-left: 0; }
       #scrollCnt #cnt1 .deco p {
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
+        transition: opacity 0.5s;
         -webkit-animation-name: opa_txtsc;
         -webkit-animation-duration: 2s;
         -webkit-animation-timing-function: ease-in;
@@ -1680,7 +1684,8 @@
         top: -448px;
         font-size: 12px;
         color: #e5e5e5;
-        text-align: center; }
+        text-align: center;
+        opacity: 1; }
   @keyframes opa_txtsc {
     100% {
       opacity: 0; }
@@ -1700,6 +1705,9 @@
         left: calc(50% - 35px); }
       #scrollCnt #cnt1 .deco .mouse {
         display: none; }
+    #scrollCnt #cnt1 .deco p.on {
+      opacity: 0;
+      animation: none; }
     #scrollCnt #cnt2 {
       margin-top: 600px; }
       #scrollCnt #cnt2 .project {
@@ -1840,14 +1848,14 @@
         -webkit-background-size: contain !important;
         -moz-background-size: contain !important;
         background-size: contain !important;
-        width: 160px;
-        height: 160px; }
+        width: 140px;
+        height: 140px; }
       #scrollCnt #cnt3 .deco .sun {
-        top: -488px;
-        left: -80px; }
+        top: -480px;
+        left: -24px; }
       #scrollCnt #cnt3 .deco .moon {
-        top: -348px;
-        right: -60px; }
+        top: -380px;
+        right: -40px; }
     #scrollCnt .ft_cnt {
       position: relative;
       top: 0;

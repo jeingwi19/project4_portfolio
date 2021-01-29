@@ -85,6 +85,14 @@ $(document).ready(function(){
     });
 
 
+    /* 모바일 - .deco .p_txt를 opacity 0 */
+    if($(window).width() < 361){
+      if(scrollY > 10){
+        $('#cnt1 .deco .p_txt').stop().animate({opacity: 0}, 300);
+      }else{
+        $('#cnt1 .deco .p_txt').stop().animate({opacity: 1}, 300);
+      }
+    }
   });
 
   /* PC #gnb에 ul li ul li클릭하면 스크롤이동하고 포커싱 */
