@@ -319,6 +319,9 @@
   0% {
     transform: rotate(-4deg); } }
     #scrollCnt #cnt1 .tit_txt .thumsup {
+      -webkit-background-size: contain !important;
+      -moz-background-size: contain !important;
+      background-size: contain !important;
       -webkit-animation-name: thumbs;
       -webkit-animation-duration: 2s;
       -webkit-animation-timing-function: cubic-bezier(0.83, -0.03, 0, 1.21);
@@ -1568,10 +1571,10 @@
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       border-radius: 20px;
-      background: -webkit-radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
-      background: -moz-radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
-      background: -o-radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
-      background: radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+      background: -webkit-radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.1));
+      background: -moz-radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.1));
+      background: -o-radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.1));
+      background: radial-gradient(closest-corner, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.1));
       width: 100%;
       height: 320px;
       padding: 48px 20px;
@@ -1587,9 +1590,11 @@
         left: 16px;
         z-index: 1; }
       #scrollCnt #cnt1 .tit_txt .thumsup {
-        top: -4px;
-        right: -52px;
-        z-index: 1; }
+        top: -12px;
+        right: -60px;
+        z-index: 1;
+        width: 160px;
+        height: 160px; }
       #scrollCnt #cnt1 .tit_txt .talkbox {
         -webkit-background-size: contain !important;
         -moz-background-size: contain !important;
@@ -1794,19 +1799,25 @@
           top: 0;
           right: 0;
           border: none;
-          background: #e5e5e5; }
+          background: transparent; }
           #scrollCnt #cnt3 .direct .btn .top::before {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
             -webkit-background-size: contain !important;
             -moz-background-size: contain !important;
             background-size: contain !important;
             content: "";
             position: absolute;
-            width: 32px;
-            height: 32px;
-            background: url("../images/main/ft_icon_top_dark.svg") no-repeat center;
+            width: 54px;
+            height: 54px;
+            background: url("../images/main/icon_top.png") no-repeat center;
             z-index: 1;
-            top: calc(50% - 18px);
-            left: calc(50% - 16px); }
+            top: -1px;
+            left: -1px; }
+          #scrollCnt #cnt3 .direct .btn .top:hover::before, #scrollCnt #cnt3 .direct .btn .top:focus::before {
+            top: 8px; }
     #scrollCnt #cnt3 .deco {
       width: 100%; }
       #scrollCnt #cnt3 .deco .arrowup {
@@ -1887,32 +1898,79 @@
             -webkit-border-radius: 20px;
             -moz-border-radius: 20px;
             border-radius: 20px;
-            background: #e5e5e5;
+            background: transparent;
             line-height: 48px;
             font-size: 0;
             width: 54px; }
           #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a::before {
             display: none; }
           #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a::after {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
             -webkit-background-size: contain !important;
             -moz-background-size: contain !important;
             background-size: contain !important;
             content: "";
             position: absolute;
-            top: calc(50% - 36px);
-            left: calc(50% - 36px);
-            width: 72px;
-            height: 72px;
+            top: 0;
+            left: 0;
+            width: 54px;
+            height: 54px;
             background: no-repeat center; }
+          #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:hover::after, #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:focus::after {
+            top: 8px; }
           #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li .ft_icon1::after {
-            background-image: url("../images/main/ft_icon_mail_dark.svg");
-            width: 32px;
-            left: 12px; }
+            background-image: url("../images/main/icon_mail.png"); }
           #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li .ft_icon2::after {
-            background-image: url("../images/main/emoji_git.png"); }
+            background-image: url("../images/main/icon_git.png"); }
           #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li .ft_icon3::after {
-            background-image: url("../images/main/ft_icon_chat_dark.svg");
-            width: 32px;
-            left: 11px; } }
+            background-image: url("../images/main/icon_chat.png"); }
+
+  #modalIntro {
+    width: 320px; }
+    #modalIntro .modal_flat strong {
+      top: 40px;
+      left: 24px; }
+      #modalIntro .modal_flat strong span {
+        font-size: 28px;
+        margin-bottom: 24px; }
+    #modalIntro .modal_flat .modal_info {
+      width: 280px;
+      height: 380px;
+      left: calc(50% - 140px);
+      top: 200px; }
+      #modalIntro .modal_flat .modal_info .education .info_list :first-child {
+        width: 48px;
+        margin-right: 4px; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list .icon {
+        width: 32px;
+        height: 32px; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list span + span {
+        margin-left: 0; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list .mgl {
+        margin-left: 2px; }
+    #modalIntro .iconbtn {
+      display: none; }
+    #modalIntro .bg_img .character {
+      -webkit-background-size: contain !important;
+      -moz-background-size: contain !important;
+      background-size: contain !important;
+      background-image: url("../images/main/modal_bg_cha2.png");
+      width: 600px;
+      height: 1029px;
+      top: -40px;
+      left: -60px; }
+    #modalIntro .bg_img .can1 {
+      top: 0;
+      left: 0; }
+    #modalIntro .bg_img .can2 {
+      top: 240px;
+      left: 220px;
+      z-index: 1; }
+    #modalIntro .bg_img .can3 {
+      top: 420px;
+      left: -60px; } }
 
 /*# sourceMappingURL=main.css.map */

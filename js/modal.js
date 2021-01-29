@@ -189,4 +189,7 @@ $(document).ready(function(){
       }
     });
   });
+
+  /* 모바일 모달1 */ //예정
+  $('#mHeader #gnb .md_gnb_about').on('click', function(){});
 });
