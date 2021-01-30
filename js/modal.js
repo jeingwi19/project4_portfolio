@@ -106,6 +106,21 @@ $(document).ready(function(){
 
     });
 
+    /* 모바일 - 모달 위치변경 */
+    if($(window).width() < 361){
+      $(window).on('resize', function (){
+        
+        clearTimeout(timer);
+  
+        timer = setTimeout(function() {
+          var x = ($(this).width() - _mdCnt.outerWidth()) / 2;
+          var y = ($(this).height() - _mdCnt.outerHeight()) / 1.2;
+          _mdCnt.css({left: x, top: y});
+        }, 50);
+
+      });
+      $(window).trigger('resize');
+    }
   });
 
 
@@ -190,6 +205,8 @@ $(document).ready(function(){
     });
   });
 
-  /* 모바일 모달1 */ //예정
+  /* 모바일 모달 - header  */
+  //모바일 헤더 메뉴 클릭하면  모달 열림
   $('#mHeader #gnb .md_gnb_about').on('click', function(){});
+
 });

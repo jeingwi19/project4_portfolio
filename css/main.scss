@@ -414,7 +414,7 @@
         .li_tit{
           position: relative;width: 100%;height: 60px;
           span{
-            position: absolute;font-weight: 700;color: $black;left: 32px;top: 22px;
+            position: absolute;font-weight: 700;color: $black;left: 32px;top: 24px;
           }
         }
         &::before{
@@ -883,6 +883,7 @@
       }
       .modal_info{
         width: 280px;height: 380px;left: calc(50% - 140px);top: 200px;
+        > li + li{margin-top: 12px;}
         .education{
           .info_list :first-child{width: 48px;margin-right: 4px;}
         }
@@ -900,7 +901,7 @@
       .character{
         @include bgsize(contain);
         background-image: url('../images/main/modal_bg_cha2.png');
-        width: 600px;height: 1029px;top: -40px;left: -60px;
+        width: 600px;height: 1029px;top: -40px;left: -80px;
       }
       .can1{top: 0;left: 0;}
       .can2{top: 240px;left: 220px;z-index: 1;}

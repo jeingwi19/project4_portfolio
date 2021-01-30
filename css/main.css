@@ -964,7 +964,7 @@
           font-weight: 700;
           color: #333333;
           left: 32px;
-          top: 22px; }
+          top: 24px; }
       #modalIntro .modal_flat .modal_info .info::before {
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
@@ -1941,6 +1941,8 @@
       height: 380px;
       left: calc(50% - 140px);
       top: 200px; }
+      #modalIntro .modal_flat .modal_info > li + li {
+        margin-top: 12px; }
       #modalIntro .modal_flat .modal_info .education .info_list :first-child {
         width: 48px;
         margin-right: 4px; }
@@ -1961,7 +1963,7 @@
       width: 600px;
       height: 1029px;
       top: -40px;
-      left: -60px; }
+      left: -80px; }
     #modalIntro .bg_img .can1 {
       top: 0;
       left: 0; }
