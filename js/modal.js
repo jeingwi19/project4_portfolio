@@ -205,8 +205,9 @@ $(document).ready(function(){
     });
   });
 
-  /* 모바일 모달 - header  */
-  //모바일 헤더 메뉴 클릭하면  모달 열림
-  $('#mHeader #gnb .md_gnb_about').on('click', function(){});
+  /* header  about me 누르면 모달열림*/
+  $('.md_gnb_about').on('click', function(){
+    
+  });
 
 });
