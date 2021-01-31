@@ -49,6 +49,12 @@ $(document).ready(function(){
 
     });
 
+    //헤더 - Contact me 클릭시 페이지 새로고침 비활성화
+    $('#gnb .md_gnb_contact').on('click', function(){
+        location.href=$(this).attr("href");
+        return false;
+    });
+
     /* 모바일 - 헤더 dep1 메뉴열기*/
     var _mgnb = $('#mHeader #gnb');
     _mgnb.find('ul li ul').hide();
@@ -121,11 +127,6 @@ $(document).ready(function(){
         }else{
             $('.bgfix_gr').stop().animate({opacity: 0});
         }
-    });
-
-    /* PC gnb메뉴 Contact Me 클릭, 모달 열림 */
-    $('#pcHeader #gnb .md_gnb_contact').on('click', function(){
-
     });
 
     

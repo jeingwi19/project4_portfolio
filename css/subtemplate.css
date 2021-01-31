@@ -94,4 +94,422 @@ body {
 #movMain {
   margin-top: 160px; }
 
+#dim, #modalIntro {
+  position: fixed;
+  z-index: 1200;
+  /* visibility: hidden; */ }
+
+#dim {
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  /* display: none; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+#modalIntro {
+  visibility: hidden;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  top: calc(50% - 260px);
+  left: calc(50% - 385px);
+  width: 770px;
+  height: 520px;
+  background: #6d1dff; }
+  #modalIntro .modal_flat strong {
+    position: absolute;
+    top: 100px;
+    left: 60px; }
+    #modalIntro .modal_flat strong span {
+      font-size: 40px; }
+    #modalIntro .modal_flat strong :first-child {
+      display: block;
+      margin-bottom: 24px; }
+  #modalIntro .modal_flat .modal_info {
+    position: absolute;
+    width: 330px;
+    height: 340px;
+    right: -40px;
+    top: 100px;
+    /* .profile{display: none;} */ }
+    #modalIntro .modal_flat .modal_info > li + li {
+      margin-top: 20px; }
+    #modalIntro .modal_flat .modal_info .info {
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      border-radius: 24px;
+      position: relative;
+      background: #e5e5e5; }
+      #modalIntro .modal_flat .modal_info .info .li_tit {
+        position: relative;
+        width: 100%;
+        height: 60px; }
+        #modalIntro .modal_flat .modal_info .info .li_tit span {
+          position: absolute;
+          font-weight: 700;
+          color: #333333;
+          left: 32px;
+          top: 24px; }
+      #modalIntro .modal_flat .modal_info .info::before {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 32px;
+        width: 32px;
+        height: 32px;
+        background: url("../images/main/arrow_down16x16.svg") no-repeat center; }
+      #modalIntro .modal_flat .modal_info .info.active::before {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+      #modalIntro .modal_flat .modal_info .info ul {
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        border-radius: 24px;
+        height: 180px;
+        width: 100%;
+        padding: 60px 0;
+        margin-top: -60px;
+        background: #e5e5e5; }
+        #modalIntro .modal_flat .modal_info .info ul li {
+          padding: 10px 32px;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          color: #333333;
+          font-family: NtSansKR;
+          font-size: 12px;
+          background: #e5e5e5; }
+    #modalIntro .modal_flat .modal_info .profile .info_list :first-child {
+      display: inline-block;
+      width: 48px;
+      margin-right: 12px; }
+    #modalIntro .modal_flat .modal_info .education .info_list span {
+      display: inline-block;
+      vertical-align: top; }
+    #modalIntro .modal_flat .modal_info .education .info_list :first-child {
+      width: 48px;
+      margin-right: 12px; }
+    #modalIntro .modal_flat .modal_info .education .align, #modalIntro .modal_flat .modal_info .education span + span {
+      margin-bottom: 24px; }
+    #modalIntro .modal_flat .modal_info .skills > ul .skill_list {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 8px; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list .icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: no-repeat center; }
+      #modalIntro .modal_flat .modal_info .skills > ul .skill_list span + span {
+        margin-left: 2px; }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb1 {
+      background-image: url("../images/main/skillicon_html.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb2 {
+      background-image: url("../images/main/skillicon_css.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb3 {
+      background-image: url("../images/main/skillicon_sass.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb4 {
+      background-image: url("../images/main/skillicon_jquery.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb5 {
+      background-image: url("../images/main/skillicon_javascript.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .publishing .pb6 {
+      background-image: url("../images/main/skillicon_bootstrap.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds1 {
+      background-image: url("../images/main/skillicon_photoshop.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds2 {
+      background-image: url("../images/main/skillicon_illust.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds3 {
+      background-image: url("../images/main/skillicon_xd.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds4 {
+      background-image: url("../images/main/skillicon_aftereffect.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds5 {
+      background-image: url("../images/main/skillicon_zeplin.svg"); }
+    #modalIntro .modal_flat .modal_info .skills > ul .design .ds6 {
+      background-image: url("../images/main/skillicon_blender3d.svg"); }
+  #modalIntro .iconbtn {
+    width: 60px;
+    height: 140px;
+    margin-top: -142px;
+    bottom: 80px;
+    left: -30px; }
+    #modalIntro .iconbtn button, #modalIntro .iconbtn a {
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      border-radius: 24px;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: no-repeat center;
+      background-color: #431f87; }
+    #modalIntro .iconbtn a {
+      top: 80px; }
+    #modalIntro .iconbtn button::before, #modalIntro .iconbtn a::before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 0;
+      left: 0; }
+    #modalIntro .iconbtn .like::before {
+      background-image: url("../images/main/icon_heart60x60.png"); }
+    #modalIntro .iconbtn .chat::before {
+      background-image: url("../images/main/icon_talk60x60.png"); }
+    #modalIntro .iconbtn .count_numb {
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      border-radius: 16px;
+      font-family: NtSansKR;
+      color: #333333;
+      font-size: 14px;
+      padding: 12px 18px;
+      background: #e5e5e5;
+      top: -52px; }
+      #modalIntro .iconbtn .count_numb::before {
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: calc(50%);
+        bottom: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #e5e5e5; }
+  #modalIntro .like:hover::before, #modalIntro .like:focus::before {
+    -webkit-animation-name: hoverheart;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: none;
+    -moz-animation-name: hoverheart;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: none;
+    -o-animation-name: hoverheart;
+    -o-animation-duration: 0.5s;
+    -o-animation-timing-function: ease;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: none;
+    animation-name: hoverheart;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none; }
+@keyframes hoverheart {
+  100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.8); }
+  0% {
+    transform: scale(1); } }
+  #modalIntro .chat:hover::before, #modalIntro .chat:focus::before {
+    -webkit-animation-name: hoverchat;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: none;
+    -moz-animation-name: hoverchat;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: none;
+    -o-animation-name: hoverchat;
+    -o-animation-duration: 0.5s;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: none;
+    animation-name: hoverchat;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none; }
+@keyframes hoverchat {
+  100% {
+    transform: rotate(0deg) scale(1); }
+  80% {
+    transform: rotate(10deg) scale(0.9); }
+  20% {
+    transform: rotate(-10deg) scale(1.2); }
+  0% {
+    transform: rotate(0deg) scale(1); } }
+  #modalIntro .bg_img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2; }
+    #modalIntro .bg_img .imgicon {
+      position: absolute;
+      background: no-repeat center; }
+    #modalIntro .bg_img .character {
+      background-image: url("../images/main/modal_bg_cha.png");
+      width: 420px;
+      height: 720px;
+      top: 0;
+      left: 110px; }
+@keyframes charotate {
+  100% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(0.9) rotate(360deg); }
+  0% {
+    transform: scale(1) rotate(0deg); } }
+      #modalIntro.on .bg_img .character {
+        -webkit-animation-name: charotate;
+        -webkit-animation-duration: 9600s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: none;
+        -moz-animation-name: charotate;
+        -moz-animation-duration: 9600s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: none;
+        -o-animation-name: charotate;
+        -o-animation-duration: 9600s;
+        -o-animation-timing-function: linear;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: none;
+        animation-name: charotate;
+        animation-duration: 9600s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none; }
+    #modalIntro .bg_img .canbg {
+      width: 200px;
+      height: 260px; }
+@keyframes canmov {
+  100% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(0.9) rotate(-360deg); }
+  0% {
+    transform: scale(1) rotate(0deg); } }
+    #modalIntro .bg_img .can1 {
+      -webkit-animation-name: canmov;
+      -webkit-animation-duration: 500s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: canmov;
+      -moz-animation-duration: 500s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: canmov;
+      -o-animation-duration: 500s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: canmov;
+      animation-duration: 500s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_can1_200x260.png");
+      top: 100px;
+      left: -100px; }
+    #modalIntro .bg_img .can2 {
+      -webkit-animation-name: canmov;
+      -webkit-animation-duration: 300s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 1s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: canmov;
+      -moz-animation-duration: 300s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-delay: 1s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: canmov;
+      -o-animation-duration: 300s;
+      -o-animation-timing-function: linear;
+      -o-animation-delay: 1s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: canmov;
+      animation-duration: 300s;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_can2_200x260.png");
+      top: -40px;
+      right: 200px; }
+    #modalIntro .bg_img .can3 {
+      -webkit-animation-name: canmov;
+      -webkit-animation-duration: 600s;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-delay: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: none;
+      -moz-animation-name: canmov;
+      -moz-animation-duration: 600s;
+      -moz-animation-timing-function: ease;
+      -moz-animation-delay: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: none;
+      -o-animation-name: canmov;
+      -o-animation-duration: 600s;
+      -o-animation-timing-function: ease;
+      -o-animation-delay: 2s;
+      -o-animation-iteration-count: infinite;
+      -o-animation-fill-mode: none;
+      animation-name: canmov;
+      animation-duration: 600s;
+      animation-timing-function: ease;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      background-image: url("../images/main/modal_can3_200x260.png");
+      bottom: -20px;
+      left: 80px; }
+  #modalIntro .btn_close_modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px; }
+
 /*# sourceMappingURL=subtemplate.css.map */

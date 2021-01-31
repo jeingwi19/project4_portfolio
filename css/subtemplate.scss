@@ -51,3 +51,182 @@ body{background: #333030;}
 
 //#movMain
 #movMain{margin-top: 160px;}
+
+//모달1
+#dim, #modalIntro{position: fixed;z-index: 1200;/* visibility: hidden; */}
+#dim{
+  @include backdrop-filter(blur(100px));
+  /* display: none; */top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);
+}
+
+
+#modalIntro{
+  visibility: hidden;
+  @include border-radius(20px);
+  top: calc(50% - 260px);left: calc(50% - 385px);width: 770px;height: 520px;background: #6d1dff;
+  .modal_flat{
+    strong{
+      position: absolute;top: 100px;left: 60px;
+      span{font-size: 40px;}
+      :first-child{display: block;margin-bottom: 24px;}
+    }
+    .modal_info{
+      position: absolute;width: 330px;height: 340px;right: -40px;top: 100px;
+      > li + li{margin-top: 20px;}
+      .info{
+        @include border-radius(24px);
+        position: relative;background: $white;
+        .li_tit{
+          position: relative;width: 100%;height: 60px;
+          span{
+            position: absolute;font-weight: 700;color: $black;left: 32px;top: 24px;
+          }
+        }
+        &::before{
+          @include transition(all 0.5s);
+          @include transform(rotate(0deg));
+          content: "";position: absolute;top: 14px;right: 32px;width: 32px;height: 32px;background: url('../images/main/arrow_down16x16.svg')no-repeat center;
+        }
+        &.active::before{
+          @include transform(rotate(180deg));
+        }
+
+        ul{
+          @include border-radius(24px);
+          height: 180px;width: 100%;padding: 60px 0;margin-top: -60px;background: $white;
+          li{padding: 10px 32px;width: 100%;height: 20px;line-height: 20px;color: $black;font-family: $korFont;font-size: 12px;background: $white;}
+        }
+
+
+      }
+      /* .profile{display: none;} */
+      .profile .info_list{
+        :first-child{display: inline-block;width: 48px;margin-right: 12px;}
+      }
+      .education{
+        .info_list span{display: inline-block;vertical-align: top;}
+        .info_list :first-child{width: 48px;margin-right: 12px;}
+        .align, span + span{margin-bottom: 24px;}
+      }
+      .skills > ul{
+        .skill_list{
+          width: 100%;height: 40px;margin-bottom: 8px;
+          .icon{display: inline-block;width: 40px;height: 40px;background: no-repeat center;}
+          span + span{margin-left: 2px;}
+
+        }
+        .publishing{
+          .pb1{background-image: url('../images/main/skillicon_html.svg');}
+          .pb2{background-image: url('../images/main/skillicon_css.svg');}
+          .pb3{background-image: url('../images/main/skillicon_sass.svg');}
+          .pb4{background-image: url('../images/main/skillicon_jquery.svg');}
+          .pb5{background-image: url('../images/main/skillicon_javascript.svg');}
+          .pb6{background-image: url('../images/main/skillicon_bootstrap.svg');}
+        }
+        .design{
+          .ds1{background-image: url('../images/main/skillicon_photoshop.svg');}
+          .ds2{background-image: url('../images/main/skillicon_illust.svg');}
+          .ds3{background-image: url('../images/main/skillicon_xd.svg');}
+          .ds4{background-image: url('../images/main/skillicon_aftereffect.svg');}
+          .ds5{background-image: url('../images/main/skillicon_zeplin.svg');}
+          .ds6{background-image: url('../images/main/skillicon_blender3d.svg');}
+        }
+      }
+    }
+  }
+  .iconbtn{
+    width: 60px;height: 140px;margin-top: -142px;bottom: 80px;left: -30px;
+    button, a{
+      @include border-radius(24px);
+      position: absolute;width: 60px;height: 60px;background: no-repeat center;background-color: #431f87;
+    }
+    a{top: 80px;}
+    button::before, a::before{
+      @include transition(all 0.3s);
+      content: "";position: absolute;width: 60px;height: 60px;top: 0;left: 0;
+    }
+    .like::before{background-image: url('../images/main/icon_heart60x60.png');}
+    .chat::before{background-image: url('../images/main/icon_talk60x60.png');}
+
+    .count_numb{//스크립트 동적생성 하트아이콘 클릭 -> span태그 생성
+      @include border-radius(16px);
+      font-family: $korFont;color: $black;font-size: 14px;padding: 12px 18px;background: $white;top: -52px;
+      &::before{@include translateX-50;
+        content: "";position: absolute;width: 0;height: 0;left: calc(50%);bottom: -8px;border-left: 8px solid transparent;border-right: 8px solid transparent;border-top: 8px solid $white;}
+    }
+
+  }
+  .like:hover::before, .like:focus::before{
+    @include keyframe(hoverheart){
+      100%{
+        transform: scale(1)
+      }50%{
+        transform: scale(1.8)
+      }0%{
+        transform: scale(1)
+      }
+    };
+    @include animation(hoverheart, 0.5s, ease, 0s, infinite, none);
+  }
+  .chat:hover::before, .chat:focus::before{
+    @include keyframe(hoverchat){
+      100%{
+        transform: rotate(0deg) scale(1)
+      }80%{
+        transform: rotate(10deg) scale(.9)
+      }20%{
+        transform: rotate(-10deg) scale(1.2)
+      }0%{
+        transform: rotate(0deg) scale(1)
+      }
+    }
+    @include animation(hoverchat, 0.5s, ease-in-out, 0s, infinite, none);
+  }
+
+  .bg_img{
+    width: 100%;height: 100%;top: 0;left: 0;z-index: -2;
+    .imgicon{position: absolute;background: no-repeat center;}
+    .character{
+      @include keyframe(charotate){
+        100%{
+          transform: scale(1) rotate(0deg)
+        }50%{
+          transform: scale(.9) rotate(360deg)
+        }0%{
+          transform: scale(1) rotate(0deg)
+        }
+      }
+      @at-root #modalIntro.on .bg_img .character{
+        @include animation(charotate, 9600s, linear, 0s, infinite, none);
+      }
+      //@include animation(charotate, 4200s, linear, 0s, infinite, none);
+      background-image: url('../images/main/modal_bg_cha.png');width: 420px;height: 720px;top: 0;left: 110px;
+    }
+    .canbg{
+      @include keyframe(canmov){
+        100%{
+          transform: scale(1) rotate(0deg)
+        }50%{
+          transform: scale(.9) rotate(-360deg)
+        }0%{
+          transform: scale(1) rotate(0deg) 
+        }
+      }
+      width: 200px;height: 260px;
+    }
+    .can1{
+      @include animation(canmov, 500s, linear, 0s, infinite, none);
+      background-image: url('../images/main/modal_can1_200x260.png');top: 100px;left: -100px;
+    }
+    .can2{
+      @include animation(canmov, 300s, linear, 1s, infinite, none);
+      background-image: url('../images/main/modal_can2_200x260.png');top: -40px;right: 200px;
+    }
+    .can3{
+      @include animation(canmov, 600s, ease, 2s, infinite, none);
+      background-image: url('../images/main/modal_can3_200x260.png');bottom: -20px;left: 80px;
+    }
+  }
+
+  .btn_close_modal{position: absolute;top: 20px;right: 20px;width: 40px;height: 40px;}
+}

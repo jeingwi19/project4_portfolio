@@ -12,6 +12,7 @@
   <script src="../js/jquery-1.12.4.min.js"></script>
   <script src="../js/common.js"></script>
   <script src="../js/pj_theSoop.js"></script>
+  <script src="../js/modal.js"></script>
 </head>
 <body>
   <div id="skip">
@@ -46,8 +47,8 @@
                       <li><a href="pj_popeyes.html" class="pj_3">PC 웹<span class="dpchange">파파이스</span></a></li>
                   </ul>
               </li>
-              <li><a href="">CONTACT ME</a></li>
-              <li><a href="" class="last">About Me</a></li>
+              <li><a href="mailto:iireal25@naver.com" target="_blank" class="md_gnb_contact">CONTACT ME</a></li>
+              <li><button type="button" class="direct_btn last" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자">About Me</button></li>
           </ul>
       </nav>
     </header>
@@ -360,6 +361,127 @@
         </div>
       </footer>
     </div>
+
+    <!-- Profile 모달 -->
+    <div id="modalIntro" class="modal_cnt wid1280 p_r" role="dialog" aria-modal="true" aria-labelledby="introMe">
+      <h4 class="blind-b" id="introMe">박정은 상세 소개</h4>
+      <div class="modal_flat myinfo">
+          <strong>
+            <span>Who is?</span>
+            <span>Bahk <br>Jeong-eun.</span>
+          </strong>
+          <ul class="modal_info">
+            <li class="info profile">
+              <button type="button" class="li_tit first">
+                <span>Profile</span>
+              </button>
+              <ul>
+                <li class="info_list">
+                  <span>NAME</span>
+                  <span>박정은</span>
+                </li>
+                <li class="info_list">
+                  <span>BIRTH</span>
+                  <span>1993.00.00</span>
+                </li>
+                <li class="info_list">
+                  <span>MOBILE</span>
+                  <span>010.1234.5678</span>
+                </li>
+                <li class="info_list">
+                  <span>E MAIL</span>
+                  <span>iireal25@naver.com</span>
+                </li>
+              </ul>
+            </li>
+            <li class="info education">
+              <button type="button" class="li_tit">
+                <span>Education</span>
+              </button>
+              <ul>
+                <li class="info_list align">
+                  <span>2021.01</span>
+                  <span>한국디지털기업협회 UIUX 기반 <br>반응형 웹퍼블리셔 훈련과정 이수</span>
+                </li>
+                <li class="info_list">
+                  <span>2016.02</span>
+                  <span>시각디자인학과 졸업</span>
+                </li>
+                <li class="info_list">
+                  <span>2012.02</span>
+                  <span>고등학교 졸업</span>
+                </li>
+              </ul>
+            </li>
+            <li class="info skills">
+              <button type="button" class="li_tit">
+                <span>Skills</span>
+              </button>
+              <ul>
+                <li class="skill_list publishing">
+                  <p class="blind-b">퍼블리싱 기술 소개</p>
+                  <span class="icon pb1" title="HTML5">
+                    <span class="blind-b">HTML5</span>
+                  </span>
+                  <span class="icon pb2 mgl" title="CSS3">
+                    <span class="blind-b">CSS3</span>
+                  </span>
+                  <span class="icon pb3 mgl" title="SASS">
+                    <span class="blind-b">SASS</span>
+                  </span>
+                  <span class="icon pb4 mgl" title="JQuery">
+                    <span class="blind-b">JQuery</span>
+                  </span>
+                  <span class="icon pb5 mgl" title="Java Script">
+                    <span class="blind-b">Java Script</span>
+                  </span>
+                  <span class="icon pb6 mgl" title="Bootstrap">
+                    <span class="blind-b">Bootstrap</span>
+                  </span>
+                </li>
+                <li class="skill_list design">
+                  <p class="blind-b">디자인 기술</p>
+                  <span class="icon ds1" title="Photoshop">
+                    <span class="blind-b">Photoshop</span>
+                  </span>
+                  <span class="icon ds2 mgl" title="illustrator">
+                    <span class="blind-b">illustrator</span>
+                  </span>
+                  <span class="icon ds3 mgl" title="XD">
+                    <span class="blind-b">XD</span>
+                  </span>
+                  <span class="icon ds4 mgl" title="After Effect">
+                    <span class="blind-b">After Effect</span>
+                  </span>
+                  <span class="icon ds5 mgl" title="Zeplin">
+                    <span class="blind-b">Zeplin</span>
+                  </span>
+                  <span class="icon ds6 mgl" title="Blender 3D">
+                    <span class="blind-b">Blender 3D</span>
+                  </span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+      <div class="iconbtn p_a">
+        <button type="button" class="like" title="좋아요">
+          <span class="blind-b">하트 좋아요</span>
+        </button>
+        <!-- <span class="count_numb p_a">102</span> --><!-- 동적생성 예정 -->
+        <a href="https://open.kakao.com/o/skrVTIQc" class="chat" target="_blank" title="새창열기 오픈채팅">
+          <span class="blind-b">채팅 메세지</span>
+        </a>
+      </div>
+      <div class="bg_img p_a">
+        <div class="imgicon canbg can1"></div>
+        <div class="imgicon canbg can2"></div>
+        <div class="imgicon canbg can3"></div>
+        <div class="imgicon character"></div>
+      </div>
+      <button type="button" class="btn_close_modal last"><img src="../images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
+    </div>
+
   </div>
 </body>
 </html>

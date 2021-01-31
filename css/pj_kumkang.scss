@@ -105,8 +105,9 @@
       }
       .bgi1{top: 1780px;background-color: #533434;}
       .bgi2{
+        @include box-sizing;
         @include bgsize(cover);
-        top: 3320px;background-image: url('../images/kumkang/bg_full_mid.jpg');
+        top: 3320px;height: 320px;background: url('../images/kumkang/bg_full_mid.jpg')no-repeat fixed 50%;
       }
 
       .font_guide{
