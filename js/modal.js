@@ -178,6 +178,12 @@ $(document).ready(function(){
       $('#cnt3 .contact').focus();
     });
 
+    //esc 키보드 누를 경우 모달창 닫기
+    $(window).on('keydown', function(e){
+      //console.log(e.keyCode); //esc = 27
+      if(e.keyCode === 27) $('#modalContact .btn_close_modal').click();
+    });
+
     //이메일form태그에 input안에 영어만 입력할수있게 정규표현객체
     $('#mailArea').on('submit', function(){
       var _tg = $('#umail');
@@ -205,9 +211,5 @@ $(document).ready(function(){
     });
   });
 
-  /* header  about me 누르면 모달열림*/
-  $('.md_gnb_about').on('click', function(){
-    
-  });
 
 });

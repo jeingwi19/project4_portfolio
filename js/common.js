@@ -128,7 +128,7 @@ $(document).ready(function(){
 
     });
 
-    /* gnb메뉴 About Me 클릭, 모달 열림 */
+    
     
 
     

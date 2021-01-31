@@ -253,7 +253,7 @@ body {
       height: 80px;
       margin-left: 348px;
       padding-top: 32px; }
-      #pcHeader #gnb > ul > li > a {
+      #pcHeader #gnb > ul > li > a, #pcHeader #gnb > ul > li > button {
         font-size: 20px;
         font-weight: 700;
         color: #595959; }
@@ -266,9 +266,9 @@ body {
       font-family: NtSansKR;
       font-weight: 400;
       /* display: none; */ }
-    #pcHeader #gnb > ul > li > a {
+    #pcHeader #gnb > ul > li > a, #pcHeader #gnb > ul > li > button {
       position: relative; }
-    #pcHeader #gnb > ul > li > a::before {
+    #pcHeader #gnb > ul > li > a::before, #pcHeader #gnb > ul > li > button::before {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
@@ -280,7 +280,7 @@ body {
       width: 0%;
       height: 2px;
       background: #e5e5e5; }
-    #pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before {
+    #pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before, #pcHeader #gnb > ul > li:hover > button, #pcHeader #gnb > ul > li > button:focus, #pcHeader #gnb > ul > li:hover > button::before, #pcHeader #gnb > ul > li > button:focus::before {
       width: 100%;
       color: #e5e5e5; }
     #pcHeader #gnb ul li ul li {
@@ -416,7 +416,7 @@ body {
         margin-top: 80px; }
         #mHeader #gnb > ul > li {
           border-bottom: 2px solid #e5e5e5; }
-          #mHeader #gnb > ul > li > a {
+          #mHeader #gnb > ul > li > a, #mHeader #gnb > ul > li > button {
             position: relative;
             height: 80px;
             padding-top: 40px; }
@@ -427,6 +427,13 @@ body {
           #mHeader #gnb > ul li a {
             display: block;
             width: 100%; }
+          #mHeader #gnb > ul li button {
+            font-weight: 700;
+            width: 100%;
+            padding-right: 132px; }
+            #mHeader #gnb > ul li button span {
+              display: block;
+              text-align: left; }
           #mHeader #gnb > ul li .more {
             position: relative; }
           #mHeader #gnb > ul li .more::before {
