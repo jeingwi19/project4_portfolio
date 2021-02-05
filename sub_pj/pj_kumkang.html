@@ -53,6 +53,49 @@
       </nav>
     </header>
 
+    <header class="header wid360" id="mHeader">
+      <div class="bgfix_gr"></div>
+      <h1 class="logo">
+          <a href="" aria-label="정은">
+              <img src="../images/common/logo_white.svg" alt="">
+              <img src="../images/common/logo_black.svg" alt="">
+          </a>
+      </h1>
+      <div class="menu">
+          <button class="btn_open" type="button">
+              <span class="blind-b">전체 메뉴 열기</span>
+              <span class="btn_line">
+                  <span class="line top"></span>
+                  <span class="line btm"></span>
+              </span>
+          </button>
+      </div>
+      <nav id="gnb">
+          <ul>
+              <li>
+                  <a href="" class="more first">PROJECT</a>
+                  <ul class="dep2">
+                      <li><a href="pj_kumkang.html" class="pj_1">반응형 웹 <span class="dpchange">금강제화</span></a></li>
+                      <li><a href="pj_theSoop.html" class="pj_2">모바일 웹 <span class="dpchange">더숲</span></a></li>
+                      <li><a href="pj_popeyes.html" class="pj_3">PC 웹 <span class="dpchange">파파이스</span></a></li>
+                  </ul>
+              </li>
+              <li>
+                <a href="" class="more md_gnb_contact">CONTACT ME</a>
+                <ul class="dep2">
+                  <li><a href="mailto: iireal25@naver.com" target="_blank">E mail</a></li>
+                  <li><a href="https://github.com/jeingwi19" target="_blank">Github</a></li>
+                  <li><a href="https://open.kakao.com/o/skrVTIQc" target="_blank">Direct</a></li>
+                </ul>
+              </li>
+              <li>
+                <button tpye="button" class="direct_btn md_gnb_about" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자"><span>About Me</span></button>
+              </li>
+              <li class="copyr"><p>COPYRIGHT 2021 <a href="index.html" class="last">Jeong-eun.</a> <span class="span_b">ALL RIGHT RESERVED.</span></p></li>
+          </ul>
+      </nav>
+  </header>
+
     <div class="fixed_bg">
       <div class="bg_full"></div>
     </div>
@@ -80,13 +123,14 @@
           <span class="blind-b">반응형 PC 웹 이미지</span>
           <a href="#cnt1" class="img_pc"></a>
           <div class="dim">
-            <p>화면 위에 마우스 커서를 올리면 이미지가 움직입니다.</p>
+            <p class="pctxt">화면 위에 마우스 커서를 올리면 이미지가 움직입니다.</p>
+            <p class="mtxt">클릭하면 이미지가 움직입니다.</p>
           </div>
         </div>
         <div class="info">
           <div class="info_txt1">
             <strong>금강제화 반응형 웹 <br>퍼블리싱 프로젝트</strong>
-            <p>금강제화는 1954년을 시작으로 오랜 세월 역사와 기술을 축적해 온 국내 대표 제화 전문기업입니다. <br>국내 제화업체 중 가장 큰 대규모의 굿이어 웰트 라인을 보유한 고급형 모델 등 다양한 공정들 모두를 <br>소화 가능한 기술력을 갖고있습니다.
+            <p>금강제화는 1954년을 시작으로 오랜 세월 역사와 기술을 축적해 온 국내 대표 제화 전문기업입니다. <br>국내 제화업체 중 가장 큰 대규모의 굿이어 웰트 라인을 보유한 고급형 모델 등 다양한 공정들 모두를 <span>소화 가능한 기술력을 갖고있습니다.</span>
             </p>
             <span>지원해상도 <br>1920 / 1440 / 1280 / 800 / 360</span>
           </div>
@@ -95,10 +139,10 @@
           </div>
           <div class="inspire_txt">
             <ul class="circles">
-              <li>High Quality</li>
-              <li>Agelong</li>
-              <li>Artisanal</li>
-              <li>Steady</li>
+              <li><span>High Quality</span></li>
+              <li><span>Agelong</span></li>
+              <li><span>Artisanal</span></li>
+              <li><span>Steady</span></li>
             </ul>
             <strong class="tit">Connecting</strong>
             <p><span>기존 웹페이지의 접근성을 고려하여 분석한 데이터와 기업과  웹이용자 사이에 일치되는 목표를 설정하였습니다. </span>디자인 기획은 브랜드의 독자성에 기반한 색상과 형태와 기업의 철학을 반영합니다.</p>
@@ -111,7 +155,7 @@
           <div class="font">
             <ul>
               <li class="basic_font">
-                <p class="font_info">Basic TypoGraphy <span>NotoSansKR</span></p>
+                <p class="font_info">Main Font <span>NotoSansKR</span></p>
                 <div class="ft_ex">
                   <span>가나다 Aa</span>
                   <span class="w_mid">가나다 Aa</span>
@@ -119,7 +163,7 @@
                 </div>
               </li>
               <li class="high_font">
-                <p class="font_info">Highlight Typography <span>SongMyung / Rozha One</span></p>
+                <p class="font_info">Highlight Font<span>SongMyung / Rozha One</span></p>
                 <div class="ft_ex">
                   <span>가나다 Aa</span>
                   <span>ABC abc</span>
@@ -266,11 +310,11 @@
                 </li>
                 <li class="info_list">
                   <span>BIRTH</span>
-                  <span>1993.00.00</span>
+                  <span>1993.08.30</span>
                 </li>
                 <li class="info_list">
                   <span>MOBILE</span>
-                  <span>010.1234.5678</span>
+                  <span>010.3300.6944</span>
                 </li>
                 <li class="info_list">
                   <span>E MAIL</span>
@@ -289,11 +333,11 @@
                 </li>
                 <li class="info_list">
                   <span>2016.02</span>
-                  <span>시각디자인학과 졸업</span>
+                  <span>경민대학교 시각디자인학과 졸업</span>
                 </li>
                 <li class="info_list">
                   <span>2012.02</span>
-                  <span>고등학교 졸업</span>
+                  <span>용화여자고등학교 졸업</span>
                 </li>
               </ul>
             </li>

@@ -91,7 +91,7 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
     &:focus{left: 0;width: 100%;background: $white;text-align: center;height: 48px;line-height: 48px;font-weight: 700;color: $black;}
 }
 
-#wrap{overflow: hidden;min-width: 320px;}
+#wrap{overflow: hidden;min-width: 360px;margin: 0 auto;}
 
 #pcHeader{
     @include transition(all 0.5s ease-in-out);
@@ -175,6 +175,7 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
       .logo{
           &, a img{position: absolute;}
           top: 0;left: 0;width: 264px;height: 24px;z-index: 100;
+          a, img{display: inline-block;}
           a img{top: 28px;left: 20px;}
           a img:last-child{opacity: 0;}
       }
@@ -210,7 +211,7 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
 
       #gnb{
         /* li아닌 a태그에 스타일 적용하기, display: block; */
-        display: none;position: fixed;top: -100%;left: 0;right: 0;height: 100%;width: 100%;overflow-y: auto;/* opacity: 0; */background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 50%, rgba(0, 0, 0, 0));
+        display: none;position: fixed;top: -100%;left: 0;right: 0;height: 100%;width: 360px;overflow-y: auto;/* opacity: 0; */background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 50%, rgba(0, 0, 0, 0));
         > ul{
           padding-left: 20px;width: 100%;height: 480px;top: 0;left: 0;margin-top: 80px;
           >li{
@@ -231,7 +232,7 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
               content: "";position: absolute;top: 46px;left: 85%;width: 16px;height: 16px;border-top: 4px solid #fff;border-left: 4px solid #fff;z-index: 1;
             }
             ul{
-              margin-top: 2px;display: none;//ul -> display: none;
+              margin-top: 2px;/* display: none; *///ul -> display: none;
               li{
                 width: 100%;font-size: 20px;font-family: $korFont;
                 a{display: block;padding-top: 16px;width: 100%;height: 60px;font-weight: 400;}

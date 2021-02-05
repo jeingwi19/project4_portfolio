@@ -161,7 +161,8 @@ body {
 
 #wrap {
   overflow: hidden;
-  min-width: 320px; }
+  min-width: 360px;
+  margin: 0 auto; }
 
 #pcHeader {
   -webkit-transition: all 0.5s ease-in-out;
@@ -343,6 +344,8 @@ body {
       z-index: 100; }
       #mHeader .logo, #mHeader .logo a img {
         position: absolute; }
+      #mHeader .logo a, #mHeader .logo img {
+        display: inline-block; }
       #mHeader .logo a img {
         top: 28px;
         left: 20px; }
@@ -403,7 +406,7 @@ body {
       left: 0;
       right: 0;
       height: 100%;
-      width: 100%;
+      width: 360px;
       overflow-y: auto;
       /* opacity: 0; */
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0)); }
@@ -457,7 +460,7 @@ body {
             z-index: 1; }
           #mHeader #gnb > ul li ul {
             margin-top: 2px;
-            display: none; }
+            /* display: none; */ }
             #mHeader #gnb > ul li ul li {
               width: 100%;
               font-size: 20px;
