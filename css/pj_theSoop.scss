@@ -165,7 +165,6 @@ body{background: #fff;}
       }
     }
 
-    .scroll_ani{}
 
     .symbol_info{
       .bg_img{
@@ -461,5 +460,58 @@ body{background: #fff;}
     }
   }
 
-  #movMain{display: none;}
+  #movMain{
+    #cnt1{
+      width: 320px;margin: 0 auto;margin-top: 628px;
+      .m_view{
+        .info_txt{
+          padding-top: 0;
+          strong{font-size: 24px;line-height: 32px;}
+          p{font-size: 14px;line-height: 24px;}
+          .work_data{
+            font-family: $korFont;text-transform: uppercase;line-height: 24px;
+          }
+        }
+        .m_main{
+          top: 320px;right: -40px;
+        }
+      }
+      .inspire{
+        margin-top: 520px;height: 400px;
+        > ul{
+          li{float: none;}
+          .shape_txt{
+            width: 320px;
+            ul li{
+              @include border-radius(46px 46px 46px 0);
+              margin-top: -20px;height: 100px;padding-top: 44px;
+            }
+            ul li + li{margin-left: 0;}
+          }
+          .txt{
+            margin-left: 0;
+            p{line-height: 24px;padding-top: 28px;}
+          }
+        }
+        
+      }
+      .symbol_info{display: none;}
+      .color_info{display: none;}
+      .icon_info{display: none;}
+      .tyop_info{display: none;}
+      .cha_info{display: none;}
+      .other_view{display: none;}
+
+    }
+    #cnt2{display: none;}
+    #footer{display: none;}
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx){
+  .m_main .devi1{background-image: url('../images/theSoop/mview_index_2x.jpg');}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .m_main .devi1{background-image: url('../images/theSoop/mview_index_3x.jpg');}
 }

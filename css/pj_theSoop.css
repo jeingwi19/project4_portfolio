@@ -878,7 +878,67 @@ body {
       background-size: cover !important;
       background-position: 75% 50%; }
 
-  #movMain {
+  #movMain #cnt1 {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 628px; }
+    #movMain #cnt1 .m_view .info_txt {
+      padding-top: 0; }
+      #movMain #cnt1 .m_view .info_txt strong {
+        font-size: 24px;
+        line-height: 32px; }
+      #movMain #cnt1 .m_view .info_txt p {
+        font-size: 14px;
+        line-height: 24px; }
+      #movMain #cnt1 .m_view .info_txt .work_data {
+        font-family: NtSansKR;
+        text-transform: uppercase;
+        line-height: 24px; }
+    #movMain #cnt1 .m_view .m_main {
+      top: 320px;
+      right: -40px; }
+    #movMain #cnt1 .inspire {
+      margin-top: 520px;
+      height: 400px; }
+      #movMain #cnt1 .inspire > ul li {
+        float: none; }
+      #movMain #cnt1 .inspire > ul .shape_txt {
+        width: 320px; }
+        #movMain #cnt1 .inspire > ul .shape_txt ul li {
+          -webkit-border-radius: 46px 46px 46px 0;
+          -moz-border-radius: 46px 46px 46px 0;
+          border-radius: 46px 46px 46px 0;
+          margin-top: -20px;
+          height: 100px;
+          padding-top: 44px; }
+        #movMain #cnt1 .inspire > ul .shape_txt ul li + li {
+          margin-left: 0; }
+      #movMain #cnt1 .inspire > ul .txt {
+        margin-left: 0; }
+        #movMain #cnt1 .inspire > ul .txt p {
+          line-height: 24px;
+          padding-top: 28px; }
+    #movMain #cnt1 .symbol_info {
+      display: none; }
+    #movMain #cnt1 .color_info {
+      display: none; }
+    #movMain #cnt1 .icon_info {
+      display: none; }
+    #movMain #cnt1 .tyop_info {
+      display: none; }
+    #movMain #cnt1 .cha_info {
+      display: none; }
+    #movMain #cnt1 .other_view {
+      display: none; }
+  #movMain #cnt2 {
+    display: none; }
+  #movMain #footer {
     display: none; } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .m_main .devi1 {
+    background-image: url("../images/theSoop/mview_index_2x.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .m_main .devi1 {
+    background-image: url("../images/theSoop/mview_index_3x.jpg"); } }
 
 /*# sourceMappingURL=pj_theSoop.css.map */

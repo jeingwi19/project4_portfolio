@@ -18,6 +18,11 @@ $(document).ready(function(){
       $('.cha_talk').removeClass('on');
     }
 
+    //.cha_talk 모바일 해상도에서 숨기기
+    if($(window).width() < 361){
+      $('.cha_talk').removeClass('on');
+    }
+
     //#cnt1 .d2 모바일 로고 나타나기
     if(scrollY > 1000){
       $('#cnt1 .d2').addClass('on');
