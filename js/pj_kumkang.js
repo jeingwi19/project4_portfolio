@@ -1,13 +1,28 @@
 $(document).ready(function(){
+  var timer = 0;
+
   //스크롤하면, 배경이미지 opacity 0;
   $(window).on('scroll', function(){
+    clearTimeout(timer);
+
     var scrollY = $(this).scrollTop();
-    //console.log(scrollY);
+    console.log(scrollY);
     if(scrollY > 100){
       $('.fixed_bg').addClass('on');
     }else{
       $('.fixed_bg').removeClass('on');
     }
+
+    timer = setTimeout(function () {
+      var scrollBtm = scrollY + $(this).height();
+
+      $('.fade').each(function () {
+        //스크롤바 이동거리 + 윈도우 창 높이 > .fade 브라우저 수직 위치 + 자신의 높이 * 0.5
+        var fadeBtm = $(this).offset().top + $(this).outerHeight()*0.5;
+        if(scrollBtm > fadeBtm) $(this).addClass('on')
+        else $(this).removeClass('on');
+      });
+    }, 50);
   });
 
   //.pc_view에 포커싱

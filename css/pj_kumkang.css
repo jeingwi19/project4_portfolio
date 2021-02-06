@@ -240,6 +240,27 @@
     width: 100%; }
     #movMain #cnt1 .tm_view > ul > li {
       float: left; }
+    #movMain #cnt1 .tm_view ul {
+      /* :first-child{@include transform(translateX(-40px));}
+      :last-child{@include transform(translateX(40px));} */ }
+      #movMain #cnt1 .tm_view ul .fade {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: translateX(-40px);
+        -moz-transform: translateX(-40px);
+        -o-transform: translateX(-40px);
+        -ms-transform: translateX(-40px);
+        transform: translateX(-40px);
+        opacity: 0; }
+      #movMain #cnt1 .tm_view ul .fade.on {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1; }
     #movMain #cnt1 .tm_view .tablet {
       -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.4);
