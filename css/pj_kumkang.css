@@ -366,6 +366,8 @@
       line-height: 20px;
       height: 48px;
       margin-top: -100px; }
+      #movMain #cnt2 .tit_txt p span {
+        display: block; }
   #movMain #cnt2 ul {
     width: 100%; }
     #movMain #cnt2 ul li {
@@ -699,11 +701,12 @@
         margin-left: 0;
         margin-top: 28px;
         line-height: 24px; }
-    #movMain #cnt1 .bgi1 {
-      top: 2200px;
+    #movMain #cnt1 .bgi1, #movMain #cnt1 .bgi2 {
       height: 600px; }
+    #movMain #cnt1 .bgi1 {
+      top: 2200px; }
     #movMain #cnt1 .bgi2 {
-      display: none; }
+      top: 4320px; }
     #movMain #cnt1 .font_guide {
       width: 320px;
       margin: 100px auto 0; }
@@ -738,10 +741,286 @@
         #movMain #cnt1 .font_guide .font .high_font .ft_ex :last-child {
           font-size: 48px; }
     #movMain #cnt1 .tm_view {
-      display: none; }
+      width: 320px;
+      margin: 320px auto 0; }
+      #movMain #cnt1 .tm_view > ul > li {
+        float: none; }
+      #movMain #cnt1 .tm_view .tablet {
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        border-radius: 16px;
+        width: 320px;
+        height: 416px;
+        margin-top: 0;
+        margin-left: -40px;
+        border: 4px solid #191919; }
+        #movMain #cnt1 .tm_view .tablet .display_t {
+          -webkit-background-size: cover !important;
+          -moz-background-size: cover !important;
+          background-size: cover !important;
+          width: 320px;
+          height: 2096px; }
+        #movMain #cnt1 .tm_view .tablet p {
+          display: none; }
+      #movMain #cnt1 .tm_view .color {
+        margin-left: 10px; }
+        #movMain #cnt1 .tm_view .color p {
+          font-family: Syncopate;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 24px; }
+        #movMain #cnt1 .tm_view .color .tit {
+          margin-top: 80px; }
+      #movMain #cnt1 .tm_view .mobile {
+        margin-left: 80px;
+        margin-bottom: 0;
+        border: 4px solid #191919; }
+    #movMain #cnt1 .brand_info {
+      width: 320px;
+      margin-top: 200px;
+      margin-left: 32px;
+      margin-bottom: 80px; }
+      #movMain #cnt1 .brand_info p::before {
+        top: -48px; }
   #movMain #cnt2 {
-    display: none; }
+    width: 320px;
+    margin: 200px auto 0; }
+    #movMain #cnt2 .tit_txt {
+      height: 160px; }
+      #movMain #cnt2 .tit_txt h3 {
+        font-weight: 700;
+        margin-right: 0; }
+      #movMain #cnt2 .tit_txt p {
+        margin-top: 28px;
+        width: 320px;
+        line-height: 24px; }
+        #movMain #cnt2 .tit_txt p span {
+          display: inline; }
+    #movMain #cnt2 ul {
+      width: 320px; }
+      #movMain #cnt2 ul li {
+        height: 320px;
+        margin-bottom: 320px; }
+      #movMain #cnt2 ul .list {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px; }
+        #movMain #cnt2 ul .list ul > li {
+          width: 100%;
+          float: none; }
+          #movMain #cnt2 ul .list ul > li strong {
+            font-weight: 700; }
+            #movMain #cnt2 ul .list ul > li strong span {
+              margin-bottom: 4px;
+              font-weight: 400; }
+          #movMain #cnt2 ul .list ul > li .sub_txt {
+            margin-top: 40px;
+            line-height: 26px; }
+          #movMain #cnt2 ul .list ul > li .sub_txt + p {
+            font-size: 14px;
+            font-weight: 400; }
+        #movMain #cnt2 ul .list .capture {
+          width: 360px;
+          height: 520px;
+          margin-right: 0;
+          margin-bottom: 0;
+          margin-top: -680px;
+          margin-left: -20px; }
+          #movMain #cnt2 ul .list .capture .img_ac1 {
+            background-image: url("../images/kumkang/capture1_m1x.jpg"); }
+          #movMain #cnt2 ul .list .capture .img_ac2 {
+            background-image: url("../images/kumkang/capture2_m1x.jpg"); }
+          #movMain #cnt2 ul .list .capture .img_ac3 {
+            background-image: url("../images/kumkang/capture3_m1x.jpg"); }
+      #movMain #cnt2 ul .ac1 {
+        margin-top: 160px; }
+      #movMain #cnt2 ul .ac2 ul li {
+        float: none; }
+      #movMain #cnt2 ul .ac2 .capture {
+        margin-left: -20px; }
   #movMain #footer {
-    display: none; } }
+    width: 360px;
+    margin: 0 auto; }
+    #movMain #footer .label {
+      top: 7280px; }
+      #movMain #footer .label .mov_label {
+        width: 1320px;
+        height: 100%; }
+      #movMain #footer .label .lb2 {
+        left: 372%; }
+    #movMain #footer .bg_full {
+      top: 7320px;
+      height: 320px; }
+      #movMain #footer .bg_full .bg_img {
+        background-position: 70% 0; }
+    #movMain #footer .btn_area {
+      width: 320px;
+      padding-top: 100px;
+      height: 320px;
+      margin: 0 auto; }
+      #movMain #footer .btn_area ul :first-child {
+        width: 100%; }
+      #movMain #footer .btn_area ul li {
+        height: 60px; }
+        #movMain #footer .btn_area ul li > p {
+          font-size: 16px; }
+        #movMain #footer .btn_area ul li + li {
+          -webkit-border-radius: 24px;
+          -moz-border-radius: 24px;
+          border-radius: 24px;
+          margin-left: 0;
+          width: 60px;
+          margin-top: 20px;
+          background: #999999; }
+          #movMain #footer .btn_area ul li + li + li {
+            width: 240px;
+            margin-left: 20px; }
+            #movMain #footer .btn_area ul li + li + li a span {
+              position: relative;
+              display: inline-block;
+              font-size: 14px;
+              padding-top: 20px;
+              padding-left: 20px;
+              color: #333333; }
+              #movMain #footer .btn_area ul li + li + li a span::before {
+                -webkit-animation-name: hor_bf;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-timing-function: ease;
+                -webkit-animation-delay: 0s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-fill-mode: none;
+                -moz-animation-name: hor_bf;
+                -moz-animation-duration: 1s;
+                -moz-animation-timing-function: ease;
+                -moz-animation-delay: 0s;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-fill-mode: none;
+                -o-animation-name: hor_bf;
+                -o-animation-duration: 1s;
+                -o-animation-timing-function: ease;
+                -o-animation-delay: 0s;
+                -o-animation-iteration-count: infinite;
+                -o-animation-fill-mode: none;
+                animation-name: hor_bf;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-delay: 0s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: none;
+                content: "";
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 14px;
+                height: 14px;
+                border-right: 2px solid #333333;
+                border-bottom: 2px solid #333333; }
+  @keyframes hor_bf {
+    100% {
+      transform: translateX(0) rotate(-45deg); }
+    0% {
+      transform: translateX(-32px) rotate(-45deg); } }
+              #movMain #footer .btn_area ul li + li + li a span::after {
+                -webkit-animation-name: hor_af;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-timing-function: ease;
+                -webkit-animation-delay: 0s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-fill-mode: none;
+                -moz-animation-name: hor_af;
+                -moz-animation-duration: 1s;
+                -moz-animation-timing-function: ease;
+                -moz-animation-delay: 0s;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-fill-mode: none;
+                -o-animation-name: hor_af;
+                -o-animation-duration: 1s;
+                -o-animation-timing-function: ease;
+                -o-animation-delay: 0s;
+                -o-animation-iteration-count: infinite;
+                -o-animation-fill-mode: none;
+                animation-name: hor_af;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-delay: 0s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: none;
+                content: "";
+                position: absolute;
+                top: 27px;
+                right: 20px;
+                width: 48px;
+                height: 2px;
+                background: #333333; }
+  @keyframes hor_af {
+    100% {
+      transform: scaleX(1);
+      transform-origin: left; }
+    0% {
+      transform: scaleX(0.4);
+      transform-origin: left; } }
+        #movMain #footer .btn_area ul li > a {
+          display: inline-block;
+          height: 100%;
+          width: 100%; }
+        #movMain #footer .btn_area ul li > a span {
+          font-size: 0; }
+        #movMain #footer .btn_area ul li > a + p {
+          display: none; }
+      #movMain #footer .btn_area .ft_txt2 a::before, #movMain #footer .btn_area .ft_txt3 a::before {
+        display: none; }
+      #movMain #footer .btn_area .ft_txt2 a::after {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 19px;
+        width: 20px;
+        height: 20px;
+        border-left: 2px solid #333333;
+        border-top: 2px solid #333333; }
+      #movMain #footer .btn_area .ft_txt2.active, #movMain #footer .btn_area .ft_txt3.active {
+        -webkit-animation-name: btn_push;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: btn_push;
+        -moz-animation-duration: 1s;
+        -moz-animation-timing-function: ease-in-out;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: btn_push;
+        -o-animation-duration: 1s;
+        -o-animation-timing-function: ease-in-out;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: 1;
+        -o-animation-fill-mode: backwards;
+        animation-name: btn_push;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards; }
+  @keyframes btn_push {
+    100% {
+      transform: translateY(0); }
+    50% {
+      transform: translateY(20px); }
+    0% {
+      transform: translateY(0); } } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .img_ac1 {
+    background-image: url("../images/kumkang/capture1_m2x.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .img_ac1 {
+    background-image: url("../images/kumkang/capture1_m3x.jpg"); } }
 
 /*# sourceMappingURL=pj_kumkang.css.map */

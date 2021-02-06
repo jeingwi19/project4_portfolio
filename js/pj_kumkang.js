@@ -34,4 +34,14 @@ $(document).ready(function(){
   $('.ft_txt2 a').on('click', function(){
     $('html, body').stop().animate({scrollTop: 0});
   });
+
+  /* 모바일해상도 - 푸터 li 버튼 클릭 애니메이션 */
+  if($(window).width() < 361){
+   $('#footer .btn_area .ft_txt2').on('click', function(){
+     $(this).addClass('active').focus().siblings().removeClass('active');
+   });
+   $('#footer .btn_area .ft_txt3').on('click', function(){
+    $(this).addClass('active').focus().siblings().removeClass('active');
+  });
+  }
 });
