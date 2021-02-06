@@ -50,6 +50,17 @@ $(document).ready(function(){
     }
   });
 
+  //모바일 헤더 색상 변경
+  if($(window).width() < 361){
+    $('#mHeader .menu').on('click', function() {
+      if($(this).hasClass('active')){
+        $(this).prev().addClass('color');
+      }else{
+        $(this).prev().removeClass('color');
+      }
+    });
+  }
+
   //#cnt1 .m_view .m_main a에 포커싱,마우스오버 했을때 애니메이션을 멈추기
   $('#cnt1 .m_view .m_main a').on({
     'focus': function(){

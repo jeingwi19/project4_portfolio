@@ -254,4 +254,43 @@ body{background: #333030;}
       }
     }
   }
+
+  //모달 - 프로필
+  #modalIntro{
+    width: 320px;
+    .modal_flat{
+      strong{
+        top: 40px;left: 24px;
+        span{font-size: 28px;}
+        :first-child{margin-bottom: 12px;}
+      }
+      .modal_info{
+        width: 280px;height: 380px;left: calc(50% - 140px);top: 180px;
+        > li + li{margin-top: 8px;}
+        .education{
+          .info_list :first-child{width: 48px;margin-right: 4px;}
+        }
+        .skills > ul{
+          .skill_list{
+            .icon{ width: 32px;height: 32px;}
+            span + span{margin-left: 0;}
+            .mgl{margin-left: 2px;}
+          }
+        }
+      }
+    }
+    .iconbtn{display: none;}
+    .bg_img{
+      @include border-radius(20px);
+      width: 320px;height: 520px;overflow: hidden;
+      .character{
+        @include bgsize(contain);
+        background-image: url('../images/main/modal_bg_cha2.png');
+        width: 600px;height: 1029px;top: -40px;left: -80px;
+      }
+      .can1{top: 0;left: 0;}
+      .can2{top: 100px;left: 220px;z-index: 1;}
+      .can3{top: 420px;left: -60px;}
+    }
+  }
 }

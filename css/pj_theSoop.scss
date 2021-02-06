@@ -436,3 +436,30 @@ body{background: #fff;}
     }
   }
 }
+
+@media screen and (max-width: 360px){
+  #mHeader{
+    .logo{
+      @include transition(all 0.5s);
+      a img:first-child{opacity: 0;}
+      a img:last-child{opacity: 1;}
+    }
+    .logo.color{
+      a img:first-child{opacity: 1;}
+      a img:last-child{opacity: 0;}
+    }
+    .menu{
+      .line{background: $black;}
+    }
+  }
+
+  .fixed_bg{
+    width: 100%;height: 100vh;
+    .bg_full{
+      @include bgsize(cover);
+      background-position: 75% 50%;
+    }
+  }
+
+  #movMain{display: none;}
+}
