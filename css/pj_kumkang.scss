@@ -484,30 +484,6 @@
               width: 240px;margin-left: 20px;
               a span{
                 position: relative;display: inline-block;font-size: 14px;padding-top: 20px;padding-left: 20px;color: $black;
-                &::before{
-                  @include keyframe(hor_bf){
-                    100%{
-                      transform: translateX(0) rotate(-45deg);
-                    }0%{
-                      transform: translateX(-32px) rotate(-45deg);
-                    }
-                  };
-                  @include animation(hor_bf, 1s, ease, 0s, infinite, none);
-                  content: "";position: absolute;top: 20px;right: 20px;width: 14px;height: 14px;border-right: 2px solid $black;border-bottom: 2px solid $black;
-                }
-                &::after{
-                  @include keyframe(hor_af){
-                    100%{
-                      transform: scaleX(1);
-                      transform-origin: left;
-                    }0%{
-                      transform: scaleX(.4);
-                      transform-origin: left;
-                    }
-                  };
-                  @include animation(hor_af, 1s, ease, 0s, infinite, none);
-                  content: "";position: absolute;top: 27px;right: 20px;width: 48px;height: 2px;background: $black;
-                }
               }
             }
           }
@@ -516,21 +492,81 @@
           > a + p{display: none;}
         }
         .ft_txt2 a::before, .ft_txt3 a::before{display: none;}
-        .ft_txt2 a::after{
-          @include transform(rotate(45deg));
-          content: "";position: absolute;top: 24px;left: 19px;width: 20px;height: 20px;border-left: 2px solid $black;border-top: 2px solid $black;
+        .ft_txt2 a{
+          @include border-radius(24px);
+          overflow: hidden;
+          .ver_arrow1{
+            @include keyframe(ver_a_mov1){
+              100%{
+                transform: translateY(-160px);
+              }0%{
+                transform: translateY(60px);
+              }
+            };
+            @include animation(ver_a_mov1, 2.8s, linear, 0s, infinite, none);
+            position: absolute;top: 0;left: calc(50% - 12px);width: 24px;height: 60px;
+            &::before{
+              @include transform(rotate(-45deg));
+              content: "";position: absolute;top: 4px;left: 4px;width: 14px;height: 14px;border-top: 2px solid $black;border-right: 2px solid $black;
+            }
+            &::after{
+              content: "";position: absolute;top: 2px;left: calc(50% - 1px);width: 2px;height: 28px;background: $black;
+            }
+          }
+          .ver_arrow2{
+            @include keyframe(ver_a_mov2){
+              100%{
+                transform: translateY(-120px);
+              }0%{
+                transform: translateY(100px);
+              }
+            };
+            @include animation(ver_a_mov2, 2.8s, linear, 0s, infinite, none);
+            position: absolute;top: 60px;left: calc(50% - 12px);width: 24px;height: 60px;
+            &::before{
+              @include transform(rotate(-45deg));
+              content: "";position: absolute;top: 4px;left: 4px;width: 14px;height: 14px;border-top: 2px solid $black;border-right: 2px solid $black;
+            }
+            &::after{
+              content: "";position: absolute;top: 2px;left: calc(50% - 1px);width: 2px;height: 28px;background: $black;
+            }
+          }
+        }
+        .ft_txt3 a{
+          :first-child{width: 160px;}
+          .hor_arrow{
+            position: absolute;top: 18px;width: 60px;height: 24px;overflow: hidden;
+            .armov2{
+              @include keyframe(hor_a_mov){
+                100%{
+                  transform: translateX(0);
+                }0%{
+                  transform: translateX(-52px);
+                }
+              };
+              @include animation(hor_a_mov, 1s, ease, 0s, infinite, none);
+              position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+              &::before{
+                @include transform(rotate(45deg));
+                content: "";position: absolute;top: 6px;right: 4px;width: 10px;height: 10px;border-top: 2px solid $black;border-right: 2px solid $black;
+              }
+              &::after{
+                content: "";position: absolute;top: 11px;right: 3px;width: 40px;height: 2px;background: $black;
+              }
+            }
+          }
         }
         .ft_txt2.active, .ft_txt3.active{
           @include keyframe(btn_push){
             100%{
               transform: translateY(0);
             }50%{
-              transform: translateY(20px);
+              transform: translateY(8px);
             }0%{
               transform: translateY(0);
             }
           };
-          @include animation(btn_push, 1s, ease-in-out, 0s, 1, backwards);
+          @include animation(btn_push, 0.2s, ease, 0s, 1, backwards);
         }
       }
     }
@@ -539,8 +575,12 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .img_ac1{background-image: url('../images/kumkang/capture1_m2x.jpg');}
+  .img_ac2{background-image: url('../images/kumkang/capture2_m2x.jpg');}
+  .img_ac3{background-image: url('../images/kumkang/capture3_m2x.jpg');}
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
   .img_ac1{background-image: url('../images/kumkang/capture1_m3x.jpg');}
+  .img_ac2{background-image: url('../images/kumkang/capture2_m3x.jpg');}
+  .img_ac3{background-image: url('../images/kumkang/capture3_m3x.jpg');}
 }

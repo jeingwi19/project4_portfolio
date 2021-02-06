@@ -883,83 +883,6 @@
               padding-top: 20px;
               padding-left: 20px;
               color: #333333; }
-              #movMain #footer .btn_area ul li + li + li a span::before {
-                -webkit-animation-name: hor_bf;
-                -webkit-animation-duration: 1s;
-                -webkit-animation-timing-function: ease;
-                -webkit-animation-delay: 0s;
-                -webkit-animation-iteration-count: infinite;
-                -webkit-animation-fill-mode: none;
-                -moz-animation-name: hor_bf;
-                -moz-animation-duration: 1s;
-                -moz-animation-timing-function: ease;
-                -moz-animation-delay: 0s;
-                -moz-animation-iteration-count: infinite;
-                -moz-animation-fill-mode: none;
-                -o-animation-name: hor_bf;
-                -o-animation-duration: 1s;
-                -o-animation-timing-function: ease;
-                -o-animation-delay: 0s;
-                -o-animation-iteration-count: infinite;
-                -o-animation-fill-mode: none;
-                animation-name: hor_bf;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-delay: 0s;
-                animation-iteration-count: infinite;
-                animation-fill-mode: none;
-                content: "";
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                width: 14px;
-                height: 14px;
-                border-right: 2px solid #333333;
-                border-bottom: 2px solid #333333; }
-  @keyframes hor_bf {
-    100% {
-      transform: translateX(0) rotate(-45deg); }
-    0% {
-      transform: translateX(-32px) rotate(-45deg); } }
-              #movMain #footer .btn_area ul li + li + li a span::after {
-                -webkit-animation-name: hor_af;
-                -webkit-animation-duration: 1s;
-                -webkit-animation-timing-function: ease;
-                -webkit-animation-delay: 0s;
-                -webkit-animation-iteration-count: infinite;
-                -webkit-animation-fill-mode: none;
-                -moz-animation-name: hor_af;
-                -moz-animation-duration: 1s;
-                -moz-animation-timing-function: ease;
-                -moz-animation-delay: 0s;
-                -moz-animation-iteration-count: infinite;
-                -moz-animation-fill-mode: none;
-                -o-animation-name: hor_af;
-                -o-animation-duration: 1s;
-                -o-animation-timing-function: ease;
-                -o-animation-delay: 0s;
-                -o-animation-iteration-count: infinite;
-                -o-animation-fill-mode: none;
-                animation-name: hor_af;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-delay: 0s;
-                animation-iteration-count: infinite;
-                animation-fill-mode: none;
-                content: "";
-                position: absolute;
-                top: 27px;
-                right: 20px;
-                width: 48px;
-                height: 2px;
-                background: #333333; }
-  @keyframes hor_af {
-    100% {
-      transform: scaleX(1);
-      transform-origin: left; }
-    0% {
-      transform: scaleX(0.4);
-      transform-origin: left; } }
         #movMain #footer .btn_area ul li > a {
           display: inline-block;
           height: 100%;
@@ -970,42 +893,212 @@
           display: none; }
       #movMain #footer .btn_area .ft_txt2 a::before, #movMain #footer .btn_area .ft_txt3 a::before {
         display: none; }
-      #movMain #footer .btn_area .ft_txt2 a::after {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        content: "";
+      #movMain #footer .btn_area .ft_txt2 a {
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        border-radius: 24px;
+        overflow: hidden; }
+        #movMain #footer .btn_area .ft_txt2 a .ver_arrow1 {
+          -webkit-animation-name: ver_a_mov1;
+          -webkit-animation-duration: 2.8s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: none;
+          -moz-animation-name: ver_a_mov1;
+          -moz-animation-duration: 2.8s;
+          -moz-animation-timing-function: linear;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: none;
+          -o-animation-name: ver_a_mov1;
+          -o-animation-duration: 2.8s;
+          -o-animation-timing-function: linear;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: none;
+          animation-name: ver_a_mov1;
+          animation-duration: 2.8s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          position: absolute;
+          top: 0;
+          left: calc(50% - 12px);
+          width: 24px;
+          height: 60px; }
+  @keyframes ver_a_mov1 {
+    100% {
+      transform: translateY(-160px); }
+    0% {
+      transform: translateY(60px); } }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow1::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 14px;
+            border-top: 2px solid #333333;
+            border-right: 2px solid #333333; }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow1::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: calc(50% - 1px);
+            width: 2px;
+            height: 28px;
+            background: #333333; }
+        #movMain #footer .btn_area .ft_txt2 a .ver_arrow2 {
+          -webkit-animation-name: ver_a_mov2;
+          -webkit-animation-duration: 2.8s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: none;
+          -moz-animation-name: ver_a_mov2;
+          -moz-animation-duration: 2.8s;
+          -moz-animation-timing-function: linear;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: none;
+          -o-animation-name: ver_a_mov2;
+          -o-animation-duration: 2.8s;
+          -o-animation-timing-function: linear;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: none;
+          animation-name: ver_a_mov2;
+          animation-duration: 2.8s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          position: absolute;
+          top: 60px;
+          left: calc(50% - 12px);
+          width: 24px;
+          height: 60px; }
+  @keyframes ver_a_mov2 {
+    100% {
+      transform: translateY(-120px); }
+    0% {
+      transform: translateY(100px); } }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow2::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 14px;
+            border-top: 2px solid #333333;
+            border-right: 2px solid #333333; }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow2::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: calc(50% - 1px);
+            width: 2px;
+            height: 28px;
+            background: #333333; }
+      #movMain #footer .btn_area .ft_txt3 a :first-child {
+        width: 160px; }
+      #movMain #footer .btn_area .ft_txt3 a .hor_arrow {
         position: absolute;
-        top: 24px;
-        left: 19px;
-        width: 20px;
-        height: 20px;
-        border-left: 2px solid #333333;
-        border-top: 2px solid #333333; }
+        top: 18px;
+        width: 60px;
+        height: 24px;
+        overflow: hidden; }
+        #movMain #footer .btn_area .ft_txt3 a .hor_arrow .armov2 {
+          -webkit-animation-name: hor_a_mov;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: none;
+          -moz-animation-name: hor_a_mov;
+          -moz-animation-duration: 1s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: none;
+          -o-animation-name: hor_a_mov;
+          -o-animation-duration: 1s;
+          -o-animation-timing-function: ease;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: none;
+          animation-name: hor_a_mov;
+          animation-duration: 1s;
+          animation-timing-function: ease;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+  @keyframes hor_a_mov {
+    100% {
+      transform: translateX(0); }
+    0% {
+      transform: translateX(-52px); } }
+          #movMain #footer .btn_area .ft_txt3 a .hor_arrow .armov2::before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: 4px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #333333;
+            border-right: 2px solid #333333; }
+          #movMain #footer .btn_area .ft_txt3 a .hor_arrow .armov2::after {
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 3px;
+            width: 40px;
+            height: 2px;
+            background: #333333; }
       #movMain #footer .btn_area .ft_txt2.active, #movMain #footer .btn_area .ft_txt3.active {
         -webkit-animation-name: btn_push;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-duration: 0.2s;
+        -webkit-animation-timing-function: ease;
         -webkit-animation-delay: 0s;
         -webkit-animation-iteration-count: 1;
         -webkit-animation-fill-mode: backwards;
         -moz-animation-name: btn_push;
-        -moz-animation-duration: 1s;
-        -moz-animation-timing-function: ease-in-out;
+        -moz-animation-duration: 0.2s;
+        -moz-animation-timing-function: ease;
         -moz-animation-delay: 0s;
         -moz-animation-iteration-count: 1;
         -moz-animation-fill-mode: backwards;
         -o-animation-name: btn_push;
-        -o-animation-duration: 1s;
-        -o-animation-timing-function: ease-in-out;
+        -o-animation-duration: 0.2s;
+        -o-animation-timing-function: ease;
         -o-animation-delay: 0s;
         -o-animation-iteration-count: 1;
         -o-animation-fill-mode: backwards;
         animation-name: btn_push;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
+        animation-duration: 0.2s;
+        animation-timing-function: ease;
         animation-delay: 0s;
         animation-iteration-count: 1;
         animation-fill-mode: backwards; }
@@ -1013,14 +1106,26 @@
     100% {
       transform: translateY(0); }
     50% {
-      transform: translateY(20px); }
+      transform: translateY(8px); }
     0% {
       transform: translateY(0); } } }
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .img_ac1 {
-    background-image: url("../images/kumkang/capture1_m2x.jpg"); } }
+    background-image: url("../images/kumkang/capture1_m2x.jpg"); }
+
+  .img_ac2 {
+    background-image: url("../images/kumkang/capture2_m2x.jpg"); }
+
+  .img_ac3 {
+    background-image: url("../images/kumkang/capture3_m2x.jpg"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
   .img_ac1 {
-    background-image: url("../images/kumkang/capture1_m3x.jpg"); } }
+    background-image: url("../images/kumkang/capture1_m3x.jpg"); }
+
+  .img_ac2 {
+    background-image: url("../images/kumkang/capture2_m3x.jpg"); }
+
+  .img_ac3 {
+    background-image: url("../images/kumkang/capture3_m3x.jpg"); } }
 
 /*# sourceMappingURL=pj_kumkang.css.map */
