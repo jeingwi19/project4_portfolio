@@ -50,7 +50,7 @@ $(document).ready(function(){
     });
 
     //헤더 - Contact me 클릭시 페이지 새로고침 비활성화
-    $('#gnb .md_gnb_contact').on('click', function(){
+    $('#pcHeader #gnb .md_gnb_contact').on('click', function(){
         location.href=$(this).attr("href");
         return false;
     });
