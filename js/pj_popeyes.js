@@ -24,5 +24,12 @@ $(document).ready(function(){
         $(this).prev().removeClass('color');
       }
     });
+
+    //첫번째 PC화면 애니메이션 중지
+    $('.dev_link').on({
+      'focus mouseenter': function(){
+        $(this).children().children('.devi1').removeClass('on');
+      }
+    });
   }
 });

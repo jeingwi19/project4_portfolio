@@ -293,6 +293,8 @@ body {
       font-size: 14px;
       line-height: 24px;
       color: #333; }
+      #movMain #cnt1 .tit + p span {
+        display: block; }
     #movMain #cnt1 .device {
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -954,7 +956,107 @@ body {
     0% {
       transform: translateX(320%) scale(1); } }
   #movMain #cnt1 {
-    display: none; }
+    width: 320px;
+    margin: 620px 20px 0; }
+    #movMain #cnt1 .tit {
+      line-height: 28px; }
+    #movMain #cnt1 .tit + p {
+      line-height: 26px; }
+    #movMain #cnt1 .device {
+      width: 480px;
+      height: 280px; }
+      #movMain #cnt1 .device ::before {
+        width: 500px;
+        height: 300px;
+        left: -10px;
+        top: -10px; }
+      #movMain #cnt1 .device ::after {
+        width: 500px;
+        height: 300px;
+        left: -10px;
+        top: -10px; }
+    #movMain #cnt1 .pc_view1 ul {
+      height: auto; }
+      #movMain #cnt1 .pc_view1 ul li {
+        float: none;
+        display: block; }
+    #movMain #cnt1 .pc_view1 .info_txt {
+      width: 100%; }
+      #movMain #cnt1 .pc_view1 .info_txt .tit + p span {
+        display: inline; }
+      #movMain #cnt1 .pc_view1 .info_txt .work_data {
+        margin-top: 20px;
+        margin-bottom: 80px; }
+    #movMain #cnt1 .pc_view1 .pc_main {
+      margin-left: 20px; }
+      #movMain #cnt1 .pc_view1 .pc_main .info_txt {
+        display: none; }
+      #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1 {
+        -webkit-animation-name: movpc1_m;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: movpc1_m;
+        -moz-animation-duration: 4s;
+        -moz-animation-timing-function: ease;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: movpc1_m;
+        -o-animation-duration: 4s;
+        -o-animation-timing-function: ease;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: backwards;
+        animation-name: movpc1_m;
+        animation-duration: 4s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+        width: 480px;
+        height: 810px;
+        background: url("../images/popeyes/mobile_main_1x.jpg") no-repeat top; }
+  @keyframes movpc1_m {
+    100% {
+      transform: translateY(0); }
+    70% {
+      transform: translateY(-528px); }
+    50% {
+      transform: translateY(-528px); }
+    30% {
+      transform: translateY(0); }
+    0% {
+      transform: translateY(0); } }
+        #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1::after, #movMain #cnt1 .pc_view1 .pc_main .dev_link .mov_img .devi1::before {
+          display: none; }
+      #movMain #cnt1 .pc_view1 .pc_main .dev_link:hover, #movMain #cnt1 .pc_view1 .pc_main .dev_link:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
+    #movMain #cnt1 .inspire {
+      height: 112px;
+      margin-top: 100px; }
+      #movMain #cnt1 .inspire ul li {
+        float: none; }
+        #movMain #cnt1 .inspire ul li ul {
+          width: 100%;
+          margin-right: 0; }
+          #movMain #cnt1 .inspire ul li ul > li {
+            /* @include border-radius(60px); */
+            width: 112px;
+            padding-top: 48px;
+            font-size: 14px; }
+          #movMain #cnt1 .inspire ul li ul > li + li {
+            margin-left: -8px; }
+    #movMain #cnt1 .tyop_info {
+      display: none; }
+    #movMain #cnt1 .color_info {
+      display: none; }
+    #movMain #cnt1 .pc_view2 {
+      display: none; }
   #movMain #cnt2 {
     display: none; }
   #movMain #footer {

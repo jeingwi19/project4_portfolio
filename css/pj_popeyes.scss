@@ -134,7 +134,10 @@ body{background: #ffb739;}
     .tit{
       display: block;font-size: 20px;line-height: 24px;margin-bottom: 24px;
     }
-    .tit + p{font-family: $korFont;font-size: 14px;line-height: 24px;color: #333;}
+    .tit + p{
+      font-family: $korFont;font-size: 14px;line-height: 24px;color: #333;
+      span{display: block;}
+    }
     .device{
       @include border-radius(10px);
       position: relative;display: inline-block;width: 628px;height: 358px;background: #fff;
@@ -491,7 +494,79 @@ body{background: #ffb739;}
   }
 
   #movMain{
-    #cnt1{display: none;}
+    #cnt1{
+      width: 320px;margin: 620px 20px 0;
+
+      //모바일 공통스타일
+      .tit{line-height: 28px;}
+      .tit + p{line-height: 26px;}
+      .device{
+        width: 480px;height: 280px;
+        ::before{width: 500px;height: 300px;left: -10px;top: -10px;}
+        ::after{width: 500px;height: 300px;left: -10px;top: -10px;}
+      }
+
+      //모바일 본문 스타일
+      .pc_view1{
+        ul{
+          height: auto;
+          li{float: none;display: block;}
+        }
+        .info_txt{
+          width: 100%;
+          .tit + p{
+            span{display: inline;}
+          }
+          .work_data{margin-top: 20px;margin-bottom: 80px;}
+        }
+        .pc_main{
+          margin-left: 20px;
+          .info_txt{display: none;}
+          .dev_link{
+            .mov_img{
+              .devi1{
+                @include keyframe(movpc1_m){
+                  100%{
+                    transform: translateY(0)
+                  }70%{
+                    transform: translateY(-528px)
+                  }50%{
+                    transform: translateY(-528px)
+                  }30%{
+                    transform: translateY(0)
+                  }0%{
+                    transform: translateY(0)
+                  }
+                };
+                @include animation(movpc1_m, 4s, ease, 0s, infinite, backwards);
+                width: 480px;height: 810px;background: url('../images/popeyes/mobile_main_1x.jpg')no-repeat top;
+                &::after, &::before{display: none;}
+              }
+            }
+          }
+          .dev_link:hover, .dev_link:focus{@include box-shadow(none);}
+        }
+      }
+
+      .inspire{
+        height: 112px;margin-top: 100px;
+        ul li{
+          float: none;
+          ul{
+            width: 100%;margin-right: 0;
+            > li{
+              /* @include border-radius(60px); *///?
+              width: 112px;padding-top: 48px;font-size: 14px;
+            }
+            > li + li{margin-left: -8px;}
+          }
+        }
+      }
+      
+      .tyop_info{display: none;}
+      .color_info{display: none;}
+      .pc_view2{display: none;}
+    }
 
     #cnt2{display: none;}
 
