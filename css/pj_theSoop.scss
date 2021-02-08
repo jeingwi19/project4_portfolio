@@ -368,7 +368,10 @@ body{background: #fff;overflow-x: hidden;overflow-y: auto;}
         font-size: 20px;line-height: 24px;
         span{display: block;}
       }
-      p{font-size: 14px;line-height: 20px;margin-left: 40px;color: $greyDark;}
+      p{
+        font-size: 14px;line-height: 20px;margin-left: 40px;color: $greyDark;
+        span{display: block;}
+      }
     }
 
     ul{
@@ -619,23 +622,67 @@ body{background: #fff;overflow-x: hidden;overflow-y: auto;}
     }
     
     #cnt2{
-      display: none;
+      width: 100%;margin: -200px auto 0;
+      .tit_txt{
+        width: 320px;margin-left: 20px;
+        p{
+          margin-left: 0;margin-top: 28px;line-height: 24px;
+          span{display: inline;}
+        }
+      }
+
+      ul{
+        width: 320px;
+        li{height: 320px;margin-bottom: 320px;margin-left: 20px;}
+        .list{
+          font-size: 20px;font-weight: 700;line-height: 24px;
+          ul > li{
+            width: 100%;float: none;display: block;
+            strong{
+              font-weight: 700;
+              span{margin-bottom: 4px;font-weight: 400;}
+            }
+            strong, p{margin-left: -20px;}
+            .sub_txt{margin-top: 40px;line-height: 26px;}
+            .sub_txt + p{font-size: 14px;font-weight: 400;}
+          }
+          .capture{
+            width: 360px;height: 520px;margin-right: 0;margin-bottom: 0;margin-top: -680px;margin-left: -20px;
+            div{@include border-radius(0);border: none;}
+            .img_ac1{background-image: url('../images/theSoop/ac_img1_m1.jpg');}
+            .img_ac2{
+              font-size: 14px;height: 680px;background-image: url('../images/theSoop/ac_img2_m1.jpg');overflow: hidden;
+              pre{
+                width: 360px;height: 600px;overflow: hidden;padding-top: 260px;
+                code{
+                  display: inline-block;font-weight: 400;margin-left: -180px;color: $black;
+                  span{color: $greyDark;}
+                  .mblock{color: $black;display: block;margin-left: 80px;margin-bottom: -24px;}
+                }
+              }
+            }
+            .img_ac3{
+              background-image: url('../images/theSoop/ac_img3_m1.jpg');
+            }
+          }
+        }
+        .ac1{margin-top: 80px;}
+        .ac2{
+          ul li{float: none;}
+          .capture{margin-left: -20px;}
+        }
+        .ac3{padding-top: 120px;}
+      }
     }
 
     #footer{
-      width: 360px;margin: 0 auto;
+      width: 360px;margin: 0 auto 60px;
       .label{
         top: 7280px;
         .mov_label{
           width: 1320px;height: 100%;
         }
         .lb2{left: 372%;}
-      }
-      .bg_full{
-        top: 7320px;height: 320px;
-        .bg_img{
-          background-position: 70% 0;
-        }
       }
       .btn_area{
         width: 320px;padding-top: 100px;height: 320px;margin: 0 auto;
