@@ -14,11 +14,11 @@ body {
   background: #333333; }
 #pcHeader .menu.active .line {
   background: #333333; }
-#pcHeader #gnb > ul > li > a {
+#pcHeader #gnb > ul > li > a, #pcHeader #gnb > ul > li > button {
   color: #d55a00; }
-#pcHeader #gnb > ul > li > a::before {
+#pcHeader #gnb > ul > li > a::before, #pcHeader #gnb > ul > li > button::before {
   background: #333333; }
-#pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before {
+#pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before, #pcHeader #gnb > ul > li:hover > button, #pcHeader #gnb > ul > li > button:focus, #pcHeader #gnb > ul > li:hover > button::before, #pcHeader #gnb > ul > li > button:focus::before {
   color: #333333; }
 #pcHeader #gnb ul li ul li a {
   color: #d55a00;
@@ -831,5 +831,133 @@ body {
         opacity: 1; }
       #movMain #footer .btn_area .ft_txt2.on a:hover::before, #movMain #footer .btn_area .ft_txt2.on a:focus::before, #movMain #footer .btn_area .ft_txt3.on a:hover::before, #movMain #footer .btn_area .ft_txt3.on a:focus::before {
         width: 100%; }
+
+@media screen and (max-width: 360px) {
+  #mHeader .logo {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    #mHeader .logo a img:first-child {
+      opacity: 0; }
+    #mHeader .logo a img:last-child {
+      opacity: 1; }
+  #mHeader .logo.color a img:first-child {
+    opacity: 1; }
+  #mHeader .logo.color a img:last-child {
+    opacity: 0; }
+  #mHeader .menu .line {
+    background: #333333; }
+
+  .fixed_bg {
+    width: 100%;
+    height: 100vh; }
+    .fixed_bg .bg_full {
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      background-size: cover !important;
+      background-position: 75% 50%; }
+      .fixed_bg .bg_full .mov_hi {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        left: -55%;
+        top: -25%; }
+      .fixed_bg .bg_full .cloud1 {
+        -webkit-animation-name: mov_c1_m;
+        -webkit-animation-duration: 30s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-name: mov_c1_m;
+        -moz-animation-duration: 30s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-name: mov_c1_m;
+        -o-animation-duration: 30s;
+        -o-animation-timing-function: linear;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: forwards;
+        animation-name: mov_c1_m;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        height: 50%;
+        top: 40%; }
+  @keyframes mov_c1_m {
+    100% {
+      transform: translateX(-380%); }
+    70% {
+      transform: translateX(-380%); }
+    0% {
+      transform: translateX(0); } }
+        .fixed_bg .bg_full .cloud1::before {
+          top: 50%;
+          left: 120%;
+          width: 50%;
+          height: 50%; }
+      .fixed_bg .bg_full .mov_lying {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 40%;
+        height: 40%; }
+        .fixed_bg .bg_full .mov_lying::before {
+          top: 38%; }
+        .fixed_bg .bg_full .mov_lying::after {
+          width: 40%;
+          height: 40%;
+          left: -40%;
+          top: 8%; }
+      .fixed_bg .bg_full .mov_delivery {
+        -webkit-animation-name: mov_deli_m;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-name: mov_deli_m;
+        -moz-animation-duration: 6s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-name: mov_deli_m;
+        -o-animation-duration: 6s;
+        -o-animation-timing-function: linear;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: forwards;
+        animation-name: mov_deli_m;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards; }
+  @keyframes mov_deli_m {
+    100% {
+      transform: translateX(-100%) scale(1); }
+    50% {
+      transform: translateX(-100%) scale(1, 1, 0.9); }
+    0% {
+      transform: translateX(320%) scale(1); } }
+  #movMain #cnt1 {
+    display: none; }
+  #movMain #cnt2 {
+    display: none; }
+  #movMain #footer {
+    display: none; } }
 
 /*# sourceMappingURL=pj_popeyes.css.map */

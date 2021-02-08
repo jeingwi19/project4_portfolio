@@ -14,4 +14,15 @@ $(document).ready(function(){
   $('.ft_txt2 a').on('click', function(){
     $('html, body').stop().animate({scrollTop: 0});
   });
+
+  //모바일 해상도 헤더 색상 변경
+  if($(window).width() < 361){
+    $('#mHeader .menu').on('click', function() {
+      if($(this).hasClass('active')){
+        $(this).prev().addClass('color');
+      }else{
+        $(this).prev().removeClass('color');
+      }
+    });
+  }
 });
