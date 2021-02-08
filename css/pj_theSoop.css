@@ -492,9 +492,7 @@ body {
         justify-content: flex-start;
         width: 100%;
         height: 100%;
-        margin-top: 20px;
-        /* :nth-child(odd){background: skyblue;}
-        :nth-child(even){background: orange;} */ }
+        margin-top: 20px; }
         #movMain #cnt1 .icon_info .icon_area .icons {
           position: relative;
           display: flex;
@@ -888,6 +886,8 @@ body {
     width: 320px;
     margin: 0 auto;
     margin-top: 628px; }
+    #movMain #cnt1 .device {
+      border-width: 4px; }
     #movMain #cnt1 .m_view .info_txt {
       padding-top: 0; }
       #movMain #cnt1 .m_view .info_txt strong {
@@ -929,7 +929,13 @@ body {
     #movMain #cnt1 .symbol_info .logom_info {
       margin-top: 40px; }
       #movMain #cnt1 .symbol_info .logom_info .logom_view {
-        margin-left: -40px; }
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        margin-left: -40px;
+        border-width: 4px; }
+        #movMain #cnt1 .symbol_info .logom_info .logom_view .d2 {
+          height: 512px; }
       #movMain #cnt1 .symbol_info .logom_info .logom_txt {
         width: 100%;
         margin-top: 60px;

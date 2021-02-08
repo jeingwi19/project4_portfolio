@@ -17,9 +17,9 @@ $(document).ready(function(){
       var scrollBtm = scrollY + $(this).height();
 
       $('.fade').each(function () {
-        //스크롤바 이동거리 + 윈도우 창 높이 > .fade 브라우저 수직 위치 + 자신의 높이 * 0.5
-        var fadeBtm = $(this).offset().top + $(this).outerHeight()*0.5;
-        if(scrollBtm > fadeBtm) $(this).addClass('on')
+        //스크롤바 이동거리 + 윈도우 창 높이 > .fade 브라우저 수직 위치 + 자신의 높이 * 0.2
+        var fadeBtm = $(this).offset().top + $(this).outerHeight()*0.2;
+        if(scrollBtm > fadeBtm) $(this).addClass('on');
         else $(this).removeClass('on');
       });
     }, 50);
@@ -45,18 +45,5 @@ $(document).ready(function(){
     }
   });
 
-  //푸터 Return to top 버튼 스크롤 맨 위로
-  $('.ft_txt2 a').on('click', function(){
-    $('html, body').stop().animate({scrollTop: 0});
-  });
-
-  /* 모바일해상도 - 푸터 li 버튼 클릭 애니메이션 */
-  if($(window).width() < 361){
-   $('#footer .btn_area .ft_txt2').on('click', function(){
-     $(this).addClass('active').focus().siblings().removeClass('active');
-   });
-   $('#footer .btn_area .ft_txt3').on('click', function(){
-    $(this).addClass('active').focus().siblings().removeClass('active');
-  });
-  }
+  
 });
