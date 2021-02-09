@@ -736,6 +736,8 @@ body {
         line-height: 24px;
         margin-left: 40px;
         color: #333333; }
+        #movMain #cnt2 .tit_txt p span {
+          display: block; }
     #movMain #cnt2 ul {
       width: 100%; }
       #movMain #cnt2 ul li {
@@ -1136,9 +1138,411 @@ body {
           margin-left: 20px; }
       #movMain #cnt1 .pc_view2 ul .subp2 {
         margin-top: 80px; }
+      #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi2 {
+        -webkit-animation-name: movpc2_m;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: movpc2_m;
+        -moz-animation-duration: 8s;
+        -moz-animation-timing-function: ease;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: movpc2_m;
+        -o-animation-duration: 8s;
+        -o-animation-timing-function: ease;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: backwards;
+        animation-name: movpc2_m;
+        animation-duration: 8s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+        width: 480px;
+        height: 1148px;
+        background-image: url("../images/popeyes/mobile_sub1_1x.jpg"); }
+  @keyframes movpc2_m {
+    100% {
+      transform: translateY(0); }
+    70% {
+      transform: translateY(-560px); }
+    50% {
+      transform: translateY(-560px); }
+    30% {
+      transform: translateY(0); }
+    0% {
+      transform: translateY(0); } }
+      #movMain #cnt1 .pc_view2 ul .sub ul .device .mov_img .devi3 {
+        -webkit-animation-name: movpc3_m;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: movpc3_m;
+        -moz-animation-duration: 4s;
+        -moz-animation-timing-function: ease;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: movpc3_m;
+        -o-animation-duration: 4s;
+        -o-animation-timing-function: ease;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-fill-mode: backwards;
+        animation-name: movpc3_m;
+        animation-duration: 4s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+        width: 480px;
+        height: 661px;
+        background-image: url("../images/popeyes/mobile_sub2_1x.jpg"); }
+  @keyframes movpc3_m {
+    100% {
+      transform: translateY(0); }
+    70% {
+      transform: translateY(-380px); }
+    50% {
+      transform: translateY(-380px); }
+    30% {
+      transform: translateY(0); }
+    0% {
+      transform: translateY(0); } }
   #movMain #cnt2 {
-    display: none; }
+    width: 320px;
+    margin: 80px 20px 0; }
+    #movMain #cnt2 .tit_txt {
+      height: 160px; }
+      #movMain #cnt2 .tit_txt h3 {
+        font-weight: 700;
+        margin-right: 0; }
+      #movMain #cnt2 .tit_txt p {
+        margin-left: 0;
+        margin-top: 28px;
+        width: 320px;
+        line-height: 24px; }
+        #movMain #cnt2 .tit_txt p span {
+          display: inline; }
+    #movMain #cnt2 ul {
+      width: 320px; }
+      #movMain #cnt2 ul li {
+        height: 320px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 20px; }
+      #movMain #cnt2 ul .list {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0 auto; }
+        #movMain #cnt2 ul .list ul > li {
+          width: 100%;
+          margin-left: 20px;
+          float: none;
+          display: block; }
+          #movMain #cnt2 ul .list ul > li strong {
+            font-weight: 700; }
+            #movMain #cnt2 ul .list ul > li strong span {
+              margin-bottom: 4px;
+              font-weight: 400; }
+          #movMain #cnt2 ul .list ul > li strong, #movMain #cnt2 ul .list ul > li p {
+            margin-left: -20px; }
+          #movMain #cnt2 ul .list ul > li .sub_txt {
+            margin-top: 40px;
+            line-height: 26px; }
+          #movMain #cnt2 ul .list ul > li .sub_txt + p {
+            font-size: 14px;
+            font-weight: 400; }
+        #movMain #cnt2 ul .list .capture {
+          margin: -340px auto 100px;
+          width: 360px; }
+          #movMain #cnt2 ul .list .capture div {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            border: none;
+            margin-left: -20px; }
+          #movMain #cnt2 ul .list .capture .img_ac1 {
+            background: none; }
+          #movMain #cnt2 ul .list .capture .img_ac2 {
+            background: none; }
+          #movMain #cnt2 ul .list .capture .img_ac3 {
+            background: none; }
   #movMain #footer {
-    display: none; } }
+    width: 360px;
+    margin: 0 auto 60px; }
+    #movMain #footer .label {
+      top: 7280px; }
+      #movMain #footer .label .mov_label {
+        width: 1320px;
+        height: 100%; }
+      #movMain #footer .label .lb2 {
+        left: 372%; }
+    #movMain #footer .btn_area {
+      width: 320px;
+      padding-top: 100px;
+      height: 320px;
+      margin: 0 auto; }
+      #movMain #footer .btn_area ul :first-child {
+        width: 100%; }
+      #movMain #footer .btn_area ul li {
+        height: 60px; }
+        #movMain #footer .btn_area ul li > p {
+          font-size: 16px; }
+        #movMain #footer .btn_area ul li + li {
+          -webkit-border-radius: 24px;
+          -moz-border-radius: 24px;
+          border-radius: 24px;
+          margin-left: 0;
+          width: 60px;
+          margin-top: 20px;
+          background: #333333; }
+          #movMain #footer .btn_area ul li + li + li {
+            width: 240px;
+            margin-left: 20px; }
+            #movMain #footer .btn_area ul li + li + li a span {
+              position: relative;
+              display: inline-block;
+              font-size: 14px;
+              padding-top: 20px;
+              padding-left: 20px;
+              color: #333333; }
+        #movMain #footer .btn_area ul li > a {
+          display: inline-block;
+          height: 100%;
+          width: 100%; }
+        #movMain #footer .btn_area ul li > a span {
+          font-size: 0; }
+        #movMain #footer .btn_area ul li > a + p {
+          display: none; }
+      #movMain #footer .btn_area .ft_txt2 a::before, #movMain #footer .btn_area .ft_txt3 a::before {
+        display: none; }
+      #movMain #footer .btn_area .ft_txt2 a {
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        border-radius: 24px;
+        overflow: hidden; }
+        #movMain #footer .btn_area .ft_txt2 a .ver_arrow1 {
+          -webkit-animation-name: ver_a_mov1;
+          -webkit-animation-duration: 2.8s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: none;
+          -moz-animation-name: ver_a_mov1;
+          -moz-animation-duration: 2.8s;
+          -moz-animation-timing-function: linear;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: none;
+          -o-animation-name: ver_a_mov1;
+          -o-animation-duration: 2.8s;
+          -o-animation-timing-function: linear;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: none;
+          animation-name: ver_a_mov1;
+          animation-duration: 2.8s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          position: absolute;
+          top: 0;
+          left: calc(50% - 12px);
+          width: 24px;
+          height: 60px; }
+  @keyframes ver_a_mov1 {
+    100% {
+      transform: translateY(-160px); }
+    0% {
+      transform: translateY(60px); } }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow1::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 14px;
+            border-top: 2px solid #e5e5e5;
+            border-right: 2px solid #e5e5e5; }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow1::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: calc(50% - 1px);
+            width: 2px;
+            height: 28px;
+            background: #e5e5e5; }
+        #movMain #footer .btn_area .ft_txt2 a .ver_arrow2 {
+          -webkit-animation-name: ver_a_mov2;
+          -webkit-animation-duration: 2.8s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: none;
+          -moz-animation-name: ver_a_mov2;
+          -moz-animation-duration: 2.8s;
+          -moz-animation-timing-function: linear;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: none;
+          -o-animation-name: ver_a_mov2;
+          -o-animation-duration: 2.8s;
+          -o-animation-timing-function: linear;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: none;
+          animation-name: ver_a_mov2;
+          animation-duration: 2.8s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          position: absolute;
+          top: 60px;
+          left: calc(50% - 12px);
+          width: 24px;
+          height: 60px; }
+  @keyframes ver_a_mov2 {
+    100% {
+      transform: translateY(-120px); }
+    0% {
+      transform: translateY(100px); } }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow2::before {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 14px;
+            border-top: 2px solid #e5e5e5;
+            border-right: 2px solid #e5e5e5; }
+          #movMain #footer .btn_area .ft_txt2 a .ver_arrow2::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: calc(50% - 1px);
+            width: 2px;
+            height: 28px;
+            background: #e5e5e5; }
+      #movMain #footer .btn_area .ft_txt3 a :first-child {
+        width: 220px;
+        color: #e5e5e5;
+        font-size: 12px; }
+      #movMain #footer .btn_area .ft_txt3 a .hor_arrow {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 48px;
+        height: 24px;
+        overflow: hidden; }
+        #movMain #footer .btn_area .ft_txt3 a .hor_arrow .armov2 {
+          -webkit-animation-name: hor_a_mov;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-fill-mode: none;
+          -moz-animation-name: hor_a_mov;
+          -moz-animation-duration: 1s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-delay: 0s;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-fill-mode: none;
+          -o-animation-name: hor_a_mov;
+          -o-animation-duration: 1s;
+          -o-animation-timing-function: ease;
+          -o-animation-delay: 0s;
+          -o-animation-iteration-count: infinite;
+          -o-animation-fill-mode: none;
+          animation-name: hor_a_mov;
+          animation-duration: 1s;
+          animation-timing-function: ease;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+  @keyframes hor_a_mov {
+    100% {
+      transform: translateX(0); }
+    0% {
+      transform: translateX(-52px); } }
+          #movMain #footer .btn_area .ft_txt3 a .hor_arrow .armov2::before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: 4px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #e5e5e5;
+            border-right: 2px solid #e5e5e5; }
+          #movMain #footer .btn_area .ft_txt3 a .hor_arrow .armov2::after {
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 3px;
+            width: 40px;
+            height: 2px;
+            background: #e5e5e5; }
+      #movMain #footer .btn_area .ft_txt2.active, #movMain #footer .btn_area .ft_txt3.active {
+        -webkit-animation-name: btn_push;
+        -webkit-animation-duration: 0.2s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-name: btn_push;
+        -moz-animation-duration: 0.2s;
+        -moz-animation-timing-function: ease;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-fill-mode: backwards;
+        -o-animation-name: btn_push;
+        -o-animation-duration: 0.2s;
+        -o-animation-timing-function: ease;
+        -o-animation-delay: 0s;
+        -o-animation-iteration-count: 1;
+        -o-animation-fill-mode: backwards;
+        animation-name: btn_push;
+        animation-duration: 0.2s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards; }
+  @keyframes btn_push {
+    100% {
+      transform: translateY(0); }
+    50% {
+      transform: translateY(8px); }
+    0% {
+      transform: translateY(0); } } }
 
 /*# sourceMappingURL=pj_popeyes.css.map */
