@@ -220,6 +220,9 @@ body{background: #ffb739;}
             }
           }
         }
+        .connect_info{
+          p span{display: block;}
+        }
       }
       .connect_info{
         display: inline-block;width: 220px;height: 100%;padding-top: 40px;
@@ -498,7 +501,7 @@ body{background: #ffb739;}
       width: 320px;margin: 620px 20px 0;
 
       //모바일 공통스타일
-      .tit{line-height: 28px;}
+      .tit{line-height: 28px;margin-bottom: 16px;}
       .tit + p{line-height: 26px;}
       .device{
         width: 480px;height: 280px;
@@ -549,23 +552,92 @@ body{background: #ffb739;}
       }
 
       .inspire{
-        height: 112px;margin-top: 100px;
-        ul li{
-          float: none;
-          ul{
-            width: 100%;margin-right: 0;
-            > li{
-              /* @include border-radius(60px); *///?
-              width: 112px;padding-top: 48px;font-size: 14px;
+        height: 112px;margin-top: 140px;
+        ul{
+          li{
+            float: none;
+            ul{
+              width: 100%;margin-right: 0;
+              > li{
+                @include border-radius(48px);
+                width: 112px;padding-top: 50px;font-size: 12px;
+              }
+              > li + li{margin-left: -8px;}
             }
-            > li + li{margin-left: -8px;}
+          }
+          .connect_info{
+            width: 100%;height: 200px;
+            p{line-height: 26px;}
+            p span{display: inline;}
           }
         }
       }
       
-      .tyop_info{display: none;}
-      .color_info{display: none;}
-      .pc_view2{display: none;}
+      .tyop_info{
+        margin-top: 280px;
+        .typo_data{
+          height: 280px;
+          .tit{
+            line-height: 24px;padding-top: 0;width: 140px;
+          }
+          div + div{margin-top: 0;}
+          .main{
+            height: 52px;margin-bottom: 120px;
+            ul{
+              width: 100%;
+              li{width: 180px;margin-left: 64px;}
+            }
+          }
+          .hihgl .hl_font{font-size: 35px;}
+        }
+      }
+      .color_info{
+        margin-top: 80px;margin-bottom: 40px;height: 440px;
+        .color_area{
+          display: flex;height: auto;
+          li ul{flex-direction: column;flex-wrap: wrap;}
+          .vari{
+            height: 360px;width: 63%;
+            ul{
+              li{
+                width: 200px;height: 68px;
+                + li{margin-left: 0;}
+              }
+            }
+          }
+          .grey{
+            height: auto;width: 37%;margin-bottom: 280px;
+            ul{
+              li{
+                width: 115px;height: 68px;margin-left: 5px;
+                + li{margin-top: 5px;}
+                p{padding-top: 18px;}
+              }
+            }
+          }
+        }
+      }
+      .pc_view2{
+        margin-top: 80px;height: 1280px;
+        ul li{
+          float: none;width: 320px;
+          p span{display: inline;}
+          .txt_info{width: 100%;}
+          ul{
+            .device{
+              margin-top: 80px;width: 480px;
+            ::before{height: 300px;}
+            ::after{height: 300px;}
+            }
+            .dev_l{
+              margin-left: -180px;
+              
+            }
+            .dev_r{margin-left: 20px;}
+          }
+        }
+        ul .subp2{margin-top: 80px;}
+      }
     }
 
     #cnt2{display: none;}

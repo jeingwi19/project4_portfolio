@@ -453,6 +453,8 @@ body {
               padding-top: 114px; }
               #movMain #cnt1 .inspire ul li ul > li + li {
                 margin-left: -52px; }
+        #movMain #cnt1 .inspire ul .connect_info p span {
+          display: block; }
       #movMain #cnt1 .inspire .connect_info {
         display: inline-block;
         width: 220px;
@@ -959,7 +961,8 @@ body {
     width: 320px;
     margin: 620px 20px 0; }
     #movMain #cnt1 .tit {
-      line-height: 28px; }
+      line-height: 28px;
+      margin-bottom: 16px; }
     #movMain #cnt1 .tit + p {
       line-height: 26px; }
     #movMain #cnt1 .device {
@@ -1038,25 +1041,101 @@ body {
         box-shadow: none; }
     #movMain #cnt1 .inspire {
       height: 112px;
-      margin-top: 100px; }
+      margin-top: 140px; }
       #movMain #cnt1 .inspire ul li {
         float: none; }
         #movMain #cnt1 .inspire ul li ul {
           width: 100%;
           margin-right: 0; }
           #movMain #cnt1 .inspire ul li ul > li {
-            /* @include border-radius(60px); */
+            -webkit-border-radius: 48px;
+            -moz-border-radius: 48px;
+            border-radius: 48px;
             width: 112px;
-            padding-top: 48px;
-            font-size: 14px; }
+            padding-top: 50px;
+            font-size: 12px; }
           #movMain #cnt1 .inspire ul li ul > li + li {
             margin-left: -8px; }
+      #movMain #cnt1 .inspire ul .connect_info {
+        width: 100%;
+        height: 200px; }
+        #movMain #cnt1 .inspire ul .connect_info p {
+          line-height: 26px; }
+        #movMain #cnt1 .inspire ul .connect_info p span {
+          display: inline; }
     #movMain #cnt1 .tyop_info {
-      display: none; }
+      margin-top: 280px; }
+      #movMain #cnt1 .tyop_info .typo_data {
+        height: 280px; }
+        #movMain #cnt1 .tyop_info .typo_data .tit {
+          line-height: 24px;
+          padding-top: 0;
+          width: 140px; }
+        #movMain #cnt1 .tyop_info .typo_data div + div {
+          margin-top: 0; }
+        #movMain #cnt1 .tyop_info .typo_data .main {
+          height: 52px;
+          margin-bottom: 120px; }
+          #movMain #cnt1 .tyop_info .typo_data .main ul {
+            width: 100%; }
+            #movMain #cnt1 .tyop_info .typo_data .main ul li {
+              width: 180px;
+              margin-left: 64px; }
+        #movMain #cnt1 .tyop_info .typo_data .hihgl .hl_font {
+          font-size: 35px; }
     #movMain #cnt1 .color_info {
-      display: none; }
+      margin-top: 80px;
+      margin-bottom: 40px;
+      height: 440px; }
+      #movMain #cnt1 .color_info .color_area {
+        display: flex;
+        height: auto; }
+        #movMain #cnt1 .color_info .color_area li ul {
+          flex-direction: column;
+          flex-wrap: wrap; }
+        #movMain #cnt1 .color_info .color_area .vari {
+          height: 360px;
+          width: 63%; }
+          #movMain #cnt1 .color_info .color_area .vari ul li {
+            width: 200px;
+            height: 68px; }
+            #movMain #cnt1 .color_info .color_area .vari ul li + li {
+              margin-left: 0; }
+        #movMain #cnt1 .color_info .color_area .grey {
+          height: auto;
+          width: 37%;
+          margin-bottom: 280px; }
+          #movMain #cnt1 .color_info .color_area .grey ul li {
+            width: 115px;
+            height: 68px;
+            margin-left: 5px; }
+            #movMain #cnt1 .color_info .color_area .grey ul li + li {
+              margin-top: 5px; }
+            #movMain #cnt1 .color_info .color_area .grey ul li p {
+              padding-top: 18px; }
     #movMain #cnt1 .pc_view2 {
-      display: none; }
+      margin-top: 80px;
+      height: 1280px; }
+      #movMain #cnt1 .pc_view2 ul li {
+        float: none;
+        width: 320px; }
+        #movMain #cnt1 .pc_view2 ul li p span {
+          display: inline; }
+        #movMain #cnt1 .pc_view2 ul li .txt_info {
+          width: 100%; }
+        #movMain #cnt1 .pc_view2 ul li ul .device {
+          margin-top: 80px;
+          width: 480px; }
+          #movMain #cnt1 .pc_view2 ul li ul .device ::before {
+            height: 300px; }
+          #movMain #cnt1 .pc_view2 ul li ul .device ::after {
+            height: 300px; }
+        #movMain #cnt1 .pc_view2 ul li ul .dev_l {
+          margin-left: -180px; }
+        #movMain #cnt1 .pc_view2 ul li ul .dev_r {
+          margin-left: 20px; }
+      #movMain #cnt1 .pc_view2 ul .subp2 {
+        margin-top: 80px; }
   #movMain #cnt2 {
     display: none; }
   #movMain #footer {
