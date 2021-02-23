@@ -139,3 +139,26 @@
     -o-background: radial-gradient($value);
     background: radial-gradient($value);
 }
+
+@mixin transform-style($value) {
+    -webkit-transform-style: $value;
+    -moz-transform-style: $value;
+    transform-style: $value;
+  }
+  
+  @mixin transform-origin($value) {
+    -webkit-transform-origin: $value;
+    -moz-transform-origin: $value;
+    -o-transform-origin: $value;
+    -ms-transform-origin: $value;
+    transform-origin: $value;
+  }
+
+  @mixin pointer-events($value) {
+    -ms-pointer-events: $value;
+    pointer-events: $value;
+  }
+
+  @mixin text-stroke($value) {
+    -webkit-text-stroke: $value;
+  }

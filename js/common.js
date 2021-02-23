@@ -1,6 +1,34 @@
 $(document).ready(function(){
-    /* gnb 메뉴아이콘 열기 클릭 - PC*/
+    /* 스플래쉬 3D 애니메이션 */
+    //1)텍스트 쪼개기
+    var _loadTxt = $('.circle p');
 
+    //2)_loadTxt요소의 텍스트 가져오기
+    var txtTyp = _loadTxt.text();
+    //console.log(txtTyp);
+
+    //3)_loadTxt 한글자씩 자르기
+    _loadTxt.html('');
+    var chars2 = txtTyp.split('');
+    //console.log(chars2);
+
+    //4)배열 chars2에 각문자들을 자식으로 span요소를 동적 생성해서 _loadTxt에 추가한다
+    $.each(chars2, function( index, value){
+        //console.log(`${index} : ${value}`);
+        _loadTxt.append($(`<span class="txt_load tl_${index}" style="--char-index:${index}"></span>`).text(value));
+    });
+    /* 스플래쉬 로딩 사라지기 */
+    var splash = $('.splash');
+    var timeSplash = 0;
+
+    clearTimeout(timeSplash);
+    timeSplash = setTimeout(function(e) {
+        splash.addClass('display-none');
+    }, 3000);
+    
+
+
+    /* gnb 메뉴아이콘 열기 클릭 - PC*/
     $('#gnb').hide();
     //$('#gnb .dep2').hide();
 

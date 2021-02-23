@@ -1862,7 +1862,7 @@
       #scrollCnt #cnt3 .deco .arrow1 {
         top: -720px;
         left: calc(50% - 35px); }
-      #scrollCnt #cnt3 .deco .arrow2, #scrollCnt #cnt3 .deco txt_grey {
+      #scrollCnt #cnt3 .deco .arrow2, #scrollCnt #cnt3 .deco .txt_grey {
         display: none; }
       #scrollCnt #cnt3 .deco .imgicon {
         -webkit-background-size: contain !important;

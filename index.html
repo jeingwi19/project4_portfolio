@@ -45,54 +45,27 @@
     </script>
 </head>
 <body>
-    <div id="skip">
-        <a href="#scrollCnt">본문 바로가기</a>
+  <div class="splash">
+    <span class="blind-b">화면 로딩중입니다.</span>
+    <div class="circle">
+      <p>Please-Waiting...-Now-loading...-</p>
     </div>
+    <strong>Loading</strong>
+  </div>
 
-    <div id="wrap">
-        <header class="header wid1280" id="pcHeader">
-            <h1 class="logo">
-                <a href="" aria-label="정은">
-                    <img src="images/common/logo_white.svg" alt="">
-                    <img src="images/common/logo_black.svg" alt="">
-                </a>
-            </h1>
-            <!-- .menu에 .active 추가 -->
-            <div class="menu">
-                <button class="btn_open" type="button">
-                    <span class="blind-b">전체 메뉴 열기</span>
-                    <span class="btn_line">
-                        <span class="line top"></span>
-                        <span class="line btm"></span>
-                    </span>
-                </button>
-            </div>
-            <nav id="gnb">
-                <ul>
-                    <li>
-                        <a href="" class="first">PROJECT</a>
-                        <ul class="dep2">
-                            <li><a href="" class="pj_1">반응형 웹<span class="dpchange">금강제화</span></a></li>
-                            <li><a href="" class="pj_2">모바일 웹<span class="dpchange">더숲</span></a></li>
-                            <li><a href="" class="pj_3">PC 웹<span class="dpchange">파파이스</span></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="mailto: iireal25@naver.com" target="_blank" class="md_gnb_contact">CONTACT ME</a></li>
-                    <li>
-                      <button type="button" class="direct_btn md_gnb_about last" data-targetmodal="#modalIntro" aria-haspopup="dialog" tite="대화상자">About Me</button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+  <div id="skip">
+      <a href="#scrollCnt">본문 바로가기</a>
+  </div>
 
-        <header class="header wid360" id="mHeader">
-          <div class="bgfix_gr"></div>
+  <div id="wrap">
+      <header class="header wid1280" id="pcHeader">
           <h1 class="logo">
               <a href="" aria-label="정은">
                   <img src="images/common/logo_white.svg" alt="">
                   <img src="images/common/logo_black.svg" alt="">
               </a>
           </h1>
+          <!-- .menu에 .active 추가 -->
           <div class="menu">
               <button class="btn_open" type="button">
                   <span class="blind-b">전체 메뉴 열기</span>
@@ -105,410 +78,446 @@
           <nav id="gnb">
               <ul>
                   <li>
-                      <a href="" class="more first">PROJECT</a>
+                      <a href="" class="first">PROJECT</a>
                       <ul class="dep2">
-                          <li><a href="sub_pj/pj_kumkang.html" class="pj_1">반응형 웹 <span class="dpchange">금강제화</span></a></li>
-                          <li><a href="sub_pj/pj_theSoop.html" class="pj_2">모바일 웹 <span class="dpchange">더숲</span></a></li>
-                          <li><a href="sub_pj/pj_popeyes.html" class="pj_3">PC 웹 <span class="dpchange">파파이스</span></a></li>
+                          <li><a href="" class="pj_1">반응형 웹<span class="dpchange">금강제화</span></a></li>
+                          <li><a href="" class="pj_2">모바일 웹<span class="dpchange">더숲</span></a></li>
+                          <li><a href="" class="pj_3">PC 웹<span class="dpchange">파파이스</span></a></li>
                       </ul>
                   </li>
+                  <li><a href="mailto: iireal25@naver.com" target="_blank" class="md_gnb_contact">CONTACT ME</a></li>
                   <li>
-                    <a href="" class="more md_gnb_contact">CONTACT ME</a>
-                    <ul class="dep2">
-                      <li><a href="mailto: iireal25@naver.com" target="_blank">E mail</a></li>
-                      <li><a href="https://github.com/jeingwi19" target="_blank">Github</a></li>
-                      <li><a href="https://open.kakao.com/o/skrVTIQc" target="_blank">Direct</a></li>
-                    </ul>
+                    <button type="button" class="direct_btn md_gnb_about last" data-targetmodal="#modalIntro" aria-haspopup="dialog" tite="대화상자">About Me</button>
                   </li>
-                  <li>
-                    <button tpye="button" class="direct_btn md_gnb_about" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자"><span>About Me</span></button>
-                  </li>
-                  <li class="copyr"><p>COPYRIGHT 2021 <a href="index.html" class="last">Jeong-eun.</a> <span class="span_b">ALL RIGHT RESERVED.</span></p></li>
               </ul>
           </nav>
       </header>
 
-        <div class="fixed_bg">
-            <div class="fixed_cnt wid1280">
-                <div class="bg_line">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="txt_line wisesaying p_a" aria-hidden="true"><p>The only thing worse than starting something and failing... is not starting something</p><p>The only thing worse than starting something and failing... is not starting something</p>
-                    </div>
-                    <div class="txt_grey hello p_a" aria-hidden="true">Hello I am...</div>
-                    <p class="txt_line now p_a">Time is</p>
-                    <div class="txt_line now p_a" id="nowTime">
-                      <div id="clock"></div>
-                    </div>
-                    <div class="human_area p_a">
-                        <div class="human">
-                          <img src="images/main/rotate_img/hum0.webp" alt="안경과 마스크를 쓰고 주황색 티셔츠와 남색 바지에 검은 운동화를 신은 박정은의 3D 캐릭터">
-                        </div>
-                        <div class="talk_area">
-                          <div class="human_talk talk1">
-                              <div class="talkguide">
-                                  <p>안녕하세요! <br>박정은의 포트폴리오 사이트입니다. 🧡💜<br><br> 현재 페이지에서 스크롤을 내려주시면 포트폴리오를 볼 수 있습니다.</p>
-                              </div>
-                          </div>
-                          <div class="human_talk talk2">
-                            <div class="talkguide">
-                              <p>오른쪽 프로젝트 카드를 클릭하시면, 프로젝트의 자세한 내용을 볼 수 있어요.<span>😏👉</span></p>
-                            </div>
-                          </div>
-                          <div class="human_talk talk3">
-                            <div class="talkguide">
-                              <p>포트폴리오를 끝까지 봐주셔서 감사합니다! <br><br>아래에 &apos;E MAIL&apos; 버튼을 누르시면, 이메일 전송이 가능합니다. 💌</p>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="txt_hire p_a">
-                        <div class="moveround">
-                            <div class="move_cycle" aria-hidden="ture"><p>C L IC k ! C l ic k ! C l ic k ! C l ic k ! </p></div>
-                        </div>
-                        <button type="button" class="btn_txt">Just Hire Now</button>
-                        <div class="imgicon coffee"></div>
-                        <div class="imgicon fire"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="scrollCnt" class="wid1280">
-            <section class="section" id="cnt1">
-                <h2 class="blind-b">박정은 소개</h2>
-                <div class="tit_txt">
-                    <div class="imgicon head"></div>
-                    <div class="imgicon thumsup"></div>
-                    <div class="imgicon talkbox"></div>
-                    <div class="imgicon point"></div>
-                    <div class="intro_main_txt">
-                      <span>if( </span><span>=== 박정은 ) </span>
-                      <br>궁금하다면?
-                      <button type="button" class="direct_btn" id="btnInfome" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자">박정은 바로가기</button>
-                    </div>
-                </div>
-                <div class="deco">
-                    <div class="p_txt">
-                      <p>SCROLL DOWN &amp;</p>
-                      <p>Watching Projects</p>
-                    </div>
-                    <div class="arrow"></div>
-                    <div class="imgicon mouse"></div>
-                </div>
-            </section>
-
-            <section class="section" id="cnt2">
-                <h2 class="blind-b">프로젝트 목록</h2>
-                <ul>
-                    <li class="project" id="pj1">
-                        <h3 class="blind-b">반응형 웹 프로젝트 금강제화</h3>
-                        <ul>
-                          <li class="pj_card">
-                            <a href="sub_pj/pj_kumkang.html" title="페이지 이동">
-                              <span class="bg_img"></span>
-                              <span class="txt_area">
-                                <span class="tit">
-                                  <span>Responsive Web <br>Project</span>
-                                  <strong>Kumkang</strong>
-                              </span>
-                              <span class="period">
-                                  <span class="tit_date">Period</span>
-                                  <span class="data" aria-hidden="true">
-                                      <span>2020.11.16</span>
-                                      <span>12.11</span>
-                                  </span>
-                              </span>
-                              <span class="btn_more"></span>
-                              </span>
-                            </a>
-                          </li>
-                          <li class="txt_opacity">
-                            <div class="explan_kor">
-                              <span>반응형 웹 프로젝트</span>
-                              <strong>금강제화</strong>
-                              <p>기존 브랜드 사이트를 리서치와 분석을 통해 <br>웹 이용자의 다양한 해상도를 생각한 반응형 <br>웹 인덱스 페이지를 구현해보았습니다.</p>
-                          </div>
-                          </li>
-                        </ul>
-                    </li>
-                    <li class="project even" id="pj2">
-                        <h3 class="blind-b">모바일 웹 프로젝트 더숲</h3>
-                        <ul>
-                          <li class="pj_card">
-                            <a href="sub_pj/pj_theSoop.html">
-                              <span class="bg_img"></span>
-                              <span class="txt_area">
-                                <span class="tit">
-                                  <span>Mobile Web <br>Project</span>
-                                  <strong>The Soop</strong>
-                              </span>
-                              <span class="period">
-                                  <span class="tit_date">Period</span>
-                                  <span class="data" aria-hidden="true">
-                                      <span>2020.10.19</span>
-                                      <span>11.12</span>
-                                  </span>
-                              </span>
-                              <span class="btn_more"></span>
-                              </span>
-                          </a>
-                          </li>
-                          <li class="txt_opacity">
-                            <div class="explan_kor">
-                              <span>모바일 웹 프로젝트</span>
-                              <strong>더숲</strong>
-                              <p>브랜드 심볼을 리뉴얼하고, 캐릭터 디자인을 추가하여 <br>언택트 사용자를 위한 서점 문화플랫폼 <br>모바일 버전 웹 사이트를 제작해보았습니다.</p>
-                          </div>
-                          </li>
-                        </ul>
-                    </li>
-                    <li class="project" id="pj3">
-                        <h3 class="blind-b">PC 웹 프로젝트 파파이스</h3>
-                        <ul>
-                          <li class="pj_card">
-                            <a href="sub_pj/pj_popeyes.html">
-                              <span class="bg_img"></span>
-                              <span class="txt_area">
-                                <span class="tit">
-                                  <span>PC Web <br>Project</span>
-                                  <strong>Popeyes</strong>
-                              </span>
-                              <span class="period">
-                                  <span class="tit_date">Period</span>
-                                  <span class="data" aria-hidden="true">
-                                      <span>2020.08.18</span>
-                                      <span>10.09</span>
-                                  </span>
-                              </span>
-                              <span class="btn_more"></span>
-                              </span>
-                          </a>
-                          </li>
-                          <li class="txt_opacity">
-                            <div class="explan_kor">
-                              <span>PC 웹 프로젝트</span>
-                              <strong>파파이스</strong>
-                              <p>사이트 이용자의 접근성 문제 분석을 중심으로 <br>웹 이용자 타겟을 조사하여 팀 프로젝트를 <br>진행하였습니다.</p>
-                          </div>
-                          </li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="section" id="cnt3">
-                <h2 class="blind-b">연락 가능한 정보 안내</h2>
-                <div class="direct">
-                  <div class="tit_txt">
-                      <strong>
-                        <span>지금 바로</span>
-                        <a class="imgicon head">
-                          <span class="me">박정은</span>
-                        </a>
-                        <span>을 만나 보세요!</span>
-                      </strong>
-                  </div>
-                  <div class="btn">
-                      <button type="button" class="contact" data-targetmodal="#modalContact" aria-haspopup="dialog" title="대화상자">연결하기</button>
-                      <a href="#skip" class="top" id="btnTop">처음으로</a>
-                  </div>
-                </div>
-                <div class="deco">
-                    <div class="arrowup arrow1"></div>
-                    <div class="arrowup arrow2"></div>
-                    <div class="txt_grey">Thanks <br>For Watching !</div>
-                    <div class="imgicon sun"></div>
-                    <div class="imgicon moon"></div>
-                </div>
-            </section>
-
-            <div class="section ft_cnt">
-              <footer id="footer">
-                <div class="footer_area">
-                  <div class="footer_left">
-                    <div class="fixed_info">
-                      <strong>Contact Me</strong>
-                      <ul>
-                        <li><a class="ft_icon1" href="mailto: iireal25@naver.com" title="문의 메일 보내기" target="_blank">E mail</a></li>
-                        <li><a class="ft_icon2" href="https://github.com/jeingwi19" target="_blank" title="새창열기 깃허브">Github</a></li>
-                        <li><a class="ft_icon3" href="https://open.kakao.com/o/skrVTIQc" target="_blank" title="새창열기 오픈채팅">Direct</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="footer_right">
-                    <p>COPYRIGHT 2021 Jeong-eun ALL RIGHT RESERVED.</p>
-                  </div>
-                </divc>
-              </footer>
-            </div>
-        </div>
-
-        <!-- #dim은 스크립트에 동적 생성 -->
-        <!-- <div id="dim"></div> -->
-
-        <!-- Profile 모달 -->
-        <div id="modalIntro" class="modal_cnt wid1280 p_r" role="dialog" aria-modal="true" aria-labelledby="introMe">
-          <h4 class="blind-b" id="introMe">박정은 상세 소개</h4>
-          <div class="modal_flat myinfo">
-              <strong>
-                <span>Who is?</span>
-                <span>Bahk <br>Jeong-eun.</span>
-              </strong>
-              <ul class="modal_info">
-                <li class="info profile">
-                  <button type="button" class="li_tit first">
-                    <span>Profile</span>
-                  </button>
-                  <ul>
-                    <li class="info_list">
-                      <span>NAME</span>
-                      <span>박정은</span>
-                    </li>
-                    <li class="info_list">
-                      <span>BIRTH</span>
-                      <span>1993.08.30</span>
-                    </li>
-                    <li class="info_list">
-                      <span>MOBILE</span>
-                      <span>010.3300.6944</span>
-                    </li>
-                    <li class="info_list">
-                      <span>E MAIL</span>
-                      <span>iireal25@naver.com</span>
-                    </li>
-                  </ul>
-                </li>
-                <li class="info education">
-                  <button type="button" class="li_tit">
-                    <span>Education</span>
-                  </button>
-                  <ul>
-                    <li class="info_list align">
-                      <span>2021.01</span>
-                      <span>한국디지털기업협회 UIUX 기반 <br>반응형 웹퍼블리셔 훈련과정 이수</span>
-                    </li>
-                    <li class="info_list">
-                      <span>2016.02</span>
-                      <span>경민대학교 시각디자인학과 졸업</span>
-                    </li>
-                    <li class="info_list">
-                      <span>2012.02</span>
-                      <span>용화여자고등학교 졸업</span>
-                    </li>
-                  </ul>
-                </li>
-                <li class="info skills">
-                  <button type="button" class="li_tit">
-                    <span>Skills</span>
-                  </button>
-                  <ul>
-                    <li class="skill_list publishing">
-                      <p class="blind-b">퍼블리싱 기술 소개</p>
-                      <span class="icon pb1" title="HTML5">
-                        <span class="blind-b">HTML5</span>
-                      </span>
-                      <span class="icon pb2 mgl" title="CSS3">
-                        <span class="blind-b">CSS3</span>
-                      </span>
-                      <span class="icon pb3 mgl" title="SASS">
-                        <span class="blind-b">SASS</span>
-                      </span>
-                      <span class="icon pb4 mgl" title="JQuery">
-                        <span class="blind-b">JQuery</span>
-                      </span>
-                      <span class="icon pb5 mgl" title="Java Script">
-                        <span class="blind-b">Java Script</span>
-                      </span>
-                      <span class="icon pb6 mgl" title="Bootstrap">
-                        <span class="blind-b">Bootstrap</span>
-                      </span>
-                    </li>
-                    <li class="skill_list design">
-                      <p class="blind-b">디자인 기술</p>
-                      <span class="icon ds1" title="Photoshop">
-                        <span class="blind-b">Photoshop</span>
-                      </span>
-                      <span class="icon ds2 mgl" title="illustrator">
-                        <span class="blind-b">illustrator</span>
-                      </span>
-                      <span class="icon ds3 mgl" title="XD">
-                        <span class="blind-b">XD</span>
-                      </span>
-                      <span class="icon ds4 mgl" title="After Effect">
-                        <span class="blind-b">After Effect</span>
-                      </span>
-                      <span class="icon ds5 mgl" title="Zeplin">
-                        <span class="blind-b">Zeplin</span>
-                      </span>
-                      <span class="icon ds6 mgl" title="Blender 3D">
-                        <span class="blind-b">Blender 3D</span>
-                      </span>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-          </div>
-          <div class="iconbtn p_a">
-            <button type="button" class="like" title="좋아요">
-              <span class="blind-b">하트 좋아요</span>
-            </button>
-            <!-- <span class="count_numb p_a">102</span> --><!-- 동적생성 예정 -->
-            <a href="https://open.kakao.com/o/skrVTIQc" class="chat" target="_blank" title="새창열기 오픈채팅">
-              <span class="blind-b">채팅 메세지</span>
+      <header class="header wid360" id="mHeader">
+        <div class="bgfix_gr"></div>
+        <h1 class="logo">
+            <a href="" aria-label="정은">
+                <img src="images/common/logo_white.svg" alt="">
+                <img src="images/common/logo_black.svg" alt="">
             </a>
-          </div>
-          <div class="bg_img p_a">
-            <div class="imgicon canbg can1"></div>
-            <div class="imgicon canbg can2"></div>
-            <div class="imgicon canbg can3"></div>
-            <div class="imgicon character"></div>
-          </div>
-          <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
+        </h1>
+        <div class="menu">
+            <button class="btn_open" type="button">
+                <span class="blind-b">전체 메뉴 열기</span>
+                <span class="btn_line">
+                    <span class="line top"></span>
+                    <span class="line btm"></span>
+                </span>
+            </button>
         </div>
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <a href="" class="more first">PROJECT</a>
+                    <ul class="dep2">
+                        <li><a href="sub_pj/pj_kumkang.html" class="pj_1">반응형 웹 <span class="dpchange">금강제화</span></a></li>
+                        <li><a href="sub_pj/pj_theSoop.html" class="pj_2">모바일 웹 <span class="dpchange">더숲</span></a></li>
+                        <li><a href="sub_pj/pj_popeyes.html" class="pj_3">PC 웹 <span class="dpchange">파파이스</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="" class="more md_gnb_contact">CONTACT ME</a>
+                  <ul class="dep2">
+                    <li><a href="mailto: iireal25@naver.com" target="_blank">E mail</a></li>
+                    <li><a href="https://github.com/jeingwi19" target="_blank">Github</a></li>
+                    <li><a href="https://open.kakao.com/o/skrVTIQc" target="_blank">Direct</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button tpye="button" class="direct_btn md_gnb_about" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자"><span>About Me</span></button>
+                </li>
+                <li class="copyr"><p>COPYRIGHT 2021 <a href="index.html" class="last">Jeong-eun.</a> <span class="span_b">ALL RIGHT RESERVED.</span></p></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Contact Me 모달 -->
-        <div id="modalContact" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="contactMe">
-          <h4 id="contactMe">Contact Me</h4>
-          <div class="modal_flat transp">
-            <form action="index.html" method="post" id="mailArea" class="mailarea">
-              <table>
-                <caption>메일 문의 입력 항목 2가지</caption>
-                <colgroup>
-                  <col class="w0">
-                  <col class="w580">
-                </colgroup>
-                <tr>
-                  <th id="uEmailAd" scope="row">
-                    <label for="umail">
-                      <span class="blind-b">이메일 보내시는 주소</span>
-                    </label>
-                  </th>
-                  <td headers="umailAd">
-                    <input type="text" style="ime-mode:disabled;" id="umail" class="umail first" name="umail" placeholder="Your Email" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
-                  </td>
-                </tr>
-                <tr>
-                  <th id="mailCnt">
-                    <label for="umailCnt">
-                      <span class="blind-b">이메일 문의 내용 입력란</span>
-                    </label>
-                  </th>
-                  <td headers="mailCnt" class="m_cnt">
-                    <textarea name="umailCnt" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message." maxlength="300"></textarea>
-                  </td>
-                </tr>
-              </table>
-              <div class="btn">
-                <input type="submit" value="Send">
+      <div class="fixed_bg">
+          <div class="fixed_cnt wid1280">
+              <div class="bg_line">
+                  <div class="box"></div>
+                  <div class="box"></div>
+                  <div class="box"></div>
+                  <div class="box"></div>
+                  <div class="txt_line wisesaying p_a" aria-hidden="true"><p>The only thing worse than starting something and failing... is not starting something</p><p>The only thing worse than starting something and failing... is not starting something</p>
+                  </div>
+                  <div class="txt_grey hello p_a" aria-hidden="true">Hello I am...</div>
+                  <p class="txt_line now p_a">Time is</p>
+                  <div class="txt_line now p_a" id="nowTime">
+                    <div id="clock"></div>
+                  </div>
+                  <div class="human_area p_a">
+                      <div class="human">
+                        <img src="images/main/rotate_img/hum0.webp" alt="안경과 마스크를 쓰고 주황색 티셔츠와 남색 바지에 검은 운동화를 신은 박정은의 3D 캐릭터">
+                      </div>
+                      <div class="talk_area">
+                        <div class="human_talk talk1">
+                            <div class="talkguide">
+                                <p>안녕하세요! <br>박정은의 포트폴리오 사이트입니다. 🧡💜<br><br> 현재 페이지에서 스크롤을 내려주시면 포트폴리오를 볼 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="human_talk talk2">
+                          <div class="talkguide">
+                            <p>오른쪽 프로젝트 카드를 클릭하시면, 프로젝트의 자세한 내용을 볼 수 있어요.<span>😏👉</span></p>
+                          </div>
+                        </div>
+                        <div class="human_talk talk3">
+                          <div class="talkguide">
+                            <p>포트폴리오를 끝까지 봐주셔서 감사합니다! <br><br>아래에 &apos;E MAIL&apos; 버튼을 누르시면, 이메일 전송이 가능합니다. 💌</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="txt_hire p_a">
+                      <div class="moveround">
+                          <div class="move_cycle" aria-hidden="ture"><p>C L IC k ! C l ic k ! C l ic k ! C l ic k ! </p></div>
+                      </div>
+                      <button type="button" class="btn_txt">Just Hire Now</button>
+                      <div class="imgicon coffee"></div>
+                      <div class="imgicon fire"></div>
+                  </div>
               </div>
-            </form>
           </div>
-          <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
-        </div>
+      </div>
 
-    </div>
+      <div id="scrollCnt" class="wid1280">
+          <section class="section" id="cnt1">
+              <h2 class="blind-b">박정은 소개</h2>
+              <div class="tit_txt">
+                  <div class="imgicon head"></div>
+                  <div class="imgicon thumsup"></div>
+                  <div class="imgicon talkbox"></div>
+                  <div class="imgicon point"></div>
+                  <div class="intro_main_txt">
+                    <span>if( </span><span>=== 박정은 ) </span>
+                    <br>궁금하다면?
+                    <button type="button" class="direct_btn" id="btnInfome" data-targetmodal="#modalIntro" aria-haspopup="dialog" title="대화상자">박정은 바로가기</button>
+                  </div>
+              </div>
+              <div class="deco">
+                  <div class="p_txt">
+                    <p>SCROLL DOWN &amp;</p>
+                    <p>Watching Projects</p>
+                  </div>
+                  <div class="arrow"></div>
+                  <div class="imgicon mouse"></div>
+              </div>
+          </section>
+
+          <section class="section" id="cnt2">
+              <h2 class="blind-b">프로젝트 목록</h2>
+              <ul>
+                  <li class="project" id="pj1">
+                      <h3 class="blind-b">반응형 웹 프로젝트 금강제화</h3>
+                      <ul>
+                        <li class="pj_card">
+                          <a href="sub_pj/pj_kumkang.html" title="페이지 이동">
+                            <span class="bg_img"></span>
+                            <span class="txt_area">
+                              <span class="tit">
+                                <span>Responsive Web <br>Project</span>
+                                <strong>Kumkang</strong>
+                            </span>
+                            <span class="period">
+                                <span class="tit_date">Period</span>
+                                <span class="data" aria-hidden="true">
+                                    <span>2020.11.16</span>
+                                    <span>12.11</span>
+                                </span>
+                            </span>
+                            <span class="btn_more"></span>
+                            </span>
+                          </a>
+                        </li>
+                        <li class="txt_opacity">
+                          <div class="explan_kor">
+                            <span>반응형 웹 프로젝트</span>
+                            <strong>금강제화</strong>
+                            <p>기존 브랜드 사이트를 리서치와 분석을 통해 <br>웹 이용자의 다양한 해상도를 생각한 반응형 <br>웹 인덱스 페이지를 구현해보았습니다.</p>
+                        </div>
+                        </li>
+                      </ul>
+                  </li>
+                  <li class="project even" id="pj2">
+                      <h3 class="blind-b">모바일 웹 프로젝트 더숲</h3>
+                      <ul>
+                        <li class="pj_card">
+                          <a href="sub_pj/pj_theSoop.html">
+                            <span class="bg_img"></span>
+                            <span class="txt_area">
+                              <span class="tit">
+                                <span>Mobile Web <br>Project</span>
+                                <strong>The Soop</strong>
+                            </span>
+                            <span class="period">
+                                <span class="tit_date">Period</span>
+                                <span class="data" aria-hidden="true">
+                                    <span>2020.10.19</span>
+                                    <span>11.12</span>
+                                </span>
+                            </span>
+                            <span class="btn_more"></span>
+                            </span>
+                        </a>
+                        </li>
+                        <li class="txt_opacity">
+                          <div class="explan_kor">
+                            <span>모바일 웹 프로젝트</span>
+                            <strong>더숲</strong>
+                            <p>브랜드 심볼을 리뉴얼하고, 캐릭터 디자인을 추가하여 <br>언택트 사용자를 위한 서점 문화플랫폼 <br>모바일 버전 웹 사이트를 제작해보았습니다.</p>
+                        </div>
+                        </li>
+                      </ul>
+                  </li>
+                  <li class="project" id="pj3">
+                      <h3 class="blind-b">PC 웹 프로젝트 파파이스</h3>
+                      <ul>
+                        <li class="pj_card">
+                          <a href="sub_pj/pj_popeyes.html">
+                            <span class="bg_img"></span>
+                            <span class="txt_area">
+                              <span class="tit">
+                                <span>PC Web <br>Project</span>
+                                <strong>Popeyes</strong>
+                            </span>
+                            <span class="period">
+                                <span class="tit_date">Period</span>
+                                <span class="data" aria-hidden="true">
+                                    <span>2020.08.18</span>
+                                    <span>10.09</span>
+                                </span>
+                            </span>
+                            <span class="btn_more"></span>
+                            </span>
+                        </a>
+                        </li>
+                        <li class="txt_opacity">
+                          <div class="explan_kor">
+                            <span>PC 웹 프로젝트</span>
+                            <strong>파파이스</strong>
+                            <p>사이트 이용자의 접근성 문제 분석을 중심으로 <br>웹 이용자 타겟을 조사하여 팀 프로젝트를 <br>진행하였습니다.</p>
+                        </div>
+                        </li>
+                      </ul>
+                  </li>
+              </ul>
+          </section>
+
+          <section class="section" id="cnt3">
+              <h2 class="blind-b">연락 가능한 정보 안내</h2>
+              <div class="direct">
+                <div class="tit_txt">
+                    <strong>
+                      <span>지금 바로</span>
+                      <a class="imgicon head">
+                        <span class="me">박정은</span>
+                      </a>
+                      <span>을 만나 보세요!</span>
+                    </strong>
+                </div>
+                <div class="btn">
+                    <button type="button" class="contact" data-targetmodal="#modalContact" aria-haspopup="dialog" title="대화상자">연결하기</button>
+                    <a href="#skip" class="top" id="btnTop">처음으로</a>
+                </div>
+              </div>
+              <div class="deco">
+                  <div class="arrowup arrow1"></div>
+                  <div class="arrowup arrow2"></div>
+                  <div class="txt_grey">Thanks <br>For Watching !</div>
+                  <div class="imgicon sun"></div>
+                  <div class="imgicon moon"></div>
+              </div>
+          </section>
+
+          <div class="section ft_cnt">
+            <footer id="footer">
+              <div class="footer_area">
+                <div class="footer_left">
+                  <div class="fixed_info">
+                    <strong>Contact Me</strong>
+                    <ul>
+                      <li><a class="ft_icon1" href="mailto: iireal25@naver.com" title="문의 메일 보내기" target="_blank">E mail</a></li>
+                      <li><a class="ft_icon2" href="https://github.com/jeingwi19" target="_blank" title="새창열기 깃허브">Github</a></li>
+                      <li><a class="ft_icon3" href="https://open.kakao.com/o/skrVTIQc" target="_blank" title="새창열기 오픈채팅">Direct</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer_right">
+                  <p>COPYRIGHT 2021 Jeong-eun ALL RIGHT RESERVED.</p>
+                </div>
+              </divc>
+            </footer>
+          </div>
+      </div>
+
+      <!-- #dim은 스크립트에 동적 생성 -->
+      <!-- <div id="dim"></div> -->
+
+      <!-- Profile 모달 -->
+      <div id="modalIntro" class="modal_cnt wid1280 p_r" role="dialog" aria-modal="true" aria-labelledby="introMe">
+        <h4 class="blind-b" id="introMe">박정은 상세 소개</h4>
+        <div class="modal_flat myinfo">
+            <strong>
+              <span>Who is?</span>
+              <span>Bahk <br>Jeong-eun.</span>
+            </strong>
+            <ul class="modal_info">
+              <li class="info profile">
+                <button type="button" class="li_tit first">
+                  <span>Profile</span>
+                </button>
+                <ul>
+                  <li class="info_list">
+                    <span>NAME</span>
+                    <span>박정은</span>
+                  </li>
+                  <li class="info_list">
+                    <span>BIRTH</span>
+                    <span>1993.08.30</span>
+                  </li>
+                  <li class="info_list">
+                    <span>MOBILE</span>
+                    <span>010.3300.6944</span>
+                  </li>
+                  <li class="info_list">
+                    <span>E MAIL</span>
+                    <span>iireal25@naver.com</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="info education">
+                <button type="button" class="li_tit">
+                  <span>Education</span>
+                </button>
+                <ul>
+                  <li class="info_list align">
+                    <span>2021.01</span>
+                    <span>한국디지털기업협회 UIUX 기반 <br>반응형 웹퍼블리셔 훈련과정 이수</span>
+                  </li>
+                  <li class="info_list">
+                    <span>2016.02</span>
+                    <span>경민대학교 시각디자인학과 졸업</span>
+                  </li>
+                  <li class="info_list">
+                    <span>2012.02</span>
+                    <span>용화여자고등학교 졸업</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="info skills">
+                <button type="button" class="li_tit">
+                  <span>Skills</span>
+                </button>
+                <ul>
+                  <li class="skill_list publishing">
+                    <p class="blind-b">퍼블리싱 기술 소개</p>
+                    <span class="icon pb1" title="HTML5">
+                      <span class="blind-b">HTML5</span>
+                    </span>
+                    <span class="icon pb2 mgl" title="CSS3">
+                      <span class="blind-b">CSS3</span>
+                    </span>
+                    <span class="icon pb3 mgl" title="SASS">
+                      <span class="blind-b">SASS</span>
+                    </span>
+                    <span class="icon pb4 mgl" title="JQuery">
+                      <span class="blind-b">JQuery</span>
+                    </span>
+                    <span class="icon pb5 mgl" title="Java Script">
+                      <span class="blind-b">Java Script</span>
+                    </span>
+                    <span class="icon pb6 mgl" title="Bootstrap">
+                      <span class="blind-b">Bootstrap</span>
+                    </span>
+                  </li>
+                  <li class="skill_list design">
+                    <p class="blind-b">디자인 기술</p>
+                    <span class="icon ds1" title="Photoshop">
+                      <span class="blind-b">Photoshop</span>
+                    </span>
+                    <span class="icon ds2 mgl" title="illustrator">
+                      <span class="blind-b">illustrator</span>
+                    </span>
+                    <span class="icon ds3 mgl" title="XD">
+                      <span class="blind-b">XD</span>
+                    </span>
+                    <span class="icon ds4 mgl" title="After Effect">
+                      <span class="blind-b">After Effect</span>
+                    </span>
+                    <span class="icon ds5 mgl" title="Zeplin">
+                      <span class="blind-b">Zeplin</span>
+                    </span>
+                    <span class="icon ds6 mgl" title="Blender 3D">
+                      <span class="blind-b">Blender 3D</span>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="iconbtn p_a">
+          <button type="button" class="like" title="좋아요">
+            <span class="blind-b">하트 좋아요</span>
+          </button>
+          <!-- <span class="count_numb p_a">102</span> --><!-- 동적생성 예정 -->
+          <a href="https://open.kakao.com/o/skrVTIQc" class="chat" target="_blank" title="새창열기 오픈채팅">
+            <span class="blind-b">채팅 메세지</span>
+          </a>
+        </div>
+        <div class="bg_img p_a">
+          <div class="imgicon canbg can1"></div>
+          <div class="imgicon canbg can2"></div>
+          <div class="imgicon canbg can3"></div>
+          <div class="imgicon character"></div>
+        </div>
+        <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
+      </div>
+
+      <!-- Contact Me 모달 -->
+      <div id="modalContact" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="contactMe">
+        <h4 id="contactMe">Contact Me</h4>
+        <div class="modal_flat transp">
+          <form action="index.html" method="post" id="mailArea" class="mailarea">
+            <table>
+              <caption>메일 문의 입력 항목 2가지</caption>
+              <colgroup>
+                <col class="w0">
+                <col class="w580">
+              </colgroup>
+              <tr>
+                <th id="uEmailAd" scope="row">
+                  <label for="umail">
+                    <span class="blind-b">이메일 보내시는 주소</span>
+                  </label>
+                </th>
+                <td headers="umailAd">
+                  <input type="text" style="ime-mode:disabled;" id="umail" class="umail first" name="umail" placeholder="Your Email" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
+                </td>
+              </tr>
+              <tr>
+                <th id="mailCnt">
+                  <label for="umailCnt">
+                    <span class="blind-b">이메일 문의 내용 입력란</span>
+                  </label>
+                </th>
+                <td headers="mailCnt" class="m_cnt">
+                  <textarea name="umailCnt" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message." maxlength="300"></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="btn">
+              <input type="submit" value="Send">
+            </div>
+          </form>
+        </div>
+        <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_white.svg" alt="대화상자 닫기"></button>
+      </div>
+
+  </div>
+
 </body>
 </html>

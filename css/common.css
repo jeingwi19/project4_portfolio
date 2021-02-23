@@ -311,6 +311,127 @@ body {
 #mHeader {
   display: none; }
 
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background: #191919;
+  z-index: 1800; }
+@keyframes splashFade {
+  to {
+    opacity: 1; } }
+  .splash .circle {
+    -webkit-animation-name: loadingR;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-name: loadingR;
+    -moz-animation-duration: 4s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-name: loadingR;
+    -o-animation-duration: 4s;
+    -o-animation-timing-function: linear;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: backwards;
+    animation-name: loadingR;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    margin-left: 100px; }
+@keyframes loadingR {
+  100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg); }
+  0% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg); } }
+    .splash .circle p {
+      font-weight: 700; }
+      .splash .circle p .txt_load {
+        -webkit-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(280px);
+        -moz-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(280px);
+        -o-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(280px);
+        -ms-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(280px);
+        transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(280px);
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        -o-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        position: absolute;
+        top: -1.5em;
+        left: 0;
+        width: 1em;
+        background: transparent;
+        color: #e5e5e5;
+        font-size: 4em;
+        padding: 12px 12px;
+        border-top: 4px solid #e5e5e5;
+        border-bottom: 4px solid #e5e5e5; }
+      .splash .circle p .tl_6, .splash .circle p .tl_17, .splash .circle p .tl_21, .splash .circle p .tl_32 {
+        color: transparent; }
+  .splash strong {
+    -webkit-animation-name: load_opa;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-name: load_opa;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-name: load_opa;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: backwards;
+    animation-name: load_opa;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    display: block;
+    margin-top: 280px;
+    font-size: 20px;
+    margin-left: -100px; }
+@keyframes load_opa {
+  100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  0% {
+    opacity: 0; } }
+.splash.display-none {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -100; }
+
 @media screen and (max-width: 360px) {
   #pcHeader {
     display: none; }
@@ -498,6 +619,56 @@ body {
               background: #e5e5e5; }
           #mHeader #gnb ul .copyr p span {
             display: block;
-            margin-top: 12px; } }
+            margin-top: 12px; }
+
+  .splash .circle {
+    -webkit-animation-name: loadingR_m;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-name: loadingR_m;
+    -moz-animation-duration: 4s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-name: loadingR_m;
+    -o-animation-duration: 4s;
+    -o-animation-timing-function: linear;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-fill-mode: backwards;
+    animation-name: loadingR_m;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 50px; }
+  @keyframes loadingR_m {
+    100% {
+      transform: perspective(4000px) rotateY(0deg) rotateX(15deg); }
+    0% {
+      transform: perspective(4000px) rotateY(360deg) rotateX(15deg); } }
+    .splash .circle p .txt_load {
+      -webkit-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(200px);
+      -moz-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(200px);
+      -o-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(200px);
+      -ms-transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(200px);
+      transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(200px);
+      left: 200%;
+      width: 2.5em;
+      border-width: 2px;
+      font-size: 2em;
+      padding: 10px 12px; }
+  .splash strong {
+    font-size: 14px;
+    margin-top: 360px;
+    margin-left: -50px; } }
 
 /*# sourceMappingURL=common.css.map */

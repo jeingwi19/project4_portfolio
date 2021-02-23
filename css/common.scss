@@ -165,6 +165,54 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
 
 #mHeader{display: none;}
 
+.splash{
+  @include keyframe(splashFade){
+    to{
+      opacity: 1;
+    }
+  };
+  display: flex;justify-content: center;align-items: center;position: fixed;top: 0;left: 0;width: 100%;height: 100vh;min-height: 100vh;background: #191919;z-index: 1800;
+  .circle{
+    @include keyframe(loadingR){
+      100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+      }0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+      }
+    };
+    @include animation(loadingR, 4s, linear, 0s, infinite, backwards);
+    @include transform-style(preserve-3d);
+    margin-left: 100px;
+    p{
+      font-weight: 700;
+      .txt_load{
+        @include transform(rotateY(calc(var(--char-index) * 12deg)) translateZ(280px));
+        @include transform-origin(center);
+        @include transform-style(preserve-3d);
+        position: absolute;top: -1.5em;left: 0;width: 1em;background: transparent;color: #e5e5e5;font-size: 4em;padding: 12px 12px;border-top: 4px solid #e5e5e5;border-bottom: 4px solid #e5e5e5;
+      }
+      .tl_6, .tl_17, .tl_21, .tl_32{color: transparent;}
+    }
+  }
+  strong{
+    @include keyframe(load_opa){
+      100%{
+        opacity: 0;
+      }50%{
+        opacity: 1;
+      }0%{
+        opacity: 0;
+      }
+    };
+    @include animation(load_opa, 1s, ease-in-out, 0s, infinite, backwards);
+    display: block;margin-top: 280px;font-size: 20px;margin-left: -100px;
+  }
+}
+.splash.display-none{
+  @include transition(all 0.5s);
+  opacity: 0;z-index: -100;
+}
+
 @media screen and (max-width: 360px){
   #pcHeader{display: none;}
   #mHeader{
@@ -259,4 +307,23 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
         }
       }
     }
+  .splash{
+    .circle{
+      @include keyframe(loadingR_m){
+        100%{
+          transform: perspective(4000px) rotateY(0deg) rotateX(15deg);
+        }0%{
+          transform: perspective(4000px) rotateY(360deg) rotateX(15deg);
+        }
+      };
+      @include animation(loadingR_m, 4s, linear, 0s, infinite, backwards);
+      @include box-sizing;
+      margin-left: 50px;
+      p .txt_load{
+        @include transform(rotateY(calc(var(--char-index) * 12deg)) translateZ(200px));
+        left: 200%;width: 2.5em;border-width: 2px;font-size: 2em;padding: 10px 12px;
+      }
+    }
+    strong{font-size: 14px;margin-top: 360px;margin-left: -50px;}
+  }
 }
