@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
@@ -41,6 +42,14 @@
         clock();
 
         var timer = setInterval(clock, 1000);
+
+        /* bg mouse parallax event */
+        const position = document.documentElement;
+        //console.log(position);
+        //마우스 무브 이벤트
+        position.addEventListener('mousemove', e =>{
+          position.style.setProperty('--x', e.clientX + 'px');
+        });
       });
     </script>
 </head>
@@ -52,6 +61,22 @@
     </div>
     <strong>Loading</strong>
   </div>
+
+  <section class="txtflow" aria-hidden="true">
+    <div class="text">
+      <p style="--i:0.5"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:1.5"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:2.5"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:2.25"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:1.25"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:0.75"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:3"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:0.35"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:2.35"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:0.5"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+      <p style="--i:1.75"><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span><span>Jeong-eun.</span></p>
+    </div>
+  </section>
 
   <div id="skip">
       <a href="#scrollCnt">본문 바로가기</a>
@@ -146,8 +171,8 @@
                   <div class="txt_line wisesaying p_a" aria-hidden="true"><p>The only thing worse than starting something and failing... is not starting something</p><p>The only thing worse than starting something and failing... is not starting something</p>
                   </div>
                   <div class="txt_grey hello p_a" aria-hidden="true">Hello I am...</div>
-                  <p class="txt_line now p_a">Time is</p>
-                  <div class="txt_line now p_a" id="nowTime">
+                  <p class="now p_a">Time is</p>
+                  <div class="now p_a" id="nowTime">
                     <div id="clock"></div>
                   </div>
                   <div class="human_area p_a">
@@ -519,5 +544,8 @@
 
   </div>
 
+  <div id="cursor">
+    <span class="c_point"></span>
+  </div>
 </body>
 </html>

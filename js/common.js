@@ -27,6 +27,18 @@ $(document).ready(function(){
     }, 3000);
     
 
+    /* 마우스커서 따라다니는 원형 */
+    $('#wrap').on('mousemove', function(e) {
+        //마우스 움직임 변수
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+        //console.log(mouseX, mouseY);
+
+        //#cursor의 top, left 좌표값
+        //animate({properties}, duration, 'easing', complete)
+        $('#cursor').stop(true, false).animate({left: mouseX, top: mouseY}, 'fast', 'easeOutBack');
+    });
+
 
     /* gnb 메뉴아이콘 열기 클릭 - PC*/
     $('#gnb').hide();
@@ -74,7 +86,6 @@ $(document).ready(function(){
               });
         }
 
-
     });
 
     //헤더 - Contact me 클릭시 페이지 새로고침 비활성화
@@ -93,6 +104,7 @@ $(document).ready(function(){
                 $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp('fast');
             });
             $(this).removeClass('active').find('.blind-b').text('전체 메뉴 열기');
+
 
 
         }else{ //열기
@@ -120,6 +132,7 @@ $(document).ready(function(){
                     $('.menu .btn_open').focus();
                 }
             });
+
         }
 
         //모바일 - depth1 a 클릭
@@ -141,7 +154,7 @@ $(document).ready(function(){
 
     $(window).on('scroll', function(){
         var scrollT = $(this).scrollTop();
-        console.log(scrollT);
+        //console.log(scrollT);
         clearTimeout(timer);timer
 
         timer = setTimeout(function (){

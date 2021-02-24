@@ -1,6 +1,37 @@
 @charset "utf-8";
 @import "_mixin", "_var", "_function";
 
+//bg text flow parallax
+.txtflow{
+  position: fixed;width: 100%;height: 100vh;overflow: hidden;background: #111;z-index: -1;
+  .text{
+    @include keyframe(animateColor){
+      100%{
+        filter: hue-rotate(360deg);
+      }0%{
+        filter: hue-rotate(0deg);
+      }
+    };
+    @include animation(animateColor, 5s, linear, 0s, infinite, backwards);
+    @include transform(skewY(345deg) translateY(-200px));
+    position: relative;
+    &::after{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(17, 17, 17, 0.9);}
+    p{
+      @include transform(translateX(calc(0% - var(--x) * var(--i))));
+      @include pointer-events(none);
+      position: relative;width: 100%;font-size: 8em;color: #fff;line-height: 1em;white-space: nowrap;font-weight: 700;
+      text-shadow: calc(var(--x)) 100px 0 rgba(255, 255, 255, 0.1);
+      span{
+        color: #0f0;margin: 0 10px;
+        &:nth-child(even){
+          color: transparent;
+          -webkit-text-stroke: 2px #fff;
+        }
+      }
+    }
+  }
+}
+
 //고정 배경 스타일
 .fixed_bg{
     @include translateX-50;
@@ -12,7 +43,8 @@
     &:nth-child(1)::before{content: "";position: absolute;bottom: -250px;left: -105px;width: 210px;height: 210px;background: url('../images/main/shape_8star_purple.svg')no-repeat center;z-index: -1;}
 
     .wisesaying{
-      display: block;font-size: 88px;font-weight: 700;white-space: nowrap;line-height: 74px;
+      /* display: block; */
+      display: none;font-size: 88px;font-weight: 700;white-space: nowrap;line-height: 74px;
       @include keyframe(flowtxt){
         100%{
           transform: translateX(-110%)
@@ -24,10 +56,11 @@
     }
     .hello{top: 80px;}
     .now{
-      width: 1200px;bottom: -8px;font-size: 88px;font-weight: 700;line-height: 68px;z-index: -1;left: 0;
+      text-shadow: -1px -1px 0 #424242, 1px -1px 0 #424242, -1px 1px 0 #424242, 1px 1px 0 #424242;
+      width: 1200px;bottom: -8px;font-size: 82px;font-weight: 700;line-height: 68px;z-index: 0;left: 0;color: $greyDark;
       div{display: inline;}
     }
-    #nowTime{left: 480px;}
+    #nowTime{left: 440px;}
     .human_area{
       width: 428px;height: 606px;
       .human{

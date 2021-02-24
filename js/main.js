@@ -49,7 +49,7 @@ $(document).ready(function(){
     var scrollY = $(this).scrollTop();
     var imgnum = parseInt(scrollY/(turn / (total + 1)));//parseInt()소수점제거
     var scrollMax = $(document).height() - $(window).height();
-    console.log(scrollY, scrollMax);
+    //console.log(scrollY, scrollMax);
     imgnum %= 60;
     
     //console.log(imgnum);

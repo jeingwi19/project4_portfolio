@@ -213,6 +213,14 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
   opacity: 0;z-index: -100;
 }
 
+#cursor{
+  @include box-sizing;
+  @include transition(all 0.3s);
+  @include border-radius(50%);
+  position: fixed;z-index: 1001;top: 0;left: 0;border: 1px solid white;pointer-events: none;display: flex;justify-content: center;align-items: center;width: 80px;height: 80px;margin: -40px 0 0 -40px;mix-blend-mode: difference;background-color: white;
+  span{@include transition(all 0.2s);opacity: 0;}
+}
+
 @media screen and (max-width: 360px){
   #pcHeader{display: none;}
   #mHeader{
@@ -326,4 +334,6 @@ body{background: #333;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
     }
     strong{font-size: 14px;margin-top: 360px;margin-left: -50px;}
   }
+
+  #cursor{display: none;}
 }
