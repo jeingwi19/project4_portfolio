@@ -115,7 +115,7 @@ $(document).ready(function(){
         timer = setTimeout(function() {
           var x = ($(this).width() - _mdCnt.outerWidth()) / 2;
           var y = ($(this).height() - _mdCnt.outerHeight()) / 2;
-          _mdCnt.css({left: x, top: 80});
+          _mdCnt.css({left: x, top: 60});
         }, 50);
 
       });
