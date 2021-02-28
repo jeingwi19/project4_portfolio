@@ -25,19 +25,6 @@ $(document).ready(function(){
     timeSplash = setTimeout(function(e) {
         splash.addClass('display-none');
     }, 3000);
-    
-
-    /* 마우스커서 따라다니는 원형 */
-    $('#wrap').on('mousemove', function(e) {
-        //마우스 움직임 변수
-        var mouseX = e.clientX;
-        var mouseY = e.clientY;
-        //console.log(mouseX, mouseY);
-
-        //#cursor의 top, left 좌표값
-        //animate({properties}, duration, 'easing', complete)
-        $('#cursor').stop(true, false).animate({left: mouseX, top: mouseY}, 'fast', 'easeOutBack');
-    });
 
 
     /* gnb 메뉴아이콘 열기 클릭 - PC*/

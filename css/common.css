@@ -130,7 +130,7 @@ header, nav, section, footer {
   color: #333333; }
 
 body {
-  background: #333;
+  background: #222;
   font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";
   font-size: 16px;
   color: #e5e5e5;
@@ -432,38 +432,6 @@ body {
   opacity: 0;
   z-index: -100; }
 
-#cursor {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  position: fixed;
-  z-index: 1001;
-  top: 0;
-  left: 0;
-  border: 1px solid white;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  margin: -40px 0 0 -40px;
-  mix-blend-mode: difference;
-  background-color: white; }
-  #cursor span {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    opacity: 0; }
-
 @media screen and (max-width: 360px) {
   #pcHeader {
     display: none; }
@@ -701,9 +669,6 @@ body {
   .splash strong {
     font-size: 14px;
     margin-top: 360px;
-    margin-left: -50px; }
-
-  #cursor {
-    display: none; } }
+    margin-left: -50px; } }
 
 /*# sourceMappingURL=common.css.map */

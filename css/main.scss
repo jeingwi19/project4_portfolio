@@ -1,36 +1,8 @@
 @charset "utf-8";
 @import "_mixin", "_var", "_function";
 
-//bg text flow parallax
-.txtflow{
-  position: fixed;width: 100%;height: 100vh;overflow: hidden;background: #111;z-index: -1;
-  .text{
-    @include keyframe(animateColor){
-      100%{
-        filter: hue-rotate(360deg);
-      }0%{
-        filter: hue-rotate(0deg);
-      }
-    };
-    @include animation(animateColor, 5s, linear, 0s, infinite, backwards);
-    @include transform(skewY(345deg) translateY(-200px));
-    position: relative;
-    &::after{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(17, 17, 17, 0.9);}
-    p{
-      @include transform(translateX(calc(0% - var(--x) * var(--i))));
-      @include pointer-events(none);
-      position: relative;width: 100%;font-size: 8em;color: #fff;line-height: 1em;white-space: nowrap;font-weight: 700;
-      text-shadow: calc(var(--x)) 100px 0 rgba(255, 255, 255, 0.1);
-      span{
-        color: #0f0;margin: 0 10px;
-        &:nth-child(even){
-          color: transparent;
-          -webkit-text-stroke: 2px #fff;
-        }
-      }
-    }
-  }
-}
+//canvas 고정 배경
+canvas{width: 100%;height: 100%;}
 
 //고정 배경 스타일
 .fixed_bg{
