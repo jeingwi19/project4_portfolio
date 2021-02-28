@@ -82,7 +82,7 @@ header, nav, section, footer{display: block;}
 .txt_line{text-shadow: -1px -1px 0 #595959, 1px -1px 0 #595959, -1px 1px 0 #595959, 1px 1px 0 #595959;color: $black;}
 
 //body
-body{background: #222;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";font-size: 16px;color: #e5e5e5;line-height: 1;font-weight: 400;word-break: keep-all;letter-spacing: -0.016em;}
+body{background: $orange;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";font-size: 16px;color: #e5e5e5;line-height: 1;font-weight: 400;word-break: keep-all;letter-spacing: -0.016em;}
 *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
 //skip
@@ -105,7 +105,8 @@ body{background: #222;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
         &, a img{position: absolute;}
         top: 28px;left: 0;width: 264px;height: 24px;
         a img{top: 0;left: 0;}
-        a img:last-child{opacity: 0;}
+        a img:first-child{opacity: 0;}
+        a img:last-child{opacity: 1;}
     }
     /* .menu에 .active 추가 */
     .menu{
@@ -119,12 +120,12 @@ body{background: #222;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
         }
         .line{
             @include transition(all 0.5s);
-            width: 100%;height: 2px;background: $white;left: 0;
+            width: 100%;height: 2px;background: $black;left: 0;
         }
         .top{top: 12px;}
         .btm{top: 26px;}
         &.active{
-            .line{background: $white;}
+            .line{background: $black;}
             .top{
                 @include transform(rotate(225deg));
                 top: 20px;
@@ -148,16 +149,16 @@ body{background: #222;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
       > ul > li > a, > ul > li > button{position: relative;}
       > ul > li > a::before, > ul > li > button::before{
         @include transition(all 0.3s);
-        content: "";position: absolute;bottom: -6px;left: 0;width: 0%;height: 2px;background: $white;
+        content: "";position: absolute;bottom: -6px;left: 0;width: 0%;height: 2px;background: $black;
       }
-      > ul > li:hover > a,  > ul > li > a:focus, > ul > li:hover > a::before, > ul > li > a:focus::before, > ul > li:hover > button, > ul > li > button:focus, > ul > li:hover > button::before, > ul > li > button:focus::before{width: 100%;color: $white;}
+      > ul > li:hover > a,  > ul > li > a:focus, > ul > li:hover > a::before, > ul > li > a:focus::before, > ul > li:hover > button, > ul > li > button:focus, > ul > li:hover > button::before, > ul > li > button:focus::before{width: 100%;color: $black;}
       ul li ul li{margin-top: 28px;margin-right: 60px;}
       ul li ul li a{position: relative;color: #595959;}
       ul li ul li a::before{
         @include transition(all 0.3s);
-        content: "";position: absolute;bottom: -6px;left: 0;width: 0;height: 2px;background: $white;
+        content: "";position: absolute;bottom: -6px;left: 0;width: 0;height: 2px;background: $black;
       }
-      ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{width: 100%;color: $white;}
+      ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{width: 100%;color: $black;}
       ul li ul li a span{margin-left: 8px;}
 
     }

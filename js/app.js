@@ -11,12 +11,11 @@ const COLORS = [
 
 class App {
   constructor() {
-    //캔버스 생성
+    //캔버스 태그 생성
     this.canvas = document.createElement('canvas');
     document.body.appendChild(this.canvas);
-
-    //현재 실행되는 View의 Context를 return
     this.ctx = this.canvas.getContext('2d');
+
     //픽셀 해상도
     this.pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
 
@@ -25,9 +24,12 @@ class App {
     this.maxRadius = 900;
     this.minRadius = 400;
 
-    //리사이징 이벤트 .bind()함수 출력
+    //리사이징 이벤트
     window.addEventListener('resize', this.resize.bind(this), false);
     this.resize();
+
+
+    window.requestAnimationFrame(this.animate.bind(this));
   }
 
   //리사이즈 함수
@@ -35,22 +37,24 @@ class App {
     this.stageWidth = document.body.clientWidth;
     this.stageHeight = document.body.clientHeight;
 
+
     this.canvas.width = this.stageWidth * this.pixelRatio;
     this.canvas.height = this.stageHeight * this.pixelRatio;
     this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
+    
     this.ctx.globalCompositeOperation = 'saturation';
 
+    
     this.createParticles();
   }
 
-  //캔버스 원형 스타일 함수
+  //원형 스타일 함수
   createParticles() {
     let curColor = 0;
     this.particles = [];
 
     for(let i = 0; i < this.totalParticles; i++){
-
       const item = new GlowParticle(
         Math.random() * this.stageWidth,
         Math.random() * this.stageHeight,
@@ -65,7 +69,7 @@ class App {
     }
   }
 
-  //원형 애니메이션 값
+  //애니메이션 함수
   animate() {
     window.requestAnimationFrame(this.animate.bind(this));
 

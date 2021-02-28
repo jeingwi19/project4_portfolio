@@ -130,7 +130,7 @@ header, nav, section, footer {
   color: #333333; }
 
 body {
-  background: #222;
+  background: #ff6f30;
   font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";
   font-size: 16px;
   color: #e5e5e5;
@@ -196,8 +196,10 @@ body {
     #pcHeader .logo a img {
       top: 0;
       left: 0; }
-    #pcHeader .logo a img:last-child {
+    #pcHeader .logo a img:first-child {
       opacity: 0; }
+    #pcHeader .logo a img:last-child {
+      opacity: 1; }
   #pcHeader .menu {
     top: 20px;
     right: 0;
@@ -223,14 +225,14 @@ body {
       transition: all 0.5s;
       width: 100%;
       height: 2px;
-      background: #e5e5e5;
+      background: #333333;
       left: 0; }
     #pcHeader .menu .top {
       top: 12px; }
     #pcHeader .menu .btm {
       top: 26px; }
     #pcHeader .menu.active .line {
-      background: #e5e5e5; }
+      background: #333333; }
     #pcHeader .menu.active .top {
       -webkit-transform: rotate(225deg);
       -moz-transform: rotate(225deg);
@@ -280,10 +282,10 @@ body {
       left: 0;
       width: 0%;
       height: 2px;
-      background: #e5e5e5; }
+      background: #333333; }
     #pcHeader #gnb > ul > li:hover > a, #pcHeader #gnb > ul > li > a:focus, #pcHeader #gnb > ul > li:hover > a::before, #pcHeader #gnb > ul > li > a:focus::before, #pcHeader #gnb > ul > li:hover > button, #pcHeader #gnb > ul > li > button:focus, #pcHeader #gnb > ul > li:hover > button::before, #pcHeader #gnb > ul > li > button:focus::before {
       width: 100%;
-      color: #e5e5e5; }
+      color: #333333; }
     #pcHeader #gnb ul li ul li {
       margin-top: 28px;
       margin-right: 60px; }
@@ -301,10 +303,10 @@ body {
       left: 0;
       width: 0;
       height: 2px;
-      background: #e5e5e5; }
+      background: #333333; }
     #pcHeader #gnb ul li ul li:hover a, #pcHeader #gnb ul li ul li a:focus, #pcHeader #gnb ul li ul li:hover a::before, #pcHeader #gnb ul li ul li a:focus::before {
       width: 100%;
-      color: #e5e5e5; }
+      color: #333333; }
     #pcHeader #gnb ul li ul li a span {
       margin-left: 8px; }
 

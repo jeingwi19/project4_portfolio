@@ -1,6 +1,10 @@
 canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  z-index: -2; }
 
 .fixed_bg {
   -webkit-transform: translateX(-50%);
@@ -15,13 +19,13 @@ canvas {
   .fixed_bg .bg_line {
     width: 1280px;
     height: 608px;
-    border: 1px solid #424242; }
+    border: 1px solid #595959; }
     .fixed_bg .bg_line .box {
       float: left;
       width: 318px;
       height: 606px; }
     .fixed_bg .bg_line .box + .box {
-      border-left: 1px solid #424242; }
+      border-left: 1px solid #595959; }
     .fixed_bg .bg_line:nth-child(1)::before {
       content: "";
       position: absolute;
@@ -29,7 +33,7 @@ canvas {
       left: -105px;
       width: 210px;
       height: 210px;
-      background: url("../images/main/shape_8star_purple.svg") no-repeat center;
+      background: url("../images/main/shape_8star_dark.svg") no-repeat center;
       z-index: -1; }
     .fixed_bg .bg_line .wisesaying {
       /* display: block; */
@@ -68,9 +72,10 @@ canvas {
   0% {
     transform: translateX(100%); } }
     .fixed_bg .bg_line .hello {
-      top: 80px; }
+      top: 80px;
+      display: none; }
     .fixed_bg .bg_line .now {
-      text-shadow: -1px -1px 0 #424242, 1px -1px 0 #424242, -1px 1px 0 #424242, 1px 1px 0 #424242;
+      /* text-shadow: -1px -1px 0 #424242, 1px -1px 0 #424242, -1px 1px 0 #424242, 1px 1px 0 #424242; */
       width: 1200px;
       bottom: -8px;
       font-size: 82px;
@@ -78,7 +83,8 @@ canvas {
       line-height: 68px;
       z-index: 0;
       left: 0;
-      color: #595959; }
+      color: transparent;
+      -webkit-text-stroke: 1px #e5e5e5; }
       .fixed_bg .bg_line .now div {
         display: inline; }
     .fixed_bg .bg_line #nowTime {
@@ -170,7 +176,7 @@ canvas {
         transform: translate(-50%, -50%);
         content: "";
         position: absolute;
-        background: url("../images/main/shape_8star_purple.svg") no-repeat center;
+        background: url("../images/main/shape_8star_dark.svg") no-repeat center;
         width: 204px;
         height: 204px;
         left: 50%;
@@ -1445,15 +1451,15 @@ canvas {
           -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
           -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
-          background: #222; }
+          background: #e5e5e5; }
           .fixed_bg .bg_line .human_area .talk_area .human_talk::before {
             left: 32%;
             bottom: -32px;
-            border-top: 32px solid #222;
+            border-top: 32px solid #e5e5e5;
             border-left: 40px solid transparent;
             border-right: 0 solid transparent; }
           .fixed_bg .bg_line .human_area .talk_area .human_talk .talkguide {
-            color: #e5e5e5; }
+            color: #333333; }
         .fixed_bg .bg_line .human_area .talk_area .talk2 {
           display: none; }
       .fixed_bg .bg_line .txt_hire {
@@ -1500,6 +1506,8 @@ canvas {
       transform: rotate(-360deg); }
     0% {
       transform: rotate(0); } }
+        .fixed_bg .bg_line .txt_hire .move_cycle {
+          color: #e5e5e5; }
         .fixed_bg .bg_line .txt_hire .coffee {
           -webkit-animation-name: mov_coffee;
           -webkit-animation-duration: 2s;
