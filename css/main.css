@@ -1,11 +1,3 @@
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2; }
-
 .fixed_bg {
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -83,8 +75,8 @@ canvas {
       line-height: 68px;
       z-index: 0;
       left: 0;
-      color: transparent;
-      -webkit-text-stroke: 1px #e5e5e5; }
+      color: #ccc;
+      -webkit-text-stroke: 1px #333333; }
       .fixed_bg .bg_line .now div {
         display: inline; }
     .fixed_bg .bg_line #nowTime {
@@ -446,6 +438,7 @@ canvas {
   0% {
     transform: translate(0) rotate(45deg) scale(0.8); } }
     #scrollCnt #cnt1 .tit_txt .intro_main_txt {
+      color: #333333;
       font-family: NtSansKR;
       font-size: 40px;
       line-height: 88px;
@@ -463,7 +456,7 @@ canvas {
         left: 0;
         width: 100%;
         height: 4px;
-        background: #e5e5e5; }
+        background: #333333; }
   #scrollCnt #cnt1 .deco {
     margin-top: 160px;
     margin-left: 110px; }
@@ -663,7 +656,8 @@ canvas {
       position: relative; }
       #scrollCnt #cnt3 .direct .tit_txt strong {
         font-size: 40px;
-        font-family: NtSansKR; }
+        font-family: NtSansKR;
+        color: #333333; }
         #scrollCnt #cnt3 .direct .tit_txt strong :last-child {
           margin-left: 160px; }
         #scrollCnt #cnt3 .direct .tit_txt strong .imgicon {
@@ -735,8 +729,8 @@ canvas {
       #scrollCnt #cnt3 .direct .btn .contact {
         background: #4c4882; }
       #scrollCnt #cnt3 .direct .btn .top {
-        border: 1px solid #595959;
-        color: #595959;
+        border: 1px solid #999999;
+        color: #999999;
         margin-left: 14px; }
       #scrollCnt #cnt3 .direct .btn .contact:hover, #scrollCnt #cnt3 .direct .btn .contact:focus {
         -webkit-transform: translateY(-4px);
@@ -747,8 +741,8 @@ canvas {
         box-shadow: 10px 20px 40px 0 rgba(0, 0, 0, 0.5);
         background: #5c4aca; }
       #scrollCnt #cnt3 .direct .btn .top:hover, #scrollCnt #cnt3 .direct .btn .top:focus {
-        color: #e5e5e5;
-        border-color: #e5e5e5; }
+        color: #333333;
+        border-color: #333333; }
   #scrollCnt #cnt3 .deco {
     position: relative;
     width: 770px;
