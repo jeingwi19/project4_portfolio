@@ -130,7 +130,7 @@ header, nav, section, footer {
   color: #333333; }
 
 body {
-  background: #ccc;
+  background: #e5e5e5;
   font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";
   font-size: 16px;
   color: #e5e5e5;
@@ -152,12 +152,12 @@ body {
   #skip a:focus {
     left: 0;
     width: 100%;
-    background: #e5e5e5;
+    background: #333333;
     text-align: center;
     height: 48px;
     line-height: 48px;
     font-weight: 700;
-    color: #333333; }
+    color: #e5e5e5; }
 
 #wrap {
   overflow: hidden;
@@ -472,8 +472,10 @@ body {
       #mHeader .logo a img {
         top: 28px;
         left: 20px; }
-      #mHeader .logo a img:last-child {
+      #mHeader .logo a img:first-child {
         opacity: 0; }
+      #mHeader .logo a img:last-child {
+        opacity: 1; }
     #mHeader .menu {
       top: 16px;
       right: 20px;
@@ -499,7 +501,7 @@ body {
         transition: all 0.5s;
         width: 100%;
         height: 4px;
-        background: #e5e5e5;
+        background: #333333;
         left: 0; }
       #mHeader .menu .top {
         top: 12px; }

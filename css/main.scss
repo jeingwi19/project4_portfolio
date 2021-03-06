@@ -6,10 +6,10 @@
     @include translateX-50;
     position: fixed;z-index: -1;left: 50%;top: 80px;
   .bg_line{
-    width: 1280px;height: 608px;border: 1px solid $greyDark;
+    width: 1280px;height: 608px;border: 1px solid #ccc;
     .box{float: left;width: 318px;height: 606px;}
-    .box + .box{border-left: 1px solid $greyDark;}
-    &:nth-child(1)::before{content: "";position: absolute;bottom: -250px;left: -105px;width: 210px;height: 210px;background: url('../images/main/shape_8star_dark.svg')no-repeat center;z-index: -1;}
+    .box + .box{border-left: 1px solid #ccc;}
+    &:nth-child(1)::before{display: none;content: "";position: absolute;bottom: -250px;left: -105px;width: 210px;height: 210px;background: url('../images/main/shape_8star_dark.svg')no-repeat center;z-index: -1;}
 
     .wisesaying{
       /* display: block; */
@@ -26,7 +26,7 @@
     .hello{top: 80px;display: none;}
     .now{
       /* text-shadow: -1px -1px 0 #424242, 1px -1px 0 #424242, -1px 1px 0 #424242, 1px 1px 0 #424242; */
-      width: 1200px;bottom: -8px;font-size: 82px;font-weight: 700;line-height: 68px;z-index: 0;left: 0;color: #ccc;-webkit-text-stroke: 1px $black;
+      width: 1200px;bottom: -10px;font-size: 82px;font-weight: 700;line-height: 68px;z-index: 0;left: 0;color: #e5e5e5;-webkit-text-stroke: 1px #ccc;
       div{display: inline;}
     }
     #nowTime{left: 440px;}
@@ -34,7 +34,7 @@
       width: 428px;height: 606px;
       .human{
         position: absolute;left: -40px;top: 104px;
-        img{position: fixed;}
+        img{position: fixed;top: 60px;}
       }
       .talk_area{
         position: relative;left: 240px;top: 60px;width: 154px;height: 238px;
@@ -44,11 +44,11 @@
         @include border-radius(20px);
         @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .5));
         position: absolute;opacity: 0;top: 0;
-        background: $white;width: 154px;height: 238px;padding: 24px;
+        background: #fff;width: 154px;height: 238px;padding: 24px;
         &::before{
           @include translateX-50;
           content: "";position: absolute;width: 0;height: 0;bottom: -40px;left: 50%;
-          border-top: 40px solid $white;border-left: 0 solid transparent;border-right: 52px solid transparent;
+          border-top: 40px solid #fff;border-left: 0 solid transparent;border-right: 52px solid transparent;
         }
         .talkguide{
           width: 106px;height: 182px;color: $black;font-size: 12px;line-height: 22px;/* background: pink; */
@@ -97,7 +97,7 @@
       }
       .btn_txt{
         @include translate-50;
-        position: absolute;font-weight: 700;font-size: 24px;line-height: 32px;width: 140px;height: 140px;left: 50%;top: 50%;z-index: 10;
+        position: absolute;font-weight: 700;font-size: 24px;line-height: 32px;width: 100px;height: 100px;left: 50%;top: 50%;z-index: 10;text-align: center;
       }
       /* .btn_txt:focus{
         @include border-radius(50%);
@@ -189,7 +189,7 @@
     }
     .deco{
       margin-top: 160px;margin-left: 110px;
-      p{font-weight: 700;color: #595959;font-size: 20px;line-height: 24px;}
+      p{font-weight: 700;color: $greyLight;font-size: 20px;line-height: 24px;}
       .arrow{
         @include keyframe(arrowmov){
           100%{
@@ -217,7 +217,7 @@
       > ul li + li{margin-left: 40px;opacity: 0;}
       ul li a{
         @include border-radius(20px);
-        position: relative;height: 520px;width: 330px;background: $white;
+        position: relative;height: 520px;width: 330px;background: #fff;border: 1px solid #ccc;
         .txt_area{
           width: 250px;height: 384px;margin-top: 60px;margin-left: 40px;
           .tit{
@@ -240,7 +240,7 @@
         }
       }
       .explan_kor{
-        color: $white;width: 330px;height: 520px;font-family: $korFont;/* background: red; */
+        color: $black;width: 330px;height: 520px;font-family: $korFont;/* background: red; */
         span, strong{display: block;}
         span, p{font-size: 12px;}
         span{padding-top: 60px;}
@@ -287,12 +287,12 @@
             .me{
               @include box-shadow(10px 20px 40px 0 rgba(0, 0, 0, .5));
               @include border-radius(16px);
-              opacity: 0;position: absolute;top: -8px;left: -100px;font-weight: 400;font-size: 12px;width: 80px;height: 40px;background :$white;padding: 14px;text-align: center;color: $black;
+              opacity: 0;position: absolute;top: -8px;left: -100px;font-weight: 400;font-size: 12px;width: 80px;height: 40px;background :#fff;padding: 14px;text-align: center;color: $black;
               &::before{
                 content: "";position: absolute;width: 0;height: 0;left: calc(50% - 8px);bottom: -8px;
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
-                border-top: 8px solid $white;
+                border-top: 8px solid #fff;
               }
               a{margin-left: -12px;padding: 12px 22px 20px;}
             }
@@ -334,7 +334,7 @@
       }
       .arrow1{top:  -400px;left: 0;}
       .arrow2{top: 0;left: 320px;}
-      .txt_grey{font-weight: 700;font-size: 20px;line-height: 24px;}
+      .txt_grey{color: $greyLight;font-weight: 700;font-size: 20px;line-height: 24px;}
       .imgicon{position: absolute;background: no-repeat center;width: 200px;height: 200px;}
       .sun{
         @include keyframe(sunmov){
@@ -373,19 +373,20 @@
         div:nth-child(1){width: 400px;}
         div{float: left;line-height: 24px;}
         .footer_left{
-          position: fixed;width: 1280px;height: 140px;bottom: 0;left: calc(50% - 640px);color: $white;
+          position: fixed;width: 1280px;height: 140px;bottom: 0;left: calc(50% - 640px);color: $greyLight;
           strong, a{display: inline-block;}
           strong{margin-bottom: 8px;}
           .fixed_info ul li a{
             position: relative;padding: 2px 8px 4px 0;
+            &:hover, &:focus{color: $black;}
           }
           .fixed_info ul li a::before{
             @include transition(width 0.3s);
-            content: "";position: absolute;background: $white;width: 0;height: 2px;bottom: 6px;left: 0;
+            content: "";position: absolute;background: $black;width: 0;height: 2px;bottom: 4px;left: 0;mix-blend-mode: difference;
           }
-          .fixed_info ul li:hover a::before{width: 100%;}
+          .fixed_info ul li a:hover::before{width: 100%;}
         }
-        .footer_right{color: #595959;margin-left: 440px;}
+        .footer_right{color: $greyLight;margin-left: 440px;}
       }
     }
   }
@@ -397,7 +398,52 @@
   /* display: none; */top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);
 }
 
-.modal_cnt{/* visibility: hidden; */}
+#SwitchMD{
+  .btn_toggle{
+    @include keyframe(theme_btn){
+      100%{
+        transform: translateX(-80px);
+      }0%{
+        transform: translateX(0);
+      }
+    }
+    @include border-radius(36px 0 0 36px);
+    position: fixed;top: 100px;right: -160px;width: 160px;height: 72px;background: $black;overflow: hidden;
+    .btn_inner{
+      @include border-radius(50%);
+      position: absolute;top: calc(50% - 20px);left: 16px;width: 40px;height: 40px;background: #e5e5e5;
+      &::before{
+        @include keyframe(switch_anime){
+          100%{
+            transform: translateX(20px);
+          }0%{
+            transform: translateX(0);
+          }
+        };
+        @include border-radius(50%);
+        @include transition(all 0.3s);
+        content: "";position: absolute;top: 0;left: 20px;width: 40px;height: 40px;background: $black;
+      }
+      .btn_txt{position: absolute;top: calc(50% - 10px);left: 32px;width: 80px;font-family: $korFont;font-size: 16px;color: $white;}
+      .thm_dark{display: block;}
+      .thm_bright{display: none;}
+    }
+  }
+  .btn_toggle:hover, .btn_toggle:focus{
+    @include animation(theme_btn, 0.3s, cubic-bezier(0.77,-0.79, 0.81, 0.28), 0s, 1, forwards);
+    background: $white;
+    .btn_inner{
+      background: $black;
+      &::before{
+        @include animation(switch_anime, 0.3s, cubic-bezier(0.77,-0.79, 0.81, 0.28), 0s, 1, forwards);
+        background: $white;
+      }
+      .thm_dark{display: none;}
+      .thm_bright{display: block;color: $black;}
+    }
+  }
+}
+
 
 #modalIntro{
   visibility: hidden;
@@ -575,22 +621,25 @@
   @include backdrop-filter(blur(100px));
   @include box-shadow(0 0 6rem 0 rgba(0, 0, 0, .5));
   @include border-radius(20px);
-  top: calc(50% - 260px);left: calc(50% - 350px);width: 700px;height: 520px;padding-top: 64px;padding-left: 60px;overflow: hidden;background-color: rgba(255, 255, 255, .03);
+  top: calc(50% - 260px);left: calc(50% - 350px);width: 700px;height: 520px;padding-top: 64px;padding-left: 60px;overflow: hidden;background-color: rgba(255, 255, 255, .03);color: $black;
   #contactMe{font-size: 40px;margin-bottom: 88px;}
-  input::placeholder{color: $white;}
-  input[type="text"]{background: transparent;color: $white;width: 552px;}
+  input::placeholder{color: $black;}
+  input[type="text"]{background: transparent;color: $black;width: 552px;}
   input[type="text"],textarea{font-weight: 700;font-size: 16px;line-height: 24px;}
-  textarea{color: $black;background: $white;resize: none;}
+  textarea{
+    color: $black;background: $white;resize: none;border: 1px solid $black;
+    &::placeholder{color: $black;}
+  }
   textarea::-webkit-scrollbar{width: 12px;background: #ccc; height: 156px}
   textarea::-webkit-scrollbar-thumb{
     @include border-radius(6px);
-    background-color: $orange;
+    background-color: $greyDark;
   }
   input[type="submit"]{
     @include border-radius(16px);
-    color: $black;font-weight: 700;font-size: 12px;padding: 15px 16px;width: 80px;height: 40px;background: $white;margin-top: 24px;cursor: pointer;
+    color: $white;font-weight: 700;font-size: 12px;padding: 15px 16px;width: 80px;height: 40px;background: $black;margin-top: 24px;cursor: pointer;
   }
-  #umail{padding: 4px 0;border-bottom: 2px solid $white;margin-bottom: 20px;}
+  #umail{padding: 4px 0;border-bottom: 2px solid $black;margin-bottom: 20px;}
   #umailCnt{
     @include border-radius(20px);
     width: 552px;height: 160px;padding: 12px 16px;
@@ -613,17 +662,18 @@
       .human_area{
         .human{
           z-index: 1;top: 0;left: -4px;
+          img{top: 0;}
         }
         .talk_area{
           /* display: none; */
           top: 0;left: 0;
           .human_talk{
             @include box-shadow(10px 40px 60px 0 rgba(0, 0, 0, .2));
-            background: $white;
+            background: $black;
             &::before{
-              left: 32%;bottom: -32px;border-top: 32px solid $white;border-left: 40px solid transparent;border-right: 0 solid transparent;
+              left: 32%;bottom: -32px;border-top: 32px solid $black;border-left: 40px solid transparent;border-right: 0 solid transparent;
             }
-            .talkguide{color: $black;}
+            .talkguide{color: #fff;}
           }
           .talk2{display: none;}
         }
@@ -642,7 +692,7 @@
             }
           };
           @include animation(rot_txt, 60s, linear, 0s, infinite, backwards);
-          z-index: -1;left: 32%;top: 32%;font-size: 20px;line-height: 24px;width: 100px;height: 100px;color: $greyLight;
+          z-index: -1;left: 35%;top: 35%;font-size: 20px;line-height: 24px;width: 80px;height: 80px;color: $greyLight;
         }
         .move_cycle{color: $white;}
         .coffee{

@@ -82,13 +82,13 @@ header, nav, section, footer{display: block;}
 .txt_line{text-shadow: -1px -1px 0 #595959, 1px -1px 0 #595959, -1px 1px 0 #595959, 1px 1px 0 #595959;color: $black;}
 
 //body
-body{background: #ccc;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";font-size: 16px;color: #e5e5e5;line-height: 1;font-weight: 400;word-break: keep-all;letter-spacing: -0.016em;}
+body{background: #e5e5e5;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";font-size: 16px;color: #e5e5e5;line-height: 1;font-weight: 400;word-break: keep-all;letter-spacing: -0.016em;}
 *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
 //skip
 #skip a{
     position: absolute;top: 0;left: -9999px;z-index: 1400;
-    &:focus{left: 0;width: 100%;background: $white;text-align: center;height: 48px;line-height: 48px;font-weight: 700;color: $black;}
+    &:focus{left: 0;width: 100%;background: $black;text-align: center;height: 48px;line-height: 48px;font-weight: 700;color: $white;}
 }
 
 #wrap{overflow: hidden;min-width: 360px;margin: 0 auto;}
@@ -228,7 +228,8 @@ body{background: #ccc;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
           top: 0;left: 0;width: 264px;height: 24px;z-index: 100;
           a, img{display: inline-block;}
           a img{top: 28px;left: 20px;}
-          a img:last-child{opacity: 0;}
+          a img:first-child{opacity: 0;}
+          a img:last-child{opacity: 1;}
       }
       /* .menu에 .active 추가 */
       .menu{
@@ -242,7 +243,7 @@ body{background: #ccc;font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고�
         }
         .line{
             @include transition(all 0.5s);
-            width: 100%;height: 4px;background: $white;left: 0;
+            width: 100%;height: 4px;background: $black;left: 0;
         }
         .top{top: 12px;}
         .btm{top: 26px;}

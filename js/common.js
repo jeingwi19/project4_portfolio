@@ -91,7 +91,8 @@ $(document).ready(function(){
                 $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp('fast');
             });
             $(this).removeClass('active').find('.blind-b').text('전체 메뉴 열기');
-
+            
+            $(this).prev().find('a .mhd_white').stop().animate({opacity: 0}).next().stop().animate({opacity: 1});
 
 
         }else{ //열기
@@ -103,6 +104,8 @@ $(document).ready(function(){
             });
 
             $(this).addClass('active').find('.blind-b').text('전체 메뉴 닫기');
+
+            $(this).prev().find('a .mhd_white').stop().animate({opacity: 1}).next().stop().animate({opacity: 0});
 
             //포커싱 제어
             _first.on('keydown', function(e){

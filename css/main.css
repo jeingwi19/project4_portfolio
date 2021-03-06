@@ -11,14 +11,15 @@
   .fixed_bg .bg_line {
     width: 1280px;
     height: 608px;
-    border: 1px solid #595959; }
+    border: 1px solid #ccc; }
     .fixed_bg .bg_line .box {
       float: left;
       width: 318px;
       height: 606px; }
     .fixed_bg .bg_line .box + .box {
-      border-left: 1px solid #595959; }
+      border-left: 1px solid #ccc; }
     .fixed_bg .bg_line:nth-child(1)::before {
+      display: none;
       content: "";
       position: absolute;
       bottom: -250px;
@@ -69,14 +70,14 @@
     .fixed_bg .bg_line .now {
       /* text-shadow: -1px -1px 0 #424242, 1px -1px 0 #424242, -1px 1px 0 #424242, 1px 1px 0 #424242; */
       width: 1200px;
-      bottom: -8px;
+      bottom: -10px;
       font-size: 82px;
       font-weight: 700;
       line-height: 68px;
       z-index: 0;
       left: 0;
-      color: #ccc;
-      -webkit-text-stroke: 1px #333333; }
+      color: #e5e5e5;
+      -webkit-text-stroke: 1px #ccc; }
       .fixed_bg .bg_line .now div {
         display: inline; }
     .fixed_bg .bg_line #nowTime {
@@ -89,7 +90,8 @@
         left: -40px;
         top: 104px; }
         .fixed_bg .bg_line .human_area .human img {
-          position: fixed; }
+          position: fixed;
+          top: 60px; }
       .fixed_bg .bg_line .human_area .talk_area {
         position: relative;
         left: 240px;
@@ -110,7 +112,7 @@
         position: absolute;
         opacity: 0;
         top: 0;
-        background: #e5e5e5;
+        background: #fff;
         width: 154px;
         height: 238px;
         padding: 24px; }
@@ -126,7 +128,7 @@
           height: 0;
           bottom: -40px;
           left: 50%;
-          border-top: 40px solid #e5e5e5;
+          border-top: 40px solid #fff;
           border-left: 0 solid transparent;
           border-right: 52px solid transparent; }
         .fixed_bg .bg_line .human_area .human_talk .talkguide {
@@ -252,11 +254,12 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 32px;
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
         left: 50%;
         top: 50%;
-        z-index: 10; }
+        z-index: 10;
+        text-align: center; }
       .fixed_bg .bg_line .txt_hire .imgicon {
         position: absolute;
         width: 200px;
@@ -462,7 +465,7 @@
     margin-left: 110px; }
     #scrollCnt #cnt1 .deco p {
       font-weight: 700;
-      color: #595959;
+      color: #999999;
       font-size: 20px;
       line-height: 24px; }
     #scrollCnt #cnt1 .deco .arrow {
@@ -537,7 +540,8 @@
       position: relative;
       height: 520px;
       width: 330px;
-      background: #e5e5e5; }
+      background: #fff;
+      border: 1px solid #ccc; }
       #scrollCnt #cnt2 .project ul li a .txt_area {
         width: 250px;
         height: 384px;
@@ -588,7 +592,7 @@
           right: 20px;
           bottom: 20px; }
     #scrollCnt #cnt2 .project .explan_kor {
-      color: #e5e5e5;
+      color: #333333;
       width: 330px;
       height: 520px;
       font-family: NtSansKR;
@@ -687,7 +691,7 @@
             font-size: 12px;
             width: 80px;
             height: 40px;
-            background: #e5e5e5;
+            background: #fff;
             padding: 14px;
             text-align: center;
             color: #333333; }
@@ -700,7 +704,7 @@
               bottom: -8px;
               border-left: 8px solid transparent;
               border-right: 8px solid transparent;
-              border-top: 8px solid #e5e5e5; }
+              border-top: 8px solid #fff; }
             #scrollCnt #cnt3 .direct .tit_txt strong .head .me a {
               margin-left: -12px;
               padding: 12px 22px 20px; }
@@ -791,6 +795,7 @@
       top: 0;
       left: 320px; }
     #scrollCnt #cnt3 .deco .txt_grey {
+      color: #999999;
       font-weight: 700;
       font-size: 20px;
       line-height: 24px; }
@@ -888,7 +893,7 @@
         height: 140px;
         bottom: 0;
         left: calc(50% - 640px);
-        color: #e5e5e5; }
+        color: #999999; }
         #scrollCnt .ft_cnt #footer .footer_area .footer_left strong, #scrollCnt .ft_cnt #footer .footer_area .footer_left a {
           display: inline-block; }
         #scrollCnt .ft_cnt #footer .footer_area .footer_left strong {
@@ -896,6 +901,8 @@
         #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a {
           position: relative;
           padding: 2px 8px 4px 0; }
+          #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:hover, #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:focus {
+            color: #333333; }
         #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a::before {
           -webkit-transition: width 0.3s;
           -moz-transition: width 0.3s;
@@ -903,15 +910,16 @@
           transition: width 0.3s;
           content: "";
           position: absolute;
-          background: #e5e5e5;
+          background: #333333;
           width: 0;
           height: 2px;
-          bottom: 6px;
-          left: 0; }
-        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li:hover a::before {
+          bottom: 4px;
+          left: 0;
+          mix-blend-mode: difference; }
+        #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:hover::before {
           width: 100%; }
       #scrollCnt .ft_cnt #footer .footer_area .footer_right {
-        color: #595959;
+        color: #999999;
         margin-left: 440px; }
 
 #dim, #modalContact, #modalIntro {
@@ -929,8 +937,123 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); }
 
-.modal_cnt {
-  /* visibility: hidden; */ }
+#SwitchMD .btn_toggle {
+  -webkit-border-radius: 36px 0 0 36px;
+  -moz-border-radius: 36px 0 0 36px;
+  border-radius: 36px 0 0 36px;
+  position: fixed;
+  top: 100px;
+  right: -160px;
+  width: 160px;
+  height: 72px;
+  background: #333333;
+  overflow: hidden; }
+@keyframes theme_btn {
+  100% {
+    transform: translateX(-80px); }
+  0% {
+    transform: translateX(0); } }
+  #SwitchMD .btn_toggle .btn_inner {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    background: #e5e5e5; }
+    #SwitchMD .btn_toggle .btn_inner::before {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background: #333333; }
+@keyframes switch_anime {
+  100% {
+    transform: translateX(20px); }
+  0% {
+    transform: translateX(0); } }
+    #SwitchMD .btn_toggle .btn_inner .btn_txt {
+      position: absolute;
+      top: calc(50% - 10px);
+      left: 32px;
+      width: 80px;
+      font-family: NtSansKR;
+      font-size: 16px;
+      color: #e5e5e5; }
+    #SwitchMD .btn_toggle .btn_inner .thm_dark {
+      display: block; }
+    #SwitchMD .btn_toggle .btn_inner .thm_bright {
+      display: none; }
+#SwitchMD .btn_toggle:hover, #SwitchMD .btn_toggle:focus {
+  -webkit-animation-name: theme_btn;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: theme_btn;
+  -moz-animation-duration: 0.3s;
+  -moz-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-name: theme_btn;
+  -o-animation-duration: 0.3s;
+  -o-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  -o-animation-delay: 0s;
+  -o-animation-iteration-count: 1;
+  -o-animation-fill-mode: forwards;
+  animation-name: theme_btn;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background: #e5e5e5; }
+  #SwitchMD .btn_toggle:hover .btn_inner, #SwitchMD .btn_toggle:focus .btn_inner {
+    background: #333333; }
+    #SwitchMD .btn_toggle:hover .btn_inner::before, #SwitchMD .btn_toggle:focus .btn_inner::before {
+      -webkit-animation-name: switch_anime;
+      -webkit-animation-duration: 0.3s;
+      -webkit-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: switch_anime;
+      -moz-animation-duration: 0.3s;
+      -moz-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      -moz-animation-delay: 0s;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -o-animation-name: switch_anime;
+      -o-animation-duration: 0.3s;
+      -o-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      -o-animation-delay: 0s;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: switch_anime;
+      animation-duration: 0.3s;
+      animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      background: #e5e5e5; }
+    #SwitchMD .btn_toggle:hover .btn_inner .thm_dark, #SwitchMD .btn_toggle:focus .btn_inner .thm_dark {
+      display: none; }
+    #SwitchMD .btn_toggle:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle:focus .btn_inner .thm_bright {
+      display: block;
+      color: #333333; }
 
 #modalIntro {
   visibility: hidden;
@@ -1352,15 +1475,16 @@
   padding-top: 64px;
   padding-left: 60px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.03); }
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #333333; }
   #modalContact #contactMe {
     font-size: 40px;
     margin-bottom: 88px; }
   #modalContact input::placeholder {
-    color: #e5e5e5; }
+    color: #333333; }
   #modalContact input[type="text"] {
     background: transparent;
-    color: #e5e5e5;
+    color: #333333;
     width: 552px; }
   #modalContact input[type="text"], #modalContact textarea {
     font-weight: 700;
@@ -1369,7 +1493,10 @@
   #modalContact textarea {
     color: #333333;
     background: #e5e5e5;
-    resize: none; }
+    resize: none;
+    border: 1px solid #333333; }
+    #modalContact textarea::placeholder {
+      color: #333333; }
   #modalContact textarea::-webkit-scrollbar {
     width: 12px;
     background: #ccc;
@@ -1378,23 +1505,23 @@
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
-    background-color: #ff6f30; }
+    background-color: #595959; }
   #modalContact input[type="submit"] {
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     border-radius: 16px;
-    color: #333333;
+    color: #e5e5e5;
     font-weight: 700;
     font-size: 12px;
     padding: 15px 16px;
     width: 80px;
     height: 40px;
-    background: #e5e5e5;
+    background: #333333;
     margin-top: 24px;
     cursor: pointer; }
   #modalContact #umail {
     padding: 4px 0;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 2px solid #333333;
     margin-bottom: 20px; }
   #modalContact #umailCnt {
     -webkit-border-radius: 20px;
@@ -1437,6 +1564,8 @@
         z-index: 1;
         top: 0;
         left: -4px; }
+        .fixed_bg .bg_line .human_area .human img {
+          top: 0; }
       .fixed_bg .bg_line .human_area .talk_area {
         /* display: none; */
         top: 0;
@@ -1445,15 +1574,15 @@
           -webkit-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
           -moz-box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 10px 40px 60px 0 rgba(0, 0, 0, 0.2);
-          background: #e5e5e5; }
+          background: #333333; }
           .fixed_bg .bg_line .human_area .talk_area .human_talk::before {
             left: 32%;
             bottom: -32px;
-            border-top: 32px solid #e5e5e5;
+            border-top: 32px solid #333333;
             border-left: 40px solid transparent;
             border-right: 0 solid transparent; }
           .fixed_bg .bg_line .human_area .talk_area .human_talk .talkguide {
-            color: #333333; }
+            color: #fff; }
         .fixed_bg .bg_line .human_area .talk_area .talk2 {
           display: none; }
       .fixed_bg .bg_line .txt_hire {
@@ -1488,12 +1617,12 @@
           animation-iteration-count: infinite;
           animation-fill-mode: backwards;
           z-index: -1;
-          left: 32%;
-          top: 32%;
+          left: 35%;
+          top: 35%;
           font-size: 20px;
           line-height: 24px;
-          width: 100px;
-          height: 100px;
+          width: 80px;
+          height: 80px;
           color: #999999; }
   @keyframes rot_txt {
     100% {
