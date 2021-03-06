@@ -130,4 +130,14 @@ $(document).ready(function(){
   $('#btnTop').on('click', function(){
     $('html, body').stop().animate({scrollTop: 0});
   });
+
+  /* 테마버튼 클릭시 버튼 스타일 변경 */
+  $('.btn_toggle').on('click', function(){
+    //$(this).addClass('thm_w');
+    if(!$(this).hasClass('thm_w')){//라이트모드
+      $(this).addClass('thm_w');
+    }else{//다크모드
+      $(this).removeClass('thm_w');
+    }
+  });
 });

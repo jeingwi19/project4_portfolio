@@ -943,14 +943,15 @@
   border-radius: 36px 0 0 36px;
   position: fixed;
   top: 100px;
-  right: -160px;
+  right: -72px;
   width: 160px;
   height: 72px;
   background: #333333;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 1px solid #ccc; }
 @keyframes theme_btn {
   100% {
-    transform: translateX(-80px); }
+    transform: translateX(-72px); }
   0% {
     transform: translateX(0); } }
   #SwitchMD .btn_toggle .btn_inner {
@@ -964,6 +965,11 @@
     height: 40px;
     background: #e5e5e5; }
     #SwitchMD .btn_toggle .btn_inner::before {
+      -webkit-transform-origin: bottom left;
+      -moz-transform-origin: bottom left;
+      -o-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      transform-origin: bottom left;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
@@ -973,87 +979,99 @@
       transition: all 0.3s;
       content: "";
       position: absolute;
-      top: 0;
-      left: 20px;
+      top: -12px;
+      left: 12px;
       width: 40px;
       height: 40px;
       background: #333333; }
 @keyframes switch_anime {
   100% {
-    transform: translateX(20px); }
+    transform: translateX(20px) translateY(-20px); }
   0% {
-    transform: translateX(0); } }
+    transform: translateX(0) translateY(0); } }
     #SwitchMD .btn_toggle .btn_inner .btn_txt {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
       position: absolute;
-      top: calc(50% - 10px);
-      left: 32px;
+      top: calc(50% - 8px);
+      left: 40px;
       width: 80px;
       font-family: NtSansKR;
-      font-size: 16px;
+      font-size: 14px;
       color: #e5e5e5; }
     #SwitchMD .btn_toggle .btn_inner .thm_dark {
-      display: block; }
+      display: block;
+      opacity: 0; }
     #SwitchMD .btn_toggle .btn_inner .thm_bright {
       display: none; }
 #SwitchMD .btn_toggle:hover, #SwitchMD .btn_toggle:focus {
   -webkit-animation-name: theme_btn;
   -webkit-animation-duration: 0.3s;
-  -webkit-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-name: theme_btn;
   -moz-animation-duration: 0.3s;
-  -moz-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  -moz-animation-timing-function: ease-in-out;
   -moz-animation-delay: 0s;
   -moz-animation-iteration-count: 1;
   -moz-animation-fill-mode: forwards;
   -o-animation-name: theme_btn;
   -o-animation-duration: 0.3s;
-  -o-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  -o-animation-timing-function: ease-in-out;
   -o-animation-delay: 0s;
   -o-animation-iteration-count: 1;
   -o-animation-fill-mode: forwards;
   animation-name: theme_btn;
   animation-duration: 0.3s;
-  animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  #SwitchMD .btn_toggle:hover .btn_inner .thm_dark, #SwitchMD .btn_toggle:focus .btn_inner .thm_dark {
+    opacity: 1; }
+#SwitchMD .btn_toggle.thm_w {
   background: #e5e5e5; }
-  #SwitchMD .btn_toggle:hover .btn_inner, #SwitchMD .btn_toggle:focus .btn_inner {
+  #SwitchMD .btn_toggle.thm_w .btn_inner {
     background: #333333; }
-    #SwitchMD .btn_toggle:hover .btn_inner::before, #SwitchMD .btn_toggle:focus .btn_inner::before {
+    #SwitchMD .btn_toggle.thm_w .btn_inner::before {
       -webkit-animation-name: switch_anime;
       -webkit-animation-duration: 0.3s;
-      -webkit-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      -webkit-animation-timing-function: ease;
       -webkit-animation-delay: 0s;
       -webkit-animation-iteration-count: 1;
       -webkit-animation-fill-mode: forwards;
       -moz-animation-name: switch_anime;
       -moz-animation-duration: 0.3s;
-      -moz-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      -moz-animation-timing-function: ease;
       -moz-animation-delay: 0s;
       -moz-animation-iteration-count: 1;
       -moz-animation-fill-mode: forwards;
       -o-animation-name: switch_anime;
       -o-animation-duration: 0.3s;
-      -o-animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      -o-animation-timing-function: ease;
       -o-animation-delay: 0s;
       -o-animation-iteration-count: 1;
       -o-animation-fill-mode: forwards;
       animation-name: switch_anime;
       animation-duration: 0.3s;
-      animation-timing-function: cubic-bezier(0.77, -0.79, 0.81, 0.28);
+      animation-timing-function: ease;
       animation-delay: 0s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       background: #e5e5e5; }
-    #SwitchMD .btn_toggle:hover .btn_inner .thm_dark, #SwitchMD .btn_toggle:focus .btn_inner .thm_dark {
+    #SwitchMD .btn_toggle.thm_w .btn_inner .thm_dark {
       display: none; }
-    #SwitchMD .btn_toggle:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle:focus .btn_inner .thm_bright {
+    #SwitchMD .btn_toggle.thm_w .btn_inner .thm_bright {
+      left: 48px;
       display: block;
-      color: #333333; }
+      color: #333333;
+      opacity: 0; }
+  #SwitchMD .btn_toggle.thm_w:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle.thm_w:focus .btn_inner .thm_bright {
+    opacity: 1; }
 
 #modalIntro {
   visibility: hidden;
