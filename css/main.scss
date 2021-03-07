@@ -398,6 +398,7 @@
   /* display: none; */top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);
 }
 
+//테마 변경 버튼
 #SwitchMD{
   .btn_toggle{
     @include keyframe(theme_btn){
@@ -413,17 +414,17 @@
       @include border-radius(50%);
       position: absolute;top: calc(50% - 20px);left: 16px;width: 40px;height: 40px;background: #e5e5e5;
       &::before{
-        @include keyframe(switch_anime){
+        @include keyframe(switch_anime1){
           100%{
-            transform: translateX(20px) translateY(-20px);
+            transform: translateX(28px) translateY(0);
           }0%{
             transform: translateX(0) translateY(0);
           }
         };
         @include transform-origin(bottom left);
         @include border-radius(50%);
-        @include transition(all 0.3s);
-        content: "";position: absolute;top: -12px;left: 12px;width: 40px;height: 40px;background: $black;
+        /* @include transition(all 0.3s); */
+        content: "";position: absolute;top: 0;left: 12px;width: 40px;height: 40px;background: $black;
       }
       .btn_txt{
         @include transition(all 0.3s);
@@ -431,6 +432,17 @@
       }
       .thm_dark{display: block;opacity: 0;}
       .thm_bright{display: none;}
+    }
+
+    .btn_inner.mov_r::before{
+      @include keyframe(switch_anime2){
+        100%{
+          transform: translateX(0);
+        }0%{
+          transform: translateX(28px);
+        }
+      };
+      @include animation(switch_anime2, 0.3s, ease, 0s, 1, forwards);
     }
   }
   .btn_toggle:hover, .btn_toggle:focus{
@@ -444,7 +456,7 @@
     .btn_inner{
       background: $black;
       &::before{
-        @include animation(switch_anime, 0.3s, ease, 0s, 1, forwards);
+        @include animation(switch_anime1, 0.3s, ease, 0s, 1, forwards);
         background: $white;
       }
       .thm_dark{display: none;}
@@ -657,6 +669,69 @@
     width: 552px;height: 160px;padding: 12px 16px;
   }
   .btn_close_modal{position: absolute;top: 20px;right: 20px;width: 40px;height: 40px;}
+}
+
+//다크 테마 변경
+body.dark_md{
+  @include transition(all 0.5s);
+  background: #191919;
+  #pcHeader{
+    .logo{
+      a img:first-child{opacity: 1;}
+      a img:last-child{opacity: 0;}
+    }
+    .menu{
+      .line{background: $white;}
+      &.active .line{background: $white;}
+    }
+    #gnb{
+      /* > ul > li > a, > li > button{color: $greyDark;} */
+      > ul > li > a::before, > ul > li > button::before{background: $white;}
+      > ul > li:hover > a,  > ul > li > a:focus, > ul > li:hover > a::before, > ul > li > a:focus::before, > ul > li:hover > button, > ul > li > button:focus, > ul > li:hover > button::before, > ul > li > button:focus::before{color: $white;}
+      /* ul li ul li a{color: $greyDark;} */
+      ul li ul li a::before{background: $white;}
+      ul li ul li:hover a, ul li ul li a:focus, ul li ul li:hover a::before, ul li ul li a:focus::before{color: $white;}
+    }
+  }
+  .fixed_bg{
+    .bg_line{
+      border-color: #333;
+      .box + .box{border-left-color: #333;}
+      .now{color: #191919;-webkit-text-stroke-color: $greyDark;}
+    }
+  }
+  #scrollCnt{
+    #cnt1{
+      .tit_txt .intro_main_txt{
+        color: $white;
+        button::before{background-color: $white;}
+      }
+      .deco p{color: $greyDark;}
+    }
+    #cnt2{
+      .project .explan_kor{color: $white;}
+    }
+    #cnt3{
+      .direct{
+        .tit_txt strong{color: $white;}
+        .btn{
+          .top{border-color: $greyDark;color: $greyDark;}
+          .top:hover, .top:focus{color: $white;border-color: $white;}
+        }
+      }
+      .deco .txt_grey{color: $greyDark;}
+    }
+    .ft_cnt #footer .footer_area{
+      .footer_left{
+        color: $greyDark;
+        .fixed_info ul li a{
+          &:hover, &:focus{color: $white;}
+        }
+        .fixed_info ul li a::before{background-color: $white;}
+      }
+      .footer_right{color: $greyDark;}
+    }
+  }
 }
 
 @media screen and (max-width: 360px){

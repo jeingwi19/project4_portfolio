@@ -130,6 +130,10 @@ header, nav, section, footer {
   color: #333333; }
 
 body {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   background: #e5e5e5;
   font-family: Syncopate, NtSansKR, Sans-serif, "맑은 고딕", "Malgun Gothic";
   font-size: 16px;

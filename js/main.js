@@ -135,9 +135,9 @@ $(document).ready(function(){
   $('.btn_toggle').on('click', function(){
     //$(this).addClass('thm_w');
     if(!$(this).hasClass('thm_w')){//라이트모드
-      $(this).addClass('thm_w');
+      $(this).addClass('thm_w').parents('body').addClass('dark_md');
     }else{//다크모드
-      $(this).removeClass('thm_w');
+      $(this).removeClass('thm_w').children().addClass('mov_r').parents('body').removeClass('dark_md');
     }
   });
 });

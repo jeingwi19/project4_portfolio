@@ -973,20 +973,17 @@
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
+      /* @include transition(all 0.3s); */
       content: "";
       position: absolute;
-      top: -12px;
+      top: 0;
       left: 12px;
       width: 40px;
       height: 40px;
       background: #333333; }
-@keyframes switch_anime {
+@keyframes switch_anime1 {
   100% {
-    transform: translateX(20px) translateY(-20px); }
+    transform: translateX(28px) translateY(0); }
   0% {
     transform: translateX(0) translateY(0); } }
     #SwitchMD .btn_toggle .btn_inner .btn_txt {
@@ -1006,6 +1003,36 @@
       opacity: 0; }
     #SwitchMD .btn_toggle .btn_inner .thm_bright {
       display: none; }
+  #SwitchMD .btn_toggle .btn_inner.mov_r::before {
+    -webkit-animation-name: switch_anime2;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: switch_anime2;
+    -moz-animation-duration: 0.3s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: switch_anime2;
+    -o-animation-duration: 0.3s;
+    -o-animation-timing-function: ease;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: 1;
+    -o-animation-fill-mode: forwards;
+    animation-name: switch_anime2;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; }
+@keyframes switch_anime2 {
+  100% {
+    transform: translateX(0); }
+  0% {
+    transform: translateX(28px); } }
 #SwitchMD .btn_toggle:hover, #SwitchMD .btn_toggle:focus {
   -webkit-animation-name: theme_btn;
   -webkit-animation-duration: 0.3s;
@@ -1038,25 +1065,25 @@
   #SwitchMD .btn_toggle.thm_w .btn_inner {
     background: #333333; }
     #SwitchMD .btn_toggle.thm_w .btn_inner::before {
-      -webkit-animation-name: switch_anime;
+      -webkit-animation-name: switch_anime1;
       -webkit-animation-duration: 0.3s;
       -webkit-animation-timing-function: ease;
       -webkit-animation-delay: 0s;
       -webkit-animation-iteration-count: 1;
       -webkit-animation-fill-mode: forwards;
-      -moz-animation-name: switch_anime;
+      -moz-animation-name: switch_anime1;
       -moz-animation-duration: 0.3s;
       -moz-animation-timing-function: ease;
       -moz-animation-delay: 0s;
       -moz-animation-iteration-count: 1;
       -moz-animation-fill-mode: forwards;
-      -o-animation-name: switch_anime;
+      -o-animation-name: switch_anime1;
       -o-animation-duration: 0.3s;
       -o-animation-timing-function: ease;
       -o-animation-delay: 0s;
       -o-animation-iteration-count: 1;
       -o-animation-fill-mode: forwards;
-      animation-name: switch_anime;
+      animation-name: switch_anime1;
       animation-duration: 0.3s;
       animation-timing-function: ease;
       animation-delay: 0s;
@@ -1554,6 +1581,65 @@
     right: 20px;
     width: 40px;
     height: 40px; }
+
+body.dark_md {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background: #191919; }
+  body.dark_md #pcHeader .logo a img:first-child {
+    opacity: 1; }
+  body.dark_md #pcHeader .logo a img:last-child {
+    opacity: 0; }
+  body.dark_md #pcHeader .menu .line {
+    background: #e5e5e5; }
+  body.dark_md #pcHeader .menu.active .line {
+    background: #e5e5e5; }
+  body.dark_md #pcHeader #gnb {
+    /* > ul > li > a, > li > button{color: $greyDark;} */
+    /* ul li ul li a{color: $greyDark;} */ }
+    body.dark_md #pcHeader #gnb > ul > li > a::before, body.dark_md #pcHeader #gnb > ul > li > button::before {
+      background: #e5e5e5; }
+    body.dark_md #pcHeader #gnb > ul > li:hover > a, body.dark_md #pcHeader #gnb > ul > li > a:focus, body.dark_md #pcHeader #gnb > ul > li:hover > a::before, body.dark_md #pcHeader #gnb > ul > li > a:focus::before, body.dark_md #pcHeader #gnb > ul > li:hover > button, body.dark_md #pcHeader #gnb > ul > li > button:focus, body.dark_md #pcHeader #gnb > ul > li:hover > button::before, body.dark_md #pcHeader #gnb > ul > li > button:focus::before {
+      color: #e5e5e5; }
+    body.dark_md #pcHeader #gnb ul li ul li a::before {
+      background: #e5e5e5; }
+    body.dark_md #pcHeader #gnb ul li ul li:hover a, body.dark_md #pcHeader #gnb ul li ul li a:focus, body.dark_md #pcHeader #gnb ul li ul li:hover a::before, body.dark_md #pcHeader #gnb ul li ul li a:focus::before {
+      color: #e5e5e5; }
+  body.dark_md .fixed_bg .bg_line {
+    border-color: #333; }
+    body.dark_md .fixed_bg .bg_line .box + .box {
+      border-left-color: #333; }
+    body.dark_md .fixed_bg .bg_line .now {
+      color: #191919;
+      -webkit-text-stroke-color: #595959; }
+  body.dark_md #scrollCnt #cnt1 .tit_txt .intro_main_txt {
+    color: #e5e5e5; }
+    body.dark_md #scrollCnt #cnt1 .tit_txt .intro_main_txt button::before {
+      background-color: #e5e5e5; }
+  body.dark_md #scrollCnt #cnt1 .deco p {
+    color: #595959; }
+  body.dark_md #scrollCnt #cnt2 .project .explan_kor {
+    color: #e5e5e5; }
+  body.dark_md #scrollCnt #cnt3 .direct .tit_txt strong {
+    color: #e5e5e5; }
+  body.dark_md #scrollCnt #cnt3 .direct .btn .top {
+    border-color: #595959;
+    color: #595959; }
+  body.dark_md #scrollCnt #cnt3 .direct .btn .top:hover, body.dark_md #scrollCnt #cnt3 .direct .btn .top:focus {
+    color: #e5e5e5;
+    border-color: #e5e5e5; }
+  body.dark_md #scrollCnt #cnt3 .deco .txt_grey {
+    color: #595959; }
+  body.dark_md #scrollCnt .ft_cnt #footer .footer_area .footer_left {
+    color: #595959; }
+    body.dark_md #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:hover, body.dark_md #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a:focus {
+      color: #e5e5e5; }
+    body.dark_md #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li a::before {
+      background-color: #e5e5e5; }
+  body.dark_md #scrollCnt .ft_cnt #footer .footer_area .footer_right {
+    color: #595959; }
 
 @media screen and (max-width: 360px) {
   .fixed_bg {
