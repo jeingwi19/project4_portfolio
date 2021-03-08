@@ -677,6 +677,13 @@ body {
   .splash strong {
     font-size: 14px;
     margin-top: 360px;
-    margin-left: -50px; } }
+    margin-left: -50px; }
+
+  body.dark_md #mHeader .logo a .mhd_white {
+    opacity: 1; }
+  body.dark_md #mHeader .logo a .mhd_black {
+    opacity: 0; }
+  body.dark_md #mHeader .menu .line {
+    background: #e5e5e5; } }
 
 /*# sourceMappingURL=common.css.map */

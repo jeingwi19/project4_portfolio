@@ -333,4 +333,16 @@ body{
     }
     strong{font-size: 14px;margin-top: 360px;margin-left: -50px;}
   }
+
+  body.dark_md{
+    #mHeader{
+      .logo{
+        a .mhd_white{opacity: 1;}
+        a .mhd_black{opacity: 0;}
+      }
+      .menu{
+        .line{background: $white;}
+      }
+    }
+  }
 }

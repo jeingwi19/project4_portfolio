@@ -674,7 +674,7 @@
 //다크 테마 변경
 body.dark_md{
   @include transition(all 0.5s);
-  background: #191919;
+  background: #222;
   #pcHeader{
     .logo{
       a img:first-child{opacity: 1;}
@@ -697,7 +697,8 @@ body.dark_md{
     .bg_line{
       border-color: #333;
       .box + .box{border-left-color: #333;}
-      .now{color: #191919;-webkit-text-stroke-color: $greyDark;}
+      .now{color: #222;-webkit-text-stroke-color: $greyDark;}
+      .txt_hire .move_cycle{color: #333;}
     }
   }
   #scrollCnt{
@@ -731,6 +732,14 @@ body.dark_md{
       }
       .footer_right{color: $greyDark;}
     }
+  }
+
+  #modalContact{
+    color: $white;
+    input::placeholder{color: $white;}
+    input[type="text"]{color: $white;}
+    input[type="submit"]{color: $black;background-color: $white;}
+    #umail{border-bottom-color: $white;}
   }
 }
 
@@ -766,9 +775,9 @@ body.dark_md{
         }
       }
       .txt_hire{
-        bottom: 23%;right: -30%;
+        bottom: 25%;right: -30%;width: 220px;height: 220px;
         &::before{
-          width: 160px;height: 160px
+          width: 160px;height: 160px;z-index: 0;
         }
         .btn_txt{
           @include keyframe(rot_txt){
@@ -779,9 +788,13 @@ body.dark_md{
             }
           };
           @include animation(rot_txt, 60s, linear, 0s, infinite, backwards);
-          z-index: -1;left: 35%;top: 35%;font-size: 20px;line-height: 24px;width: 80px;height: 80px;color: $greyLight;
+          z-index: 0;left: 32%;top: 32%;font-size: 20px;line-height: 24px;width: 80px;height: 80px;color: $greyLight;
         }
-        .move_cycle{color: $white;}
+        .moveround{width: 220px;height: 220px;}
+        .move_cycle{
+          width: 220px;height: 220px;color: #ccc;font-size: 28px;
+          p span{width: 14px;height: 220px;}
+        }
         .coffee{
           @include keyframe(mov_coffee){
             100%{
@@ -793,7 +806,7 @@ body.dark_md{
             }
           };
           @include animation(mov_coffee, 2s, ease, 0s, infinite, backwards);
-          top: -48px;left: 80px;
+          top: -80px;left: 16px;
         }
         .fire{
           @include keyframe(mov_fire){
@@ -806,7 +819,7 @@ body.dark_md{
             }
           };
           @include animation(mov_fire, 0.14s, ease-in-out, 0s, infinite, backwards);
-          bottom: -50px;left: -182px;
+          bottom: -60px;left: -238px;
         }
       }
     }
@@ -1018,6 +1031,22 @@ body.dark_md{
 
   }
 
+  #SwitchMD{
+    .btn_toggle{
+      width: 120px;height: 48px;
+      .btn_inner{
+        left: 12px;top: calc(50% - 12px);width: 24px;height: 24px;
+        &::before{
+          width: 24px;height: 24px;
+        }
+        .btn_txt{font-size: 12px;left: 20px;top: calc(50% - 7px)}
+      }
+    }
+    .btn_toggle.thm_w .btn_inner{
+      .thm_bright{left: 22px;}
+    }
+  }
+
   #modalIntro{
     width: 320px;
     .modal_flat{
@@ -1055,4 +1084,5 @@ body.dark_md{
       .can3{top: 420px;left: -60px;}
     }
   }
+  
 }

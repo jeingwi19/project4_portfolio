@@ -1587,7 +1587,7 @@ body.dark_md {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  background: #191919; }
+  background: #222; }
   body.dark_md #pcHeader .logo a img:first-child {
     opacity: 1; }
   body.dark_md #pcHeader .logo a img:last-child {
@@ -1612,8 +1612,10 @@ body.dark_md {
     body.dark_md .fixed_bg .bg_line .box + .box {
       border-left-color: #333; }
     body.dark_md .fixed_bg .bg_line .now {
-      color: #191919;
+      color: #222;
       -webkit-text-stroke-color: #595959; }
+    body.dark_md .fixed_bg .bg_line .txt_hire .move_cycle {
+      color: #333; }
   body.dark_md #scrollCnt #cnt1 .tit_txt .intro_main_txt {
     color: #e5e5e5; }
     body.dark_md #scrollCnt #cnt1 .tit_txt .intro_main_txt button::before {
@@ -1640,6 +1642,17 @@ body.dark_md {
       background-color: #e5e5e5; }
   body.dark_md #scrollCnt .ft_cnt #footer .footer_area .footer_right {
     color: #595959; }
+  body.dark_md #modalContact {
+    color: #e5e5e5; }
+    body.dark_md #modalContact input::placeholder {
+      color: #e5e5e5; }
+    body.dark_md #modalContact input[type="text"] {
+      color: #e5e5e5; }
+    body.dark_md #modalContact input[type="submit"] {
+      color: #333333;
+      background-color: #e5e5e5; }
+    body.dark_md #modalContact #umail {
+      border-bottom-color: #e5e5e5; }
 
 @media screen and (max-width: 360px) {
   .fixed_bg {
@@ -1690,11 +1703,14 @@ body.dark_md {
         .fixed_bg .bg_line .human_area .talk_area .talk2 {
           display: none; }
       .fixed_bg .bg_line .txt_hire {
-        bottom: 23%;
-        right: -30%; }
+        bottom: 25%;
+        right: -30%;
+        width: 220px;
+        height: 220px; }
         .fixed_bg .bg_line .txt_hire::before {
           width: 160px;
-          height: 160px; }
+          height: 160px;
+          z-index: 0; }
         .fixed_bg .bg_line .txt_hire .btn_txt {
           -webkit-animation-name: rot_txt;
           -webkit-animation-duration: 60s;
@@ -1720,9 +1736,9 @@ body.dark_md {
           animation-delay: 0s;
           animation-iteration-count: infinite;
           animation-fill-mode: backwards;
-          z-index: -1;
-          left: 35%;
-          top: 35%;
+          z-index: 0;
+          left: 32%;
+          top: 32%;
           font-size: 20px;
           line-height: 24px;
           width: 80px;
@@ -1733,8 +1749,17 @@ body.dark_md {
       transform: rotate(-360deg); }
     0% {
       transform: rotate(0); } }
+        .fixed_bg .bg_line .txt_hire .moveround {
+          width: 220px;
+          height: 220px; }
         .fixed_bg .bg_line .txt_hire .move_cycle {
-          color: #e5e5e5; }
+          width: 220px;
+          height: 220px;
+          color: #ccc;
+          font-size: 28px; }
+          .fixed_bg .bg_line .txt_hire .move_cycle p span {
+            width: 14px;
+            height: 220px; }
         .fixed_bg .bg_line .txt_hire .coffee {
           -webkit-animation-name: mov_coffee;
           -webkit-animation-duration: 2s;
@@ -1760,8 +1785,8 @@ body.dark_md {
           animation-delay: 0s;
           animation-iteration-count: infinite;
           animation-fill-mode: backwards;
-          top: -48px;
-          left: 80px; }
+          top: -80px;
+          left: 16px; }
   @keyframes mov_coffee {
     100% {
       transform: rotate(-12deg); }
@@ -1794,8 +1819,8 @@ body.dark_md {
           animation-delay: 0s;
           animation-iteration-count: infinite;
           animation-fill-mode: backwards;
-          bottom: -50px;
-          left: -182px; }
+          bottom: -60px;
+          left: -238px; }
   @keyframes mov_fire {
     100% {
       transform: scale(0.9, 1.1) translateY(2px) rotate(0); }
@@ -2178,6 +2203,24 @@ body.dark_md {
             background-image: url("../images/main/icon_git.png"); }
           #scrollCnt .ft_cnt #footer .footer_area .footer_left .fixed_info ul li .ft_icon3::after {
             background-image: url("../images/main/icon_chat.png"); }
+
+  #SwitchMD .btn_toggle {
+    width: 120px;
+    height: 48px; }
+    #SwitchMD .btn_toggle .btn_inner {
+      left: 12px;
+      top: calc(50% - 12px);
+      width: 24px;
+      height: 24px; }
+      #SwitchMD .btn_toggle .btn_inner::before {
+        width: 24px;
+        height: 24px; }
+      #SwitchMD .btn_toggle .btn_inner .btn_txt {
+        font-size: 12px;
+        left: 20px;
+        top: calc(50% - 7px); }
+  #SwitchMD .btn_toggle.thm_w .btn_inner .thm_bright {
+    left: 22px; }
 
   #modalIntro {
     width: 320px; }

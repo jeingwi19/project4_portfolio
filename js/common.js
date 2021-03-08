@@ -86,16 +86,23 @@ $(document).ready(function(){
     _mgnb.find('ul li ul').hide();
 
     $('#mHeader .menu').on('click', function() {
-        if($(this).hasClass('active')){ //닫기
+        if($(this).hasClass('active')){ //닫힘 상태
             _mgnb.stop().animate({top: '-100%'}, 500, function(){
                 $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp('fast');
             });
             $(this).removeClass('active').find('.blind-b').text('전체 메뉴 열기');
             
-            $(this).prev().find('a .mhd_white').stop().animate({opacity: 0}).next().stop().animate({opacity: 1});
+            //$(this).prev().find('a .mhd_white').stop().animate({opacity: 0}).next().stop().animate({opacity: 1});
 
 
-        }else{ //열기
+            if($(this).parents('body').hasClass('dark_md')){
+                $(this).prev().find('a .mhd_white').stop().animate({opacity: 1}).next().stop().animate({opacity: 0});
+            }else{
+                $(this).prev().find('a .mhd_white').stop().animate({opacity: 0}).next().stop().animate({opacity: 1});
+            }
+
+
+        }else{ //열림 상태
             var _first = $('#mHeader #gnb').find('.first');
             var _last = $('#mHeader #gnb').find('.last');
 
@@ -106,6 +113,7 @@ $(document).ready(function(){
             $(this).addClass('active').find('.blind-b').text('전체 메뉴 닫기');
 
             $(this).prev().find('a .mhd_white').stop().animate({opacity: 1}).next().stop().animate({opacity: 0});
+
 
             //포커싱 제어
             _first.on('keydown', function(e){
@@ -176,6 +184,9 @@ $(document).ready(function(){
         $('#footer .btn_area .ft_txt3').on('click', function(){
             $(this).addClass('active').focus().siblings().removeClass('active');
         });
+
+        /* 모바일 해상도 로고 테마변경 */
+
     }
     
 });

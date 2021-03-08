@@ -134,10 +134,10 @@ $(document).ready(function(){
   /* 테마버튼 클릭시 버튼 스타일 변경 */
   $('.btn_toggle').on('click', function(){
     //$(this).addClass('thm_w');
-    if(!$(this).hasClass('thm_w')){//라이트모드
-      $(this).addClass('thm_w').parents('body').addClass('dark_md');
-    }else{//다크모드
-      $(this).removeClass('thm_w').children().addClass('mov_r').parents('body').removeClass('dark_md');
+    if(!$(this).hasClass('thm_w')){//라이트모드 -> 다크모드
+      $(this).addClass('thm_w').parents('body').addClass('dark_md').find('#modalContact .btn_close_modal img').attr('src', 'images/main/btn_close_white.svg').parents('#wrap').find('#mHeader .logo a .mhd_white').stop().animate({opacity: 1}).next().stop().animate({opacity: 0});
+    }else{//다크모드 -> 라이트모드
+      $(this).removeClass('thm_w').children().addClass('mov_r').parents('body').removeClass('dark_md').find('#modalContact .btn_close_modal img').attr('src', 'images/main/btn_close_black.svg').parents('#wrap').find('#mHeader .logo a .mhd_white').stop().animate({opacity: 0}).next().stop().animate({opacity: 1});
     }
   });
 });
