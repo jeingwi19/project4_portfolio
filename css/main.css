@@ -1588,6 +1588,8 @@ body.dark_md {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   background: #222; }
+  body.dark_md::before {
+    background: url("../images/main/bg_line_black.svg"); }
   body.dark_md #pcHeader .logo a img:first-child {
     opacity: 1; }
   body.dark_md #pcHeader .logo a img:last-child {

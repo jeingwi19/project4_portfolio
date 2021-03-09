@@ -3,8 +3,9 @@
 
 //고정 배경 스타일
 .fixed_bg{
-    @include translateX-50;
-    position: fixed;z-index: -1;left: 50%;top: 80px;
+  @include translateX-50;
+  position: fixed;z-index: -1;left: 50%;top: 80px;
+  
   .bg_line{
     width: 1280px;height: 608px;border: 1px solid #ccc;
     .box{float: left;width: 318px;height: 606px;}
@@ -675,6 +676,7 @@
 body.dark_md{
   @include transition(all 0.5s);
   background: #222;
+  &::before{background: url('../images/main/bg_line_black.svg');}
   #pcHeader{
     .logo{
       a img:first-child{opacity: 1;}
