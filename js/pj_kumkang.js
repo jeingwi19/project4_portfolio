@@ -1,6 +1,9 @@
 $(document).ready(function(){
   var timer = 0;
 
+  //페이지가 로드되면 배경의 가상요소 .none 이미지 display: none;
+  $('body').addClass('none');
+
   //스크롤하면, 배경이미지 opacity 0;
   $(window).on('scroll', function(){
     clearTimeout(timer);

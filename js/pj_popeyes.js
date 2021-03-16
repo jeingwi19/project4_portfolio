@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  //페이지가 로드되면 배경의 가상요소 .none 이미지 display: none;
+  $('body').addClass('none');
+
   /* 첫번째 PC화면 커서,포커싱하면 애니메이션 작동 */
   //1)포커싱
   $('.dev_link').on({
