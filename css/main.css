@@ -943,15 +943,15 @@
   border-radius: 36px 0 0 36px;
   position: fixed;
   top: 100px;
-  right: -72px;
-  width: 160px;
+  right: -112px;
+  width: 200px;
   height: 72px;
-  background: #333333;
+  background: #e5e5e5;
   overflow: hidden;
   border: 1px solid #ccc; }
 @keyframes theme_btn {
   100% {
-    transform: translateX(-72px); }
+    transform: translateX(-112px); }
   0% {
     transform: translateX(0); } }
   #SwitchMD .btn_toggle .btn_inner {
@@ -963,7 +963,7 @@
     left: 16px;
     width: 40px;
     height: 40px;
-    background: #e5e5e5; }
+    background: #333333; }
     #SwitchMD .btn_toggle .btn_inner::before {
       -webkit-transform-origin: bottom left;
       -moz-transform-origin: bottom left;
@@ -977,10 +977,10 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 12px;
+      left: 16px;
       width: 40px;
       height: 40px;
-      background: #333333; }
+      background: #e5e5e5; }
 @keyframes switch_anime1 {
   100% {
     transform: translateX(28px) translateY(0); }
@@ -994,10 +994,10 @@
       position: absolute;
       top: calc(50% - 8px);
       left: 40px;
-      width: 80px;
+      width: 120px;
       font-family: NtSansKR;
       font-size: 14px;
-      color: #e5e5e5; }
+      color: #333333; }
     #SwitchMD .btn_toggle .btn_inner .thm_dark {
       display: block;
       opacity: 0; }
@@ -1057,13 +1057,20 @@
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards; }
-  #SwitchMD .btn_toggle:hover .btn_inner .thm_dark, #SwitchMD .btn_toggle:focus .btn_inner .thm_dark {
-    opacity: 1; }
+  animation-fill-mode: forwards;
+  background: #333333; }
+  #SwitchMD .btn_toggle:hover .btn_inner, #SwitchMD .btn_toggle:focus .btn_inner {
+    background: #e5e5e5; }
+    #SwitchMD .btn_toggle:hover .btn_inner::before, #SwitchMD .btn_toggle:focus .btn_inner::before {
+      background: #333333; }
+    #SwitchMD .btn_toggle:hover .btn_inner .btn_txt, #SwitchMD .btn_toggle:focus .btn_inner .btn_txt {
+      color: #e5e5e5; }
+    #SwitchMD .btn_toggle:hover .btn_inner .thm_dark, #SwitchMD .btn_toggle:focus .btn_inner .thm_dark {
+      opacity: 1; }
 #SwitchMD .btn_toggle.thm_w {
-  background: #e5e5e5; }
+  background: #333333; }
   #SwitchMD .btn_toggle.thm_w .btn_inner {
-    background: #333333; }
+    background: #e5e5e5; }
     #SwitchMD .btn_toggle.thm_w .btn_inner::before {
       -webkit-animation-name: switch_anime1;
       -webkit-animation-duration: 0.3s;
@@ -1089,16 +1096,24 @@
       animation-delay: 0s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
-      background: #e5e5e5; }
+      background: #333333; }
     #SwitchMD .btn_toggle.thm_w .btn_inner .thm_dark {
       display: none; }
     #SwitchMD .btn_toggle.thm_w .btn_inner .thm_bright {
       left: 48px;
       display: block;
-      color: #333333;
+      color: #e5e5e5;
       opacity: 0; }
-  #SwitchMD .btn_toggle.thm_w:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle.thm_w:focus .btn_inner .thm_bright {
-    opacity: 1; }
+  #SwitchMD .btn_toggle.thm_w:hover, #SwitchMD .btn_toggle.thm_w:focus {
+    background: #e5e5e5; }
+    #SwitchMD .btn_toggle.thm_w:hover .btn_inner, #SwitchMD .btn_toggle.thm_w:focus .btn_inner {
+      background: #333333; }
+      #SwitchMD .btn_toggle.thm_w:hover .btn_inner::before, #SwitchMD .btn_toggle.thm_w:focus .btn_inner::before {
+        background: #e5e5e5; }
+      #SwitchMD .btn_toggle.thm_w:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle.thm_w:focus .btn_inner .thm_bright {
+        color: #333333; }
+    #SwitchMD .btn_toggle.thm_w:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle.thm_w:focus .btn_inner .thm_bright {
+      opacity: 1; }
 
 #modalIntro {
   visibility: hidden;
@@ -2207,7 +2222,7 @@ body.dark_md {
             background-image: url("../images/main/icon_chat.png"); }
 
   #SwitchMD .btn_toggle {
-    width: 120px;
+    width: 160px;
     height: 48px; }
     #SwitchMD .btn_toggle .btn_inner {
       left: 12px;
@@ -2216,11 +2231,43 @@ body.dark_md {
       height: 24px; }
       #SwitchMD .btn_toggle .btn_inner::before {
         width: 24px;
-        height: 24px; }
+        height: 24px;
+        left: 10px; }
       #SwitchMD .btn_toggle .btn_inner .btn_txt {
+        opacity: 0;
         font-size: 12px;
         left: 20px;
         top: calc(50% - 7px); }
+  #SwitchMD .btn_toggle:hover, #SwitchMD .btn_toggle:focus {
+    -webkit-animation-name: theme_btn;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: theme_btn;
+    -moz-animation-duration: 0.3s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-name: theme_btn;
+    -o-animation-duration: 0.3s;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-delay: 0s;
+    -o-animation-iteration-count: 1;
+    -o-animation-fill-mode: forwards;
+    animation-name: theme_btn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; }
+  @keyframes theme_btn_m {
+    100% {
+      transform: translateX(0); }
+    0% {
+      transform: translateX(0); } }
   #SwitchMD .btn_toggle.thm_w .btn_inner .thm_bright {
     left: 22px; }
 

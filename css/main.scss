@@ -404,16 +404,16 @@
   .btn_toggle{
     @include keyframe(theme_btn){
       100%{
-        transform: translateX(-72px);
+        transform: translateX(-112px);
       }0%{
         transform: translateX(0);
       }
     }
     @include border-radius(36px 0 0 36px);
-    position: fixed;top: 100px;right: -72px;width: 160px;height: 72px;background: $black;overflow: hidden;border: 1px solid #ccc;
+    position: fixed;top: 100px;right: -112px;width: 200px;height: 72px;background: $white;overflow: hidden;border: 1px solid #ccc;
     .btn_inner{
       @include border-radius(50%);
-      position: absolute;top: calc(50% - 20px);left: 16px;width: 40px;height: 40px;background: #e5e5e5;
+      position: absolute;top: calc(50% - 20px);left: 16px;width: 40px;height: 40px;background: $black;
       &::before{
         @include keyframe(switch_anime1){
           100%{
@@ -425,11 +425,11 @@
         @include transform-origin(bottom left);
         @include border-radius(50%);
         /* @include transition(all 0.3s); */
-        content: "";position: absolute;top: 0;left: 12px;width: 40px;height: 40px;background: $black;
+        content: "";position: absolute;top: 0;left: 16px;width: 40px;height: 40px;background: $white;
       }
       .btn_txt{
         @include transition(all 0.3s);
-        position: absolute;top: calc(50% - 8px);left: 40px;width: 80px;font-family: $korFont;font-size: 14px;color: $white;
+        position: absolute;top: calc(50% - 8px);left: 40px;width: 120px;font-family: $korFont;font-size: 14px;color: $black;
       }
       .thm_dark{display: block;opacity: 0;}
       .thm_bright{display: none;}
@@ -448,22 +448,34 @@
   }
   .btn_toggle:hover, .btn_toggle:focus{
     @include animation(theme_btn, 0.3s, ease-in-out, 0s, 1, forwards);
+    background: $black;
     .btn_inner{
+      background: $white;
+      &::before{
+        background: $black;
+      }
+      .btn_txt{color: $white;}
       .thm_dark{opacity: 1;}
     }
   }
   .btn_toggle.thm_w{
-    background: $white;
+    background: $black;
     .btn_inner{
-      background: $black;
+      background: $white;
       &::before{
         @include animation(switch_anime1, 0.3s, ease, 0s, 1, forwards);
-        background: $white;
+        background: $black;
       }
       .thm_dark{display: none;}
-      .thm_bright{left: 48px;display: block;color: $black;opacity: 0;}
+      .thm_bright{left: 48px;display: block;color: $white;opacity: 0;}
     }
     &:hover, &:focus{
+      background: $white;
+      .btn_inner{
+        background: $black;
+        &::before{background: $white;}
+        .thm_bright{color: $black;}
+      }
       .btn_inner .thm_bright{opacity: 1;}
     }
   }
@@ -1035,14 +1047,24 @@ body.dark_md{
 
   #SwitchMD{
     .btn_toggle{
-      width: 120px;height: 48px;
+      width: 160px;height: 48px;
       .btn_inner{
         left: 12px;top: calc(50% - 12px);width: 24px;height: 24px;
         &::before{
-          width: 24px;height: 24px;
+          width: 24px;height: 24px;left: 10px;
         }
-        .btn_txt{font-size: 12px;left: 20px;top: calc(50% - 7px)}
+        .btn_txt{opacity: 0;font-size: 12px;left: 20px;top: calc(50% - 7px);}
       }
+    }
+    .btn_toggle:hover, .btn_toggle:focus{
+      @include keyframe(theme_btn_m){
+        100%{
+          transform: translateX(0);
+        }0%{
+          transform: translateX(0);
+        }
+      }
+      @include animation(theme_btn, 0.3s, ease-in-out, 0s, 1, forwards);
     }
     .btn_toggle.thm_w .btn_inner{
       .thm_bright{left: 22px;}
