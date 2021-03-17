@@ -2222,10 +2222,17 @@ body.dark_md {
             background-image: url("../images/main/icon_chat.png"); }
 
   #SwitchMD .btn_toggle {
-    width: 160px;
-    height: 48px; }
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+    width: 48px;
+    height: 48px;
+    right: 14px; }
     #SwitchMD .btn_toggle .btn_inner {
-      left: 12px;
+      left: 11px;
       top: calc(50% - 12px);
       width: 24px;
       height: 24px; }
@@ -2239,37 +2246,52 @@ body.dark_md {
         left: 20px;
         top: calc(50% - 7px); }
   #SwitchMD .btn_toggle:hover, #SwitchMD .btn_toggle:focus {
-    -webkit-animation-name: theme_btn;
+    -webkit-animation-name: theme_btn_m;
     -webkit-animation-duration: 0.3s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-delay: 0s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
-    -moz-animation-name: theme_btn;
+    -moz-animation-name: theme_btn_m;
     -moz-animation-duration: 0.3s;
     -moz-animation-timing-function: ease-in-out;
     -moz-animation-delay: 0s;
     -moz-animation-iteration-count: 1;
     -moz-animation-fill-mode: forwards;
-    -o-animation-name: theme_btn;
+    -o-animation-name: theme_btn_m;
     -o-animation-duration: 0.3s;
     -o-animation-timing-function: ease-in-out;
     -o-animation-delay: 0s;
     -o-animation-iteration-count: 1;
     -o-animation-fill-mode: forwards;
-    animation-name: theme_btn;
+    animation-name: theme_btn_m;
     animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    background: #e5e5e5; }
   @keyframes theme_btn_m {
     100% {
       transform: translateX(0); }
     0% {
       transform: translateX(0); } }
+    #SwitchMD .btn_toggle:hover .btn_inner, #SwitchMD .btn_toggle:focus .btn_inner {
+      background: #333333; }
+      #SwitchMD .btn_toggle:hover .btn_inner::before, #SwitchMD .btn_toggle:focus .btn_inner::before {
+        background: #e5e5e5; }
+      #SwitchMD .btn_toggle:hover .btn_inner .btn_txt, #SwitchMD .btn_toggle:focus .btn_inner .btn_txt {
+        color: #333333; }
   #SwitchMD .btn_toggle.thm_w .btn_inner .thm_bright {
     left: 22px; }
+  #SwitchMD .btn_toggle.thm_w:hover, #SwitchMD .btn_toggle.thm_w:focus {
+    background: #333333; }
+    #SwitchMD .btn_toggle.thm_w:hover .btn_inner, #SwitchMD .btn_toggle.thm_w:focus .btn_inner {
+      background: #e5e5e5; }
+      #SwitchMD .btn_toggle.thm_w:hover .btn_inner::before, #SwitchMD .btn_toggle.thm_w:focus .btn_inner::before {
+        background: #333333; }
+      #SwitchMD .btn_toggle.thm_w:hover .btn_inner .thm_bright, #SwitchMD .btn_toggle.thm_w:focus .btn_inner .thm_bright {
+        color: #e5e5e5; }
 
   #modalIntro {
     width: 320px; }
