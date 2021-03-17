@@ -627,11 +627,11 @@
       z-index: -1;
       opacity: 0; }
     #scrollCnt #cnt2 .project:nth-child(1) ul li a .bg_img::before {
-      background-color: #d84c4c; }
+      background: url("../images/main/cnt2mbg_c1_1x.jpg"); }
     #scrollCnt #cnt2 .project:nth-child(2) ul li a .bg_img::before {
-      background-color: yellowgreen; }
+      background: url("../images/main/cnt2mbg_c2_1x.jpg"); }
     #scrollCnt #cnt2 .project:nth-child(3) ul li a .bg_img::before {
-      background-color: coral; }
+      background: url("../images/main/cnt2mbg_c3_1x.jpg"); }
     #scrollCnt #cnt2 .project > ul .pj_card:first-child:hover a, #scrollCnt #cnt2 .project > ul .pj_card:first-child a:focus {
       -webkit-transform: translateY(-20px);
       -moz-transform: translateY(-20px);
@@ -639,6 +639,14 @@
       -ms-transform: translateY(-20px);
       transform: translateY(-20px);
       box-shadow: 10px 60px 80px 0 rgba(0, 0, 0, 0.5); }
+      #scrollCnt #cnt2 .project > ul .pj_card:first-child:hover a .txt_area, #scrollCnt #cnt2 .project > ul .pj_card:first-child a:focus .txt_area {
+        color: #e5e5e5; }
+        #scrollCnt #cnt2 .project > ul .pj_card:first-child:hover a .txt_area .period .tit_date::before, #scrollCnt #cnt2 .project > ul .pj_card:first-child a:focus .txt_area .period .tit_date::before {
+          background: #e5e5e5; }
+        #scrollCnt #cnt2 .project > ul .pj_card:first-child:hover a .txt_area .period .data :last-child::before, #scrollCnt #cnt2 .project > ul .pj_card:first-child a:focus .txt_area .period .data :last-child::before {
+          background: #e5e5e5; }
+        #scrollCnt #cnt2 .project > ul .pj_card:first-child:hover a .txt_area .btn_more, #scrollCnt #cnt2 .project > ul .pj_card:first-child a:focus .txt_area .btn_more {
+          background: url("../images/main/btn_more_white.svg") no-repeat center; }
     #scrollCnt #cnt2 .project ul .pj_card:hover + li {
       opacity: 1; }
     #scrollCnt #cnt2 .project ul .pj_card:hover a > .bg_img::before, #scrollCnt #cnt2 .project ul .pj_card a:focus > .bg_img::before {
@@ -2004,7 +2012,10 @@ body.dark_md {
     #scrollCnt #cnt2 {
       margin-top: 600px; }
       #scrollCnt #cnt2 .project {
-        width: 100%; }
+        width: 100%;
+        /* &:nth-child(1) ul li a .bg_img::before{background: url('../images/main/cnt2mbg_c1_1x.jpg');}
+        &:nth-child(2) ul li a .bg_img::before{background: url('../images/main/cnt2mbg_c2_1x.jpg');}
+        &:nth-child(3) ul li a .bg_img::before{background: url('../images/main/cnt2mbg_c3_1x.jpg');} */ }
         #scrollCnt #cnt2 .project + .project {
           margin-top: 120px; }
         #scrollCnt #cnt2 .project > ul li {
@@ -2033,6 +2044,10 @@ body.dark_md {
               background: url("../images/main/btn_more_white.svg") no-repeat center;
               width: 32px;
               height: 32px; }
+        #scrollCnt #cnt2 .project ul li a .bg_img::before {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
     #scrollCnt #cnt3 .direct {
       /* @include backdrop-filter(blur(20px));
       @include box-shadow(0 2rem 6rem 0 rgba(0, 0, 0, 0.5));
@@ -2155,9 +2170,11 @@ body.dark_md {
         width: 140px;
         height: 140px; }
       #scrollCnt #cnt3 .deco .sun {
+        display: none;
         top: -410px;
         left: -24px; }
       #scrollCnt #cnt3 .deco .moon {
+        display: none;
         top: -340px;
         right: -40px; }
     #scrollCnt .ft_cnt {
@@ -2347,5 +2364,14 @@ body.dark_md {
       #modalIntro .bg_img .can3 {
         top: 420px;
         left: -60px; } }
+@media screen and (max-width: 360px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 360px) and (min-resolution: 192dpi), screen and (max-width: 360px) and (min-resolution: 2dppx) {
+  #cnt2 .project:nth-child(1) ul li a .bg_img::before {
+    background: url("../images/main/cnt2mbg_c1_2x.jpg"); }
+
+  #cnt2 .project:nth-child(2) ul li a .bg_img::before {
+    background: url("../images/main/cnt2mbg_c2_2x.jpg"); }
+
+  #cnt2 .project:nth-child(3) ul li a .bg_img::before {
+    background: url("../images/main/cnt2mbg_c3_2x.jpg"); } }
 
 /*# sourceMappingURL=main.css.map */
