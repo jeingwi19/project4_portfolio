@@ -313,7 +313,7 @@
       }
       .btn{
         width: 380px;height: 48px;margin-top: 72px;
-        a{display: inline-block;line-height: 46px;text-align: center;}
+        a{display: inline-block;line-height: 50px;text-align: center;}
         button, a{
           @include transition(all 0.3s);
           @include border-radius(16px);
