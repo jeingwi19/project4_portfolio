@@ -724,7 +724,7 @@
       margin-top: 72px; }
       #scrollCnt #cnt3 .direct .btn a {
         display: inline-block;
-        line-height: 46px;
+        line-height: 50px;
         text-align: center; }
       #scrollCnt #cnt3 .direct .btn button, #scrollCnt #cnt3 .direct .btn a {
         -webkit-transition: all 0.3s;
@@ -1547,17 +1547,22 @@
   color: #333333; }
   #modalContact #contactMe {
     font-size: 40px;
-    margin-bottom: 88px; }
+    margin-bottom: 60px; }
   #modalContact input::placeholder {
     color: #333333; }
-  #modalContact input[type="text"] {
+  #modalContact input[type="text"], #modalContact input[type="email"] {
     background: transparent;
     color: #333333;
     width: 552px; }
-  #modalContact input[type="text"], #modalContact textarea {
+  #modalContact input[type="text"], #modalContact input[type="email"], #modalContact textarea {
     font-weight: 700;
     font-size: 16px;
     line-height: 24px; }
+  #modalContact input[type="text"] {
+    display: block;
+    margin-bottom: 4px;
+    line-height: 36px;
+    border-bottom: 1px solid #333333; }
   #modalContact textarea {
     color: #333333;
     background: #e5e5e5;
@@ -1671,7 +1676,7 @@ body.dark_md {
     color: #e5e5e5; }
     body.dark_md #modalContact input::placeholder {
       color: #e5e5e5; }
-    body.dark_md #modalContact input[type="text"] {
+    body.dark_md #modalContact input[type="text"], body.dark_md #modalContact input[type="email"] {
       color: #e5e5e5; }
     body.dark_md #modalContact input[type="submit"] {
       color: #333333;

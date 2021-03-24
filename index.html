@@ -494,21 +494,32 @@
       <div id="modalContact" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="contactMe">
         <h4 id="contactMe">Contact Me</h4>
         <div class="modal_flat transp">
-          <form action="index.html" method="post" id="mailArea" class="mailarea">
+          <form action="index.html" method="POST" id="contact-form" class="mailarea">
+            <input type="hidden" name="contact_number">
             <table>
-              <caption>메일 문의 입력 항목 2가지</caption>
+              <caption>메일 문의 입력 항목 3가지 </caption>
               <colgroup>
                 <col class="w0">
                 <col class="w580">
               </colgroup>
               <tr>
-                <th id="uEmailAd" scope="row">
+                <th id="userName" scope="row">
+                  <label for="uName">
+                    <span class="blind-b">메일 보내시는 분의 성함 입력 </span>
+                  </label>
+                </th>
+                <td headers="userName">
+                  <input type="text" name="user_name" id="uName" class="first" placeholder="Your Name" maxlength="20" title="보내시는 분의 성함">
+                </td>
+              </tr>
+              <tr>
+                <th id="umailAd" scope="row">
                   <label for="umail">
-                    <span class="blind-b">이메일 보내시는 주소</span>
+                    <span class="blind-b">이메일 보내시는 주소 입력 </span>
                   </label>
                 </th>
                 <td headers="umailAd">
-                  <input type="text" style="ime-mode:disabled;" id="umail" class="umail first" name="umail" placeholder="Your E-mail" maxlength="30" title="메일 보내주시는 주소를 입력" maxlength="30">
+                  <input type="email" style="ime-mode:disabled" id="umail" class="umail" name="user_email" placeholder="Your E-mail" maxlength="30" title="메일 보내주시는 주소">
                 </td>
               </tr>
               <tr>
@@ -518,7 +529,7 @@
                   </label>
                 </th>
                 <td headers="mailCnt" class="m_cnt">
-                  <textarea name="umailCnt" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message." maxlength="300"></textarea>
+                  <textarea name="message" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message."></textarea>
                 </td>
               </tr>
             </table>

@@ -671,10 +671,11 @@
   @include box-shadow(0 0 6rem 0 rgba(0, 0, 0, .5));
   @include border-radius(20px);
   top: calc(50% - 260px);left: calc(50% - 350px);width: 700px;height: 520px;padding-top: 64px;padding-left: 60px;overflow: hidden;background-color: rgba(255, 255, 255, .03);color: $black;
-  #contactMe{font-size: 40px;margin-bottom: 88px;}
+  #contactMe{font-size: 40px;margin-bottom: 60px;}
   input::placeholder{color: $black;}
-  input[type="text"]{background: transparent;color: $black;width: 552px;}
-  input[type="text"],textarea{font-weight: 700;font-size: 16px;line-height: 24px;}
+  input[type="text"], input[type="email"]{background: transparent;color: $black;width: 552px;}
+  input[type="text"], input[type="email"], textarea{font-weight: 700;font-size: 16px;line-height: 24px;}
+  input[type="text"]{display: block;margin-bottom: 4px;line-height: 36px;border-bottom: 1px solid $black;}
   textarea{
     color: $black;background: $white;resize: none;border: 1px solid $black;
     &::placeholder{color: $black;}
@@ -763,7 +764,7 @@ body.dark_md{
   #modalContact{
     color: $white;
     input::placeholder{color: $white;}
-    input[type="text"]{color: $white;}
+    input[type="text"], input[type="email"]{color: $white;}
     input[type="submit"]{color: $black;background-color: $white;}
     #umail{border-bottom-color: $white;}
   }

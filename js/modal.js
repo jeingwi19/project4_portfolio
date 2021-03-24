@@ -184,12 +184,14 @@ $(document).ready(function(){
       if(e.keyCode === 27) $('#modalContact .btn_close_modal').click();
     });
 
+
     //이메일form태그에 input안에 영어만 입력할수있게 정규표현객체
-    $('#mailArea').on('submit', function(){
-      var _tg = $('#umail');
-      var regExp = /^[\w]{5,30}$/; //한글만 2~10글자
+    $('#contact-form').on('submit', function(){
+      var _tg = $('#umail');//이메일 input태그 변수
+      var regExp = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+$/; //이메일 정규표현
       var msg = '이메일 주소는 영문, 숫자, 기호로 입력해주세요.';
 
+      /* if(!regChk(_tg, regExp, msg)) return false; */
       if(!regChk(_tg, regExp, msg)) return false;
 
       //alert('메일을 전송합니다.');
@@ -199,14 +201,23 @@ $(document).ready(function(){
         var result = regExp.test(_tg.val());
         console.log(result);
 
-        if(result){
-          alert('서버 준비중 입니다. 왼쪽 하단 e mail 버튼을 눌러 메일을 보내주세요.');
+        if(result){//유효한 문자열을 입력한 경우
           return true;
         } else{//잘못된 문자열을 입력한 경우 : 경고창, 포커스강제이동
-          alert(msg);//?? alret()왜 두번?
+          alert(msg);
           _tg.focus();//잘못 입력한 곳에 포커싱
           return false;
         }
+      }
+    });
+
+    /* textarea태그의 val의 length가 5자 이상이어야 submit 클릭가능 */
+    /* input태그는 maxlength가 가능하지만, textarea태그는 maxlength 사용할 수 없기 때문에 스크립트로 제어해준다. */
+    $('#umailCnt').on('blur', function(){
+      if($(this).val().length > 5 && $(this).val().length < 100){
+        $(this).val($(this).val().substring(0, 100));
+      }else{
+        alert('글자수 5자 이상, 100자 이내 작성 제한');
       }
     });
   });
