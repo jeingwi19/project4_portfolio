@@ -1547,7 +1547,7 @@
   color: #333333; }
   #modalContact #contactMe {
     font-size: 40px;
-    margin-bottom: 60px; }
+    margin-bottom: 32px; }
   #modalContact input::placeholder {
     color: #333333; }
   #modalContact input[type="text"], #modalContact input[type="email"] {
@@ -1681,7 +1681,7 @@ body.dark_md {
     body.dark_md #modalContact input[type="submit"] {
       color: #333333;
       background-color: #e5e5e5; }
-    body.dark_md #modalContact #umail {
+    body.dark_md #modalContact #umail, body.dark_md #modalContact #uName {
       border-bottom-color: #e5e5e5; }
 
 @media screen and (max-width: 360px) {
