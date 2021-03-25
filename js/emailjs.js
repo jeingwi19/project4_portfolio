@@ -21,7 +21,8 @@ window.onload = function() {
     // 서비스ID, 이메일 템플릿 ID
     emailjs.sendForm('emjser', 'template_6hshug8', this)
       .then(function() {//비동기 작업 진행 .then()
-        alert('😍성공적으로 전송되었습니다!😍');
+        alert('😍성공적으로 전송되었습니다!😍');//두번째 알람 실행
+        window.location.reload();//마지막 실행 -> 새로고침
       }, function(error) {
         alert('전송에 실패했습니다.', error);
       });
