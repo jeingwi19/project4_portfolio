@@ -936,8 +936,8 @@
   /* visibility: hidden; */ }
 
 #dim {
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   /* display: none; */
   top: 0;
   left: 0;
@@ -1547,29 +1547,36 @@
   color: #333333; }
   #modalContact #contactMe {
     font-size: 40px;
-    margin-bottom: 32px; }
-  #modalContact input::placeholder {
-    color: #333333; }
+    margin-bottom: 28px; }
+  #modalContact .input_title {
+    display: inline-block;
+    font-weight: 700;
+    width: 80px; }
+  #modalContact input::placeholder, #modalContact textarea::placeholder {
+    color: #999999;
+    font-family: NtSansKR;
+    font-weight: 400;
+    font-size: 14px; }
   #modalContact input[type="text"], #modalContact input[type="email"] {
+    display: inline-block;
     background: transparent;
     color: #333333;
-    width: 552px; }
+    width: 440px;
+    margin-left: 8px;
+    line-height: 24px; }
   #modalContact input[type="text"], #modalContact input[type="email"], #modalContact textarea {
     font-weight: 700;
-    font-size: 16px;
-    line-height: 24px; }
+    font-size: 16px; }
   #modalContact input[type="text"] {
-    display: block;
     margin-bottom: 4px;
     line-height: 36px;
-    border-bottom: 1px solid #333333; }
+    border-bottom: 2px solid #333333; }
   #modalContact textarea {
     color: #333333;
     background: #e5e5e5;
     resize: none;
-    border: 1px solid #333333; }
-    #modalContact textarea::placeholder {
-      color: #333333; }
+    border: 1px solid #333333;
+    font-family: NtSansKR; }
   #modalContact textarea::-webkit-scrollbar {
     width: 12px;
     background: #ccc;
@@ -1595,7 +1602,7 @@
   #modalContact #umail {
     padding: 4px 0;
     border-bottom: 2px solid #333333;
-    margin-bottom: 20px; }
+    margin-bottom: 32px; }
   #modalContact #umailCnt {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -1675,7 +1682,9 @@ body.dark_md {
   body.dark_md #modalContact {
     color: #e5e5e5; }
     body.dark_md #modalContact input::placeholder {
-      color: #e5e5e5; }
+      color: #999; }
+    body.dark_md #modalContact textarea::placeholder {
+      color: #595959; }
     body.dark_md #modalContact input[type="text"], body.dark_md #modalContact input[type="email"] {
       color: #e5e5e5; }
     body.dark_md #modalContact input[type="submit"] {

@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/email.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script type="text/javascript" src="js/emailjs.js"></script>
     <script type="text/javascript">
       window.addEventListener('load', function(){
         var digEle = document.getElementById('nowTime');
@@ -509,7 +511,8 @@
                   </label>
                 </th>
                 <td headers="userName">
-                  <input type="text" name="user_name" id="uName" class="first" placeholder="Your Name" maxlength="10" title="보내시는 분의 성함">
+                  <span class="input_title">Name</span>
+                  <input type="text" name="user_name" id="uName" class="first" placeholder="한글 또는 영문 2~12자 이내 입력" maxlength="12" title="보내시는 분의 성함">
                 </td>
               </tr>
               <tr>
@@ -519,7 +522,8 @@
                   </label>
                 </th>
                 <td headers="umailAd">
-                  <input type="email" style="ime-mode:disabled" id="umail" class="umail" name="user_email" placeholder="Your E-mail" maxlength="30" title="메일 보내주시는 주소">
+                  <span class="input_title">E-mail</span>
+                  <input type="email" style="ime-mode:disabled" id="umail" class="umail" name="user_email" placeholder="영문, 숫자, 기호 포함 이메일 주소 입력" maxlength="256" title="메일 보내주시는 주소">
                 </td>
               </tr>
               <tr>
@@ -529,7 +533,7 @@
                   </label>
                 </th>
                 <td headers="mailCnt" class="m_cnt">
-                  <textarea name="message" id="umailCnt" cols="38" rows="6" placeholder="Fill out your message."></textarea>
+                  <textarea name="message" id="umailCnt" cols="38" rows="6" placeholder="200자 이내로 메세지를 작성해주세요."></textarea>
                 </td>
               </tr>
             </table>
@@ -538,7 +542,7 @@
             </div>
           </form>
         </div>
-        <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_black.svg" alt="대화상자 닫기"></button>
+        <button type="button" class="btn_close_modal last"><img src="images/main/btn_close_black.svg" alt="대화상자 닫기" title="닫기"></button>
       </div>
 
   </div>
